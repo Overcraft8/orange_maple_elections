@@ -1,0 +1,46 @@
+title: Choosing Our Enemies
+new-page: true
+view-if: year <= 1930 and enemies_timer <= 0
+on-arrival: month_actions += 1; enemies_timer = 18
+max-visits: 3
+is-card: true
+card-image: img/poster_1.png
+tags: party_affairs
+
+= Choosing our enemies
+
+In our media and campaign materials, who should we consider as our main opponents?
+
+[? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
+
+- @anti_dem: The anti-democratic parties of the far right and left - the CP, NSDAP, and SCP.
+- @far_right: The far right - the NSDAP and SCP.
+- @nsdap: The NSDAP alone.
+- @cp: The CP.
+- @bourgeois: The bourgeois parties - the RPC and CPC.
+- @easy_discard
+
+@anti_dem
+on-arrival: enemies = "anti-democratic parties"; agrarian_strength += 5; reformist_strength += 5; left_dissent += 5; workers_cp -= 2; workers_nsdap -= 2; workers_scp -= 2; cp_relation -= 10
+
+Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the CP in the future.
+
+@far_right
+on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; workers_scp -= 3;
+
+Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the CP. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
+
+@nsdap
+on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4;
+
+[? if nazi_urgency == 0 or nsdap_r < 10 : The NSDAP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
+
+@cp
+on-arrival: enemies = "CP"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; cp_relation -= 15; cpc_relation += 5; rpc_relation += 5; workers_cp -= 4;
+
+Attacking the CP is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the CP, this may not be the best choice.
+
+@bourgeois
+on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; cpc_relation -= 5; rpc_relation -= 5; cp_relation += 5; reformist_dissent += 8; workers_rpc -= 3; coalition_dissent += 1
+
+Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.

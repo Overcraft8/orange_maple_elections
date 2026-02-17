@@ -1,0 +1,84 @@
+title: Dealing with Toleration
+new-page: true
+is-card: true
+card-image: img/portraits/BrüningHeinrich.jpg
+view-if: dealing_with_toleration_timer = 0 and ccf_toleration and prime_minister_party == "RPC"
+on-arrival: dealing_with_toleration_timer += 6; month_actions += 1
+tags: govt_affairs
+#subtitle: Despite not being in government, we can still provide support.
+
+= Dealing with Toleration
+
+We are currently acting as external support to the government of Prime Minister [+ prime_minister +]. How should we use our position?
+
+- @break_toleration
+- @urge_against_austerity
+- @improve_relations
+- @new_grand_coalition
+- @stay_course: Stay the course, for stability's sake.
+- @easy_discard
+
+@break_toleration
+view-if: not constructive_vonc
+title: End the toleration agreement with a vote of no confidence!
+
+Are we sure about this? A vote of no confidence would trigger new elections, and potentially an increased vote-share for the extremist parties.
+
+- @vonc: Yes, end this arrangement!
+- @stay_course: No, we should stay the course.
+
+@vonc
+on-arrival: ccf_in_government = 0; ccf_toleration = 0; in_grand_coalition = 0; prime_minister = "Brüning"; prime_minister_party = "RPC"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; ccf_toleration = 0; left_strength += 8; pro_republic -= 5; new_middle_ccf -= 3; rural_ccf -= 3; old_middle_ccf -= 3; catholics_ccf -= 3; reformist_dissent += 5; left_dissent -= 5
+
+We have called for a vote of no confidence, and have brought down this government. Prime Minister [+ prime_minister +] currently rules as acting prime_minister.
+
+New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+
+@urge_against_austerity
+title: Urge the coalition against austerity politics, and to increase social spending.
+choose-if: budget >= 1
+unavailable-subtitle: This can only happen with a budget surplus.
+go-to: urge_success if cpc_relation >= 30 and rpc_relation >= 40; urge_failure if cpc_relation < 30 or rpc_relation < 40
+
+@urge_success
+on-arrival: welfare += 1; budget -= 1; workers_ccf += 5*(1-dissent); unemployed_ccf += 5*(1-dissent); rpc_relation -= 3; cpc_relation -= 3; reformist_dissent -= 5; center_dissent -= 5; labor_dissent -= 5;
+
+We have successfully urged the coalition parties to increase social spending! Unfortunately, the center-right parties increasingly see us as a nuisance, and might not wish to continue these negotiations.
+
+@urge_failure
+on-arrival: rpc_relation -= 3; cpc_relation -= 3
+
+Unfortunately, our negotiations have met with failure. The center-right parties increasingly see us as a nuisance, and might not wish to continue these negotiations.
+
+
+@improve_relations
+title: Improve relations with the parties of the coalition.
+on-arrival: rpc_relation += 5*(1-dissent); cpc_relation += 4*(1-dissent); left_dissent += 5;
+
+We have increased our level of contact and discussions with the parties of the coalition, primarily the RPC Party and CPC.
+
+Our attempts to reach out to the center-right are met with disdain by leftists within our party.
+
+
+
+
+@new_grand_coalition
+title: Can we join the government in a new grand coalition?
+view-if: neo_weimar_coalition >= 50
+choose-if: rpc_relation >= 50 and cpc_relation >= 30 and resources >= 2
+subtitle: We will need 2 resources to smooth out the process of forming the coalition.
+unavailable-subtitle: [? if rpc_relation < 50 : We do not have adequate relations with the RPC Party. ?][? if cpc_relation < 30 : We do not have adequate relations with the CPC. ?] [? if resources < 2 : We do not have enough resources. ?]
+on-arrival: resources -= 2; ccf_in_government = 1; in_grand_coalition = 1; ccf_toleration = 0; left_dissent += 6; reformist_strength += 5; leverage = 20 if leverage >= 20
+achievement: constitutional_coalition
+
+Our negotiations have succeeded, and the RPC Party and CPC have agreed to form a new coalition government with us!
+
+We are now part of a "constitutional coalition" government that includes all parties except the extremists of the CP, SCP, and NSDAP. [+ prime_minister +] will remain as prime_minister. Leftists in our party are skeptical of this arrangement.
+
+- @election_1928.ministries: Now, we must select our ministries.
+
+
+
+@stay_course
+
+We will stay the course of toleration, for the sake of stability.

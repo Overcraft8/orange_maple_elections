@@ -1,0 +1,18 @@
+title: Cabinet
+is-pinned-card: true
+tags: advisor
+card-image: img/douglas_cabinet.jpg
+view-if: difficulty < 0 and ccf_in_government and prime_minister_party = "CCF"
+on-arrival: last_cabinet_action = 1
+new-page: true 
+
+= Cabinet
+
+With an CCF prime_minister and CCF cabinet members, we can direct the affairs of the national government.
+
+- #cabinet
+- @back: Return to main
+
+@back
+on-arrival: last_cabinet_action = 0
+go-to: root

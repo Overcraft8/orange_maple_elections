@@ -1,0 +1,34 @@
+title: Frank Underhill
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/UnderhillFrank.jpg
+view-if: underhill_advisor = 1
+new-page: true 
+
+= Frank Underhill
+
+Frank Underhill is a renowned legal scholar.
+
+
+- @judiciary_
+- @constitutional_reform_
+- @root: Return to main
+
+
+@judiciary_
+title: Judicial Affairs
+subtitle: Enact judicial reforms.
+choose-if: advisor_action_timer = 0 and ccf_in_government and justice_minister_party = "CCF"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not ccf_in_government : The CCF is not currently in government. ?][? if justice_minister_party != "CCF" : We do not have the Justice Ministry. ?]
+on-arrival: advisor_action_timer = 6; judiciary_timer -= 6; last_advisor_action = 1
+go-to: judiciary
+
+
+@constitutional_reform_
+title: Constitutional Reform
+subtitle: Pursue reforms of the inadequate Weimar Constitution.
+choose-if: advisor_action_timer = 0 and ccf_in_government and justice_minister_party = "CCF" and ((in_weimar_coalition) or (in_ccf_majority) or (in_left_front) or (in_popular_front)) and judicial_reform >= 2
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not ccf_in_government : The CCF is not currently in government. ?] [? if justice_minister_party != "CCF" : We do not have the Justice Ministry. ?] [? if judicial_reform < 2: The judiciary is unlikely to tolerate progressive constitutional changes. ?] [? if not ((in_weimar_coalition) or (in_ccf_majority) or (in_left_front) or (in_popular_front)) : Our current governing coalition will not support constitutional reforms. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; constitutional_reform_timer -= 12
+go-to: constitutional_reform
+

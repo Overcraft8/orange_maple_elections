@@ -1,0 +1,120 @@
+title: Inter-Party Relationships
+new-page: true
+view-if: year <= 1932 and inter_party_relationships_timer <= 0
+tags: party_affairs
+is-card: true
+on-arrival: month_actions += 1; inter_party_relationships_timer = 6;
+card-image: img/weimar_coalition_2.jpg
+max-visits: 12
+#subtitle: Building relations with the other political parties of Canada.
+
+= Inter-Party Relationships
+
+The CCF cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the CCF, RPC, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
+
+- @liberals: Strengthen our bonds with the left-liberal Canadian Democratic Party and conservative-liberal Canadian People's Party.
+- @center: Strengthen our bonds with the Catholic RPC Party.
+- @cp: Work towards repairing relationships with the Communist Party.
+- @ccf_alone: The CCF can stand alone for now.
+- @easy_discard
+
+
+@cp
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; cp_inter_party_seen += 1
+go-to: cp_blutmai if blutmai = 1; cp_1 if blutmai = 0 and cp_coalition_success = 0 and (cp_relation < 40 or cp_rectified_history = 1); cp_rectification_of_history if cp_relation >= 40 and cp_rectified_history = 0; cp_2 if cp_coalition_success = 1 and cp_rectified_history = 1
+
+@cp_1
+on-arrival: cp_relation += 6*(1 - dissent); communist_coalition += 1 if cp_inter_party_seen <= 1; reformist_dissent += 2; rpc_relation -= 2; cpc_relation -= 3
+
+The communists are suspicious of our overtures, especially the Stalinist leadership, who persist in calling us "social fascists". However, connections are made at the grassroots and local levels.
+
+@cp_rectification_of_history
+
+One stumbling block for our relations with the CP is our history of conflict, dating back to 1918 and 1919. The CP is especially contemptuous of Gustav Noske, the CCF "bloodhound" who reportedly ordered the violent suppression of the Spartacist uprising and other CP revolts. They also blame us for the deaths of Rosa Luxemburg and Karl Liebknecht, two CCF-turned-CP leaders who were killed during the suppression of the uprising.
+
+For further improvements in CP relations, it might be necessary to expel Noske, and hold some sort of commemoration for Luxemburg and Liebknecht.
+
+- @yes_history: Yes, we must apologize for our past actions.
+- @no_history: No, we have no need to apologize.
+
+@yes_history
+on-arrival: reformist_dissent += 12; reformist_strength -= 2; neorevisionist_dissent += 5; left_dissent -= 6; left_strength += 5; cp_rectified_history = 1; rpc_relation -= 6; cpc_relation -= 6; lpc_relation -= 4; cp_relation += 8*(1-dissent); coalition_dissent += 1
+
+As part of normalizing relations with the CP, we have to acknowledge the wrongdoings of our past. We have expelled Noske, and have held public commemorations for those killed by troops during the uprisings.
+
+This leads to tensions with the moderates and reformists within our party, and criticism from the conservative and liberal parties.
+
+@no_history
+on-arrival: cp_relation -= 3
+
+We have no need to apologize for the actions of Ebert and Noske; it is the Communists' fault for launching a violent insurrection.
+
+
+@cp_2
+on-arrival: cp_relation += 8*(1 - dissent); communist_coalition += 1 if cp_inter_party_seen <= 1; reformist_dissent += 2; rpc_relation -= 3; cpc_relation -= 3
+
+After the success of the coalition government with the CP, they are much more amenable to us.
+
+@cp_blutmai
+on-arrival: cp_relation += 3*(1 - dissent); reformist_dissent += 1
+
+After the events of Blütmai, reconciling with the Communists is difficult, if not impossible. Nevertheless, we must try.
+
+@center
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; rpc_relation += 2 if rpc_party_leader == "Joos"
+go-to: center_op if rpc_in_government = 1 and ccf_in_government = 0 and prime_minister != "Brüning"; center_coalition if ccf_in_government = 1 and rpc_in_government = 1; center_bruning if prime_minister = "Brüning"
+
+@center_op
+on-arrival: rpc_relation += 5*(1 - dissent)
+
+We are currently in opposition to the RPC-led government, but that does not preclude the general building of feelings of good will.
+
+@center_coalition
+on-arrival: rpc_relation += 8*(1 - dissent)
+
+We are currently coalition partners with them, so improving relations comes naturally.
+
+@center_bruning
+on-arrival: rpc_relation += 5*(1 - dissent)
+
+The Brüning semi-autocratic regime makes building friendly relations difficult, but not impossible.
+
+@liberals
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; lpc_relation += 5*(1 - dissent)
+go-to: cpc_stresemann if stresemann_dead = 0; cpc_loss if stresemann_dead = 1 and year <= 1930; cpc_moribund if year > 1930
+
+The [+ lpc_name +] has been one of our closest allies through the course of the Republic.
+
+@cpc_stresemann
+on-arrival: cpc_relation += 8*(1 - dissent)
+
+Gustav Stresemann, the leader of the CPC is the best foreign policy leaders of the republic, and while he has previously expressed monarchist tendencies, he has been friendly towards us.
+
+@cpc_loss
+on-arrival: cpc_relation += 5*(1 - dissent)
+
+With the death of Gustav Stresemann, the CPC is much less likely to be accommodating of us. In addition, the liberal parties are electorally in decline, so perhaps our efforts are best spent elsewhere.
+
+However, given the influence of the CPC among the other right-leaning parties [? if monarch == "George V": and with Monarch George V ?], it can still be helpful to influence them.
+
+@cpc_moribund
+on-arrival: cpc_relation += 5*(1 - dissent)
+
+The liberal parties (both the [+ lpc_name +] and CPC) are electorally moribund, so perhaps our efforts are best spent elsewhere.
+
+However, given the influence of the CPC among the other right-leaning parties[? if monarch == "George V": and with Monarch George V ?], it can still be helpful to influence them.
+
+@ccf_alone
+
+Whether it is because we *cannot* or *will not*, we do not make ties with other parties at this moment.
+
+- @return: Continue...

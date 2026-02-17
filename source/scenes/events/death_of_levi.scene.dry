@@ -1,0 +1,12 @@
+title: The Death of Stanley Knowles
+view-if: year == 1930 and month >= 2
+frequency: 1000
+max-visits: 1
+on-arrival: knowles_dead = 1; n_advisors -= 1 if knowles_advisor == 1; knowles_advisor = 0
+tags: event
+new-page: true
+face-image: img/portraits/KnowlesStanley.jpg
+
+= The Death of Stanley Knowles
+
+Stanley Knowles, a leader of the left wing of our party, has died in an unfortunate accident. He will be missed.

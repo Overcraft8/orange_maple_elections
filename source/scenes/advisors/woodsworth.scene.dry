@@ -1,0 +1,43 @@
+title: J. S. Woodsworth
+is-pinned-card: true
+tags: advisor, reformist
+card-image: img/portraits/WoodsworthJS.jpg
+view-if: woodsworth_advisor = 1
+new-page: true 
+
+= JS_Woodsworth
+
+James Woodsworth is a former methodist minister, and one of the most recognizable and well-known Democratic Socialist leaders. He is the CCF's Party Leader.
+
+JS_Woodsworth [? if ccf_prussia = 1 : is ?][? if ccf_prussia = 0 : was ?] the Minister-Monarch of Prussia, the largest state in Canada. He is a reformist leader who seeks to work with the bourgeois parties.
+
+- @coalition
+- @prussian_bulwark
+- @snap_election
+- @root: Return to main
+
+@coalition
+title: Negotiating with the Coalition
+subtitle: JS_Woodsworth can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Reichstag.
+choose-if: advisor_action_timer <= 0 and (ccf_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not ccf_prussia : The CCF does not control the Prussian government. ?]
+on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if ccf_in_government = 1 and coalition_dissent > 0; rpc_relation += 6; lpc_relation += 6; cpc_relation += 2; cpc_relation += 3 if in_grand_coalition
+
+We have improved our relations with the [? if in_grand_coalition : RPC Party, [+ lpc_name +], and CPC, ?][? if not in_grand_coalition: RPC Party and [+ lpc_name +], ?] and reduced tensions with the coalition.
+
+@prussian_bulwark
+title: The Prussian Bulwark
+subtitle: As the Minister-Monarch of Prussia, JS_Woodsworth has power over the Prussian bureaucracy and security services.
+choose-if: advisor_action_timer <= 0 and ccf_prussia = 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if ccf_prussia == 0 : The CCF does not control Prussia. ?]
+on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_action = 1
+go-to: prussian_affairs
+
+@snap_election
+title: Snap Election
+subtitle: Call a snap election.
+unavailable-subtitle: [? if prime_minister != "JS_Woodsworth" and monarch != "JS_Woodsworth" : JS_Woodsworth must be Prime Minister or Monarch. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if monarch = "JS_Woodsworth" and monarchial_powers : We have removed this power from the monarch with a constitutional reform. ?]
+choose-if: advisor_action_timer == 0 and (prime_minister == "JS_Woodsworth" or (monarch == "JS_Woodsworth" and not monarchial_powers))
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; 
+
+We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].

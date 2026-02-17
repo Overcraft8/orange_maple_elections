@@ -1,0 +1,319 @@
+title: Election Simulation
+set-jump: post_election
+
+
+- @1928: 1928 historical scenario
+- @1930: 1930 historical scenario
+- @1932: 1932 (July) historical scenario
+
+@1928
+on-arrival: {!
+Q.workers = 46; // industry and trade
+Q.old_middle = 13; // "old mittelstand"
+// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
+Q.new_middle = 14; // "new mittelstand"
+Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
+// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
+Q.unemployed = 8.6;
+Q.catholics = 30;
+
+Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.parties = ['ccf', 'cp', 'rpc', 'lpc', 'cpc', 'scp', 'nsdap', 'other'];
+
+// Support for party by social group
+// they don't have to sum to 100 since the electoral calculations will be normalized.
+Q.workers_ccf = 65;
+Q.workers_cp = 20;
+Q.workers_rpc = 5;
+Q.workers_lpc = 0;
+Q.workers_cpc = 0;
+Q.workers_scp = 5;
+Q.workers_nsdap = 0;
+Q.workers_other = 10;
+
+Q.old_middle_ccf = 5;
+Q.old_middle_cp = 0;
+Q.old_middle_rpc = 5;
+Q.old_middle_lpc= 10;
+Q.old_middle_cpc = 25;
+Q.old_middle_scp = 25;
+Q.old_middle_nsdap = 10;
+Q.old_middle_other = 10;
+
+Q.new_middle_ccf = 5;
+Q.new_middle_cp = 0;
+Q.new_middle_rpc = 10;
+Q.new_middle_lpc= 25;
+Q.new_middle_cpc = 25;
+Q.new_middle_scp = 10;
+Q.new_middle_nsdap = 5;
+Q.new_middle_other = 15;
+
+Q.rural_ccf = 10;
+Q.rural_cp = 0;
+Q.rural_rpc = 5;
+Q.rural_lpc= 5;
+Q.rural_cpc = 15;
+Q.rural_scp = 45;
+Q.rural_nsdap = 5;
+Q.rural_other = 10;
+
+Q.unemployed_ccf = 25;
+Q.unemployed_cp = 55;
+Q.unemployed_rpc = 1;
+Q.unemployed_lpc = 0;
+Q.unemployed_cpc = 0;
+Q.unemployed_scp = 5;
+Q.unemployed_nsdap = 15;
+Q.unemployed_other = 9;
+
+Q.catholics_ccf = 15;
+Q.catholics_cp = 5;
+Q.catholics_rpc = 50;
+Q.catholics_lpc = 0;
+Q.catholics_cpc = 5;
+Q.catholics_scp = 5;
+Q.catholics_nsdap = 0;
+Q.catholics_other = 10;
+!}
+go-to: election_algorithm
+set-jump: post_election
+
+@1930
+on-arrival: {!
+Q.workers = 46; // industry and trade
+Q.old_middle = 13; // "old mittelstand"
+// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
+Q.new_middle = 14; // "new mittelstand"
+Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
+// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
+Q.unemployed = 20;
+Q.catholics = 30;
+
+Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.parties = ['ccf', 'cp', 'rpc', 'lpc', 'cpc', 'scp', 'nsdap', 'other'];
+
+// Support for party by social group
+// they don't have to sum to 100 since the electoral calculations will be normalized.
+Q.workers_ccf = 60;
+Q.workers_cp = 20;
+Q.workers_rpc = 5;
+Q.workers_lpc = 0;
+Q.workers_cpc = 0;
+Q.workers_scp = 0;
+Q.workers_nsdap = 10;
+Q.workers_other = 15;
+
+Q.old_middle_ccf = 5;
+Q.old_middle_cp = 0;
+Q.old_middle_rpc = 5;
+Q.old_middle_lpc= 5;
+Q.old_middle_cpc = 10;
+Q.old_middle_scp = 20;
+Q.old_middle_nsdap = 30;
+Q.old_middle_other = 15;
+
+Q.new_middle_ccf = 5;
+Q.new_middle_cp = 0;
+Q.new_middle_rpc = 5;
+Q.new_middle_lpc = 10;
+Q.new_middle_cpc = 20;
+Q.new_middle_scp = 10;
+Q.new_middle_nsdap = 25;
+Q.new_middle_other = 15;
+
+Q.rural_ccf = 5;
+Q.rural_cp = 0;
+Q.rural_rpc = 5;
+Q.rural_lpc= 5;
+Q.rural_cpc = 10;
+Q.rural_scp = 20;
+Q.rural_nsdap = 25;
+Q.rural_other = 15;
+
+Q.unemployed_ccf = 20;
+Q.unemployed_cp = 50;
+Q.unemployed_rpc = 0;
+Q.unemployed_lpc = 0;
+Q.unemployed_cpc = 0;
+Q.unemployed_scp = 5;
+Q.unemployed_nsdap = 25;
+Q.unemployed_other = 5;
+
+Q.catholics_ccf = 10;
+Q.catholics_cp = 5;
+Q.catholics_rpc = 50;
+Q.catholics_lpc = 0;
+Q.catholics_cpc = 5;
+Q.catholics_scp = 5;
+Q.catholics_nsdap = 10;
+Q.catholics_other = 5;
+
+Q.ccf_r = 25;
+Q.cp_r = 10;
+Q.rpc_r = 15;
+Q.lpc_r = 10;
+Q.cpc_r = 10;
+Q.scp_r = 14;
+Q.nsdap_r = 10;
+Q.other_r = 5;
+!}
+go-to: election_algorithm
+set-jump: post_election
+
+@1932
+on-arrival: {!
+Q.workers = 46; // industry and trade
+Q.old_middle = 13; // "old mittelstand"
+// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
+Q.new_middle = 14; // "new mittelstand"
+Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
+// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
+Q.unemployed = 33;
+Q.catholics = 30;
+
+Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.parties = ['ccf', 'cp', 'rpc', 'lpc', 'cpc', 'scp', 'nsdap', 'other'];
+
+// Support for party by social group
+// they don't have to sum to 100 since the electoral calculations will be normalized.
+Q.workers_ccf = 55;
+Q.workers_cp = 20;
+Q.workers_rpc = 5;
+Q.workers_lpc = 0;
+Q.workers_cpc = 0;
+Q.workers_scp = 0;
+Q.workers_nsdap = 15;
+Q.workers_other = 5;
+
+Q.old_middle_ccf = 0;
+Q.old_middle_cp = 0;
+Q.old_middle_rpc = 5;
+Q.old_middle_lpc = 4;
+Q.old_middle_cpc = 4;
+Q.old_middle_scp = 15;
+Q.old_middle_nsdap = 70;
+Q.old_middle_other = 5;
+
+Q.new_middle_ccf = 5;
+Q.new_middle_cp = 0;
+Q.new_middle_rpc = 5;
+Q.new_middle_lpc = 10;
+Q.new_middle_cpc = 10;
+Q.new_middle_scp = 10;
+Q.new_middle_nsdap = 60;
+Q.new_middle_other = 5;
+
+Q.rural_ccf = 0;
+Q.rural_cp = 0;
+Q.rural_rpc = 5;
+Q.rural_lpc = 0;
+Q.rural_cpc = 5;
+Q.rural_scp = 15;
+Q.rural_nsdap = 65;
+Q.rural_other = 5;
+
+Q.unemployed_ccf = 20;
+Q.unemployed_cp = 40;
+Q.unemployed_rpc = 0;
+Q.unemployed_lpc = 0;
+Q.unemployed_cpc = 0;
+Q.unemployed_scp = 0;
+Q.unemployed_nsdap = 50;
+Q.unemployed_other = 5;
+
+Q.catholics_ccf = 10;
+Q.catholics_cp = 5;
+Q.catholics_rpc = 60;
+Q.catholics_lpc = 0;
+Q.catholics_cpc = 5;
+Q.catholics_scp = 5;
+Q.catholics_nsdap = 10;
+Q.catholics_other = 5;
+
+Q.ccf_r = 25;
+Q.cp_r = 10;
+Q.rpc_r = 15;
+Q.lpc_r = 10;
+Q.cpc_r = 10;
+Q.scp_r = 14;
+Q.nsdap_r = 10;
+Q.other_r = 5;
+!}
+go-to: election_algorithm
+set-jump: post_election
+
+@post_election
+on-arrival: {!
+// set congress proportion to votes
+Q.ccf_r = Q.ccf_votes;
+Q.rpc_r = Q.rpc_votes;
+Q.cp_r = Q.cp_votes;
+Q.lpc_r = Q.lpc_votes;
+Q.cpc_r = Q.cpc_votes;
+Q.scp_r = Q.scp_votes;
+Q.nsdap_r = Q.nsdap_votes;
+Q.other_r = Q.other_votes;
+
+// The largest party can only be the NSDAP or the CCF.
+Q.largest_party = 'CCF';
+if (Q.nsdap_r >= Q.ccf_r && Q.nsdap_r >= Q.cp_r) {
+    Q.largest_party = 'NSDAP';
+}
+if (Q.cp_r >= Q.ccf_r && Q.cp_r >= Q.nsdap_r) {
+    Q.largest_party = 'CP';
+}
+
+// coalitions
+Q.weimar_coalition = Q.ccf_r + Q.lpc_r + Q.rpc_r - 3;
+Q.grand_coalition = Q.ccf_r + Q.lpc_r + Q.rpc_r + Q.cpc_r;
+Q.bourgeois_coalition = Q.lpc_r + Q.rpc_r + Q.cpc_r + Q.other_r;
+Q.center_right_coalition = Q.rpc_r + Q.lpc_r + Q.cpc_r + Q.other_r + Q.scp_r;
+Q.right_coalition = Q.rpc_r + Q.cpc_r + Q.other_r + Q.scp_r;
+Q.far_right_coalition = Q.scp_r + Q.nsdap_r;
+Q.left_coalition = Q.ccf_r + Q.cp_r;
+// this is an absurd concept lol
+Q.united_front_coalition = Q.ccf_r + Q.cp_r + Q.rpc_r + Q.lpc_r - 3;
+Q.anti_democratic_coalition = Q.cp_r + Q.nsdap_r;
+// aka everyone except nazi, cp, scp
+Q.neo_weimar_coalition = Q.ccf_r + Q.lpc_r + Q.rpc_r + Q.cpc_r + Q.other_r;
+!}
+
+The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
+ 
+**Election results:**
+
+# 1928: 30, 1930: 25, 1932: 22
+CCF: [+ ccf_r +]
+
+# 1928: 15, 1930: 15, 1932: 
+RPC: [+ rpc_r +]
+
+# 1928: 10, 1930: 13
+CP: [+ cp_r +]
+
+# 1928: 5, 1930: 4 (as DstP)
+LPC: [+ lpc_r +]
+
+# 1928: 9, 1930: 5
+CPC: [+ cpc_r +]
+
+# 1928: 14, 1930: 7
+SCP: [+ scp_r +]
+
+# 1928: 3, 1930: 18
+NSDAP: [+ nsdap_r +]
+
+# 1928: 9, 1930: 10
+Other: [+ other_r +]
+
+**Potential coalitions:**
+
+Weimar Coalition (CCF + RPC + LPC): [+ weimar_coalition +]
+
+Grand Coalition (CCF + RPC + LPC + CPC): [+ grand_coalition +]
+
+Bourgeois Coalition (RPC + LPC + CPC + Others): [+ bourgeois_coalition +]
+
+Right-wing Coalition (RPC + CPC + Others + SCP): [+ right_coalition +]
+

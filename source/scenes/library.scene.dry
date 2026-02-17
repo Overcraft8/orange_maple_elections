@@ -1,0 +1,484 @@
+title: library
+new-page: true
+is-special: true
+go-to: menu
+
+= The Library
+
+Herein contains relevant information about the government and politics of the Canadian republic.
+
+@menu
+
+- @government: Canada's system of government
+- @Canadian_timeline: Timeline of the Dominion of Canada
+- @curr_gov: Current government details
+- @demographics: Demographics
+- @parties: Parties
+- @public_opinion: Public opinion (and projected election results)
+- @paramilitaries: Paramilitary groups
+- @factions: Internal factions
+- @figures: Figures and charts
+- @backSpecialScene: Exit library.
+
+@government
+go-to: menu
+
+The Dominion of Canada is a parliamentary constitutional monarchy with a ceremonial monarch and a dominant lower house, the House of Commons. The leader of the majority party becomes the Prime Minister. The unelected upper house, the Senate of Canada is appointed by the Governor General. The British parliament retains the exclusive power to amend the Canadian constitution. The Governor General is a Monarchial appointee responsible for dissolving Parliament and calling an election. They traditionally defer to the Prime Minister's decision.
+
+The House of Commons is elected using a first-past-the-post system, with the plurality candidate in each electoral district (colloquially called ridings) winning. A majority of the Commons then selects the Prime Minister. The Cabinet is selected by the Prime Minister and are responsible for government. A majority vote-of-no-confidence, including Federal Budget proposals can remove the current government.
+
+Canada is divided into a number of provinces, each of which have their own governments with some responsibilities. By far the largest and most important states are Ontario and Quebec. The CCF is most popular in the Western provinces. 
+
+@Canadian_timeline
+go-to: menu
+
+= Timeline of the CCF and the Republic (until 1928)
+
+**1774**: The Quebec Act is signed into law, protecting French civil law and Catholic rights. 
+
+**1867**: Canada is granted Dominion status, allowing it to run its internal affairs. The Liberals and Conservatives become the 2 dominant parties. 
+
+**1870**: The province of Manitoba joins Confederation after the Metis-led Red River Rebellion is crushed. The Red River Rebellion becomes the first symbol of East-West political antagonism in Canada.
+
+**1871**: The province of British Columbia enters Confederataion, having been promised a transcontinental railway to the east. 
+
+**1873**: Prince Edward Island joins Confederation, having been promised more than proportional seats in the Commons. 
+
+**1885**: The Metis-led Northwest Rebellion is crushed by Canadian soldiers arriving through the promised Canadian Pacific Railway. 
+
+**1914-1918**: Canada enters the First World War. Conscription measures lead to riots among the largely anti-war Quebecois population.
+
+**1919**: The Winnipeg General Strike is violently shut down by the RCMP, resulting in 2 deaths and 30 injured. The event would act as a catalyst for the rise in Labour politics across Canada. J.S. Woodsworth would be elected to the Commons in the Winnipeg Centre riding 2 years later.
+
+**1926**: Prime Minister Mackenzie King requests Governor General Byng to dissolve parliament and call an election, suspecting that a recent Liberal scandal would lose them the support of the Progressive Party and therefore, a majority. Byng declines, insisting that Conservative Leader Meighan be given a chance to govern and negotiate with other parties to obtain a majority. Instead, Meighan loses a confidence vote 3 days later, forcing Byng to call an election anyways. 
+
+**1926**: The Statue of Westminster is signed, granting Canada authority over foreign policy and lawmaking, excepting amendments to the constitution. 
+
+**1930-1932**: Conservative Leader R. B. Bennett becomes Prime Minister on a campaign of "blasting" Canada out of the Depression. Instead, 1.5 million Canadians are left in poverty, 10% of the population. Drought across the Prairies, hailed as the "Dirty Thirties" leads to a rise in Farmer co-ops and support for socialist policies amongst rural voters. Bennett's administration constructs work camps for unemployed single men, paying 20 cents a day.
+
+@curr_gov
+go-to: cabinet if ccf_in_government; menu if not ccf_in_government
+
+= Current Government
+
+Monarch: [+ monarch +]
+
+Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
+
+Reichstag composition:
+
+# 1928: 30, 1930: 25, 1932: 22
+CCF: [+ ccf_r +]%
+[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
+# 1928: 15, 1930: 15, 1932: 
+RPC: [+ rpc_r +]%
+# 1928: 10, 1930: 13
+CP: [+ cp_r +]%
+# 1928: 5, 1930: 4 (as DstP)
+[+ lpc_name +]: [+ lpc_r +]%
+# 1928: 9, 1930: 5
+CPC: [+ cpc_r +]%
+# 1928: 14, 1930: 7
+SCP: [+ scp_r +]%
+# 1928: 3, 1930: 18
+NSDAP: [+ nsdap_r +]%
+# 1928: 9, 1930: 10
+Others: [+ other_r +]%
+
+CCF position: [? if ccf_toleration : toleration ?][? if ccf_in_government : in government - ?][? if ccf_toleration == 0 and ccf_in_government == 0 and ccf_caretaker == 0 : opposition ?][? if ccf_caretaker : caretaker government ?]
+[? if in_weimar_coalition and ccf_in_government: Weimar Coalition ?][? if in_grand_coalition and ccf_in_government: Grand Coalition ?][? if in_popular_front and ccf_in_government: Popular Front ?][? if in_left_front and ccf_in_government: Left Front ?][? if in_ccf_majority and ccf_in_government: CCF majority ?][? if in_minority_government and ccf_in_government: minority government ?][? if in_emergency_government and ccf_in_government: emergency government ?]
+
+[? if ccf_in_government and not in_ccf_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+
+[? if ccf_in_government and (in_left_front or in_popular_front): CP coalition dissent: [+ cp_coalition_dissent : coalition_dissent +] ?]
+
+@cabinet
+go-to: menu
+
+Current cabinet:
+
+Labor: [+ labor_minister_party +]
+
+Interior: [+ interior_minister_party +]
+
+Finance: [+ finance_minister_party +]
+
+Economic: [+ economic_minister_party +]
+
+Justice: [+ justice_minister_party +]
+
+Foreign: [+ foreign_minister_party +]
+
+Reichswehr: [+ reichswehr_minister_party +]
+
+Agriculture: [+ agriculture_minister_party +]
+
+
+@demographics
+go-to: menu
+
+**Demographic Groups**
+
+**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the CCF or CP. They make up 40-50% of the population.
+
+**Old Mittelstand**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the far right. 10-15% of the population.
+
+**New Mittelstand**: The new middle class consists of white-collar workers and government employees. This is the base of liberalism. 10-15% of the population.
+
+**Rural**: Small and large farmers and independent rural workers. Protestant farmers often support the SCP. 20-30% of the population.
+
+**Catholics** are the largest religious minority, at about 30% of the population. They disproportionately support the RPC Party (or the Bavarian People's Party in Bavaria).
+
+**Jews** account for between 0.5% to 1% of the population, and tend to support liberal parties, mostly the LPC, although substantial numbers support the CCF or CP.
+
+
+@public_opinion
+on-arrival: {!
+Q.pro_republic_disp = Math.round(Q.pro_republic);
+Q.nationalism_disp = Math.round(Q.nationalism);
+Q.socialism_disp = Math.round(Q.socialism);
+!}
+view-if: (not historical_mode) or game_over
+go-to: election_algorithm
+set-jump: election_projections
+
+**Public Opinion**
+
+#Support for Socialism: [+ socialism +]%
+
+#Support for Nationalism: [+ nationalism +]%
+
+Support for the Republic: [+ pro_republic_disp +]%
+
+
+@election_projections
+view-if: (not historical_mode) or game_over
+go-to: menu
+
+**Projected election results** (if the election were to be held now):
+
+# 1928: 30, 1930: 25, 1932: 22
+CCF: [+ ccf_votes +]%
+
+[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
+
+# 1928: 15, 1930: 15, 1932: 
+RPC: [+ rpc_votes +]%
+
+# 1928: 10, 1930: 13
+CP: [+ cp_votes +]%
+
+# 1928: 5, 1930: 4 (as DstP)
+[+ lpc_name +]: [+ lpc_votes +]%
+
+# 1928: 9, 1930: 5
+CPC: [+ cpc_votes +]%
+
+# 1928: 14, 1930: 7
+SCP: [+ scp_votes +]%
+
+# 1928: 3, 1930: 18
+NSDAP: [+ nsdap_votes +]%
+
+# 1928: 9, 1930: 10
+Others: [+ other_votes +]%
+
+**Detailed results for each demographic**
+
+Workers: CCF: [+ workers_ccf_display +]%, RPC: [+ workers_rpc_display +]%, CP: [+ workers_cp_display +]%, [+ lpc_name +]: [+ workers_lpc_display +]%, CPC: [+ workers_cpc_display +]%; SCP: [+ workers_scp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+
+New Middle Class: CCF: [+ new_middle_ccf_display +]%, RPC: [+ new_middle_rpc_display +]%, CP: [+ new_middle_cp_display +]%, [+ lpc_name +]: [+ new_middle_lpc_display +]%, CPC: [+ new_middle_cpc_display +]%; SCP: [+ new_middle_scp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+
+Old Middle Class: CCF: [+ old_middle_ccf_display +]%, RPC: [+ old_middle_rpc_display +]%, CP: [+ old_middle_cp_display +]%, [+ lpc_name +]: [+ old_middle_lpc_display +]%, CPC: [+ old_middle_cpc_display +]%; SCP: [+ old_middle_scp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+
+Rural: CCF: [+ rural_ccf_display +]%, RPC: [+ rural_rpc_display +]%, CP: [+ rural_cp_display +]%, [+ lpc_name +]: [+ rural_lpc_display +]%, CPC: [+ rural_cpc_display +]%; SCP: [+ rural_scp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+
+Unemployed: CCF: [+ unemployed_ccf_display +]%, RPC: [+ unemployed_rpc_display +]%, CP: [+ unemployed_cp_display +]%, [+ lpc_name +]: [+ unemployed_lpc_display +]%, CPC: [+ unemployed_cpc_display +]%; SCP: [+ unemployed_scp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+
+Catholics: CCF: [+ catholics_ccf_display +]%, RPC: [+ catholics_rpc_display +]%, CP: [+ catholics_cp_display +]%, [+ lpc_name +]: [+ catholics_lpc_display +]%, CPC: [+ catholics_cpc_display +]%; SCP: [+ catholics_scp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+
+@parties
+go-to: menu
+
+**CCF** - *Co-operative Commonwealth Federation* - this is us. We are a multi-faceted socialist party, home to reformist populists, radical labour members, and social gospelers. We are the foremost representative of those struck down by the capitalist system. 
+
+**RPC** - *Reconstruction Party*  - An offshoot of the Conservatives, the RPC is a center-right party that supports moderate economic reform and increased social spending, but within the confines of capitalism. 
+
+Current relations: [+ rpc_relation : relationships +]
+
+# TODO: replace this with the german state party after 1930
+**LPC** - *Liberal Party* - a center-left big tent liberal party, popular among the intelligensia and educated middle class. They are proponents of free trade. They are one of the 2 dominant parties of the Canadian parliament. 
+
+Current relations: [+ lpc_relation : relationships +]
+
+**CPC** - *Conservative Party* - a conservative-liberal party, supported by the middle classes and bourgeoisie. They are more isolationist. They are the other dominant party of the Canadian parliament. 
+
+Current relations: [+ cpc_relation : relationships +]
+
+**SCP** - *Social Credit Party* - a recently emerged right-wing populist party advocating for social credit reforms of the monetary system. They see much support in the province of Alberta. 
+
+Current relations: [+ scp_relation : relationships +]
+
+**CP** - *Communist Party* - A far-Left revolutionary party aiming to overthrow capitalism and establish a dictatorship of the proletariat. They are supported by a minority of the working class, and are heavily repressed by the government. They have alleged links to Moscow
+
+Current relations: [+ cp_relation : relationships +]
+
+[? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Canada) - a party recently formed in a split from the CCF, the SAPD is essentially an agglomeration of various left-wing splinter groups between the CCF and CP. ?]
+
+**NSDAP** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist Canadian Worker's Party, or Nazis) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
+
+Current relations: [+ nsdap_relation : relationships +]
+
+**Other parties** - there is a multitude of small parties, including the United Farmers parties. There are also independent Liberal, Progressive, and Conservative candidates who have not been nominated yet support the parties' positions.
+
+@paramilitaries
+on-arrival: {!
+Q.rb_strength = Math.round(Q.rb_strength);
+Q.sh_strength = Math.round(Q.sh_strength);
+Q.sa_strength = Math.round(Q.sa_strength); 
+!}
+go-to: menu
+
+**Paramilitary groups:**
+
+**Reichsbanner Schwarz-Rot-Gold**: There are various farmer's organizations in Canada, mainly acting as wheat pool cooperatives. They have are represented by the reformist wing of our party.
+
+Strength: [+ rb_strength +] thousand
+
+Militarization: [+ rb_militancy : militancy +]
+
+**Rotfrontkämpferbund (RFB)**: The "Red Front Fighter's League" is associated with the CP.
+
+Strength: [+ rfb_strength +] thousand
+
+Militarization: [+ rfb_militancy : militancy +]
+
+**Der Stahlhelm**: A right-wing nationalist organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. Associated with the SCP.
+
+Strength: [+ sh_strength +] thousand
+
+Militarization: [+ sh_militancy : militancy +]
+
+**Sturmabteilung (SA)**: This is the nazi paramilitary group.
+
+Strength: [+ sa_strength +] thousand
+
+Militarization: [+ sa_militancy : militancy +]
+
+**Official military/paramilitary groups:**
+
+**Reichswehr**: [+ reichswehr_strength +] thousand troops. This is Canada's military.
+
+Loyalty: [+ reichswehr_loyalty : loyalty +]
+
+**Prussian police**: [+ prussian_police_strength +] thousand members.
+
+Loyalty: [+ prussian_police_loyalty : loyalty +]
+
+
+
+@factions
+go-to: neorevisionists if neorevisionism > 0; menu if neorevisionism <= 0
+
+**Internal factions of the CCF**
+
+Overall dissent: [+ dissent_percent : dissent +]
+
+**Left**
+
+Many leftists are former members of the UCCF (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the CP, and some support extraparliamentary action.
+
+Strength: [+ left_strength : strength +]
+
+Dissent: [+ left_dissent : dissent +]
+
+**Agrarians**
+
+Agrarians in the CCF are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Frank Scott. They seek a middle course between reform and revolution, while defending the democratic state.
+
+Strength: [+ agrarian_strength : strength +]
+
+Dissent: [+ center_dissent : dissent +]
+
+**Labor**
+
+Many CCF members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
+
+Strength: [+ labor_strength : strength +]
+
+Dissent: [+ labor_dissent : dissent +]
+
+**Reformists**
+
+Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if ccf_prussia : They are dominant in the state government of Prussia. ?]
+
+Strength: [+ reformist_strength : strength +]
+
+Dissent: [+ reformist_dissent : dissent +]
+
+@neorevisionists
+go-to: menu
+
+**Neorevisionists**
+
+Neorevisionists focus on defending the republic and expanding democracy, while also expanding the party's base beyond the working class to create a people's party. They support new propaganda methods and extraparliamentary action in defense of the republic.
+
+Strength: [+ neorevisionist_strength : strength +]
+
+Dissent: [+ neorevisionist_dissent : dissent +]
+
+
+@figures
+title: Figures and Charts
+go-to: menu
+on-arrival: rpc_r = rpc_r - 3;
+on-display: {!
+data = [
+    {
+        "id": "cp",
+        "legend": "CP",
+        "name": "CP",
+        "seats": Q.cp_r*5,
+    }];
+if (Q.sapd_formed && Q.sapd_r) {
+    data.push({
+            "id": "sapd",
+            "legend": "SAPD",
+            "name": "SAPD",
+            "seats": Math.round(Q.sapd_r*5),
+            });
+}
+data = data.concat([
+    {
+        "id": "ccf",
+        "legend": "CCF",
+        "name": "CCF",
+        "seats": Q.ccf_r*5,
+    },
+    {
+        "id": "lpc",
+        "legend": "LPC",
+        "name": "LPC",
+        "seats": Q.lpc_r*5,
+    },
+    {
+        "id": "rpc",
+        "legend": "RPC",
+        "name": "RPC",
+        "seats": (Q.rpc_r - 3)*5,
+    },
+    {
+        "id": "cpc",
+        "legend": "CPC",
+        "name": "CPC",
+        "seats": Q.cpc_r*5,
+    },
+    {
+        "id": "other",
+        "legend": "Other",
+        "name": "Other",
+        "seats": Q.other_r*5,
+    },
+    {
+        "id": "scp",
+        "legend": "SCP",
+        "name": "SCP",
+        "seats": Q.scp_r*5,
+    },
+    {
+        "id": "nsdap",
+        "legend": "NSDAP",
+        "name": "NSDAP",
+        "seats": Q.nsdap_r*5,
+    },
+]);
+if (d3 && window) {
+    // get screen width
+    var width = 500;
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50;
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    }
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromRPC(true).smallToBig(true);
+    parliament.exit.toRPC(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
+
+    var lines = d3.linegraph(false, false,
+            Q.parties,
+            {'ccf': '#D26E28', 'cp': '#8B0000', 'lpc': '#BE0028', 'rpc': '#E7DB73', 'cpc': '#0055A5', 'scp': '#50E23D', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'ccf': 'CCF', 'cp': 'CP', 'lpc': Q.lpc_name, 'rpc': 'RPC', 'cpc': 'CPC', 'scp': 'SCP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+    lines.width(width).height(400);
+    //var svg = lines(Q.election_records);
+    if (Q.election_records.length > 0) {
+        d3.select("#election_history").datum(Q.election_records).call(lines);
+    }
+    //document.getElementById('election_history').innerHTML = svg.outerHTML;
+
+    // party support records should not have so many ticks
+    if (!Q.historical_mode || Q.game_over) {
+        var lines_2 = d3.linegraph(true, true,
+            Q.parties,
+            {'ccf': '#D26E28', 'cp': '#8B0000', 'lpc': '#BE0028', 'rpc': '#E7DB73', 'cpc': '#0055A5', 'scp': '#50E23D', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'ccf': 'CCF', 'cp': 'CP', 'lpc': Q.lpc_name, 'rpc': 'RPC', 'cpc': 'CPC', 'scp': 'SCP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+        lines_2.width(width).height(400);
+        d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
+    }
+
+    // economic stats
+    var minInflation = d3.min(Q.economic_records, d => d.inflation);
+    var maxUnemployment = d3.max(Q.economic_records, d => d.unemployment);
+    var lines_3 = d3.linegraph(true, true, ['inflation', 'unemployment'],
+            {'inflation': '#0000FF', 'unemployment': '#FF0000'},
+            {'inflation': 'Inflation', 'unemployment': 'Unemployment'},
+            maxUnemployment + 5, minInflation - 5, 21);
+    lines_3.width(width).height(300);
+    d3.select("#economic_history").datum(Q.economic_records).call(lines_3);
+}
+!}
+
+= Reichstag composition
+
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!}
+{!<tr><td><div class="box" style='background-color:#D26E28; outline: 2px; outline-style: solid;'> </div></td><td>!} **CCF:** {!</td><td>!} **[+ ccf_r +]%** {!</td></tr>!}
+
+[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div></td> <td> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td></tr>!} ?]
+
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div></td> <td>!}CP: {!</td><td>!} [+ cp_r +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#BE0028'> </div></td><td>!} [+ lpc_name +]: {!</td><td>!} [+ lpc_r +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#E7DB73'> </div></td><td>!} RPC: {!</td><td>!} [+ rpc_r +]% {!</td></tr>!}
+
+
+{!<tr><td><div class="box" style='background-color:#0055A5'> </div></td><td>!} CPC: {!</td><td>!} [+ cpc_r +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +] % {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#50E23D'> </div></td><td>!} SCP: {!</td><td>!} [+ scp_r +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#954B00'> </div></td><td>!} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td></tr>!}
+{!</table>!}
+
+= Election history
+
+[? if year = 1928 and month < 5 : No new elections yet. ?]
+
+{!<svg id="election_history" style="width: 500px; height: 400px;"> </svg>!}
+
+= Party support history
+
+[? if historical_mode: Not available in historical mode. ?]
+
+{!<svg id="party_support_history" style="width: 500px; height: 400px;"> </svg>!}
+
+= Economic history
+
+{!<svg id="economic_history" style="width: 500px; height: 300px;"> </svg>!}
+# TODO: maybe add textual histories too? some accessibility stuff as well...

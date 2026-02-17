@@ -1,0 +1,43 @@
+title: Tommy Douglas
+is-pinned-card: true 
+tags: advisor, centrist
+card-image: img/portraits/DouglasTommy.jpg
+new-page: true
+view-if: douglas_advisor = 1
+
+= Tommy Douglas
+
+Tommy Douglas is a minister hailing from Saskatchewan. He is known for his skill in oratory.
+
+- @coalition
+- @toleration
+- @snap_election
+- @root: Return to main
+
+@coalition
+title: Negotiating with the Coalition
+subtitle: Douglas can improve our relationships with our coalition partners.
+choose-if: advisor_action_timer <= 0 and ccf_in_government = 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not ccf_in_government: The CCF is not in government. ?]
+on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if ccf_in_government = 1 and coalition_dissent > 0; rpc_relation += 5; lpc_relation += 5; cpc_relation += 5
+
+We have improved our relations with the RPC, [+ lpc_name +], and CPC, and reduced tensions with the coalition.
+
+
+@toleration
+title: Defending Toleration
+subtitle: Douglas supports the toleration arrangement with the bourgeois parties.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not ccf_toleration: The CCF is not in toleration. ?]
+choose-if: ccf_in_government = 0 and ccf_toleration = 1 and advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6; left_dissent -= 8; neorevisionist_dissent -= 8; center_dissent -= 5;
+
+We have reduced dissent among the anti-toleration factions. 
+
+@snap_election
+title: Snap Election
+subtitle: Call a snap election.
+unavailable-subtitle: [? if prime_minister != "Douglas" : Douglas must be Prime Minister. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and prime_minister == "Douglas"
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
+
+We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
