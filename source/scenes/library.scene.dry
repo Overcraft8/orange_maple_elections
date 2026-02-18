@@ -65,7 +65,7 @@ Monarch: [+ monarch +]
 
 Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 
-Reichstag composition:
+Commons composition:
 
 # 1928: 30, 1930: 25, 1932: 22
 CCF: [+ ccf_r +]%
@@ -400,13 +400,13 @@ if (d3 && window) {
     if (screenWidth < width - 50) {
         width = screenWidth - 50;
         height = width;
-        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+        document.getElementById("commons").style.height = screenWidth/2 + "px";
     }
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromRPC(true).smallToBig(true);
     parliament.exit.toRPC(false).bigToSmall(true);
-    d3.select("#reichstag").datum(data).call(parliament);
+    d3.select("#commons").datum(data).call(parliament);
 
     var lines = d3.linegraph(false, false,
             Q.parties,
@@ -441,9 +441,9 @@ if (d3 && window) {
 }
 !}
 
-= Reichstag composition
+= Commons composition
 
-{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+{!<svg id="commons" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!}
 {!<tr><td><div class="box" style='background-color:#D26E28; outline: 2px; outline-style: solid;'> </div></td><td>!} **CCF:** {!</td><td>!} **[+ ccf_r +]%** {!</td></tr>!}

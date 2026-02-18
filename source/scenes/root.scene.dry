@@ -31,7 +31,7 @@ Q.difficulty = 0;
 Q.historical_mode = 0;
 // old demographics
 Q.old_demographics = 0;
-// use decimals for reichstag seats
+// use decimals for commons seats
 // TODO: not yet implemented
 Q.use_decimals = 0;
 
@@ -178,7 +178,7 @@ Q.pro_republic = 59;
 
 Q.emergency_rule = 0;
 
-// minimum percentage of votes to be represented in the Reichstag
+// minimum percentage of votes to be represented in the Commons
 Q.electoral_threshold = 0;
 // constitutional reform level
 Q.constitutional_reform = 0;
@@ -323,8 +323,8 @@ Q.catholics_nsdap = 0;
 Q.catholics_other = 6;
 
 
-// Current Reichstag composition
-// % of Reichstag in Jan 1928
+// Current Commons composition
+// % of Commons in Jan 1928
 // source: wikipedia
 // note: the RPC figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
@@ -662,5 +662,5 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 It is a dire time for the Dominion of Canada. The Great Depression has begun, and the government of R.B. Bennett is proving itself incapable of dealing with the crisis. The Liberal Party of Mackenzie King is promising reform, but their commitment to capitalism and the status quo is clear. 
 
-The Cooperative Commonwealth Federation (CCF) is the only party offering a real alternative to the old order. However, they are a young and inexperienced party, and they face opposition not only from the right-wing parties but also from within their own ranks, torn between the Agrarian vision of George Williams and the Labour oriented J. S. Woodsworth and M. J. Coldwell. The CCF's success in the upcoming election will depend on their ability to navigate these challenges and present a compelling vision for the future of Canada.
+The Cooperative Commonwealth Federation (CCF) is the only party offering a real alternative to the old order. However, we are a young and inexperienced party, and we face opposition not only from the right-wing parties but also from within our own ranks, torn between the Agrarian vision of George Williams and the Labour oriented J. S. Woodsworth and M. J. Coldwell. The CCF's success in the upcoming election will depend on your ability to navigate these challenges and present a compelling vision for the future of Canada.
 

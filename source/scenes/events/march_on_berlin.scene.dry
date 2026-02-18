@@ -110,12 +110,12 @@ go-to: new_elections_woodsworth if monarch == "JS_Woodsworth"; new_elections_geo
 @new_elections_woodsworth
 go-to: new_elections_woodsworth_2 if nsdap_normalized + scp_normalized >= 0.5 and far_right_coalition < 50; new_elections_woodsworth_reject if (nsdap_normalized + scp_normalized < 0.5 or far_right_coalition >= 50)
 
-# if the Nazis + SCP have a current majority in the Reichstag, then they'll instantly launch the coup.
+# if the Nazis + SCP have a current majority in the Commons, then they'll instantly launch the coup.
 
 
 @new_elections_woodsworth_reject
 
-The fascists reject our offer of free and fair elections. They are demanding that Monarch [+ monarch +] dismisses the current government and appoints Hitler prime_minister. [? if far_right_coalition >= 50 : They claim that since the far-right coalition has the majority in the Reichstag, they are constitutionally justified in appointing the chanellor. Unfortunately, their argument is not exactly wrong. ?]
+The fascists reject our offer of free and fair elections. They are demanding that Monarch [+ monarch +] dismisses the current government and appoints Hitler prime_minister. [? if far_right_coalition >= 50 : They claim that since the far-right coalition has the majority in the Commons, they are constitutionally justified in appointing the chanellor. Unfortunately, their argument is not exactly wrong. ?]
 
 - @woodsworth_appoints_hitler
 - @fight

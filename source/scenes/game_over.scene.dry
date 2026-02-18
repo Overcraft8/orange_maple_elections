@@ -70,7 +70,7 @@ for (var c of Q.classes) {
 }
 
 // Die Rote Fahne - join the CP in the May Day march.
-// Mehrheitspartei - form an CCF majority government in the Reichstag.
+// Mehrheitspartei - form an CCF majority government in the Commons.
 // Panik im Mittelstand - have over 50% of New Middle Class support.
 if (Q.new_middle_ccf_normalized && Q.new_middle_ccf_normalized >= 50) {
     this.achieve('panik_im_mittelstand');

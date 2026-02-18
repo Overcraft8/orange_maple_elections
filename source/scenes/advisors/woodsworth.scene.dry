@@ -18,7 +18,7 @@ JS_Woodsworth [? if ccf_prussia = 1 : is ?][? if ccf_prussia = 0 : was ?] the Mi
 
 @coalition
 title: Negotiating with the Coalition
-subtitle: JS_Woodsworth can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Reichstag.
+subtitle: JS_Woodsworth can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Commons.
 choose-if: advisor_action_timer <= 0 and (ccf_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not ccf_prussia : The CCF does not control the Prussian government. ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if ccf_in_government = 1 and coalition_dissent > 0; rpc_relation += 6; lpc_relation += 6; cpc_relation += 2; cpc_relation += 3 if in_grand_coalition

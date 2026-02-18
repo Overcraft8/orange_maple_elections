@@ -8,7 +8,7 @@ view-if: panzerkreuzer_b_seen = 0 and year = 1931 and month >= 2 and (ccf_in_gov
 
 = Panzerkreuzer B
 
-The Navy is demanding the construction of another new battlecruiser. [? if panzerkreuzer_funded: The previous battlecruiser had been funded, and has already been launched. Another ship would futher progress Canada's rearmament. ?][? if not panzerkreuzer_funded: The previous battlecruiser requested by the Navy was not funded, thanks to us. The military remains bitter, but nevertheless they are still pursuing their rearmament plan, and must seek funding from the Reichstag. ?]
+The Navy is demanding the construction of another new battlecruiser. [? if panzerkreuzer_funded: The previous battlecruiser had been funded, and has already been launched. Another ship would futher progress Canada's rearmament. ?][? if not panzerkreuzer_funded: The previous battlecruiser requested by the Navy was not funded, thanks to us. The military remains bitter, but nevertheless they are still pursuing their rearmament plan, and must seek funding from the Commons. ?]
 
 Much of our party is deeply opposed to rearmament, while the center and right parties are united in support. What will we do?
 
@@ -33,14 +33,14 @@ Our vote against the battlecruiser is unpopular among the right-wing parties[? i
 @abstain
 on-arrival: cpc_relation -= 5; rpc_relation -= 3; left_dissent += 5; labor_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; cp_relation -= 3
 
-The center-right parties are critical of our decision to abstain, and the pressure from our left flank is not entirely assuaged. Despite our abstention, the vote in the Reichstag passes, with all parties in favor except the CCF and CP. The ship will be built.
+The center-right parties are critical of our decision to abstain, and the pressure from our left flank is not entirely assuaged. Despite our abstention, the vote in the Commons passes, with all parties in favor except the CCF and CP. The ship will be built.
 
 [? if panzerkreuzer_funded : Given the construction of the previous battlecruiser, this seemed to be a foregone conclusion, and the reaction is muted. ?]
 
 @built
 on-arrival: panzerkreuzer_b_funded = 1
 
-Prime Minister [+ prime_minister +] brings the matter to a full Reichstag vote, which passes with all parties in favor except the CCF and CP. The ship will be built.
+Prime Minister [+ prime_minister +] brings the matter to a full Commons vote, which passes with all parties in favor except the CCF and CP. The ship will be built.
 
 @not_built
 on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0

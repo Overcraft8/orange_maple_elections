@@ -9,7 +9,7 @@ tags: event
 
 = Schleicher's Schemes
 
-Prime Minister Kurt von Schleicher claims to have a plan to save Canada, and he has reached out to the Social Democrats with vague promises. He claims that in order to govern, the Reichstag must be temporarily suspended to prevent the Nazis and Communists from disrupting government, in effect giving him and George V dictatorial powers. In the meantime, he is enacting a public works program and job creation plan, which he claims will stabilize the economy, 
+Prime Minister Kurt von Schleicher claims to have a plan to save Canada, and he has reached out to the Social Democrats with vague promises. He claims that in order to govern, the Commons must be temporarily suspended to prevent the Nazis and Communists from disrupting government, in effect giving him and George V dictatorial powers. In the meantime, he is enacting a public works program and job creation plan, which he claims will stabilize the economy, 
 
 [? if works_program <= 0: The trade unions are somewhat favorable to Schleicher's plan, as they see a commonality between Schleicher's economic plan and the ADGB's WTB-plan for debt-funded job creation. However, the rest of our party is vehemently against Schleicher. ?]
 
@@ -23,7 +23,7 @@ Rumors are that Schleicher is also reaching out to the Nazis with similar promis
 
 @accept
 title: Accept Schleicher's schemes.
-subtitle: We will support the suspension of the Reichstag.
+subtitle: We will support the suspension of the Commons.
 
 Are we sure that we wish to do this? The vast majority of the party is against this proposal.
 
@@ -32,7 +32,7 @@ Are we sure that we wish to do this? The vast majority of the party is against t
 
 @accept_2
 title: Accept Schleicher's schemes.
-subtitle: We will support the suspension of the Reichstag.
+subtitle: We will support the suspension of the Commons.
 on-arrival: schleicher_support = ccf_r; workers_ccf -= 3; new_middle_ccf -= 3; reformist_dissent += 20; left_dissent += 30; center_dissent += 30; neorevisionist_dissent += 25; pro_republic -= 10; schleicher_support += rpc_r if rpc_relation >= 50; schleicher_support += other_r + cpc_r if cpc_relation >= 30; schleicher_support += scp_r if cp_relation <= 10 and left_strength + agrarian_strength < labor_strength; labor_dissent -= 10
 go-to: schleicher_success if schleicher_support >= 50; schleicher_failed if schleicher_support < 50
 
@@ -48,15 +48,15 @@ call: set_next_election_time
 
 # hack to set next election time
 
-The scheme has succeeded - there is a majority in the Reichstag backing Schleicher. New elections have been tentatively set for [+ next_parl_election_month : month +] [+ next_parl_election_year +].
+The scheme has succeeded - there is a majority in the Commons backing Schleicher. New elections have been tentatively set for [+ next_parl_election_month : month +] [+ next_parl_election_year +].
 
 @schleicher_failed
 
-Unfortunately, the coalition supporting the dissolution of the Reichstag does not constitute a majority. There will be elections as scheduled.
+Unfortunately, the coalition supporting the dissolution of the Commons does not constitute a majority. There will be elections as scheduled.
 
 @reject
 title: Reject Schleicher's schemes.
-subtitle: The Reichstag will continue to meet.
+subtitle: The Commons will continue to meet.
 on-arrival: labor_dissent += 10 if works_program = 0
 
 In the end, there is no uptake for Schleicher's schemes by any political party.

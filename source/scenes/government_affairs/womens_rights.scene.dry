@@ -53,7 +53,7 @@ go-to: liberalize_fail if progressive_coalition < 50; liberalize_success if prog
 @liberalize_fail
 on-arrival: rpc_relation -= 5; coalition_dissent += 1; workers_ccf += 3*(1-dissent); catholics_ccf -= 5;
 
-Unfortunately, our proposal is voted down in the Reichstag, with the Catholic RPC party (our long-time partners) speaking in particularly vehement opposition, and some of our own members breaking party discipline. The activists, feeling demoralized from this attempt, have decided to bide their time.
+Unfortunately, our proposal is voted down in the Commons, with the Catholic RPC party (our long-time partners) speaking in particularly vehement opposition, and some of our own members breaking party discipline. The activists, feeling demoralized from this attempt, have decided to bide their time.
 
 @liberalize_success
 on-arrival: abortion_rights += 1; womens_rights += 1; coalition_dissent += 1; rpc_relation -= 8; catholics_ccf -= 10; cpc_relation -= 5; workers_ccf += 3*(1-dissent); new_middle_ccf += 3*(1-dissent); workers_rpc += 3; new_middle_rpc += 3; old_middle_rpc += 3; old_middle_scp += 3; rural_scp += 3; workers_nsdap -= 3; new_middle_nsdap -= 3; old_middle_nsdap -= 2; rural_nsdap -= 2; unemployed_nsdap -= 2; unemployed_rpc += 3; unemployed_ccf += 3*(1-dissent)
