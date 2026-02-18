@@ -47,7 +47,7 @@ Commons composition:
 # 1928: 5, 1930: 4 (as DstP)
 {!<span class="tooltip-text" title="Liberal Party">!}[? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]{!</span>!}: [+ lpc_r +]%
 # 1928: 9, 1930: 5
-{!<span class="tooltip-text" title="Conservative Party>!}[? if not cpc_name: CPC?][? if cpc_name != 0 : [+ cpc_name +]?]{!</span>!}: [+ cpc_r +]%
+{!<span class="tooltip-text" title="Conservative Party">!}[? if not cpc_name: CPC?][? if cpc_name != 0 : [+ cpc_name +]?]{!</span>!}: [+ cpc_r +]%
 # 1928: 14, 1930: 7
 {!<span class="tooltip-text" title="Social Credit Party">!}[? if not scp_name: SCP?][? if scp_name != 0 : [+ scp_name +]?]{!</span>!}: [+ scp_r +]%
 # 1928: 3, 1930: 18
@@ -75,15 +75,15 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="RPC Party">!}[? if not rpc_name: RPC?][? if rpc_name != 0 : [+ rpc_name +]?]{!</span>!}: [+ rpc_relation : relationships +]
+{!<span class="tooltip-text" title="Reconstruction Party">!}[? if not rpc_name: RPC?][? if rpc_name != 0 : [+ rpc_name +]?]{!</span>!}: [+ rpc_relation : relationships +]
 
-{!<span class="tooltip-text" title="Canadian Democratic Party">!}[? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]{!</span>!}: [+ lpc_relation : relationships +]
+{!<span class="tooltip-text" title="Liberal Party">!}[? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]{!</span>!}: [+ lpc_relation : relationships +]
 
-{!<span class="tooltip-text" title="Canadian People's Party">!}[? if not cpc_name: CPC?][? if cpc_name != 0 : [+ cpc_name +]?]{!</span>!}: [+ cpc_relation : relationships +]
+{!<span class="tooltip-text" title="Conservative Party">!}[? if not cpc_name: CPC?][? if cpc_name != 0 : [+ cpc_name +]?]{!</span>!}: [+ cpc_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Canada">!}[? if not cp_name: CP?][? if cp_name != 0 : [+ cp_name +]?]{!</span>!}: [+ cp_relation : relationships +]
+{!<span class="tooltip-text" title="Communist Party">!}[? if not cp_name: CP?][? if cp_name != 0 : [+ cp_name +]?]{!</span>!}: [+ cp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Canadian National People's Party">!}[? if not scp_name: SCP?][? if scp_name != 0 : [+ scp_name +]?]{!</span>!}: [+ scp_relation : relationships +]
+{!<span class="tooltip-text" title="Social Credit Party">!}[? if not scp_name: SCP?][? if scp_name != 0 : [+ scp_name +]?]{!</span>!}: [+ scp_relation : relationships +]
 
 {!<span class="tooltip-text" title="National-Socialist Canadian Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
 
@@ -91,7 +91,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the CP.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Agrarian wing is a mix between reform and revolution.">RPC</span>!} strength: [+ agrarian_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="The Agrarian wing is a mix between reform and revolution.">Agrarian</span>!} strength: [+ agrarian_strength : strength +], dissent: [+ center_dissent : dissent +]
 
 {!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
