@@ -111,7 +111,7 @@ Q.NSDAP_relation = 0;
 
 Q.cp_leader = "Tim Buck";
 // alternative is the Conciliators as party leader
-Q.ccf_party_leader = "JS_Woodsworth";
+Q.ccf_party_leader = "J.S. Woodsworth";
 Q.cp_party_leader = "Tim Buck";
 Q.cpc_leader = "R. B. Bennett";
 Q.lpc_leader = "Mackenzie King";
@@ -413,7 +413,7 @@ Q.interior_minister = 'von Keudell';
 Q.interior_minister_party = 'SCP';
 Q.justice_minister = 'Hergt';
 Q.justice_minister_party = 'SCP';
-Q.labor_minister = 'JS_Woodsworths';
+Q.labor_minister = 'JS_Woodsworth';
 Q.labor_minister_party = 'RPC';
 Q.reichswehr_minister = 'Groener';
 Q.reichswehr_minister_party = 'I';

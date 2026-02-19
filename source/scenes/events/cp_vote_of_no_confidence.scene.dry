@@ -25,7 +25,7 @@ How do we assuage the CP?
 - @let_it_happen: Never mind. Let the vote happen.
 
 @tim_buck
-choose-if: monarch == "JS_Woodsworth"
+choose-if: monarch == "J. S. Woodsworth"
 subtitle: This would be pretext for a right-wing coup.
 unavailable-subtitle: [? if monarch == "George V" : Monarch George V would never allow this. ?]
 on-arrival: prime_minister = "Tim Buck"; prime_minister_party = "CP"
@@ -63,7 +63,7 @@ We could try to boot the CP from our governing coalition, and form a new governm
 @let_it_happen
 view-if: not constructive_vonc
 on-arrival: cp_relation -= 8; workers_cp -= 5; workers_ccf -= 8; unemployed_ccf -= 6
-go-to: let_it_happen_woodsworth if monarch = "JS_Woodsworth"; let_it_happen_georgev if monarch = "George V"
+go-to: let_it_happen_woodsworth if monarch = "J. S. Woodsworth"; let_it_happen_georgev if monarch = "George V"
 
 # if JS_Woodsworth is monarch, we are now a caretaker government. If George V is monarch, Brüning is a caretaker government
 

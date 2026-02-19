@@ -28,7 +28,7 @@ on-arrival: cpc_relation -= 8; rpc_relation -= 5; pacifism += 1; nationalism -= 
 go-to: vote_no_prime_minister if prime_minister_party = "CCF"; vote_no_pass if prime_minister_party != "CCF"
 
 @vote_no_prime_minister
-go-to: woodsworth if prime_minister = "JS_Woodsworth"; douglas if prime_minister = "Douglas"
+go-to: woodsworth if prime_minister = "J. S. Woodsworth"; douglas if prime_minister = "Douglas"
 
 @woodsworth
 on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; workers_ccf += 5*(1-dissent);

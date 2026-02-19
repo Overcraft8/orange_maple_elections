@@ -23,7 +23,7 @@ Prime Minister Tommy Douglas has died while in office. He will be greatly missed
 - @wirth_prime_minister: Joseph Wirth of the RPC Party should be Prime Minister.
 
 @woodsworth_prime_minister
-on-arrival: prime_minister = "JS_Woodsworth"; prime_minister_party = "CCF"; rpc_relation -= 5; cpc_relation -= 5
+on-arrival: prime_minister = "J. S. Woodsworth"; prime_minister_party = "CCF"; rpc_relation -= 5; cpc_relation -= 5
 subtitle: The RPC Party is worried about having so much power in one man.
 
 Our coalition partners are reluctant to accept the new Prime Minister, but they do not make loud objections.

@@ -103,7 +103,7 @@ on-arrival: {!
 Q.reform_support = Q.ccf_normalized + Q.lpc_normalized + Q.cp_normalized;
 if (Q.rpc_relation > 49 && (Q.monarch == "George V" || Q.monarch == "Eckener")) {
     Q.reform_support += Q.rpc_normalized;
-} else if (Q.monarch == "JS_Woodsworth") {
+} else if (Q.monarch == "J. S. Woodsworth") {
     Q.reform_support += Q.rpc_normalized - 0.03;
 }
 !}
@@ -111,14 +111,14 @@ view-if: monarchial_powers = 0
 
 The wide-ranging monarchial powers promised by the constitution are a potential gateway to authoritarianism. Thus, we can support reforms that limit the powers of the monarch, ending his power to unilaterally terminate an elected government and to remove state governments.
 
-The CP is in favor of this reform, having been victims of the *Reichsexekution* in the past (when CP-supported state governments in Thuringia and Saxony were removed). The democrats of the [+ lpc_name +] also support this. [? if monarch == "George V": However, the opposition from conservatives is vehement, as they see a reduction in monarchial powers as disrespectful to George V. ?] [? if rpc_relation <= 49 and monarch == "George V" : Thus, the RPC Party has been influenced to oppose these reforms. ?] [? if rpc_relation > 49 and monarch == "George V" : Despite this, the RPC Party supports the proposed reform. ?] [? if monarch == "JS_Woodsworth" : The RPC Party supports this reform. ?]
+The CP is in favor of this reform, having been victims of the *Reichsexekution* in the past (when CP-supported state governments in Thuringia and Saxony were removed). The democrats of the [+ lpc_name +] also support this. [? if monarch == "George V": However, the opposition from conservatives is vehement, as they see a reduction in monarchial powers as disrespectful to George V. ?] [? if rpc_relation <= 49 and monarch == "George V" : Thus, the RPC Party has been influenced to oppose these reforms. ?] [? if rpc_relation > 49 and monarch == "George V" : Despite this, the RPC Party supports the proposed reform. ?] [? if monarch == "J. S. Woodsworth" : The RPC Party supports this reform. ?]
 
 - @monarchial_powers_2: Call a constitutional referendum to pass the reform!
 - @reforms_menu: See other reform options.
 
 @monarchial_powers_2
 choose-if: reform_support >= pass_threshold
-unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if rpc_relation <= 49 and monarch != "JS_Woodsworth" : The RPC Party does not trust us enough to support this policy. ?]
+unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if rpc_relation <= 49 and monarch != "J. S. Woodsworth" : The RPC Party does not trust us enough to support this policy. ?]
 on-arrival: constitutional_reform += 1; monarchial_powers = 1
 achievement: verfassungsreform
 
