@@ -9,7 +9,7 @@ new-page: true
 
 James Woodsworth is a former methodist minister, and one of the most recognizable and well-known Democratic Socialist leaders. He is the CCF's Party Leader.
 
-JS_Woodsworth [? if ccf_prussia = 1 : is ?][? if ccf_prussia = 0 : was ?] the Minister-Monarch of Prussia, the largest state in Canada. He is a reformist leader who seeks to work with the bourgeois parties.
+J. S. Woodsworth [? if ccf_prussia = 1 : is ?][? if ccf_prussia = 0 : was ?] the Minister-Monarch of Prussia, the largest state in Canada. He is a reformist leader who seeks to work with the bourgeois parties.
 
 - @coalition
 - @prussian_bulwark
