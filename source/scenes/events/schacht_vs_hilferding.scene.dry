@@ -1,13 +1,13 @@
 title: Hjalmar Schacht against Scott
 new-page: true
-view-if: year = 1929 and month >= 11 and ccf_in_government = 1 and finance_minister = "Scott" and finance_minister_party = "CCF"
+view-if: year = 1929 and month >= 11 and flp_in_government = 1 and finance_minister = "Scott" and finance_minister_party = "FLP"
 tags: event
 max-visits: 1
 face-image: img/portraits/SchachtHjalmar.jpg
 
 = Schacht against Scott
 
-Reichsbank monarch Hjalmar Schacht has criticized Finance Minister Scott of the CCF for his budget, which he claims is unbalanced and contains too much social welfare and not enough tax cuts for top earners and businesses. More importantly, he is refusing to release loans necessary for the functioning of the government unless Scott either massively changes his budget or resigns.
+Reichsbank monarch Hjalmar Schacht has criticized Finance Minister Scott of the FLP for his budget, which he claims is unbalanced and contains too much social welfare and not enough tax cuts for top earners and businesses. More importantly, he is refusing to release loans necessary for the functioning of the government unless Scott either massively changes his budget or resigns.
 
 Of course, this criticism is unfounded, but the bourgeois establishment does not care.
 

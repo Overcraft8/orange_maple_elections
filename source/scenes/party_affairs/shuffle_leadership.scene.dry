@@ -331,7 +331,7 @@ view-if: n_advisors < 3
 
 @add_scott
 title: Frank Scott
-subtitle: Frank Scott is a founding member of the LSR, the CCF's de facto intellectual organization. He is an expert on constitutional law. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+subtitle: Frank Scott is a founding member of the LSR, the FLP's de facto intellectual organization. He is an expert on constitutional law. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
 is-card: true
 card-image: img/portraits/ScottFrank.jpg
 tags: center_advisor
@@ -343,7 +343,7 @@ Frank Scott is now an advisor.
 
 @add_coldwell
 title: Major James Coldwell
-subtitle: Major James Coldwell is a former school teacher and long-time party organizer. He was Leader of the provincial CCF affiliate in Saskatchewan, the Farmer-Labour Group, while it was official opposition. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
+subtitle: Major James Coldwell is a former school teacher and long-time party organizer. He was Leader of the provincial FLP affiliate in Saskatchewan, the Farmer-Labour Group, while it was official opposition. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
 is-card: true
 card-image: img/portraits/ColdwellRudolf.jpg
 tags: center_advisor
@@ -382,7 +382,7 @@ Robert Gardiner is now an advisor.
 
 @add_macinnis
 title: Angus MacInnis
-subtitle: Angus MacInnis is a trade unionist. He was one of the ILP MPs who helped form first the Ginger Group and later the CCF. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
+subtitle: Angus MacInnis is a trade unionist. He was one of the ILP MPs who helped form first the Ginger Group and later the FLP. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
 is-card: true
 card-image: img/portraits/MacInnisAngus.jpg
 tags: reformist_advisor
@@ -394,7 +394,7 @@ Angus MacInnis is now an advisor.
 
 @add_woodsworth
 title: J. S. Woodsworth
-subtitle: James Woodsworth is a former methodist minister, and one of the most recognizable and well-known Democratic Socialist leaders. He is the CCF's Party Leader. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
+subtitle: James Woodsworth is a former methodist minister, and one of the most recognizable and well-known Democratic Socialist leaders. He is the FLP's Party Leader. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
 is-card: true
 card-image: img/portraits/WoodsworthJS.jpg
 tags: reformist_advisor
@@ -418,7 +418,7 @@ Agnes Macphail is now an advisor.
 
 @add_connell
 title: Robert Connell
-subtitle: Robert Connell is the BC CCF Party leader. A moderate, he is part of the LSR. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
+subtitle: Robert Connell is the BC FLP Party leader. A moderate, he is part of the LSR. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
 is-card: true
 card-image: img/portraits/ConnellRobert.jpg
 view-if: connell_advisor = 0 and n_advisors < 3
@@ -458,7 +458,7 @@ Laura Jamieson is now an advisor.
 
 @add_winch
 title: Ernest Winch
-subtitle: Ernest Winch is a left CCF who has supported other Leftist parties in the past. He is known for serving as President of the Vancouver Trade and Labour Council. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the CP, Against Toleration ?]
+subtitle: Ernest Winch is a left FLP who has supported other Leftist parties in the past. He is known for serving as President of the Vancouver Trade and Labour Council. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the CP, Against Toleration ?]
 is-card: true
 card-image: img/portraits/WinchErnest.jpg
 view-if: winch_advisor = 0 and n_advisors < 3 and left_split = 0
@@ -482,7 +482,7 @@ William Irvine is now an advisor.
 
 @add_nielsen
 title: Dorise Nielsen
-subtitle: Dorise Nielsen is a left CCF and campaign manager. (Joined 1934) {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
+subtitle: Dorise Nielsen is a left FLP and campaign manager. (Joined 1934) {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
 is-card: true
 card-image: img/portraits/NielsenDorise.png
 view-if: nielsen_advisor = 0 and n_advisors < 3 and left_split = 0
@@ -498,7 +498,7 @@ Dorise Nielsen is now an advisor.
 
 @add_heaps
 title: Albert Heaps
-subtitle: Albert Heaps is one of the leaders of the 1919 Winnipeg General Strike. He is a founding member of the Ginger Group and the CCF. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis ?]
+subtitle: Albert Heaps is one of the leaders of the 1919 Winnipeg General Strike. He is a founding member of the Ginger Group and the FLP. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis ?]
 is-card: true
 card-image: img/portraits/HeapsAA.jpg
 tags: labor_advisor
@@ -522,7 +522,7 @@ Clarence Gillis is now an advisor.
 
 @add_noseworthy
 title: Joseph Noseworthy
-subtitle: Joseph Noseworthy is a teacher and moderate CCF. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights ?]
+subtitle: Joseph Noseworthy is a teacher and moderate FLP. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights ?]
 is-card: true
 card-image: img/portraits/NoseworthyJoseph.jpg
 tags: labor_advisor

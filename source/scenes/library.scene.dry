@@ -27,12 +27,12 @@ The Dominion of Canada is a parliamentary constitutional monarchy with a ceremon
 
 The House of Commons is elected using a first-past-the-post system, with the plurality candidate in each electoral district (colloquially called ridings) winning. A majority of the Commons then selects the Prime Minister. The Cabinet is selected by the Prime Minister and are responsible for government. A majority vote-of-no-confidence, including Federal Budget proposals can remove the current government.
 
-Canada is divided into a number of provinces, each of which have their own governments with some responsibilities. By far the largest and most important states are Ontario and Quebec. The CCF is most popular in the Western provinces. 
+Canada is divided into a number of provinces, each of which have their own governments with some responsibilities. By far the largest and most important states are Ontario and Quebec. The FLP is most popular in the Western provinces. 
 
 @Canadian_timeline
 go-to: menu
 
-= Timeline of the CCF and the Republic (until 1928)
+= Timeline of the FLP and the Republic (until 1928)
 
 **1774**: The Quebec Act is signed into law, protecting French civil law and Catholic rights. 
 
@@ -57,7 +57,7 @@ go-to: menu
 **1930-1932**: Conservative Leader R. B. Bennett becomes Prime Minister on a campaign of "blasting" Canada out of the Depression. Instead, 1.5 million Canadians are left in poverty, 10% of the population. Drought across the Prairies, hailed as the "Dirty Thirties" leads to a rise in Farmer co-ops and support for socialist policies amongst rural voters. Bennett's administration constructs work camps for unemployed single men, paying 20 cents a day.
 
 @curr_gov
-go-to: cabinet if ccf_in_government; menu if not ccf_in_government
+go-to: cabinet if flp_in_government; menu if not flp_in_government
 
 = Current Government
 
@@ -68,7 +68,7 @@ Prime Minister: [+ prime_minister +] ([+ prime_minister_party +])
 Commons composition:
 
 # 1928: 30, 1930: 25, 1932: 22
-CCF: [+ ccf_r +]%
+FLP: [+ flp_r +]%
 [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
 RPC: [+ rpc_r +]%
@@ -85,12 +85,12 @@ NSDAP: [+ nsdap_r +]%
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
-CCF position: [? if ccf_toleration : toleration ?][? if ccf_in_government : in government - ?][? if ccf_toleration == 0 and ccf_in_government == 0 and ccf_caretaker == 0 : opposition ?][? if ccf_caretaker : caretaker government ?]
-[? if in_weimar_coalition and ccf_in_government: Weimar Coalition ?][? if in_grand_coalition and ccf_in_government: Grand Coalition ?][? if in_popular_front and ccf_in_government: Popular Front ?][? if in_left_front and ccf_in_government: Left Front ?][? if in_ccf_majority and ccf_in_government: CCF majority ?][? if in_minority_government and ccf_in_government: minority government ?][? if in_emergency_government and ccf_in_government: emergency government ?]
+FLP position: [? if flp_toleration : toleration ?][? if flp_in_government : in government - ?][? if flp_toleration == 0 and flp_in_government == 0 and flp_caretaker == 0 : opposition ?][? if flp_caretaker : caretaker government ?]
+[? if in_weimar_coalition and flp_in_government: Weimar Coalition ?][? if in_grand_coalition and flp_in_government: Grand Coalition ?][? if in_popular_front and flp_in_government: Popular Front ?][? if in_left_front and flp_in_government: Left Front ?][? if in_flp_majority and flp_in_government: FLP majority ?][? if in_minority_government and flp_in_government: minority government ?][? if in_emergency_government and flp_in_government: emergency government ?]
 
-[? if ccf_in_government and not in_ccf_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+[? if flp_in_government and not in_flp_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
-[? if ccf_in_government and (in_left_front or in_popular_front): CP coalition dissent: [+ cp_coalition_dissent : coalition_dissent +] ?]
+[? if flp_in_government and (in_left_front or in_popular_front): CP coalition dissent: [+ cp_coalition_dissent : coalition_dissent +] ?]
 
 @cabinet
 go-to: menu
@@ -119,7 +119,7 @@ go-to: menu
 
 **Demographic Groups**
 
-**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the CCF or CP. They make up 40-50% of the population.
+**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the FLP or CP. They make up 40-50% of the population.
 
 **Old Mittelstand**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the far right. 10-15% of the population.
 
@@ -129,7 +129,7 @@ go-to: menu
 
 **Catholics** are the largest religious minority, at about 30% of the population. They disproportionately support the RPC Party (or the Bavarian People's Party in Bavaria).
 
-**Jews** account for between 0.5% to 1% of the population, and tend to support liberal parties, mostly the LPC, although substantial numbers support the CCF or CP.
+**Jews** account for between 0.5% to 1% of the population, and tend to support liberal parties, mostly the LPC, although substantial numbers support the FLP or CP.
 
 
 @public_opinion
@@ -157,7 +157,7 @@ go-to: menu
 
 **Projected election results** (if the election were to be held now):
 
-CCF: [+ ccf_votes +]%
+FLP: [+ flp_votes +]%
 
 [? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
 
@@ -181,22 +181,22 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: CCF: [+ workers_ccf_display +]%, RPC: [+ workers_rpc_display +]%, CP: [+ workers_cp_display +]%, [+ lpc_name +]: [+ workers_lpc_display +]%, CPC: [+ workers_cpc_display +]%; SCP: [+ workers_scp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: FLP: [+ workers_flp_display +]%, RPC: [+ workers_rpc_display +]%, CP: [+ workers_cp_display +]%, [+ lpc_name +]: [+ workers_lpc_display +]%, CPC: [+ workers_cpc_display +]%; SCP: [+ workers_scp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: CCF: [+ new_middle_ccf_display +]%, RPC: [+ new_middle_rpc_display +]%, CP: [+ new_middle_cp_display +]%, [+ lpc_name +]: [+ new_middle_lpc_display +]%, CPC: [+ new_middle_cpc_display +]%; SCP: [+ new_middle_scp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: FLP: [+ new_middle_flp_display +]%, RPC: [+ new_middle_rpc_display +]%, CP: [+ new_middle_cp_display +]%, [+ lpc_name +]: [+ new_middle_lpc_display +]%, CPC: [+ new_middle_cpc_display +]%; SCP: [+ new_middle_scp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: CCF: [+ old_middle_ccf_display +]%, RPC: [+ old_middle_rpc_display +]%, CP: [+ old_middle_cp_display +]%, [+ lpc_name +]: [+ old_middle_lpc_display +]%, CPC: [+ old_middle_cpc_display +]%; SCP: [+ old_middle_scp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: FLP: [+ old_middle_flp_display +]%, RPC: [+ old_middle_rpc_display +]%, CP: [+ old_middle_cp_display +]%, [+ lpc_name +]: [+ old_middle_lpc_display +]%, CPC: [+ old_middle_cpc_display +]%; SCP: [+ old_middle_scp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: CCF: [+ rural_ccf_display +]%, RPC: [+ rural_rpc_display +]%, CP: [+ rural_cp_display +]%, [+ lpc_name +]: [+ rural_lpc_display +]%, CPC: [+ rural_cpc_display +]%; SCP: [+ rural_scp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: FLP: [+ rural_flp_display +]%, RPC: [+ rural_rpc_display +]%, CP: [+ rural_cp_display +]%, [+ lpc_name +]: [+ rural_lpc_display +]%, CPC: [+ rural_cpc_display +]%; SCP: [+ rural_scp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: CCF: [+ unemployed_ccf_display +]%, RPC: [+ unemployed_rpc_display +]%, CP: [+ unemployed_cp_display +]%, [+ lpc_name +]: [+ unemployed_lpc_display +]%, CPC: [+ unemployed_cpc_display +]%; SCP: [+ unemployed_scp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: FLP: [+ unemployed_flp_display +]%, RPC: [+ unemployed_rpc_display +]%, CP: [+ unemployed_cp_display +]%, [+ lpc_name +]: [+ unemployed_lpc_display +]%, CPC: [+ unemployed_cpc_display +]%; SCP: [+ unemployed_scp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: CCF: [+ catholics_ccf_display +]%, RPC: [+ catholics_rpc_display +]%, CP: [+ catholics_cp_display +]%, [+ lpc_name +]: [+ catholics_lpc_display +]%, CPC: [+ catholics_cpc_display +]%; SCP: [+ catholics_scp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: FLP: [+ catholics_flp_display +]%, RPC: [+ catholics_rpc_display +]%, CP: [+ catholics_cp_display +]%, [+ lpc_name +]: [+ catholics_lpc_display +]%, CPC: [+ catholics_cpc_display +]%; SCP: [+ catholics_scp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 @parties
 go-to: menu
 
-**CCF** - *Co-operative Commonwealth Federation* - this is us. We are a multi-faceted socialist party, home to reformist populists, radical labour members, and social gospelers. We are the foremost representative of those struck down by the capitalist system. 
+**FLP** - *Farmer-Labour Group* - this is us. We are a multi-faceted socialist party, home to reformist populists, radical labour members, and social gospelers. We are the foremost representative of those struck down by the capitalist system. 
 
 **RPC** - *Reconstruction Party*  - An offshoot of the Conservatives, the RPC is a center-right party that supports moderate economic reform and increased social spending, but within the confines of capitalism. 
 
@@ -219,7 +219,7 @@ Current relations: [+ scp_relation : relationships +]
 
 Current relations: [+ cp_relation : relationships +]
 
-[? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Canada) - a party recently formed in a split from the CCF, the SAPD is essentially an agglomeration of various left-wing splinter groups between the CCF and CP. ?]
+[? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Canada) - a party recently formed in a split from the FLP, the SAPD is essentially an agglomeration of various left-wing splinter groups between the FLP and CP. ?]
 
 **NSDAP** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist Canadian Worker's Party, or Nazis) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
 
@@ -276,13 +276,13 @@ Loyalty: [+ prussian_police_loyalty : loyalty +]
 @factions
 go-to: neorevisionists if neorevisionism > 0; menu if neorevisionism <= 0
 
-**Internal factions of the CCF**
+**Internal factions of the FLP**
 
 Overall dissent: [+ dissent_percent : dissent +]
 
 **Left**
 
-Many leftists are former members of the UCCF (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the CP, and some support extraparliamentary action.
+Many leftists are former members of the UFLP (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the CP, and some support extraparliamentary action.
 
 Strength: [+ left_strength : strength +]
 
@@ -290,7 +290,7 @@ Dissent: [+ left_dissent : dissent +]
 
 **Agrarians**
 
-Agrarians in the CCF are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Frank Scott. They seek a middle course between reform and revolution, while defending the democratic state.
+Agrarians in the FLP are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Frank Scott. They seek a middle course between reform and revolution, while defending the democratic state.
 
 Strength: [+ agrarian_strength : strength +]
 
@@ -298,7 +298,7 @@ Dissent: [+ center_dissent : dissent +]
 
 **Labor**
 
-Many CCF members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
+Many FLP members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
 
 Strength: [+ labor_strength : strength +]
 
@@ -306,7 +306,7 @@ Dissent: [+ labor_dissent : dissent +]
 
 **Reformists**
 
-Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if ccf_prussia : They are dominant in the state government of Prussia. ?]
+Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if flp_prussia : They are dominant in the state government of Prussia. ?]
 
 Strength: [+ reformist_strength : strength +]
 
@@ -334,7 +334,7 @@ data = [
         "id": "cp",
         "legend": "CP",
         "name": "CP",
-        "seats": Q.cp_r*5,
+        "seats": Q.cp_r / 2,
     }];
 if (Q.sapd_formed && Q.sapd_r) {
     data.push({
@@ -346,10 +346,10 @@ if (Q.sapd_formed && Q.sapd_r) {
 }
 data = data.concat([
     {
-        "id": "ccf",
-        "legend": "CCF",
-        "name": "CCF",
-        "seats": Q.ccf_r / 2,
+        "id": "flp",
+        "legend": "FLP",
+        "name": "FLP",
+        "seats": Q.flp_r / 2,
     },
     {
         "id": "lpc",
@@ -406,8 +406,8 @@ if (d3 && window) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'ccf': '#D26E28', 'cp': '#8B0000', 'lpc': '#BE0028', 'rpc': '#E7DB73', 'cpc': '#0055A5', 'scp': '#50E23D', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'ccf': 'CCF', 'cp': 'CP', 'lpc': Q.lpc_name, 'rpc': 'RPC', 'cpc': 'CPC', 'scp': 'SCP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'flp': '#D26E28', 'cp': '#8B0000', 'lpc': '#BE0028', 'rpc': '#E7DB73', 'cpc': '#0055A5', 'scp': '#50E23D', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'flp': 'FLP', 'cp': 'CP', 'lpc': Q.lpc_name, 'rpc': 'RPC', 'cpc': 'CPC', 'scp': 'SCP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     if (Q.election_records.length > 0) {
@@ -419,8 +419,8 @@ if (d3 && window) {
     if (!Q.historical_mode || Q.game_over) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'ccf': '#D26E28', 'cp': '#8B0000', 'lpc': '#BE0028', 'rpc': '#E7DB73', 'cpc': '#0055A5', 'scp': '#50E23D', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'ccf': 'CCF', 'cp': 'CP', 'lpc': Q.lpc_name, 'rpc': 'RPC', 'cpc': 'CPC', 'scp': 'SCP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'flp': '#D26E28', 'cp': '#8B0000', 'lpc': '#BE0028', 'rpc': '#E7DB73', 'cpc': '#0055A5', 'scp': '#50E23D', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'flp': 'FLP', 'cp': 'CP', 'lpc': Q.lpc_name, 'rpc': 'RPC', 'cpc': 'CPC', 'scp': 'SCP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -442,7 +442,7 @@ if (d3 && window) {
 {!<svg id="commons" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!}
-{!<tr><td><div class="box" style='background-color:#D26E28; outline: 2px; outline-style: solid;'> </div></td><td>!} **CCF:** {!</td><td>!} **[+ ccf_r +]%** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D26E28; outline: 2px; outline-style: solid;'> </div></td><td>!} **FLP:** {!</td><td>!} **[+ flp_r +]%** {!</td></tr>!}
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div></td> <td> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td></tr>!} ?]
 

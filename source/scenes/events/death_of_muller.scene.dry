@@ -16,27 +16,27 @@ on-arrival: douglas_died_in_office = 1
 
 Prime Minister Tommy Douglas has died while in office. He will be greatly missed. But now, we must select a new Prime Minister.
 
-- @woodsworth_prime_minister: J. S. Woodsworth (CCF) for Prime Minister.
-- @coldwell_prime_minister: Major James Coldwell (CCF) for Prime Minister.
-- @gardiner_prime_minister: Robert Gardiner (CCF) for Prime Minister.
+- @woodsworth_prime_minister: J. S. Woodsworth (FLP) for Prime Minister.
+- @coldwell_prime_minister: Major James Coldwell (FLP) for Prime Minister.
+- @gardiner_prime_minister: Robert Gardiner (FLP) for Prime Minister.
 - @bruning_prime_minister: Let Heinrich Bruning of the RPC Party become Prime Minister.
 - @wirth_prime_minister: Joseph Wirth of the RPC Party should be Prime Minister.
 
 @woodsworth_prime_minister
-on-arrival: prime_minister = "J. S. Woodsworth"; prime_minister_party = "CCF"; rpc_relation -= 5; cpc_relation -= 5
+on-arrival: prime_minister = "J. S. Woodsworth"; prime_minister_party = "FLP"; rpc_relation -= 5; cpc_relation -= 5
 subtitle: The RPC Party is worried about having so much power in one man.
 
 Our coalition partners are reluctant to accept the new Prime Minister, but they do not make loud objections.
 
 
 @coldwell_prime_minister
-on-arrival: prime_minister = "Coldwell"; prime_minister_party = "CCF"; rpc_relation -= 3; cpc_relation -= 3
+on-arrival: prime_minister = "Coldwell"; prime_minister_party = "FLP"; rpc_relation -= 3; cpc_relation -= 3
 subtitle: He is a good organizer, but is he also a good prime_minister?
 
 Our coalition partners are reluctant to accept the new Prime Minister, but they do not make loud objections.
 
 @gardiner_prime_minister
-on-arrival: prime_minister = "Gardiner"; prime_minister_party = "CCF"; rpc_relation -= 5; cpc_relation -= 5; cp_relation += 1
+on-arrival: prime_minister = "Gardiner"; prime_minister_party = "FLP"; rpc_relation -= 5; cpc_relation -= 5; cp_relation += 1
 subtitle: The RPC Party is worried about his left-leaning tendencies.
 
 Our coalition partners are reluctant to accept the new Prime Minister, but they do not make loud objections.
@@ -57,4 +57,4 @@ Our coalition partners accept Joseph Wirth of the RPC Party as the new Prime Min
 
 @not_pm
 
-Herman Douglas, one of the CCF's long-time leaders, has died. He will be greatly missed.
+Herman Douglas, one of the FLP's long-time leaders, has died. He will be greatly missed.

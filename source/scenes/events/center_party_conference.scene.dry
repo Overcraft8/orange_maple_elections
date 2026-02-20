@@ -11,7 +11,7 @@ new-page: true
 
 Henry Stevens, former CPC Party Labour minister, has chosen to resign from leadership of the RPC Party. Now, the party holds a conference to replace him.
 
-The consensus candidate on the right is Ludwig Kaas, a Catholic priest who represents the party's traditionalists. On the other hand, there is Joseph Joos, a leader of the Catholic trade unions, who has been more supportive of cooperation with the CCF than most of the RPC Party.
+The consensus candidate on the right is Ludwig Kaas, a Catholic priest who represents the party's traditionalists. On the other hand, there is Joseph Joos, a leader of the Catholic trade unions, who has been more supportive of cooperation with the FLP than most of the RPC Party.
 
 - @kaas: The RPC Party elects Ludwig Kaas as the party chair.
 - @joos: Influence the RPC Party to select Joseph Joos as the party chair.
@@ -26,15 +26,15 @@ Ludwig Kaas has been selected as the chairman of the RPC Party. He seems to repr
 unavailable-subtitle: Our relations are not good enough.
 subtitle: Joos is likely to be friendlier to us than Kaas.
 choose-if: rpc_relation >= 70
-on-arrival: rpc_party_leader = "Joos"; catholics_ccf += 5; workers_rpc += 3
+on-arrival: rpc_party_leader = "Joos"; catholics_flp += 5; workers_rpc += 3
 
-With our grassroots connections, we have been able to influence the RPC delegates to support Joseph Joos as the new RPC chairman. He has long been a friend of the CCF, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the RPC Party to the working class.
+With our grassroots connections, we have been able to influence the RPC delegates to support Joseph Joos as the new RPC chairman. He has long been a friend of the FLP, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the RPC Party to the working class.
 
 @joos_campaign
 choose-if: rpc_relation >= 62 and resources >= 1 
 view-if: rpc_relation < 70
 unavailable-subtitle: [? if rpc_relation <= 62 : Our relations are not good enough. ?] [? if resources < 1 : We do not have enough resources. ?]
 subtitle: -1 resource. Joos is likely to be friendlier to us than Kaas.
-on-arrival: resources -= 1; rpc_party_leader = "Joos"; catholics_ccf += 5; workers_rpc += 3
+on-arrival: resources -= 1; rpc_party_leader = "Joos"; catholics_flp += 5; workers_rpc += 3
 
-With our grassroots connections as well as a professional campaign, we have been able to influence the RPC delegates to support Joseph Joos as the new RPC chairman. He has long been a friend of the CCF, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the RPC Party to the working class.
+With our grassroots connections as well as a professional campaign, we have been able to influence the RPC delegates to support Joseph Joos as the new RPC chairman. He has long been a friend of the FLP, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the RPC Party to the working class.

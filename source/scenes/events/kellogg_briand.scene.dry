@@ -18,7 +18,7 @@ An international treaty has been negotiated which promises an end to war. The tr
 - @not_enough
 
 @sign_treaty
-view-if: ccf_in_government and foreign_minister_party = "CCF"
+view-if: flp_in_government and foreign_minister_party = "FLP"
 on-arrival: kellogg_briand_signed = 1
 
 Foreign Minister Gardiner will sign the treaty, of course. The reaction is generally muted; both pacifists and militarists are skeptical about the efficacy of the treaty.

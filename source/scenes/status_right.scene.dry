@@ -30,7 +30,7 @@ Industries: [+ district_industries +]
 
 @party
 
-= Leader of the CCF
+= Leader of the FLP
 
 [? if the_split == 0 : <div><img src="img/portraits/BandaranaikeSirimavo.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">Sirimavo Bandaranaike</p> ?]
 
@@ -45,7 +45,7 @@ Industries: [+ district_industries +]
 <div><img src="img/portraits/BandaranaikeAnura.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
 <p style="text-align: center;margin-bottom: 0;"> [+ slfp_parliament_leader +] </p>
 
-= Internal Factions of the <span style="color: #00008B;">**CCF**</span>
+= Internal Factions of the <span style="color: #00008B;">**FLP**</span>
 
 <span class="tooltip-text" title="A faction consisting of socialists, social democrats, trade unionists, etc." style="color: #A91101;">**Left**</span> 
 Strength: [+ left_strength : strength +] 

@@ -1,7 +1,7 @@
 title: Hitler takes power.
 subtitle: The beginning of the end.
 view-if: prime_minister == "Hitler" or monarch == "Hitler" or prime_minister_party == "NSDAP"
-on-arrival: ccf_in_government = 0
+on-arrival: flp_in_government = 0
 tags: event
 new-page: true
 

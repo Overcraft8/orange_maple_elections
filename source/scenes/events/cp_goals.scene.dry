@@ -1,5 +1,5 @@
 title: The CP presents its list of goals for the coalition.
-view-if: (in_popular_front = 1 or in_left_front = 1) and cp_goals_seen = 0 and cp_coalition_success = 0 and next_election_time - time > 12 and ccf_in_government
+view-if: (in_popular_front = 1 or in_left_front = 1) and cp_goals_seen = 0 and cp_coalition_success = 0 and next_election_time - time > 12 and flp_in_government
 on-arrival: cp_goals_seen = 1; welfare_goal = 1; foreign_goal = 0; agriculture_goal = 1 if agriculture_minister_party != "CP"; economy_goal = 1 if economic_minister_party != "CP"; finance_goal = 1 if finance_minister_party != "CP"; labor_goal = 1 if labor_minister_party != "CP"; reichswehr_goal = 1 if reichswehr_minister_party != "CP"; cp_ultimatum_timer = 12; cp_ultimatum_timer = 16 if cp_relation >= 60; cp_ultimatum_timer = 24 if cp_party_leader == "Conciliators" or constructive_vonc; cp_ultimatum_timer = next_election_time - time - 1 if next_election_time - time <= 12;
 new-page: true
 tags: event

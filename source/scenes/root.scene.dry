@@ -68,17 +68,17 @@ Q.reformists_resigned = 0;
 // have we discovered neorevisionism?
 Q.neorevisionism = 0;
 
-// crisis_urgency indicates how seriously the CCF is taking the economic crisis - scale from 0 to 10.
+// crisis_urgency indicates how seriously the FLP is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
-// nazi_urgency indicates how seriously the CCF takes the nazis - scale from 0 to 10.
+// nazi_urgency indicates how seriously the FLP takes the nazis - scale from 0 to 10.
 Q.nazi_urgency = 0;
-// radicalization indicates how radical the CCF's rhetoric is - scale from 0 to 10.
+// radicalization indicates how radical the FLP's rhetoric is - scale from 0 to 10.
 Q.radicalization = 0;
 // Support for the WTB plan and proto-Keynesian works creation plans in general
 Q.wtb_support = 0;
-// Support for Pacifism within the CCF relative to 1928
+// Support for Pacifism within the FLP relative to 1928
 Q.pacifism = 0;
-// Support for democratic reform within the CCF relative to 1928
+// Support for democratic reform within the FLP relative to 1928
 Q.democratization = 0;
 // Support for a communist coalition relative to 1928
 Q.communist_coalition = 0;
@@ -111,13 +111,13 @@ Q.NSDAP_relation = 0;
 
 Q.cp_leader = "Tim Buck";
 // alternative is the Conciliators as party leader
-Q.ccf_party_leader = "J.S. Woodsworth";
+Q.flp_party_leader = "J.S. Woodsworth";
 Q.cp_party_leader = "Tim Buck";
 Q.cpc_leader = "R. B. Bennett";
 Q.lpc_leader = "Mackenzie King";
 Q.scp_leader = "William Aberhart"; 
 Q.rpc_leader = "Henry Stevens";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the CCF.
+// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the FLP.
 Q.rpc_party_leader = "Henry Stevens";
 Q.nsdap_leader = "Hitler";
 
@@ -127,10 +127,10 @@ Q.georgev_relation = 25;
 Q.georgev_enabled = 0;
 
 
-// Does the CCF lead in Prussia?
-Q.ccf_prussia = 1;
-// Options: ccf, z, scp, papen, nsdap
-Q.prussian_government = "CCF";
+// Does the FLP lead in Prussia?
+Q.flp_prussia = 1;
+// Options: flp, z, scp, papen, nsdap
+Q.prussian_government = "FLP";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
@@ -244,7 +244,7 @@ Q.catholics = 30;
 Q.income = 1600;
 // what about incomes for different classes? rural workers? middle-class workers?
 
-// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BCCFRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
+// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BFLPRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
 Q.inflation = 2.9;
 
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
@@ -261,14 +261,14 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['ccf', 'cp', 'rpc', 'lpc', 'cpc', 'scp', 'nsdap', 'other'];
+Q.parties = ['flp', 'cp', 'rpc', 'lpc', 'cpc', 'scp', 'nsdap', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_ccf = 10;
+Q.workers_flp = 10;
 Q.workers_cp = 3;
 Q.workers_rpc = 3;
 Q.workers_lpc = 35;
@@ -277,7 +277,7 @@ Q.workers_scp = 5;
 Q.workers_nsdap = 0;
 Q.workers_other = 12;
 
-Q.old_middle_ccf = 2;
+Q.old_middle_flp = 2;
 Q.old_middle_cp = 0;
 Q.old_middle_rpc = 5;
 Q.old_middle_lpc= 38;
@@ -286,7 +286,7 @@ Q.old_middle_scp = 15;
 Q.old_middle_nsdap = 0;
 Q.old_middle_other = 2;
 
-Q.new_middle_ccf = 5;
+Q.new_middle_flp = 5;
 Q.new_middle_cp = 1;
 Q.new_middle_rpc = 12;
 Q.new_middle_lpc= 34;
@@ -295,7 +295,7 @@ Q.new_middle_scp = 13;
 Q.new_middle_nsdap = 0;
 Q.new_middle_other = 2;
 
-Q.rural_ccf = 13;
+Q.rural_flp = 13;
 Q.rural_cp = 0;
 Q.rural_rpc = 6;
 Q.rural_lpc= 36;
@@ -304,7 +304,7 @@ Q.rural_scp = 10;
 Q.rural_nsdap = 0;
 Q.rural_other = 3;
 
-Q.unemployed_ccf = 9;
+Q.unemployed_flp = 9;
 Q.unemployed_cp = 4;
 Q.unemployed_rpc = 7;
 Q.unemployed_lpc = 37;
@@ -313,7 +313,7 @@ Q.unemployed_scp = 6;
 Q.unemployed_nsdap = 0;
 Q.unemployed_other = 5;
 
-Q.catholics_ccf = 7;
+Q.catholics_flp = 7;
 Q.catholics_cp = 2;
 Q.catholics_rpc = 10;
 Q.catholics_lpc = 40;
@@ -328,7 +328,7 @@ Q.catholics_other = 6;
 // source: wikipedia
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.ccf_r = 0;
+Q.flp_r = 0;
 Q.cp_r = 0;
 Q.rpc_r = 1;
 Q.lpc_r = 42;
@@ -338,7 +338,7 @@ Q.nsdap_r = 0;
 Q.other_r = 4;
 
 // diff from prev
-Q.old_ccf_r = 26;
+Q.old_flp_r = 26;
 Q.old_cp_r = 9;
 Q.old_rpc_r = 17;
 Q.old_lpc_r = 6;
@@ -354,7 +354,7 @@ Q.old_sapd_r = 0;
 // for changing the LPC's name to the DStP
 Q.lpc_name = "LPC";
 
-// array of objects of the form {date: Date(), ccf: 10, cp: 12, ...} for each election
+// array of objects of the form {date: Date(), flp: 10, cp: 12, ...} for each election
 Q.election_records = [];
 // party support records for every month
 Q.party_support_records = [];
@@ -367,7 +367,7 @@ Q.monarch = "George V";
 // starting prime_minister: R.B. Bennett
 Q.prime_minister = "R.B. Bennett";
 Q.prime_minister_party = 'CPC';
-Q.ccf_in_government = 0;
+Q.flp_in_government = 0;
 Q.rpc_in_government = 0;
 Q.lpc_in_government = 0;
 Q.cpc_in_government = 1;
@@ -376,20 +376,20 @@ Q.cp_in_government = 0;
 Q.nsdap_in_government = 0;
 
 Q.in_right_coalition = 0;
-// Weimar coalition = CCF + RPC + LPC
+// Weimar coalition = FLP + RPC + LPC
 Q.in_weimar_coalition = 0;
-// Grand coalition = CCF + RPC + LPC + CPC
-// also includes the "new grand coalition" of CCF + RPC + LPC + CPC + Others
+// Grand coalition = FLP + RPC + LPC + CPC
+// also includes the "new grand coalition" of FLP + RPC + LPC + CPC + Others
 Q.in_grand_coalition = 0;
-// Popular front = CCF + CP + RPC + LPC
+// Popular front = FLP + CP + RPC + LPC
 Q.in_popular_front = 0;
-// left coalition = CCF + CP + left-splinters
+// left coalition = FLP + CP + left-splinters
 Q.in_left_front = 0;
-// emergency government containing the CCF: only monarch JS_Woodsworth can do this.
+// emergency government containing the FLP: only monarch JS_Woodsworth can do this.
 Q.in_emergency_government = 0;
-Q.in_ccf_majority = 0;
+Q.in_flp_majority = 0;
 Q.grand_coalition_failed = 0;
-// if the CCF is ruling as part of a minority government
+// if the FLP is ruling as part of a minority government
 Q.in_minority_government = 0;
 // national unity governmet
 
@@ -398,8 +398,8 @@ Q.coalition_dissent = 0;
 // dissent from the CP, in a popular front or left front government
 Q.cp_coalition_dissent = 0;
 
-// does the CCF tolerate the government even if it is not a participant?
-Q.ccf_toleration = 0;
+// does the FLP tolerate the government even if it is not a participant?
+Q.flp_toleration = 0;
 
 // is the current government a monarchial minority government?
 Q.minority_government = 0;
@@ -481,10 +481,10 @@ Q.tariffs = 0;
 Q.electoral_threshold = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
-// did the CCF vote against the previous government in a vote of no confidence?
-Q.ccf_no_confidence = 0;
-// was the last CCF government taken down in a vote of no confidence by right-wing coalition partners?
-Q.no_confidence_against_ccf = 0;
+// did the FLP vote against the previous government in a vote of no confidence?
+Q.flp_no_confidence = 0;
+// was the last FLP government taken down in a vote of no confidence by right-wing coalition partners?
+Q.no_confidence_against_flp = 0;
 
 // Advisors/Leaders
 Q.n_advisors = 3;
@@ -653,13 +653,13 @@ this.state.disableSaves = true;
 go-to: 1928_main
 
 @1928_main
-audio: shuffle music/OCanadaColdstreamGuards.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/RPCurSonne_rpcurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3 music/1928_1933/SozialistenMarsch.mp3
+audio: shuffle music/OCanadaColdstreamGuards.mp3 music/COURAGE.mp3 music/CoveredWagonDays.mp3 music/WhiteRiverStomp.mp3 music/CoaxingthePiano.mp3 
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
-
+z
 = 1928
 
-It is a dire time for the Dominion of Canada. The Great Depression has begun, and the government of R.B. Bennett is proving itself incapable of dealing with the crisis. The Liberal Party of Mackenzie King is promising reform, but their commitment to capitalism and the status quo is clear. 
+It is a dire time for Saskatchewan. The Great Depression has begun, and the government of James Gardiner has been unable to effectively address the crisis. The province is in the midst of a severe drought, and many farmers are on the brink of ruin.
 
-The Cooperative Commonwealth Federation (CCF) is the only party offering a real alternative to the old order. However, we are a young and inexperienced party, and we face opposition not only from the right-wing parties but also from within our own ranks, torn between the Agrarian vision of George Williams and the Labour oriented J. S. Woodsworth and M. J. Coldwell. The CCF's success in the upcoming election will depend on your ability to navigate these challenges and present a compelling vision for the future of Canada.
+The Farmer-Labour Group (FLP) is the only party offering a real alternative to the old order. However, we are a young and inexperienced party, and we face opposition not only from the right-wing parties but also from within our own ranks, torn between the Agrarian vision of George Williams and the Labour oriented M. J. Coldwell. The FLP's success in the upcoming election will depend on your ability to navigate these challenges and present a compelling vision for the future of Canada.
 

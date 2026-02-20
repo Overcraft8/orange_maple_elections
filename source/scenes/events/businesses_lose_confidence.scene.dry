@@ -1,9 +1,9 @@
 title: Businesses Lose Confidence
 subtitle: Big businesses are losing confidence in our government's policies.
-view-if: (capital_strike_progress >= 6 and capital_strike_progress < 10 and budget > -5) and ccf_in_government
+view-if: (capital_strike_progress >= 6 and capital_strike_progress < 10 and budget > -5) and flp_in_government
 new-page: true
 max-visits: 1
-on-arrival: unemployed += 2; new_middle_ccf -= 6; old_middle_ccf -= 6; rural_ccf -= 5; workers_ccf -= 4; unemployed_ccf -= 4; cpc_relation -= 6; economic_growth -= 1
+on-arrival: unemployed += 2; new_middle_flp -= 6; old_middle_flp -= 6; rural_flp -= 5; workers_flp -= 4; unemployed_flp -= 4; cpc_relation -= 6; economic_growth -= 1
 tags: event
 
 = Businesses Lose Confidence
@@ -18,12 +18,12 @@ The business community has a variety of suggestions as to how we might improve t
 - @watch: Just watch us. The economy *will* improve.
 
 @taxes
-on-arrival: upper_tax_rates -= 1; budget -= 1; capital_strike_progress -= 1; unemployed -= 1; new_middle_ccf += 5*(1-dissent); old_middle_ccf += 4*(1-dissent); cp_coalition_dissent += 1; cp_relation -= 5; left_dissent += 5
+on-arrival: upper_tax_rates -= 1; budget -= 1; capital_strike_progress -= 1; unemployed -= 1; new_middle_flp += 5*(1-dissent); old_middle_flp += 4*(1-dissent); cp_coalition_dissent += 1; cp_relation -= 5; left_dissent += 5
 
 Cutting taxes improves our relationship with the capitalists.
 
 @welfare
-on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; new_middle_ccf += 4*(1-dissent); old_middle_ccf += 4*(1-dissent); workers_ccf -= 5; unemployed_ccf -= 5; unemployed -= 1; left_dissent += 5; labor_dissent += 5; center_dissent += 5; cp_coalition_dissent += 1; inflation -= 1;
+on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; new_middle_flp += 4*(1-dissent); old_middle_flp += 4*(1-dissent); workers_flp -= 5; unemployed_flp -= 5; unemployed -= 1; left_dissent += 5; labor_dissent += 5; center_dissent += 5; cp_coalition_dissent += 1; inflation -= 1;
 
 Cutting welfare improves our relationship with the capitalists, but it hurts our working-class base.
 

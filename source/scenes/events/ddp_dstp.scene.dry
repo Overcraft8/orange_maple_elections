@@ -12,13 +12,13 @@ Leaders of the Canadian Democratic Party, seeing the party's vote share fall ove
 
 This has led to outcry from the left wing of the party, progressives who would rather not work with antisemites and conservative nationalists.
 
-- @advantage: We can recruit disaffected progressives to the CCF.
+- @advantage: We can recruit disaffected progressives to the FLP.
 - @nothing: This is none of our concern.
 
 @advantage
-on-arrival: new_middle_ccf += 5; peoples_party_support += 1; left_dissent += 5; reformist_strength += 3; neorevisionist_strength += 3; reformist_dissent -= 2; neorevisionist_dissent -= 2
+on-arrival: new_middle_flp += 5; peoples_party_support += 1; left_dissent += 5; reformist_strength += 3; neorevisionist_strength += 3; reformist_dissent -= 2; neorevisionist_dissent -= 2
 
-With turmoil in the LPC, we have an opportunity to recruit middle-class progressives and portions of the liberal intelligensia into our party. The left of the CCF is opposed to this path, seeing it as diluting the class character of the party. On the other hand, revisionists support this course.
+With turmoil in the LPC, we have an opportunity to recruit middle-class progressives and portions of the liberal intelligensia into our party. The left of the FLP is opposed to this path, seeing it as diluting the class character of the party. On the other hand, revisionists support this course.
 
 
 @nothing
