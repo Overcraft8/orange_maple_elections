@@ -16,13 +16,13 @@ function addMonths(date, months) {
 d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataMax, dataMin, additionalMonths) {
     /* params */
     if (!parties) {
-        parties = ['ccf', 'cp', 'lpc', 'rpc', 'cpc', 'scp', 'nsdap', 'other'];
+        parties = ['flp', 'cp', 'lpc', 'rpc', 'cpc', 'scp', 'nsdap', 'other'];
     }
     if (!partyColors) {
-        partyColors = {'ccf': '#D26E28', 'cp': '#8B0000', 'lpc': '#BE0028', 'rpc': '#E7DB73', 'cpc': '#0055A5', 'scp': '#50E23D', 'nsdap': '#954B00', 'other': '#a0a0a0'};
+        partyColors = {'flp': '#D26E28', 'cp': '#8B0000', 'lpc': '#BE0028', 'rpc': '#E7DB73', 'cpc': '#0055A5', 'scp': '#50E23D', 'nsdap': '#954B00', 'other': '#a0a0a0'};
     }
     if (!partyNames) {
-        partyNames = {'ccf': 'CCF', 'cp': 'CP', 'lpc': 'LPC', 'rpc': 'RPC', 'cpc': 'CPC', 'scp': 'SCP', 'nsdap': 'NSDAP', 'other': 'Others'};
+        partyNames = {'flp': 'FLP', 'cp': 'CP', 'lpc': 'LPC', 'rpc': 'RPC', 'cpc': 'CPC', 'scp': 'SCP', 'nsdap': 'NSDAP', 'other': 'Others'};
     }
     if (!additionalMonths) {
         additionalMonths = 10;
@@ -59,9 +59,9 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
 
       // Declare the y (vertical position) scale.
       if (!dataMax) {
-          const maxCCF = d3.max(data, d => d.ccf);
+          const maxFLP = d3.max(data, d => d.flp);
           const maxNSDAP = d3.max(data, d => d.nsdap);
-          dataMax = maxCCF >= maxNSDAP ? maxCCF + 10 : maxNSDAP + 10;
+          dataMax = maxFLP >= maxNSDAP ? maxFLP + 10 : maxNSDAP + 10;
           dataMin = 0;
       }
       const yScale = d3.scaleLinear([dataMin, dataMax], [height - marginBottom, marginTop]);
