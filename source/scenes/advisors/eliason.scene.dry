@@ -1,13 +1,13 @@
-title: Robert Connell
+title: Frank Eliason
 is-pinned-card: true
 tags: advisor, agrarian
-card-image: img/portraits/ConnellRobert.jpg
-view-if: connell_advisor = 1
+card-image: img/portraits/EliasonFrank.jpg
+view-if: eliason_advisor = 1
 new-page: true 
 
-= Robert Connell
+= Frank Eliason
 
-Robert Connell is the BC FLP Party leader. A moderate, he is part of the LSR.
+Frank Eliason is the BC FLP Party leader. A moderate, he is part of the LSR.
 
 - @support_peoples_party
 - @build_peoples_party

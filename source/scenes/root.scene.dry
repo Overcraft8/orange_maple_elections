@@ -572,7 +572,7 @@ Q.douglas_advisor = 1; // Tommy Douglas
 Q.douglas_dead = 0;
 // okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
 Q.crispien_advisor = 0; // Arthur Crispien
-Q.scott_advisor = 1; // Frank Scott
+Q.nicholson_advisor = 1; // Alexander Nicholson
 
 // left advisors
 Q.jamieson_advisor = 0; // Laura Jamieson
@@ -582,20 +582,20 @@ Q.winch_advisor = 0; // Ernest Winch
 Q.seydewitrpc_advisor = 0; // William Irvine
 
 // agrarian alternate advisors
-Q.connell_advisor = 0; // Robert Connell
-Q.gardiner_advisor = 0; // Robert Gardiner
+Q.eliason_advisor = 0; // Frank Eliason
+Q.williams_advisor = 0; // George Hara Williams
 
 // Reformist advisors
-Q.macinnis_advisor = 0; // Angus MacInnis
+Q.brockelbank_advisor = 0; // John Brockelbank
 Q.woodsworth_advisor = 0; // JS_Woodsworth
-Q.juchaczrpc_advisor = 0; // Agnes Macphail
+Q.juchaczrpc_advisor = 0; // Louise Lucas
 Q.wright_advisor = 0; // Percy Wright
 
 // Labor advisors
 Q.heaps_advisor = 0; // Albert Heaps
-Q.gillis_advisor = 0; // Clarence Gillis
+Q.phelps_advisor = 0; // Joe Phelps
 Q.forsey_advisor = 0; // Eugene Forsey (post-1930)
-Q.noseworthy_advisor = 0; // Joseph Noseworthy
+Q.carlyle_advisor = 0; // Carlyle King
 
 // Revisionist advisors
 Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
@@ -659,7 +659,7 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1928
 
-It is a dire time for Saskatchewan. The Great Depression has begun, and the government of James Gardiner has been unable to effectively address the crisis. The province is in the midst of a severe drought, and many farmers are on the brink of ruin.
+It is a dire time for Saskatchewan. The Great Depression has begun, and the government of James Williams has been unable to effectively address the crisis. The province is in the midst of a severe drought, and many farmers are on the brink of ruin.
 
 The Farmer-Labour Group (FLP) is the only party offering a real alternative to the old order. However, we are a young and inexperienced party, and we face opposition not only from the right-wing parties but also from within our own ranks, torn between the Agrarian vision of George Williams and the Labour oriented M. J. Coldwell. The FLP's success in the upcoming election will depend on your ability to navigate these challenges and present a compelling vision for the future of Canada.
 

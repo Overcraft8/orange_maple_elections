@@ -38,7 +38,7 @@ Barring that, the RPC and [+ lpc_name +] are planning to run separate candidates
 As for the FLP, we could support a joint Weimar Coalition candidate or run our own.
 [? if woodsworth_campaign : J. S. Woodsworth is tired. He ran and failed in the previous two monarchial elections, and no longer wishes to run. His wife is ill enough that he wishes to stay by her side. ?][? if woodsworth_campaign = 0 and not flp_prussia: J. S. Woodsworth is tired. After being deposed in Prussia, he has largely retired from politics, and is devoting his time to caring for his dying wife. ?][? if woodsworth_campaign = 0 and flp_prussia : J. S. Woodsworth is tired. He does not wish to run, but he is willing to be convinced that he is needed at this moment. His wife is terminally ill, and he does not want more responsibilities. ?]
 Kurt Schumacher is an ambitious rising star in the party, and would be all too willing to run. He was a hero in the Great War, but his relatively young age might be relevant.
-[? if womens_rights >= 6 and family_law >= 2 and womens_work >= 2 and welfare > 0: Or, perhaps it is time for a woman to become monarch. Canada and the FLP have been leading on women's rights for years, and it is only fitting that we should elect the world's first female monarch. Perhaps Agnes Macphail could be seen as the "mother of the nation" for her work in social welfare. However, her divorce 28 years ago might make it difficult for the Catholics to support her. ?]
+[? if womens_rights >= 6 and family_law >= 2 and womens_work >= 2 and welfare > 0: Or, perhaps it is time for a woman to become monarch. Canada and the FLP have been leading on women's rights for years, and it is only fitting that we should elect the world's first female monarch. Perhaps Louise Lucas could be seen as the "mother of the nation" for her work in social welfare. However, her divorce 28 years ago might make it difficult for the Catholics to support her. ?]
 
 [? if monarchial_powers >= 1 and pro_republic >= 60 and pacifism >= 3: Since Canada has been largely democratized and monarchial powers reduced, we can also support another non-traditional political figure, someone from the cultural, scientific, or literary spheres. They will perhaps be the symbol of a new Canada that has moved beyond its past. ?]
 # if JS_Woodsworth ran last time: he can only run if he controls Prussia. Otherwise, it's Kurt Schumacher.
@@ -46,7 +46,7 @@ Kurt Schumacher is an ambitious rising star in the party, and would be all too w
 # options: 
 # - JS_Woodsworth (only if flp_prussia)
 # - Kurt Schumacher
-# - Agnes Macphail (The mother of the nation, only available if women's rights is full)
+# - Louise Lucas (The mother of the nation, only available if women's rights is full)
 
 @candidate_menu
 
@@ -57,7 +57,7 @@ Kurt Schumacher is an ambitious rising star in the party, and would be all too w
 - @munzenberg_r1: Support Willi Münzenberg of the CP.
 - @woodsworth_r1: Support J. S. Woodsworth.
 - @schumacher_r1: Support Kurt Schumacher.
-- @macphail_r1: Support Agnes Macphail.
+- @lucas_r1: Support Louise Lucas.
 - @cultural_figure: Support a nonpartisan cultural figure?
 
 @eckener_r1
@@ -134,15 +134,15 @@ go-to: r1_menu
 We have nominated Kurt Schumacher to be our monarchial candidate.
 
 
-@macphail_r1
+@lucas_r1
 subtitle: -2 resources.
 unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?]
 view-if: womens_rights >= 6 and family_law >= 2 and womens_work >= 2 and welfare > 0
 choose-if: resources >= 2
-on-arrival: flp_candidate = "Macphail"; resources -= 2; is_unity_candidate = 0
+on-arrival: flp_candidate = "Lucas"; resources -= 2; is_unity_candidate = 0
 go-to: r1_menu
 
-We have nominated Agnes Macphail as our monarchial candidate, the first woman ever to be nominated for this position!
+We have nominated Louise Lucas as our monarchial candidate, the first woman ever to be nominated for this position!
 
 @cultural_figure
 view-if: monarchial_powers >= 1 and pro_republic >= 60 and pacifism >= 3
@@ -231,10 +231,10 @@ We implore the RPC Party to support [+ flp_candidate +] as a unity candidate aga
 title: Convince the RPC Party to support [+ flp_candidate +].
 choose-if: flp_votes >= rpc_votes
 unavailable-subtitle: [? if flp_votes < rpc_votes: The RPC knows that they are more popular than us; they do not see a reason to support our candidate. ?]
-view-if: (flp_candidate = "J. S. Woodsworth" or flp_candidate = "Schumacher" or flp_candidate = "Macphail" or is_cultural_candidate) and rpc_candidate != flp_candidate
+view-if: (flp_candidate = "J. S. Woodsworth" or flp_candidate = "Schumacher" or flp_candidate = "Lucas" or is_cultural_candidate) and rpc_candidate != flp_candidate
 on-arrival: {!
 Q.rpc_support_woodsworth = 0;
-if (Q.flp_candidate == "Macphail") {
+if (Q.flp_candidate == "Lucas") {
     if (Q.rpc_relation >= 60 || (Q.rpc_relation > 40 && Q.rpc_party_leader == "Joos")) {
         Q.rpc_support_woodsworth = 1;
     } else if (Q.rpc_relation <= 40) {
@@ -260,7 +260,7 @@ We implore the RPC Party to support [+ flp_candidate +]. We attempt to convince 
 @rpc_failed
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
-Unfortunately, the RPC Party is not convinced. [? if flp_candidate = "Macphail" : The Catholics are not impressed with Agnes Macphail. This is in part because she is a woman, in part because she had a divorce. ?]
+Unfortunately, the RPC Party is not convinced. [? if flp_candidate = "Lucas" : The Catholics are not impressed with Louise Lucas. This is in part because she is a woman, in part because she had a divorce. ?]
 
 @rpc_success
 on-arrival: rpc_candidate = flp_candidate; Seldte_bonus += 2.5 if rpc_relation < 40
@@ -302,7 +302,7 @@ max-visits: 1
 
 @convince_lpc_flp
 title: Convince the [+ lpc_name +] to support [+ flp_candidate +].
-view-if: (flp_candidate = "J. S. Woodsworth" or flp_candidate = "Schumacher" or flp_candidate = "Macphail"or is_cultural_candidate) and lpc_candidate != flp_candidate
+view-if: (flp_candidate = "J. S. Woodsworth" or flp_candidate = "Schumacher" or flp_candidate = "Lucas"or is_cultural_candidate) and lpc_candidate != flp_candidate
 on-arrival: lpc_candidate = flp_candidate if lpc_relation >= 40
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
@@ -312,7 +312,7 @@ max-visits: 1
 
 @convince_cp_flp
 title: Convince the CP to support [+ flp_candidate +].
-view-if: (flp_candidate = "J. S. Woodsworth" or flp_candidate = "Schumacher" or flp_candidate = "Macphail" or is_cultural_candidate) and cp_candidate != flp_candidate
+view-if: (flp_candidate = "J. S. Woodsworth" or flp_candidate = "Schumacher" or flp_candidate = "Lucas" or is_cultural_candidate) and cp_candidate != flp_candidate
 choose-if: flp_votes >= cp_votes
 unavailable-subtitle: The CP knows that they are more popular than us; they do not see a reason to support our candidate.
 max-visits: 1
@@ -346,8 +346,8 @@ The CP now endorses [+ flp_candidate +] in the monarchial election! We ask them 
 @convince_cpc_flp
 title: Convince the CPC to support [+ flp_candidate +].
 unavailable-subtitle: The CPC is not willing to support our candidate.
-view-if: flp_candidate = "J. S. Woodsworth" or flp_candidate = "Schumacher" or flp_candidate = "Macphail" or is_cultural_candidate
-choose-if: (cpc_relation >= 50 and candidate != "Macphail") or (cpc_relation >= 60 and candidate = "Macphail")
+view-if: flp_candidate = "J. S. Woodsworth" or flp_candidate = "Schumacher" or flp_candidate = "Lucas" or is_cultural_candidate
+choose-if: (cpc_relation >= 50 and candidate != "Lucas") or (cpc_relation >= 60 and candidate = "Lucas")
 on-arrival: cpc_candidate = flp_candidate
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
@@ -385,7 +385,7 @@ Tim_Buck: "Tim Buck of the CP",
 Munzenberg: "Willi Münzenberg of the CP",
 JS_Woodsworth: "J. S. Woodsworth of the FLP",
 Schumacher: "Kurt Schumacher of the FLP",
-Macphail: "Agnes Macphail of the FLP",
+Lucas: "Louise Lucas of the FLP",
 Einstein: "Albert Einstein, scientist",
 Mann: "Heinrich Mann, writer",
 Ossietzky: "Carl von Ossietzky, journalist"
@@ -453,7 +453,7 @@ Election results:
 
 [? if JS_Woodsworth_running : JS_Woodsworth - [+ JS_Woodsworth_votes_disp +]% ?]
 [? if Schumacher_running : Schumacher - [+ Schumacher_votes_disp +]% ?]
-[? if Macphail_running : Macphail - [+ Macphail_votes_disp +]% ?]
+[? if Lucas_running : Lucas - [+ Lucas_votes_disp +]% ?]
 # cultural candidates
 [? if Einstein_running : Einstein - [+ Einstein_votes_disp +]% ?]
 [? if Ossietzky_running : Ossietzky - [+ Ossietzky_votes_disp +]% ?]
@@ -543,10 +543,10 @@ view-if: flp_candidate != "Tim Buck" and cp_candidate = "Tim Buck"
 choose-if: cp_relation >= 50 and left_strength > reformist_strength
 unavailable-subtitle: [? if cp_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
 on-arrival: reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_flp -= 5; workers_flp -= 3; cp_relation += 10; communist_coalition += 2; rpc_relation -= 15; cpc_relation -= 15; lpc_relation -= 12
-on-departure: rpc_candidate = "Adenauer" if rpc_candidate = "J. S. Woodsworth" or rpc_candidate = "Schumacher" or rpc_candidate = "Macphail"; lpc_candidate = rpc_candidate if lpc_candidate = "J. S. Woodsworth" or lpc_candidate = "Schumacher" or lpc_candidate = "Macphail"; cpc_candidate = rpc_candidate if cpc_candidate = "J. S. Woodsworth" or cpc_candidate = "Schumacher" or cpc_candidate = "Macphail"; flp_candidate = "Tim Buck"; 
+on-departure: rpc_candidate = "Adenauer" if rpc_candidate = "J. S. Woodsworth" or rpc_candidate = "Schumacher" or rpc_candidate = "Lucas"; lpc_candidate = rpc_candidate if lpc_candidate = "J. S. Woodsworth" or lpc_candidate = "Schumacher" or lpc_candidate = "Lucas"; cpc_candidate = rpc_candidate if cpc_candidate = "J. S. Woodsworth" or cpc_candidate = "Schumacher" or cpc_candidate = "Lucas"; flp_candidate = "Tim Buck"; 
 max-visits: 1
 
-We have switched our endorsement to Ernst Tim Buck of the CP. [? if rpc_candidate = flp_candidate : Our former allies in the RPC Party see this as a betrayal. ?][? if rpc_candidate = "J. S. Woodsworth" or rpc_candidate = "Schumacher" or rpc_candidate = "Macphail": Now, they will support Konrad Adenauer once again. ?][? if lpc_candidate = "J. S. Woodsworth" or lpc_candidate = "Schumacher" or lpc_candidate = "Macphail": The [+ lpc_name +] will switch their support to the RPC Party candidate. ?][? if cpc_candidate = "J. S. Woodsworth" or cpc_candidate = "Schumacher" or cpc_candidate = "Macphail": The CPC will also support the RPC Party candidate. ?]
+We have switched our endorsement to Ernst Tim Buck of the CP. [? if rpc_candidate = flp_candidate : Our former allies in the RPC Party see this as a betrayal. ?][? if rpc_candidate = "J. S. Woodsworth" or rpc_candidate = "Schumacher" or rpc_candidate = "Lucas": Now, they will support Konrad Adenauer once again. ?][? if lpc_candidate = "J. S. Woodsworth" or lpc_candidate = "Schumacher" or lpc_candidate = "Lucas": The [+ lpc_name +] will switch their support to the RPC Party candidate. ?][? if cpc_candidate = "J. S. Woodsworth" or cpc_candidate = "Schumacher" or cpc_candidate = "Lucas": The CPC will also support the RPC Party candidate. ?]
 
 - @r2_vote: Let the voting begin.
 
@@ -557,10 +557,10 @@ view-if: flp_candidate != "Münzenberg" and cp_candidate = "Münzenberg"
 choose-if: cp_relation >= 50 and left_strength > reformist_strength
 unavailable-subtitle: [? if cp_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
 on-arrival: reformist_dissent += 12; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_flp -= 5; workers_flp -= 3; cp_relation += 10; communist_coalition += 2; rpc_relation -= 12; lpc_relation -= 10; cpc_relation -= 15; 
-on-departure: rpc_candidate = "Adenauer" if rpc_candidate = "J. S. Woodsworth" or rpc_candidate = "Schumacher" or rpc_candidate = "Macphail"; lpc_candidate = rpc_candidate if lpc_candidate = "J. S. Woodsworth" or lpc_candidate = "Schumacher" or lpc_candidate = "Macphail"; cpc_candidate = rpc_candidate if cpc_candidate = "J. S. Woodsworth" or cpc_candidate = "Schumacher" or cpc_candidate = "Macphail"; flp_candidate = "Münzenberg"; 
+on-departure: rpc_candidate = "Adenauer" if rpc_candidate = "J. S. Woodsworth" or rpc_candidate = "Schumacher" or rpc_candidate = "Lucas"; lpc_candidate = rpc_candidate if lpc_candidate = "J. S. Woodsworth" or lpc_candidate = "Schumacher" or lpc_candidate = "Lucas"; cpc_candidate = rpc_candidate if cpc_candidate = "J. S. Woodsworth" or cpc_candidate = "Schumacher" or cpc_candidate = "Lucas"; flp_candidate = "Münzenberg"; 
 max-visits: 1
 
-We have switched our endorsement to Willi Münzenberg of the CP. [? if rpc_candidate = flp_candidate : Our former allies in the RPC Party see this as a betrayal. ?][? if rpc_candidate = "J. S. Woodsworth" or rpc_candidate = "Schumacher" or rpc_candidate = "Macphail": Now, they will support Konrad Adenauer once again. ?][? if lpc_candidate = "J. S. Woodsworth" or lpc_candidate = "Schumacher" or lpc_candidate = "Macphail": The [+ lpc_name +] will switch their support to the RPC Party candidate. ?][? if cpc_candidate = "J. S. Woodsworth" or cpc_candidate = "Schumacher" or cpc_candidate = "Macphail": The CPC will also support the RPC Party candidate. ?]
+We have switched our endorsement to Willi Münzenberg of the CP. [? if rpc_candidate = flp_candidate : Our former allies in the RPC Party see this as a betrayal. ?][? if rpc_candidate = "J. S. Woodsworth" or rpc_candidate = "Schumacher" or rpc_candidate = "Lucas": Now, they will support Konrad Adenauer once again. ?][? if lpc_candidate = "J. S. Woodsworth" or lpc_candidate = "Schumacher" or lpc_candidate = "Lucas": The [+ lpc_name +] will switch their support to the RPC Party candidate. ?][? if cpc_candidate = "J. S. Woodsworth" or cpc_candidate = "Schumacher" or cpc_candidate = "Lucas": The CPC will also support the RPC Party candidate. ?]
 
 - @r2_vote: Let the voting begin.
 
@@ -685,7 +685,7 @@ Despite the Nazi threats, supporters of the FLP and the democratic parties refus
 
 
 @election_end
-go-to: eckener_win if winner = "Eckener"; macphail_win if winner = "Macphail"; bundesrepublik_win if winner = "Schumacher" or winner = "Adenauer"; hitler_victory if winner = "Hitler" or winner = "Göring" or winner = "Goring"; seldte_victory if winner = "Seldte"; munzenberg_victory if winner = "Munzenberg" or winner = "Münzenberg"; tim_buck_victory if winner = "Tim_Buck" or winner = "Tim Buck"; nazis_lose if winner = "J. S. Woodsworth" or winner = "Gessler"; cultural_victory if winner = "Ossietzky" or winner = "Mann"; einstein_victory if winner = "Einstein"
+go-to: eckener_win if winner = "Eckener"; lucas_win if winner = "Lucas"; bundesrepublik_win if winner = "Schumacher" or winner = "Adenauer"; hitler_victory if winner = "Hitler" or winner = "Göring" or winner = "Goring"; seldte_victory if winner = "Seldte"; munzenberg_victory if winner = "Munzenberg" or winner = "Münzenberg"; tim_buck_victory if winner = "Tim_Buck" or winner = "Tim Buck"; nazis_lose if winner = "J. S. Woodsworth" or winner = "Gessler"; cultural_victory if winner = "Ossietzky" or winner = "Mann"; einstein_victory if winner = "Einstein"
 on-arrival: monarch = winner; monarch = "Tim Buck" if monarch == "Tim_Buck"; monarch = "Münzenberg" if monarch = "Munzenberg"; monarch = "Göring" if monarch = "Goring"
 
 The election has been won by [+ winner_desc +].
@@ -718,11 +718,11 @@ achievement: zeppelin_kapitan
 go-to: nazis_lose
 
 
-@macphail_win
+@lucas_win
 achievement: wahlrechts
 go-to: nazis_lose
 
-This is a historic victory - Agnes Macphail is the first woman to be elected monarch in any republic, anywhere in the world.
+This is a historic victory - Louise Lucas is the first woman to be elected monarch in any republic, anywhere in the world.
 
 @einstein_victory
 achievement: republik_der_wissenschaft

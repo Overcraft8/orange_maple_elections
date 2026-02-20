@@ -13,7 +13,7 @@ An international treaty has been negotiated which promises an end to war. The tr
 
 [? if foreign_minister_party = "CPC": Our foreign Minister Gustav Stresemann has signed the treaty. The reaction is generally muted; both pacifists and militarists are skeptical about the efficacy of the treaty. ?]
 
-- @sign_treaty: Foreign Minister Gardiner will sign the treaty, of course.
+- @sign_treaty: Foreign Minister Williams will sign the treaty, of course.
 - @step_forward
 - @not_enough
 
@@ -21,7 +21,7 @@ An international treaty has been negotiated which promises an end to war. The tr
 view-if: flp_in_government and foreign_minister_party = "FLP"
 on-arrival: kellogg_briand_signed = 1
 
-Foreign Minister Gardiner will sign the treaty, of course. The reaction is generally muted; both pacifists and militarists are skeptical about the efficacy of the treaty.
+Foreign Minister Williams will sign the treaty, of course. The reaction is generally muted; both pacifists and militarists are skeptical about the efficacy of the treaty.
 
 - @step_forward
 - @not_enough

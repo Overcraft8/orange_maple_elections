@@ -1,13 +1,13 @@
-title: Joseph Noseworthy
+title: Carlyle King
 is-pinned-card: true
 tags: advisor, labor
-card-image: img/portraits/NoseworthyJoseph.jpg
-view-if: noseworthy_advisor = 1
+card-image: img/portraits/KingCarlyle.jpg
+view-if: carlyle_advisor = 1
 new-page: true 
 
-= Joseph Noseworthy
+= Carlyle King
 
-Joseph Noseworthy is a teacher and moderate FLP.
+Carlyle King is a teacher and moderate FLP.
 
 - @labor_rights_
 - @union_unity
@@ -15,7 +15,7 @@ Joseph Noseworthy is a teacher and moderate FLP.
 
 @labor_rights_
 title: Labor Rights
-subtitle: As Labor Minister, Noseworthy can help set regulations for working conditions.
+subtitle: As Labor Minister, Carlyle can help set regulations for working conditions.
 choose-if: advisor_action_timer <= 0 and flp_in_government and labor_minister_party = "FLP"
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if labor_minister_party != "FLP" : The FLP does not control the Labor Ministry. ?]
 on-arrival: advisor_action_timer = 6; labor_rights_timer -= 10; last_advisor_action = 1

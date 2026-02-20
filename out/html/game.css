@@ -579,7 +579,7 @@ table {
 .mytooltip .mytooltiptext {
   position: fixed;
   z-index: 999999;
-  width: 260px;
+  width: 120px;
   background: #fff4e6;
   color: #3b1f0a;
   text-align: left;

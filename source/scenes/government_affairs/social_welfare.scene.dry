@@ -4,7 +4,7 @@ is-card: true
 tags: govt_affairs, cabinet
 on-arrival: social_welfare_timer = 10; month_actions += 1
 view-if: flp_in_government = 1 and social_welfare_timer = 0
-card-image: img/portraits/MacphailAgnes.jpg
+card-image: img/portraits/LucasLouise.jpg
 
 = Social Welfare Policy
 

@@ -33,14 +33,14 @@ go-to: root
 tags: remove_advisor
 
 
-@remove_scott
-title: Remove Scott
-view-if: scott_advisor = 1
-on-arrival: scott_advisor = 0; center_dissent += 5; n_advisors -= 1
+@remove_nicholson
+title: Remove Nicholson
+view-if: nicholson_advisor = 1
+on-arrival: nicholson_advisor = 0; center_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Scott has been removed as an advisor. The Agrarian faction disapproves.
+Nicholson has been removed as an advisor. The Agrarian faction disapproves.
 
 @remove_coldwell
 title: Remove Coldwell
@@ -61,26 +61,26 @@ go-to: rm_main
 Douglas has been removed as an advisor. The Agrarian faction disapproves.
 
 
-@remove_gardiner
-title: Remove Gardiner
-view-if: gardiner_advisor = 1
+@remove_williams
+title: Remove Williams
+view-if: williams_advisor = 1
 tags: remove_advisor
-on-arrival: gardiner_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: williams_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Gardiner has been removed as an advisor. The Agrarian faction disapproves.
+Williams has been removed as an advisor. The Agrarian faction disapproves.
 
 # reformists
 
 
-@remove_macinnis
-title: Remove MacInnis
-view-if: macinnis_advisor = 1
+@remove_brockelbank
+title: Remove Brockelbank
+view-if: brockelbank_advisor = 1
 tags: remove_advisor
-on-arrival: macinnis_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: brockelbank_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-MacInnis has been removed as an advisor. The Reformist faction disapproves.
+Brockelbank has been removed as an advisor. The Reformist faction disapproves.
 
 @remove_woodsworth
 title: Remove J. S. Woodsworth
@@ -91,23 +91,23 @@ go-to: rm_main
 
 J. S. Woodsworth has been removed as an advisor. The Reformist faction disapproves.
 
-@remove_macphail
-title: Remove Macphail
-view-if: macphail_advisor = 1
+@remove_lucas
+title: Remove Lucas
+view-if: lucas_advisor = 1
 tags: remove_advisor
-on-arrival: macphail_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: lucas_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Macphail has been removed as an advisor. The Reformist faction disapproves.
+Lucas has been removed as an advisor. The Reformist faction disapproves.
 
-@remove_connell
-title: Remove Connell
-view-if: connell_advisor = 1
+@remove_eliason
+title: Remove Eliason
+view-if: eliason_advisor = 1
 tags: remove_advisor
-on-arrival: connell_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: eliason_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Connell has been removed as an advisor. The Reformist faction disapproves.
+Eliason has been removed as an advisor. The Reformist faction disapproves.
 
 
 # labor
@@ -121,23 +121,23 @@ go-to: rm_main
 
 Heaps has been removed as an advisor. The Labor faction disapproves.
 
-@remove_gillis
-title: Remove Gillis
-view-if: gillis_advisor = 1
+@remove_phelps
+title: Remove Phelps
+view-if: phelps_advisor = 1
 tags: remove_advisor
-on-arrival: gillis_advisor = 0; labor_dissent += 5; n_advisors -= 1
+on-arrival: phelps_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Gillis has been removed as an advisor. The Labor faction disapproves.
+Phelps has been removed as an advisor. The Labor faction disapproves.
 
-@remove_noseworthy
-title: Remove Noseworthy
-view-if: noseworthy_advisor = 1
+@remove_carlyle
+title: Remove Carlyle
+view-if: carlyle_advisor = 1
 tags: remove_advisor
-on-arrival: noseworthy_advisor = 0; labor_dissent += 3; n_advisors -= 1
+on-arrival: carlyle_advisor = 0; labor_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Noseworthy has been removed as an advisor. The Labor faction disapproves.
+Carlyle has been removed as an advisor. The Labor faction disapproves.
 
 
 @remove_forsey
@@ -329,17 +329,17 @@ view-if: n_advisors < 3
 
 - #nonfactional_advisor
 
-@add_scott
-title: Frank Scott
-subtitle: Frank Scott is a founding member of the LSR, the FLP's de facto intellectual organization. He is an expert on constitutional law. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+@add_nicholson
+title: Alexander Nicholson
+subtitle: Alexander Nicholson is a founding member of the LSR, the FLP's de facto intellectual organization. He is an expert on constitutional law. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
 is-card: true
-card-image: img/portraits/ScottFrank.jpg
+card-image: img/portraits/NicholsonAlexander.jpg
 tags: center_advisor
-view-if: scott_advisor = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: scott_advisor = 1; n_advisors += 1
+view-if: nicholson_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: nicholson_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Frank Scott is now an advisor.
+Alexander Nicholson is now an advisor.
 
 @add_coldwell
 title: Major James Coldwell
@@ -365,32 +365,32 @@ go-to: advisor_menu
 
 Tommy Douglas is now an advisor.
 
-@add_gardiner
-title: Robert Gardiner
-subtitle: Robert Gardiner is a farmer and long serving UFA MP. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
+@add_williams
+title: George Hara Williams
+subtitle: George Hara Williams is a farmer and long serving UFA MP. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
 is-card: true
-card-image: img/portraits/GardinerRobert.jpg
-view-if: gardiner_advisor = 0 and n_advisors < 3
-on-arrival: gardiner_advisor = 1; n_advisors += 1
+card-image: img/portraits/WilliamsHaraGeorge.jpg
+view-if: williams_advisor = 0 and n_advisors < 3
+on-arrival: williams_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: center_advisor
 
-Robert Gardiner is now an advisor.
+George Hara Williams is now an advisor.
 
 # reformist
 
 
-@add_macinnis
-title: Angus MacInnis
-subtitle: Angus MacInnis is a trade unionist. He was one of the ILP MPs who helped form first the Ginger Group and later the FLP. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
+@add_brockelbank
+title: John Brockelbank
+subtitle: John Brockelbank is a trade unionist. He was one of the ILP MPs who helped form first the Ginger Group and later the FLP. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
 is-card: true
-card-image: img/portraits/MacInnisAngus.jpg
+card-image: img/portraits/BrockelbankJohn.jpg
 tags: reformist_advisor
-view-if: macinnis_advisor = 0 and n_advisors < 3
-on-arrival: macinnis_advisor = 1; n_advisors += 1; reformist_strength += 5
+view-if: brockelbank_advisor = 0 and n_advisors < 3
+on-arrival: brockelbank_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 
-Angus MacInnis is now an advisor.
+John Brockelbank is now an advisor.
 
 @add_woodsworth
 title: J. S. Woodsworth
@@ -404,29 +404,29 @@ go-to: advisor_menu
 
 J. S. Woodsworth is now an advisor.
 
-@add_macphail
-title: Agnes Macphail
-subtitle: Agnes Macphail is the first woman to be elected to the House of Commons. She is a women's rights activist and proponent of peace. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
+@add_lucas
+title: Louise Lucas
+subtitle: Louise Lucas is the first woman to be elected to the House of Commons. She is a women's rights activist and proponent of peace. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
 is-card: true
-card-image: img/portraits/MacphailAgnes.jpg
-view-if: macphail_advisor = 0 and n_advisors < 3
-on-arrival: macphail_advisor = 1; n_advisors += 1; reformist_strength += 5
+card-image: img/portraits/LucasLouise.jpg
+view-if: lucas_advisor = 0 and n_advisors < 3
+on-arrival: lucas_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 tags: reformist_advisor
 
-Agnes Macphail is now an advisor.
+Louise Lucas is now an advisor.
 
-@add_connell
-title: Robert Connell
-subtitle: Robert Connell is the BC FLP Party leader. A moderate, he is part of the LSR. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
+@add_eliason
+title: Frank Eliason
+subtitle: Frank Eliason is the BC FLP Party leader. A moderate, he is part of the LSR. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
 is-card: true
-card-image: img/portraits/ConnellRobert.jpg
-view-if: connell_advisor = 0 and n_advisors < 3
-on-arrival: connell_advisor = 1; n_advisors += 1
+card-image: img/portraits/EliasonFrank.jpg
+view-if: eliason_advisor = 0 and n_advisors < 3
+on-arrival: eliason_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: reformist_advisor
 
-Robert Connell is now an advisor.
+Frank Eliason is now an advisor.
 
 
 
@@ -508,29 +508,29 @@ go-to: advisor_menu
 
 Albert Heaps is now an advisor.
 
-@add_gillis
-title: Clarence Gillis
-subtitle: Clarence Gillis is a rising member of the United Workers of America. (Joined 1938) {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
+@add_phelps
+title: Joe Phelps
+subtitle: Joe Phelps is a rising member of the United Workers of America. (Joined 1938) {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
 is-card: true
-card-image: img/portraits/GillisClarence.jpg
+card-image: img/portraits/PhelpsJoe.jpg
 tags: labor_advisor
-view-if: gillis_advisor = 0 and n_advisors < 3
-on-arrival: gillis_advisor = 1; n_advisors += 1; labor_strength += 5
+view-if: phelps_advisor = 0 and n_advisors < 3
+on-arrival: phelps_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 
-Clarence Gillis is now an advisor.
+Joe Phelps is now an advisor.
 
-@add_noseworthy
-title: Joseph Noseworthy
-subtitle: Joseph Noseworthy is a teacher and moderate FLP. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights ?]
+@add_carlyle
+title: Carlyle King
+subtitle: Carlyle King is a teacher and moderate FLP. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights ?]
 is-card: true
-card-image: img/portraits/NoseworthyJoseph.jpg
+card-image: img/portraits/KingCarlyle.jpg
 tags: labor_advisor
-view-if: noseworthy_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: noseworthy_advisor = 1; n_advisors += 1; labor_strength += 3
+view-if: carlyle_advisor = 0 and n_advisors < 3 and unions_independent = 0
+on-arrival: carlyle_advisor = 1; n_advisors += 1; labor_strength += 3
 go-to: advisor_menu
 
-Joseph Noseworthy is now an advisor.
+Carlyle King is now an advisor.
 
 
 @add_forsey

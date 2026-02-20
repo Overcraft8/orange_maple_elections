@@ -1,13 +1,13 @@
-title: Angus MacInnis
+title: John Brockelbank
 is-pinned-card: true
 tags: advisor, reformist
-card-image: img/portraits/MacInnisAngus.jpg
-view-if: macinnis_advisor = 1
+card-image: img/portraits/BrockelbankJohn.jpg
+view-if: brockelbank_advisor = 1
 new-page: true 
 
-= Angus MacInnis
+= John Brockelbank
 
-Angus MacInnis is a trade unionist. He was one of the ILP MPs who helped form first the Ginger Group and later the FLP.
+John Brockelbank is a trade unionist. He was one of the ILP MPs who helped form first the Ginger Group and later the FLP.
 
 - @prussian_bulwark
 - @police_affairs
@@ -15,7 +15,7 @@ Angus MacInnis is a trade unionist. He was one of the ILP MPs who helped form fi
 
 @prussian_bulwark
 title: Prussian Bulwark
-subtitle: MacInnis has influence over Prussian politics.
+subtitle: Brockelbank has influence over Prussian politics.
 choose-if: advisor_action_timer <= 0 and flp_prussia = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not flp_prussia : The FLP is not in control of Prussia. ?]
 on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_action = 1
