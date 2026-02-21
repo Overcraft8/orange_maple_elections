@@ -12,10 +12,6 @@ this.achieve('game_completed');
 if (Q.monarch == 'JS_Woodsworth' && Q.prime_minister == 'JS_Woodsworth' && Q.flp_prussia) {
     this.achieve('red_tzar_of_prussia');
 }
-// Bürgerkrieg - enter a long civil war.
-if (Q.long_war) {
-    this.achieve('civil_war');
-}
 // Sieg für die Republik - victory for the republic
 if (Q.republic_victory) {
     this.achieve('victory_for_the_republic');
@@ -124,14 +120,12 @@ if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_l
 
 
 @needham_wins
-view-if: (prime_minister == "Needham" or monarch == "Needham") and (total_defeat==1 or civil_war_seen == 0)
+view-if: (prime_minister == "Needham" or monarch == "Needham") and (total_defeat==1)
 title: Adolf Needham is in undisputed control over Canada.
 tags: endings
 go-to: eg_menu
 
 Adolf Needham is in undisputed control over Canada. The FLP, along with all of the democratic forces, have failed.
-
-[? if civil_war_seen == 1 : At the very least, we fought back. Perhaps our resistance will be celebrated in an impossible-to-forsee future. ?]
 
 @war_against_needham
 view-if: (prime_minister == "Needham" or monarch == "Needham") and (long_war == 1)
@@ -142,28 +136,8 @@ go-to: eg_menu
 Adolf Needham has taken power in Canada. However, we have rallied the democratic forces of the country against him, and are fighting back. The outcome of this war is uncertain.
 
 
-
-
 Needham does not yet control Canada. [? if prime_minister == "Papen" : However, Prime Minister Papen's authoritarianism and far-right politics are paving the way for Needham, or someone like him, to take power. ?] [? if prime_minister == "Schleicher" : However, Prime Minister Schleicher's authoritarianism and scheming is paving the way for Needham, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Prussian coup, the far-right appears to be ascendant. ?][? if prime_minister == "Brüning" : However, Prime Minister Brüning's austerity policies and the continuation of the depression are paving the way for Needham, or someone like him, to take power. ?]
 
-
-
-
-@civil_war_won
-title: We have won the civil war.
-view-if: republic_victory == 1
-tags: endings
-go-to: eg_menu
-
-We have won the civil war against the reactionary forces. Canada will be changed forever, but it is too early to know how.
-
-@civil_war_lost
-title: We lost the civil war.
-view-if: total_defeat == 1
-tags: endings
-go-to: eg_menu
-
-We have lost the civil war. At least it was a quick coup, and ended before Canada could be plunged into total war.
 
 @long_war
 title: Canada is gripped by civil war.
@@ -312,7 +286,6 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_eiserne_front : **Eiserne Front** - form the Iron Front. ?]
 
-[? if game_achievement_civil_war : **Bürgerkrieg** - enter a long civil war. ?]
 
 [? if game_achievement_einigkeit : **Einigkeit** - reach the end of the game without a civil war on easy. ?]
 
@@ -419,7 +392,6 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_eiserne_front : **Eiserne Front** - form the Iron Front. ?]
 
-[? if achievement_civil_war : **Bürgerkrieg** - enter a long civil war. ?]
 
 [? if achievement_einigkeit : **Einigkeit** - reach the end of the game without a civil war on easy. ?]
 
@@ -523,8 +495,6 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 = Incomplete Achievements
 
 [? if not achievement_eiserne_front : **Eiserne Front** - form the Iron Front. ?]
-
-[? if not achievement_civil_war : **Bürgerkrieg** - enter a long civil war. ?]
 
 [? if not achievement_einigkeit : **Einigkeit** - reach the end of the game without a civil war on easy. ?]
 

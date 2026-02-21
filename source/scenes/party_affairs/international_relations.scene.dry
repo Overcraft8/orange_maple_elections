@@ -27,15 +27,13 @@ on-arrival: resources -= 1; american_relation += 1; reformist_strength += 5; mod
 We can improve relations with our southern neighbour in the hopes that they will invest in our province and reducing tariffs.
 
 @britain
-subtitle: -1 resources [? if austrian_parliament_seen and not austrian_civil_war_seen: - We will also help the Austrians oppose their dictatorship. ?]
+subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 audio: shuffle music/communist/workers_of_vienna_normalized.mp3
 on-arrival: resources -= 1; britain_relation += 1; 
 
 Britain is Canada's main trading partner. It would be wise to build good relations with the British government and the British Labour Party. 
-
-[? if austrian_parliament_seen and not austrian_civil_war_seen: We are also helping the Austrian Social Democratic Worker's Party build up their resources in preparation for a future struggle, legally and illegally. ?]
 
 
 @scandi

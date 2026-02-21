@@ -366,13 +366,13 @@ go-to: popular_front_success
 view-if: rpc_party_leader == "Joos" and cp_party_leader == "Conciliators"
 on-arrival: flp_in_government = 1; in_popular_front = 1; prime_minister = "Williams"; prime_minister_party = "FLP"; cp_relation += 10; coup_progress += 2; in_left_front = 0; in_weimar_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
 achievement: grosse_volksfront
-go-to: popular_front_civil_war if coup_progress >= 10; popular_front_no_civil_war if coup_progress < 10
+go-to: 
 
 Somehow, the coalition is successfully formed! The conciliatory leadership of the RPC Party and CP helped make the negotiations possible. We still need a prime_minister; the only acceptable choice among the parties was George Hara Williams of the FLP, acceptable to the RPC and CP [? if monarch == "George V" : as well as Monarch George V, albeit extremely reluctantly ?].
 
 @popular_front_success
 on-arrival: flp_in_government = 1; in_popular_front = 1; prime_minister = "Williams"; prime_minister_party = "FLP"; cp_relation += 10; coup_progress += 2; in_left_front = 0; in_weimar_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
-go-to: popular_front_civil_war if coup_progress >= 10; popular_front_no_civil_war if coup_progress < 10
+go-to: popular_front_no_civil_war
 achievement: volksfront
 
 Somehow, surprisingly, the coalition is successfully formed! We still need a prime_minister; the only acceptable choice among the parties was George Hara Williams of the FLP, acceptable to the RPC and CP [? if monarch == "George V" : as well as Monarch George V, albeit extremely reluctantly ?].
@@ -386,17 +386,6 @@ In response to the CP's entrance into the government, the right-wing takes a "wa
 The CP has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" within the Popular Front government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that the Popular Front would inevitably fail, and that our failure would benefit them.
 
 - @ministries: First, we must select our ministries.
-
-
-@popular_front_civil_war
-on-arrival: cp_relation = 80; reichswehr_loyalty += 0.25;
-
-In response to the CP's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and SCPs SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
-
-The RPC manages to diffuse some of the hostility from the Reichswehr and the Stahlhelm, but fail to prevent the outbreak of fighting. We are forced to fight on the same side as the CP, whether we want to or not.
-
-- @civil_war: A civil war, then.
-
 
 
 @scp_majority
@@ -476,7 +465,6 @@ Immediately, [+ prime_minister +] goes to work building a "Soviet Canada": conso
 
 In response to [+ prime_minister +] being appointed Prime Minister, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and SCPs SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop the CP from taking power. We are forced to be on the same side as the CP, whether we want to or not.
 
-- @civil_war
 
 
 @left_coalition_resources
@@ -496,7 +484,7 @@ go-to: left_coalition_success
 
 @left_coalition_success
 on-arrival: flp_in_government = 1; in_left_front = 1; prime_minister = "Williams"; prime_minister_party = "FLP"; coup_progress += 3; capital_strike_progress += 2; in_popular_front = 0; in_grand_coalition = 0; in_weimar_coalition = 0; cp_relation += 10
-go-to: left_coalition_civil_war if coup_progress >= 10; left_coalition_no_civil_war if coup_progress < 10
+go-to: 
 achievement: einheitsfront
 
 Somehow, surprisingly, the left coalition is successfully formed, without appointing Tim Buck as prime_minister. The consensus choice for prime_minister, accepted by the FLP, CP, and Monarch [+ monarch +], is George Hara Williams, who belongs to the agrarian faction of the FLP, but was acceptable to the left due to his previous membership in the left-wing anti-war UFLP.
@@ -515,9 +503,7 @@ Whatever their reasoning is, the FLP has control over the ministries of governme
 @left_coalition_civil_war
 on-arrival: reichswehr_loyalty += 0.1
 
-In response to the CP's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and SCPs SA enter Berlin and begin clashing with our supporters. Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
 
-- @civil_war: A civil war, then.
 
 
 
@@ -816,21 +802,9 @@ on-arrival: prime_minister = "Wirth"; prime_minister_party = "RPC"; flp_in_gover
 
 The RPC Party is pleased that we have appointed [+ prime_minister +] as prime_minister.
 
-- @far_right_coup
+
 - @emergency_no_confidence
 
-
-
-@far_right_coup
-title: The far-right parties immediately launch a military coup against us...
-view-if: scp_majority >= 45
-on-arrival: sh_strength += 150; sa_strength += 150; sh_militancy += 0.05; sa_militancy += 0.05
-
-The far-right parties, seeing that we are willing to deny them government by questionably democratic means, have decided that they can only take power by undemocratic means, and have risen up in force against the sitting government.
-
-Their numbers are bolstered by the many government workers who are against the prospect of a unified Socialist government. Police and soldiers defect to the SA and Stahlhelm.
-
-- @civil_war: It is war.
 
 
 @emergency_no_confidence
