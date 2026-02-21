@@ -59,7 +59,7 @@ Socialism has always stood for science and rationality. Despite the setbacks of 
 title: Fund the Kaiser Wilhelm Society for basic scientific research.
 subtitle: -1 budget
 choose-if: budget >= 1
-on-arrival: budget -= 1; science += 1; kwg_research += 1; economic_growth += 0.3 if economic_growth <= 8; new_middle_flp += 5*(1-dissent); lpc_relation += 5*(1-dissent); unemployed -= 0.2 if unemployed >= 4; west_relation += 1; science_funding += 1
+on-arrival: budget -= 1; science += 1; kwg_research += 1; economic_growth += 0.3 if economic_growth <= 8; new_middle_flp += 5*(1-dissent); lpc_relation += 5*(1-dissent); unemployed -= 0.2 if unemployed >= 4; american_relation += 1; science_funding += 1
 
 The Kaiser Wilhelm Society is one of the most respected scientific research institutions in the world, with physicist Albert Einstein as its most famous employee. Our research program is to provide the Society with additional resources to hire and train scientists and conduct fundamental research, based on the scientists' own interests.
 

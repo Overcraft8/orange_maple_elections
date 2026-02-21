@@ -27,7 +27,7 @@ The left-wing news and literary magazine Weltbühne has been targeted by the nat
 view-if: flp_in_government
 choose-if: flp_in_government and justice_minister_party = "FLP"
 unavailable-subtitle: [? if not flp_in_government : FLP not in government. ?] [? if flp_in_government and justice_minister_party != "FLP": The FLP does not control the Justice Ministry. ?]
-on-arrival: weltbuhne_dropped = 1; cpc_relation -= 4; nationalism -= 3*(1-dissent); coalition_dissent += 1 if in_grand_coalition; reichswehr_loyalty -= 0.1; west_relation += 1; east_relation += 1; coup_progress += 1; reparations_negotiation += 1; pacifism += 1
+on-arrival: weltbuhne_dropped = 1; cpc_relation -= 4; nationalism -= 3*(1-dissent); coalition_dissent += 1 if in_grand_coalition; reichswehr_loyalty -= 0.1; american_relation += 1; britain_relation += 1; coup_progress += 1; reparations_negotiation += 1; pacifism += 1
 
 The Justice Ministry has dropped all persecution of Carl von Ossietzky and Walter Kreiser, the journalist responsible for the offending publication. In fact, some say that the Weltbühne journalists should be feted as heroes.
 
@@ -36,13 +36,13 @@ The Western powers and all countries that feel threatened by Canadian militarism
 
 @let_persecute
 view-if: flp_in_government
-on-arrival: weltbuhne_dropped = 0; cpc_relation += 4; reichswehr_loyalty += 0.05; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; pacifism -= 1; nationalism += 4; left_dissent += 5
+on-arrival: weltbuhne_dropped = 0; cpc_relation += 4; reichswehr_loyalty += 0.05; american_relation -= 1; britain_relation -= 1; reparations_negotiation -= 1; pacifism -= 1; nationalism += 4; left_dissent += 5
 
 The case progresses slowly, given the military secrets involved, and there will be no determination made for a while. The Reichswehr is pleased of our loyalty. However, the affair has made the Western powers suspicious of our resurgent militarism, as well as displeasing the left wing of the party.
 
 @pressure_drop
 view-if: flp_in_government and justice_minister_party != "FLP"
-on-arrival: weltbuhne_dropped = 1; cpc_relation -= 5; nationalism += 3*(1-dissent); coalition_dissent += 1; coalition_dissent += 1 if in_grand_coalition; reichswehr_loyalty -= 0.1; coup_progress += 1; west_relation += 1; east_relation += 1; reparations_negotiation += 1
+on-arrival: weltbuhne_dropped = 1; cpc_relation -= 5; nationalism += 3*(1-dissent); coalition_dissent += 1; coalition_dissent += 1 if in_grand_coalition; reichswehr_loyalty -= 0.1; coup_progress += 1; american_relation += 1; britain_relation += 1; reparations_negotiation += 1
 
 We have pressured the Justice Ministry to drop the case against the Weltbühne, raising tensions with our coalition.
 
@@ -51,6 +51,6 @@ On the other hand, the Reichswehr disapproves of dropping the case.
 
 @nothing
 view-if: not flp_in_government
-on-arrival: weltbuhne_dropped = 0; west_relation -= 1; east_relation -= 1; reparations_negotiation -= 1; pacifism -= 1; nationalism += 4
+on-arrival: weltbuhne_dropped = 0; american_relation -= 1; britain_relation -= 1; reparations_negotiation -= 1; pacifism -= 1; nationalism += 4
 
 The case progresses slowly, given the military secrets involved, and there will be no determination made for a while. However, the affair has made the Western powers suspicious of our resurgent militarism.

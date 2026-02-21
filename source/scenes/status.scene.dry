@@ -81,18 +81,6 @@ Next Parliamentary Election: [+ next_parl_election_month : month +] [+ next_parl
 
 {!<span class="tooltip-text" title="National-Socialist Canadian Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
 
-= Internal Factions of the FLP
-
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the CP.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
-
-{!<span class="tooltip-text" title="The Agrarian wing is a mix between reform and revolution.">Agrarian</span>!} strength: [+ agrarian_strength : strength +], dissent: [+ center_dissent : dissent +]
-
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
-
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
-
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
-
 
 @paramilitaries
 on-arrival: {!
@@ -187,7 +175,11 @@ Support for the Republic: [+ pro_republic_disp +]%
 
 @interior
 
+= Infrastructure
+
 @economy
+
+= Status of the Economy
 
 Inflation: [+ inflation_2 +]%
 
@@ -196,3 +188,5 @@ Inflation: [+ inflation_2 +]%
 Economic growth: [+ economic_growth_2 +]%
 
 @livingstandards
+
+= Living Standards

@@ -111,7 +111,7 @@ Q.NSDAP_relation = 0;
 
 Q.cp_leader = "Tim Buck";
 // alternative is the Conciliators as party leader
-Q.flp_party_leader = "J.S. Woodsworth";
+Q.flp_parliament_leader = "Major James Coldwell";
 Q.cp_party_leader = "Tim Buck";
 Q.cpc_leader = "James Anderson";
 Q.lpc_leader = "Mackenzie King";
@@ -364,8 +364,8 @@ Q.economic_records = [];
 
 // State of the government
 Q.monarch = "George V";
-// starting prime_minister: R.B. Anderson
-Q.prime_minister = "R.B. Anderson";
+// starting prime_minister: James Anderson
+Q.prime_minister = "James Anderson";
 Q.prime_minister_party = 'CPC';
 Q.flp_in_government = 0;
 Q.rpc_in_government = 0;
@@ -438,20 +438,12 @@ Q.judicial_reform = 0;
 Q.bureaucratic_reform = 0;
 Q.military_reform = 0;
 Q.womens_rights = 0;
-// level of welfare relative to 1928 (can go negative)
-Q.welfare = 0;
 // level of support for farmers
 Q.agricultural_policy = 0;
 Q.land_reform = 0;
 // works-creation programs (i.e. WTB-plan) - how much have they implemented?
 Q.works_program = 0;
 Q.wtb_implemented = 0;
-// Relations with the Western countries (France, UK).
-Q.west_relation = 0;
-// Relations with the Eastern countries (Poland, Czechoslovakia)
-Q.east_relation = 0;
-// Relations with the Soviet Union
-Q.soviet_relation = 0;
 // How much have we exposed the secret rearmament programs?
 Q.rearmament_exposed = 0;
 // reparations vs baseline: young plan is -1.
@@ -472,6 +464,32 @@ Q.eu_progress = 0;
 // science/education
 Q.science = 0;
 Q.education_science = 0;
+
+
+
+//                   Living Standards
+// level of welfare relative to 1928 (can go negative)
+Q.welfare = 0;
+// Rural Access to electricity
+Q.rural_electrification = 0;
+// Rural Access to sewage
+Q.rural_sewage = 0;
+
+
+//                 Foreign Relations
+// Relations with the USA
+Q.american_relation = 0;
+// Relations with Britain
+Q.britain_relation = 0;
+// Relations with the Soviet Union
+Q.soviet_relation = 0;
+
+//                  Interior Policies
+// Have we introduced an intraprovincial public transit option?
+Q.public_transit = 0;
+// Have we nationalized the provinces' resources?
+Q.resource_nationalization = 0;
+
 
 // Tax rates relative to 1928 baseline
 Q.lower_tax_rates = 0;
@@ -570,8 +588,6 @@ Q.march_on_berlin_timer = 0;
 Q.coldwell_advisor = 1; // Major James Coldwell
 Q.douglas_advisor = 1; // Tommy Douglas
 Q.douglas_dead = 0;
-// okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
-Q.crispien_advisor = 0; // Arthur Crispien
 Q.nicholson_advisor = 1; // Alexander Nicholson
 
 // left advisors
@@ -658,7 +674,7 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1928
 
-It is a dire time for Saskatchewan. The Great Depression has begun, and the government of James Williams has been unable to effectively address the crisis. The province is in the midst of a severe drought, and many farmers are on the brink of ruin.
+It is a dire time for Saskatchewan. The Great Depression has begun, and the government of James Gardiner has been unable to effectively address the crisis. The province is in the midst of a severe drought, and many farmers are on the brink of ruin.
 
 The Farmer-Labour Group (FLP) is the only party offering a real alternative to the old order. However, we are a young and inexperienced party, and we face opposition not only from the right-wing parties but also from within our own ranks, torn between the Agrarian vision of George Williams and the Labour oriented M. J. Coldwell. The FLP's success in the upcoming election will depend on your ability to navigate these challenges and present a compelling vision for the future of Canada.
 
