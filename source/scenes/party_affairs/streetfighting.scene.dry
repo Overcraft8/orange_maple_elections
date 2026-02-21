@@ -8,7 +8,7 @@ tags: party_affairs; antifascism
 
 = Streetfighting
 
-Battles rage on the streets between the Nazi SA, nationalist Stahlhelm, communist Rotfrontkämpferbund (RFB), and our own Reichsbanner. In some parts of the country, conditions are nearing civil war levels, as dozens of people are killed each month.
+Battles rage on the streets between the SCPs SA, nationalist Stahlhelm, communist Rotfrontkämpferbund (RFB), and our own Reichsbanner. In some parts of the country, conditions are nearing civil war levels, as dozens of people are killed each month.
 
 We must do something to protect the workers against these predations.
 
@@ -25,7 +25,7 @@ view-if: rb_militancy > 0.1 and rb_militancy < 0.5
 on-arrival: rb_militancy += 0.1; sa_strength += 40; rb_strength -= 100; 
 max-visits: 1
 
-Many Reichsbanner members are not ready for actual fighting, and thus quit. However, the remainder are toughened as a result. Our confrontations also provide ample recruiting material for the Nazi SA.
+Many Reichsbanner members are not ready for actual fighting, and thus quit. However, the remainder are toughened as a result. Our confrontations also provide ample recruiting material for the SCPs SA.
 
 @arm_rb
 subtitle: -[+ rb_militarization_cost +] resource

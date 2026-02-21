@@ -73,7 +73,7 @@ achievement: constitutional_coalition
 
 Our negotiations have succeeded, and the RPC Party and CPC have agreed to form a new coalition government with us!
 
-We are now part of a "constitutional coalition" government that includes all parties except the extremists of the CP, SCP, and NSDAP. [+ prime_minister +] will remain as prime_minister. Leftists in our party are skeptical of this arrangement.
+We are now part of a "constitutional coalition" government that includes all parties except the extremists of the CP, SCP, and SCP. [+ prime_minister +] will remain as prime_minister. Leftists in our party are skeptical of this arrangement.
 
 - @election_1928.ministries: Now, we must select our ministries.
 

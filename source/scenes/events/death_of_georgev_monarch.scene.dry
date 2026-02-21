@@ -2,7 +2,7 @@ title: The Death of George V
 subtitle: The Monarch has died...
 new-page: true
 view-if: year = 1934 and month >= 7 and monarch = "George V"
-on-arrival: round = 0; georgev_dead = 1; monarch = "Bumke (acting)"; monarch = "Großmann (acting)" if judicial_reform >= 4; flp_candidate = "Eckener"; cp_candidate = "Tim Buck"; cp_candidate = "Münzenberg" if cp_party_leader = "Conciliators"; rpc_candidate = "Adenauer"; lpc_candidate = "Gessler"; nsdap_candidate = "Hitler"; nsdap_candidate = "Göring" if hitler_deported; scp_candidate = "Seldte"; cpc_candidate = "Gessler"; other_candidate = "Seldte"; is_unity_candidate = 0; sapd_candidate = cp_candidate;
+on-arrival: round = 0; georgev_dead = 1; monarch = "Bumke (acting)"; monarch = "Großmann (acting)" if judicial_reform >= 4; flp_candidate = "Eckener"; cp_candidate = "Tim Buck"; cp_candidate = "Münzenberg" if cp_party_leader = "Conciliators"; rpc_candidate = "Adenauer"; lpc_candidate = "Gessler"; scp_candidate = "Seldte"; cpc_candidate = "Gessler"; other_candidate = "Seldte"; is_unity_candidate = 0; sapd_candidate = cp_candidate;
 max-visits: 1
 face-image: img/George_V.jpg
 tags: event
@@ -22,18 +22,18 @@ New monarchial elections are to be held as soon as possible. The Canadian politi
 @candidates
 go-to: candidate_menu
 
-[? if not hitler_deported : Of course, Adolf Hitler will be running for the Nazis, in his third run. We have kept him out of power so far, but nothing is certain. ?]
-[? if hitler_deported : With Hitler deported, the Nazis will be running Hermann Göring as their candidate. ?]
-This might be the Nazis' last hurrah; the party's internal contradictions are heightening, and it is in desperate shortage of funds.
+[? if not needham_deported : Of course, Adolf Needham will be running for the SCPs, in his third run. We have kept him out of power so far, but nothing is certain. ?]
+[? if needham_deported : With Needham deported, the SCPs will be running Hermann Needham as their candidate. ?]
+This might be the SCPs' last hurrah; the party's internal contradictions are heightening, and it is in desperate shortage of funds.
 
-The SCP will nominate Franz Seldte, leader of the Stahlhelm paramilitary group. He will be endorsed by many of George V's most right-wing supporters. They are working more closely with the Nazis than before, and in the second round, the far-right parties are expected to consolidate into a single anti-republican front.
+The SCP will nominate Franz Seldte, leader of the Stahlhelm paramilitary group. He will be endorsed by many of George V's most right-wing supporters. They are working more closely with the SCPs than before, and in the second round, the far-right parties are expected to consolidate into a single anti-republican front.
 
 [? if cp_party_leader = "Conciliators" : Given the failure of Tim Buck's previous runs for monarch, and his declining stature in the party, the CP will be running Willi Münzenberg, a controversial figure sometimes called the "Red millionaire". He is a media magnate who leads a number of Communist front organizations. ?]
 [? if cp_party_leader != "Conciliators" : This will be Tim Buck's third run for monarch as leader of the CP. Despite his previous electoral defeats, he retains the loyalty of the party as well as Stalin's Soviet Union. ?]
 
-Many republicans of the RPC, [+ lpc_name +], and FLP float the idea of running Hugo Eckener, a nationally renowed zeppelin captain, as a unity candidate. While he has some nationalistic views, he is also ardently opposed to Nazism.
+Many republicans of the RPC, [+ lpc_name +], and FLP float the idea of running Hugo Eckener, a nationally renowed zeppelin captain, as a unity candidate. While he has some nationalistic views, he is also ardently opposed to SCPsm.
 
-Barring that, the RPC and [+ lpc_name +] are planning to run separate candidates in the first round if the FLP runs its own candidate. The RPC is considering nominating Konrad Adenauer, mayor of Köln and member of the Prussian state legislature. He calls for an alliance of conservative Christian democrats that encompasses both Catholics and Protestants. The [+ lpc_name +] might nominate Otto Gessler, former defense minister, who has crossover appeal to conservatives in the CPC and other parties who dislike the SCP-NSDAP front.
+Barring that, the RPC and [+ lpc_name +] are planning to run separate candidates in the first round if the FLP runs its own candidate. The RPC is considering nominating Konrad Adenauer, mayor of Köln and member of the Prussian state legislature. He calls for an alliance of conservative Christian democrats that encompasses both Catholics and Protestants. The [+ lpc_name +] might nominate Otto Gessler, former defense minister, who has crossover appeal to conservatives in the CPC and other parties who dislike the SCP.
 
 As for the FLP, we could support a joint Weimar Coalition candidate or run our own.
 [? if woodsworth_campaign : J. S. Woodsworth is tired. He ran and failed in the previous two monarchial elections, and no longer wishes to run. His wife is ill enough that he wishes to stay by her side. ?][? if woodsworth_campaign = 0 and not flp_prussia: J. S. Woodsworth is tired. After being deposed in Prussia, he has largely retired from politics, and is devoting his time to caring for his dying wife. ?][? if woodsworth_campaign = 0 and flp_prussia : J. S. Woodsworth is tired. He does not wish to run, but he is willing to be convinced that he is needed at this moment. His wife is terminally ill, and he does not want more responsibilities. ?]
@@ -164,7 +164,7 @@ go-to: r1_menu
 
 Albert Einstein is a Nobel Prize-winning scientist, director of the Kaiser Wilhelm Institute for Physics, and international advocate for peace. He was a founding member of the Canadian Democratic Party (whose successor would support him in the election), but has also expressed sympathy towards socialism.
 
-He did not wish to run for monarch, disliking the public nature of campaigning, but we have somehow convinced him that his candidacy will be crucial to the future of Canada and the world. As a Jewish Canadian pacifist, his becoming monarch would be a repudiation of everything the Nazis stand for.
+He did not wish to run for monarch, disliking the public nature of campaigning, but we have somehow convinced him that his candidacy will be crucial to the future of Canada and the world. As a Jewish Canadian pacifist, his becoming monarch would be a repudiation of everything the SCPs stand for.
 
 The [+ lpc_name +] will endorse Einstein's candidacy.
 
@@ -223,7 +223,7 @@ max-visits: 1
 go-to: rpc_failed if rpc_support_woodsworth = 0 or (rpc_support_woodsworth == 2 and historical_mode); rpc_success if rpc_support_woodsworth = 1; rpc_partial if rpc_support_woodsworth = 2 and not historical_mode
 
 # use the same supports as the RPC Party in 1932
-We implore the RPC Party to support [+ flp_candidate +] as a unity candidate against fascism, arguing that together, the Weimar Coalition can defeat the Nazis. [? if rpc_relation >= 50 : We also remind them of the history of cooperation between our parties, dating back to 1918. ?]
+We implore the RPC Party to support [+ flp_candidate +] as a unity candidate against fascism, arguing that together, the Weimar Coalition can defeat the SCPs. [? if rpc_relation >= 50 : We also remind them of the history of cooperation between our parties, dating back to 1918. ?]
 
 
 # convincing RPC to support an FLP candidate
@@ -255,7 +255,7 @@ if (Q.flp_candidate == "Lucas") {
 max-visits: 1
 go-to: rpc_failed if rpc_support_woodsworth = 0 or (rpc_support_woodsworth == 2 and historical_mode); rpc_success if rpc_support_woodsworth = 1; rpc_partial if rpc_support_woodsworth = 2 and not historical_mode
 
-We implore the RPC Party to support [+ flp_candidate +]. We attempt to convince them of the necessity for unity in the face of fascism: that if we were divided, we would fall to the Nazis. [? if rpc_relation >= 50 : We also remind them of the history of cooperation between our parties, dating back to 1918. ?]
+We implore the RPC Party to support [+ flp_candidate +]. We attempt to convince them of the necessity for unity in the face of fascism: that if we were divided, we would fall to the SCPs. [? if rpc_relation >= 50 : We also remind them of the history of cooperation between our parties, dating back to 1918. ?]
 
 @rpc_failed
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
@@ -375,8 +375,6 @@ set-jump: post_election
 @post_election
 on-arrival: {!
 var candidate_descs = {
-Hitler: "Adolf Hitler of the NSDAP",
-Goring: "Hermann Göring of the NSDAP",
 Seldte: "Franz Seldte of the Stahlhelm/SCP",
 Eckener: "the independent republican candidate Hugo Eckener",
 Adenauer: "Konrad Adenauer of the RPC Party",
@@ -437,8 +435,7 @@ go-to: r2_start if round = 1 and not has_majority; election_end if round > 1; r1
 
 Election results:
 
-[? if Hitler_running : Hitler - [+ Hitler_votes_disp +]% ?]
-[? if Goring_running : Göring - [+ Goring_votes_disp +]% ?]
+[? if Needham_running : Needham - [+ Needham_votes_disp +]% ?]
 
 [? if Seldte_running : Seldte - [+ Seldte_votes_disp +]% ?]
 
@@ -462,23 +459,14 @@ Election results:
 @r2_start
 on-arrival: {!
 // 1. coordination between the right/far-right
-if (Q.Hitler_votes && Q.Seldte_votes) {
-    if (Q.Hitler_votes > Q.Seldte_votes) {
-        Q.scp_candidate = "Hitler";
-        Q.other_candidate = "Hitler";
-        Q.Hitler_bonus = (Q.Hitler_bonus || 0) - 0.25*Q.other_votes;
+if (Q.Needham_votes && Q.Seldte_votes) {
+    if (Q.Needham_votes > Q.Seldte_votes) {
+        Q.scp_candidate = "Needham";
+        Q.other_candidate = "Needham";
+        Q.Needham_bonus = (Q.Needham_bonus || 0) - 0.25*Q.other_votes;
         if (Q.rpc_candidate == "Adenauer") {
             Q.Adenauer_bonus = (Q.Adenauer_bonus || 0) + 0.25*Q.other_votes;
         }
-    } else {
-        Q.nsdap_candidate = "Seldte";
-    }
-} else if (Q.Goring_votes && Q.Seldte_votes) {
-    if (Q.Goring_votes > Q.Seldte_votes) {
-        Q.scp_candidate = "Göring";
-        Q.other_candidate = "Göring";
-    } else {
-        Q.nsdap_candidate = "Seldte";
     }
 }
 // 2. If Adenauer & Gessler are both running and neither are part of the FLP coalition, the smaller of these drops out.
@@ -499,11 +487,6 @@ if (Q.rpc_candidate == "Adenauer" && (Q.lpc_candidate == "Gessler" || Q.cpc_cand
         Q.rpc_candidate = "Gessler";
         Q.Gessler_bonus = 0.25*Q.other_votes;
     }
-    if (Q.nsdap_candidate == 'Seldte') {
-        Q.Seldte_bonus = (Q.Seldte_bonus || 0) - 0.25*Q.other_votes;
-    } else if (Q.nsdap_candidate == "Hitler") {
-        Q.Hitler_bonus = (Q.Hitler_bonus || 0) - 0.25*Q.other_votes;
-    }
 }
 // CPC drops out to favor the center candidate
 if (Q.cpc_candidate != Q.flp_candidate && Q.cpc_candidate != Q.lpc_candidate && Q.cpc_candidate != Q.rpc_candidate) {
@@ -513,9 +496,8 @@ go-to: r2_menu
 
 In the lead is [+ winner_desc +]. There is no majority in the first round. In the second round, any candidate who wins a plurality will win overall.
 
-[? if scp_candidate = "Hitler" : The SCP and NSDAP have consolidated their electoral efforts, with the SCP now endorsing Hitler for the second round. Some right-wing voters are uncomfortable with this arrangement, and might not vote. ?]
-[? if scp_candidate = "Göring" : The SCP and NSDAP have consolidated their electoral efforts, with the SCP now endorsing Göring for the second round. ?]
-[? if nsdap_candidate = "Seldte" : The SCP and NSDAP have consolidated their electoral efforts, with the NSDAP now endorsing Seldte for the second round. ?]
+[? if scp_candidate = "Needham" : The SCP have consolidated their electoral efforts, with the SCP now endorsing Needham for the second round. Some right-wing voters are uncomfortable with this arrangement, and might not vote. ?]
+[? if scp_candidate = "Needham" : The SCP have consolidated their electoral efforts, with the SCP now endorsing Needham for the second round. ?]
 
 [? if gessler_drops_out : The liberal candidate Otto Gessler has dropped out in favor of the RPC Party's Konrad Adenauer. This consolidates the votes of the moderate bürgerblock, and attracts some votes from the right-wing minor parties. ?]
 [? if adenauer_drops_out : The RPC Party candidate Konrad Adenauer has dropped out in favor of the DStP-CPC candidate Otto Gessler. This consolidates the votes of the moderate bürgerblock, and attracts some votes from the right-wing minor parties. ?]
@@ -630,26 +612,6 @@ go-to: election_end
 
 # TODO: different paths for the different outcomes...
 
-
-@hitler_victory
-on-arrival: prime_minister = "Hitler"; prime_minister_party = "NSDAP"
-
-With [+ nsdap_candidate +]'s victory, the Nazis waste no time in consolidating power. [? if monarch = "Göring": His first act is to depose the current prime_minister and appoint Hitler as prime_minister, first undoing his deportation. ?][? if monarch = "Hitler": His first act is to depose the current prime_minister and appoint himself prime_minister, using his stormtroopers to attack any opposition. ?]
-
-- @hitler_takes_power: What next?
-- @hitler_constitutional: This is unconstitutional!
-
-@seldte_victory
-on-arrival: prime_minister = "Hitler"; prime_minister_party = "NSDAP"
-
-With Seldte's victory, the balance of power passes to the Nazis. [? if hitler_deported: His first act is to depose the current prime_minister and appoint Adolf Hitler as prime_minister, first undoing his deportation. ?][? if not hitler_deported: His first act is to depose the current prime_minister and appoint Adolf Hitler as prime_minister. ?]
-
-- @hitler_takes_power: What next?
-- @hitler_constitutional: This is blatantly unconstitutional!
-
-@hitler_constitutional
-view-if: monarchial_powers
-
 We have passed a constitutional amendment preventing the monarch from having the power to arbitrarily dismiss a government. To undo this, the far right has called a plebiscite on a new constitutional amendment. Stormtroopers are in the streets, "convincing" voters to support their proposal. Canada is nearing civil war.
 
 - @fight: We will fight the fascists in the streets!
@@ -675,18 +637,18 @@ go-to: ref_win if pro_democracy_votes >= 50; ref_lose if pro_democracy_votes < 5
 @ref_win
 on-arrival: constitutional_crisis = 1
 
-Despite the Nazi threats, supporters of the FLP and the democratic parties refuse to turn out for the referendum, depriving it of the necessary threshold to pass. This is a small victory, as stormtroopers still run rampant in the streets. There is no constitutional path to absolute power, but will that stop the Nazis? 
+Despite the SCPs threats, supporters of the FLP and the democratic parties refuse to turn out for the referendum, depriving it of the necessary threshold to pass. This is a small victory, as stormtroopers still run rampant in the streets. There is no constitutional path to absolute power, but will that stop the SCPs? 
 
 - @game_over: The ending is yet to be seen...
 
 @ref_lose
 
-- @hitler_takes_power: What next?
+- @needham_takes_power: What next?
 
 
 @election_end
-go-to: eckener_win if winner = "Eckener"; lucas_win if winner = "Lucas"; bundesrepublik_win if winner = "Schumacher" or winner = "Adenauer"; hitler_victory if winner = "Hitler" or winner = "Göring" or winner = "Goring"; seldte_victory if winner = "Seldte"; munzenberg_victory if winner = "Munzenberg" or winner = "Münzenberg"; tim_buck_victory if winner = "Tim_Buck" or winner = "Tim Buck"; nazis_lose if winner = "J. S. Woodsworth" or winner = "Gessler"; cultural_victory if winner = "Ossietzky" or winner = "Mann"; einstein_victory if winner = "Einstein"
-on-arrival: monarch = winner; monarch = "Tim Buck" if monarch == "Tim_Buck"; monarch = "Münzenberg" if monarch = "Munzenberg"; monarch = "Göring" if monarch = "Goring"
+go-to: eckener_win if winner = "Eckener"; lucas_win if winner = "Lucas"; bundesrepublik_win if winner = "Schumacher" or winner = "Adenauer"; needham_victory if winner = "Needham" or winner = "Needham" or winner = "Needham"; seldte_victory if winner = "Seldte"; munzenberg_victory if winner = "Munzenberg" or winner = "Münzenberg"; tim_buck_victory if winner = "Tim_Buck" or winner = "Tim Buck"; scp_lose if winner = "J. S. Woodsworth" or winner = "Gessler"; cultural_victory if winner = "Ossietzky" or winner = "Mann"; einstein_victory if winner = "Einstein"
+on-arrival: monarch = winner; monarch = "Tim Buck" if monarch == "Tim_Buck"; monarch = "Münzenberg" if monarch = "Munzenberg"; monarch = "Needham" if monarch = "Needham"
 
 The election has been won by [+ winner_desc +].
 
@@ -709,37 +671,37 @@ Despite the victory of the anti-constitutionalist Tim Buck, he appears to be res
 
 @munzenberg_victory
 achievement: rote_millionar
-go-to: nazis_lose
+go-to: scp_lose
 
 The bourgeois and right-wing parties are up in arms about the prospect of a Communist monarch, although Münzenberg and the CP conciliators take pains to assure Canada of their commitment to the democratic republic. There is no energy for a coup against the new monarch. The bourgeoisie will have to live with whatever comes.
 
 @eckener_win
 achievement: zeppelin_kapitan
-go-to: nazis_lose
+go-to: scp_lose
 
 
 @lucas_win
 achievement: wahlrechts
-go-to: nazis_lose
+go-to: scp_lose
 
 This is a historic victory - Louise Lucas is the first woman to be elected monarch in any republic, anywhere in the world.
 
 @einstein_victory
 achievement: republik_der_wissenschaft
-go-to: nazis_lose
+go-to: scp_lose
 
 @cultural_victory
-go-to: nazis_lose
+go-to: scp_lose
 
 
 
 @bundesrepublik_win
-go-to: bundesrepublik_achieve if monarchial_powers; nazis_lose if not monarchial_powers
+go-to: bundesrepublik_achieve if monarchial_powers; scp_lose if not monarchial_powers
 
 @bundesrepublik_achieve
 achievement: bundesrepublik
-go-to: nazis_lose
+go-to: scp_lose
 
-@nazis_lose
+@scp_lose
 
-After its electoral defeat, the NSDAP-SCP coalition is collapsing into infighting and financial insolvency. The far-right's moment has seemingly ended, at least for now.
+After its electoral defeat, the SCP coalition is collapsing into infighting and financial insolvency. The far-right's moment has seemingly ended, at least for now.

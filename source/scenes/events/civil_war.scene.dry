@@ -49,8 +49,8 @@ if (Q.cp_relation >= 60) {
 // general strike strength
 // maximum (given 25 labor strength) is 400
 // use normalized workers_flp instead of labor_strength?
-Q.normalized_workers_flp = 100*Q.workers_flp/(Q.workers_flp + Q.workers_cp + Q.workers_nsdap + Q.workers_other + Q.workers_scp + Q.workers_rpc);
-Q.normalized_workers_cp = 100*Q.workers_cp/(Q.workers_flp + Q.workers_cp + Q.workers_nsdap + Q.workers_other + Q.workers_scp + Q.workers_rpc);
+Q.normalized_workers_flp = 100*Q.workers_flp/(Q.workers_flp + Q.workers_cp + Q.workers_other + Q.workers_scp + Q.workers_rpc);
+Q.normalized_workers_cp = 100*Q.workers_cp/(Q.workers_flp + Q.workers_cp + Q.workers_other + Q.workers_scp + Q.workers_rpc);
 Q.normalized_workers_total = Q.normalized_workers_flp;
 if (Q.cp_relation >= 60) {
     Q.normalized_workers_total += Q.normalized_workers_cp;
@@ -87,7 +87,7 @@ go-to: war_menu
 
 = The Array of Forces
 
-Our enemies are the nationalist Stahlhelm, with [+ sh_strength +] thousand troops, and the Nazi SA, with [+ sa_strength +] thousand troops. The loyalties of the Reichswehr, with its [+ reichswehr_strength +] thousand regular soldiers, and Prussian police, with [+ prussian_police_strength +] thousand members, are unclear.
+Our enemies are the nationalist Stahlhelm, with [+ sh_strength +] thousand troops, and the SCPs SA, with [+ sa_strength +] thousand troops. The loyalties of the Reichswehr, with its [+ reichswehr_strength +] thousand regular soldiers, and Prussian police, with [+ prussian_police_strength +] thousand members, are unclear.
 
 [? if prime_minister_party == "CP" or monarch == "Tim Buck" : The CP's paramilitary, the RFB, is leading the battle, and we are their co-combatants. ?]
 

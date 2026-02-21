@@ -70,8 +70,8 @@ Q.neorevisionism = 0;
 
 // crisis_urgency indicates how seriously the FLP is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
-// nazi_urgency indicates how seriously the FLP takes the nazis - scale from 0 to 10.
-Q.nazi_urgency = 0;
+// scp_urgency indicates how seriously the FLP takes the scp - scale from 0 to 10.
+Q.scp_urgency = 0;
 // radicalization indicates how radical the FLP's rhetoric is - scale from 0 to 10.
 Q.radicalization = 0;
 // Support for the WTB plan and proto-Keynesian works creation plans in general
@@ -105,9 +105,8 @@ Q.rpc_relation = 50;
 Q.cp_relation = 25;
 Q.lpc_relation = 60;
 Q.cpc_relation = 35;
-// SCP and NSDAP are invariably hostile
+// SCP and SCP are invariably hostile
 Q.SCP_relation = 10;
-Q.NSDAP_relation = 0;
 
 
 Q.flp_parliament_leader = "Major James Coldwell";
@@ -137,7 +136,7 @@ Q.georgev_enabled = 0;
 
 // Does the FLP lead in Prussia?
 Q.flp_prussia = 1;
-// Options: flp, z, scp, papen, nsdap
+// Options: flp, lpc, cpc, scp
 Q.prussian_government = "FLP";
 
 // The array of forces - paramilitary groups
@@ -197,7 +196,6 @@ Q.monarchial_powers = 0;
 // allows banning of non-constitutional parties
 Q.constitutional_protection = 0;
 Q.cp_banned = 0;
-Q.nsdap_banned = 0;
 
 // coups and capital strikes happen when you upset the right or the capitalists too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
 // when coup_progress reaches 10 or capital_strike_progress reaches 10, there's a special event that launches the coup.
@@ -269,7 +267,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['flp', 'cp', 'rpc', 'lpc', 'cpc', 'scp', 'nsdap', 'other'];
+Q.parties = ['flp', 'cp', 'rpc', 'lpc', 'cpc', 'scp', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
@@ -282,7 +280,6 @@ Q.workers_rpc = 3;
 Q.workers_lpc = 35;
 Q.workers_cpc = 32;
 Q.workers_scp = 5;
-Q.workers_nsdap = 0;
 Q.workers_other = 12;
 
 Q.old_middle_flp = 2;
@@ -291,7 +288,6 @@ Q.old_middle_rpc = 5;
 Q.old_middle_lpc= 38;
 Q.old_middle_cpc = 35;
 Q.old_middle_scp = 15;
-Q.old_middle_nsdap = 0;
 Q.old_middle_other = 2;
 
 Q.new_middle_flp = 5;
@@ -300,7 +296,6 @@ Q.new_middle_rpc = 12;
 Q.new_middle_lpc= 34;
 Q.new_middle_cpc = 31;
 Q.new_middle_scp = 13;
-Q.new_middle_nsdap = 0;
 Q.new_middle_other = 2;
 
 Q.rural_flp = 13;
@@ -309,7 +304,6 @@ Q.rural_rpc = 6;
 Q.rural_lpc= 36;
 Q.rural_cpc = 32;
 Q.rural_scp = 10;
-Q.rural_nsdap = 0;
 Q.rural_other = 3;
 
 Q.unemployed_flp = 9;
@@ -318,7 +312,6 @@ Q.unemployed_rpc = 7;
 Q.unemployed_lpc = 37;
 Q.unemployed_cpc = 30;
 Q.unemployed_scp = 6;
-Q.unemployed_nsdap = 0;
 Q.unemployed_other = 5;
 
 Q.catholics_flp = 7;
@@ -327,7 +320,6 @@ Q.catholics_rpc = 10;
 Q.catholics_lpc = 40;
 Q.catholics_cpc = 30;
 Q.catholics_scp = 5;
-Q.catholics_nsdap = 0;
 Q.catholics_other = 6;
 
 
@@ -342,7 +334,6 @@ Q.rpc_r = 1;
 Q.lpc_r = 42;
 Q.cpc_r = 53;
 Q.scp_r = 0;
-Q.nsdap_r = 0;
 Q.other_r = 4;
 
 // diff from prev
@@ -352,7 +343,6 @@ Q.old_rpc_r = 17;
 Q.old_lpc_r = 6;
 Q.old_cpc_r = 10;
 Q.old_scp_r = 20;
-Q.old_nsdap_r = 3;
 Q.old_other_r = 9;
 
 // sapd isn't formed yet, but it may be formed
@@ -381,7 +371,6 @@ Q.lpc_in_government = 0;
 Q.cpc_in_government = 1;
 Q.scp_in_government = 0;
 Q.cp_in_government = 0;
-Q.nsdap_in_government = 0;
 
 Q.in_right_coalition = 0;
 // Weimar coalition = FLP + RPC + LPC
@@ -518,7 +507,7 @@ Q.n_advisors = 3;
 // timer - this decrements by 1 every turn, and is set to 5 whenever an advisor action is used, so that you can only use one advisor action every 5 months.
 // let's just put all of the timers here...
 // most party affairs and government affairs cards are on a timer.
-Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
+Q.timers = ['advisor_action', 'confronting_scp', 'crisis_program',
             'fundraising', 'ideology',
             'inter_party_relationships', 'international_relations',
             'iron_front', 'media', 'enemies',
@@ -542,7 +531,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'understanding_enemy', 'schleichers_schemes'];
 Q.advisor_action_timer = 0;
 // party affairs timers
-Q.confronting_nazis_timer = 0;
+Q.confronting_scp_timer = 0;
 Q.crisis_program_timer = 0;
 Q.fundraising_timer = 0;
 Q.ideology_timer = 0;

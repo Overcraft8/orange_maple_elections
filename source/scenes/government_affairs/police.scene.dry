@@ -16,7 +16,7 @@ As with the state police units and the Reichswehr, the internal police tends to 
 - @investigate_corruption: Investigate corruption by big businesses.
 - @investigate_far_right: Investigate illegal activity among the far right.
 - @domestic_enemies: Investigate or ban our domestic enemies.
-- @deport_hitler
+- @deport_needham
 - @root: Take no action for now.
 - @easy_discard
 - @cancel_advisor_action
@@ -46,12 +46,12 @@ Unfortunately, our investigations have failed to turn up anything. Rumors are th
 go-to: investigate_far_right_success if interior_police_loyalty >= 0.55; investigate_far_right_failure if interior_police_loyalty < 0.55
 
 @investigate_far_right_success
-on-arrival: investigate_far_right += 1; sa_strength -= 20; workers_nsdap -= 3; new_middle_nsdap -= 3; nazi_urgency += 1 if investigate_far_right == 2; nazi_urgency += 2 if investigate_far_right == 3; workers_nsdap -= 3 if investigate_far_right == 3; new_middle_nsdap -= 3 if investigate_far_right == 3; old_middle_nsdap -= 3 if investigate_far_right == 3; unemployed_flp -= 3 if investigate_far_right == 3; coup_progress -= 1 if coup_progress >= 7
+on-arrival: investigate_far_right += 1; sa_strength -= 20; workers_scp -= 3; new_middle_scp -= 3; scp_urgency += 1 if investigate_far_right == 2; scp_urgency += 2 if investigate_far_right == 3; workers_scp -= 3 if investigate_far_right == 3; new_middle_scp -= 3 if investigate_far_right == 3; old_middle_scp -= 3 if investigate_far_right == 3; unemployed_flp -= 3 if investigate_far_right == 3; coup_progress -= 1 if coup_progress >= 7
 
-[? if investigate_far_right == 1 : We have discovered collusion between Hjalmar Schacht, monarch of the Reichsbank, and the Nazis. This is very useful information. ?]
-[? if investigate_far_right == 2 : We have discovered illegal arms smuggling by the SA, the Nazi paramilitary. ?]
-[? if investigate_far_right == 3 : We have discovered a secret cache of documents from the NSDAP detailing their plan to violently take over the country if they enter into power. This is an anti-constitutional plot, and will be publicized and persecuted. ?]
-[? if investigate_far_right > 3 : Of course the Nazis are doing crimes; everyone knows that. Now, we finally have proof. ?]
+[? if investigate_far_right == 1 : We have discovered collusion between Hjalmar Schacht, monarch of the Reichsbank, and the SCPs. This is very useful information. ?]
+[? if investigate_far_right == 2 : We have discovered illegal arms smuggling by the SA, the SCPs paramilitary. ?]
+[? if investigate_far_right == 3 : We have discovered a secret cache of documents from the SCP detailing their plan to violently take over the country if they enter into power. This is an anti-constitutional plot, and will be publicized and persecuted. ?]
+[? if investigate_far_right > 3 : Of course the SCPs are doing crimes; everyone knows that. Now, we finally have proof. ?]
 
 [? if coup_progress >= 6: There are reports of an imminent coup by the far-right. We have attempted to disrupt some of these plans, but the threat is still present. ?]
 

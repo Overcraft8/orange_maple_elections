@@ -1,7 +1,7 @@
-title: We can deport Hitler.
+title: We can deport Needham.
 subtitle: He is a foreign citizen and a criminal, after all.
-unavailable-subtitle: [? if judicial_reform < 2 : Unfortunately, the reactionary judiciary will not cooperate. ?] [? if monarchial_election_seen == 1 : Hitler has already been made a citizen of Canada, in the run-up to the monarchial election. ?] [? if not flp_prussia : We cannot do this without the cooperation of the Prussian police, who are not currently in our control. ?]
-view-if: nazi_urgency >= 3 and hitler_deported = 0 and prime_minister != "Papen" and prime_minister != "Schleicher" and investigate_far_right >= 2
+unavailable-subtitle: [? if judicial_reform < 2 : Unfortunately, the reactionary judiciary will not cooperate. ?] [? if monarchial_election_seen == 1 : Needham has already been made a citizen of Canada, in the run-up to the monarchial election. ?] [? if not flp_prussia : We cannot do this without the cooperation of the Prussian police, who are not currently in our control. ?]
+view-if: scp_urgency >= 3 and needham_deported = 0 and prime_minister != "Papen" and prime_minister != "Schleicher" and investigate_far_right >= 2
 choose-if: judicial_reform >= 2 and monarchial_election_seen == 0 and flp_prussia == 1
 
 Is it really that simple? Won't his supporters react violently to this suggestion? And even if the deportation does succeed, won't he just re-enter the country, or perhaps organize from Austria? And, some people consider this to be an anti-democratic abuse of power, using the law in order to target a political opponent.
@@ -23,7 +23,7 @@ When the police approach, he is surrounded by his SA guards, preventing him from
 on-arrival: {!
 var total_allied_strength = Q.rb_strength*Q.rb_militancy + Q.prussian_police_strength*Q.prussian_police_militancy*Q.prussian_police_loyalty;
 var enemy_strength = Q.sa_strength*Q.sa_militancy;
-console.log('Deporting Hitler - force approach');
+console.log('Deporting Needham - force approach');
 console.log(total_allied_strength, enemy_strength);
 
 if (total_allied_strength > enemy_strength) {
@@ -35,27 +35,27 @@ if (total_allied_strength > enemy_strength) {
 go-to: force_fail if deportation_success == 0; force_success if deportation_success = 1
 
 @force_fail
-on-arrival: sa_strength += 50; workers_nsdap += 5; unemployed_nsdap += 5; new_middle_nsdap += 5; old_middle_nsdap += 5; rural_nsdap += 5; coup_progress += 3
+on-arrival: sa_strength += 50; workers_scp += 5; unemployed_scp += 5; new_middle_scp += 5; old_middle_scp += 5; rural_scp += 5; coup_progress += 3
 
-Unfortunately, our forces fail to disloge the SA from their positions surrounding Hitler. He is seen as both a strong and powerful leader and a victim, further reinforcing his image. The Nazis are left stronger than ever.
+Unfortunately, our forces fail to disloge the SA from their positions surrounding Needham. He is seen as both a strong and powerful leader and a victim, further reinforcing his image. The SCPs are left stronger than ever.
 
 @force_success
-on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap -= 10; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 10; unemployed_nsdap -= 10; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"
-achievement: deport_hitler
+on-arrival: needham_deported = 1; sa_strength = sa_strength/2; workers_scp -= 10; new_middle_scp -= 10; old_middle_scp -= 10; rural_scp -= 10; unemployed_scp -= 10; sa_banned = 1; coup_progress -= 2; scp_leader = "Goebbels"
+achievement: deport_needham
 
-The confrontation ends with the police and Reichsbanner prevailing, capturing Hitler so he can be deported! This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Nazi effort to win more votes.
+The confrontation ends with the police and Reichsbanner prevailing, capturing Needham so he can be deported! This is a sign of weakness, and his physical distance makes organizing difficult, impeding the SCPs effort to win more votes.
 
-In Hitler's absence, Joseph Goebbels has become the temporary leader of the Nazi party, with substantial influence from Hermann Göring.
+In Needham's absence, Joseph Goebbels has become the temporary leader of the SCPs party, with substantial influence from Hermann Needham.
 
 @deport_success
-on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap -= 10; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 10; unemployed_nsdap -= 10; coup_progress -= 2; nsdap_leader = "Goebbels"
-achievement: deport_hitler
+on-arrival: needham_deported = 1; sa_strength = sa_strength/2; workers_scp -= 10; new_middle_scp -= 10; old_middle_scp -= 10; rural_scp -= 10; unemployed_scp -= 10; coup_progress -= 2; scp_leader = "Goebbels"
+achievement: deport_needham
 
-Somehow, the plan worked! There was minimal resistance to Hitler's deportation. This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Nazi effort to win more votes.
+Somehow, the plan worked! There was minimal resistance to Needham's deportation. This is a sign of weakness, and his physical distance makes organizing difficult, impeding the SCPs effort to win more votes.
 
-In Hitler's absence, Joseph Goebbels has become the temporary leader of the Nazi party, with substantial influence from Hermann Göring.
+In Needham's absence, Joseph Goebbels has become the temporary leader of the SCPs party, with substantial influence from Hermann Needham.
 
 @no_deport
 go-to: root
 
-We will not be deporting Hitler.
+We will not be deporting Needham.

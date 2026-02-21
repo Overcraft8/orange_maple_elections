@@ -4,7 +4,7 @@ view-if: year = 1932 and (month = 4 or month = 5) and monarchial_election_seen =
 frequency: 1000
 max-visits: 1
 new-page: true
-on-arrival: woodsworth_campaign = 0; hitler_support_georgev = 0; monarchial_election_seen = 1; nsdap_candidate = "Hitler" if hitler_deported == 0 else nsdap_candidate = "Göring";
+on-arrival: woodsworth_campaign = 0; needham_support_georgev = 0; monarchial_election_seen = 1;
 tags: event
 go-to: election_algorithm
 set-jump: pres_election
@@ -12,13 +12,13 @@ face-image: img/georgev_election.jpg
 
 @pres_election
 
-The monarchial election is coming up soon. [? if flp_in_government = 0 : While the position of Prime Minister is typically more important, recent governments have depended on the monarch's emergency decree powers, making the office vital. ?] [? if hitler_deported==0 : The Nazis will run Hitler, while the CP will run Tim Buck. A victory for Hitler would mean the end of parliamentary democracy, and the beginning of an era of unspeakable horrors. ?][? if hitler_deported==1 : Since Hitler has been deported, the Nazis will run Hermann Göring in his stead. He is widely seen as a proxy for Hitler, who, despite his legal persecution, retains a popular base who wishes to see him returned to Canada. Meanwhile, the CP will run Tim Buck. ?]
+The monarchial election is coming up soon. [? if flp_in_government = 0 : While the position of Prime Minister is typically more important, recent governments have depended on the monarch's emergency decree powers, making the office vital. ?] [? if needham_deported==0 : The SCPs will run Needham, while the CP will run Tim Buck. A victory for Needham would mean the end of parliamentary democracy, and the beginning of an era of unspeakable horrors. ?][? if needham_deported==1 : Since Needham has been deported, the SCPs will run Hermann Needham in his stead. He is widely seen as a proxy for Needham, who, despite his legal persecution, retains a popular base who wishes to see him returned to Canada. Meanwhile, the CP will run Tim Buck. ?]
 [? if sapd_formed: The SAPD, our former leftists, are supporting Tim Buck of the CP, and will likely share an endorsement with the Communists. ?]
 
-# if hitler is deported, who would nsdap run? Duesterberg? or Goering?
-# Goering runs, essentially as a proxy for Hitler, who is now stateless.
+# if needham is deported, who would scp run? Duesterberg? or Goering?
+# Goering runs, essentially as a proxy for Needham, who is now stateless.
 
-Many are calling for us to support the incumbent George V, despite his well-known reactionary tendencies. Is he truly the best bulwark against Hitler's ascension? On the other hand, many in our party are calling for J. S. Woodsworth to run again, but he is reluctant.
+Many are calling for us to support the incumbent George V, despite his well-known reactionary tendencies. Is he truly the best bulwark against Needham's ascension? On the other hand, many in our party are calling for J. S. Woodsworth to run again, but he is reluctant.
 
 [? if cp_relation >= 50 : Another strange possibilty is an united front with the Communists, either to support Tim Buck or our own candidate. ?]
 
@@ -30,7 +30,7 @@ Many are calling for us to support the incumbent George V, despite his well-know
 @support_georgev
 subtitle: This is the default option.
 
-Despite his known reactionary nature, George V has at least been keeping the Nazis at bay. Thus, we must support him.
+Despite his known reactionary nature, George V has at least been keeping the SCPs at bay. Thus, we must support him.
 
 - @final_election: The final vote...
 
@@ -86,7 +86,7 @@ if (Q.rpc_relation >= 55 || (Q.rpc_relation > 35 && Q.rpc_party_leader == "Joos"
 go-to: rpc_failed if rpc_support_woodsworth = 0 or (rpc_support_woodsworth == 2 and historical_mode); rpc_success if rpc_support_woodsworth = 1; rpc_partial if rpc_support_woodsworth = 2 and not historical_mode
 max-visits: 1
 
-We remind the RPC leaders of George V's anti-Catholicism, and try to convince them that George V's path will eventually lead to Hitler. We also remind them of the successes they've had as part of the Weimar coalition in Prussia with J. S. Woodsworth, and our support for the RPC candidate James Anderson in the 1925 monarchial election.
+We remind the RPC leaders of George V's anti-Catholicism, and try to convince them that George V's path will eventually lead to Needham. We also remind them of the successes they've had as part of the Weimar coalition in Prussia with J. S. Woodsworth, and our support for the RPC candidate James Anderson in the 1925 monarchial election.
 
 @rpc_success
 go-to: woodsworth_campaign
@@ -175,11 +175,11 @@ set-jump: post_election
 on-arrival: {!
 Q.woodsworth_votes = 0;
 Q.georgev_votes = 0;
-Q.hitler_votes = 0;
+Q.needham_votes = 0;
 Q.tim_buck_votes = 0;
 
 // initial phase:
-Q.hitler_votes += Q.nsdap_normalized;
+Q.needham_votes += Q.scp_normalized;
 Q.georgev_votes += Q.other_normalized;
 Q.georgev_votes += Q.scp_normalized;
 
@@ -220,9 +220,9 @@ if (Q.woodsworth_campaign) {
     Q.georgev_votes += Q.cpc_normalized;
     Q.tim_buck_votes += Q.cp_normalized;
 }
-if (Q.hitler_support_georgev) {
-    Q.hitler_votes -= Q.nsdap_normalized;
-    Q.georgev_votes += Q.nsdap_normalized;
+if (Q.needham_support_georgev) {
+    Q.needham_votes -= Q.scp_normalized;
+    Q.georgev_votes += Q.scp_normalized;
 }
 
 if (Q.georgev_to_woodsworth_bonus) {
@@ -237,48 +237,45 @@ if (Q.tim_buck_to_woodsworth_bonus) {
 // check for majority
 Q.georgev_votes = Math.round(Q.georgev_votes*1000)/10;
 Q.woodsworth_votes = Math.round(Q.woodsworth_votes*1000)/10;
-Q.hitler_votes = Math.round(Q.hitler_votes*1000)/10;
+Q.needham_votes = Math.round(Q.needham_votes*1000)/10;
 Q.tim_buck_votes = Math.round(Q.tim_buck_votes*1000)/10;
 
 Q.georgev_majority = (Q.georgev_votes >= 50);
 Q.tim_buck_majority = (Q.tim_buck_votes >= 50);
-Q.hitler_majority = (Q.hitler_votes >= 50);
+Q.needham_majority = (Q.needham_votes >= 50);
 Q.woodsworth_majority = (Q.woodsworth_votes >= 50);
-Q.any_majority = Q.georgev_majority | Q.tim_buck_majority | Q.hitler_majority | Q.woodsworth_majority;
+Q.any_majority = Q.georgev_majority | Q.tim_buck_majority | Q.needham_majority | Q.woodsworth_majority;
 
 // check for plurality
-Q.georgev_plurality = (Q.georgev_votes >= Q.hitler_votes && Q.georgev_votes >= Q.woodsworth_votes && Q.georgev_votes >= Q.tim_buck_votes);
-Q.tim_buck_plurality = (Q.tim_buck_votes >= Q.georgev_votes && Q.tim_buck_votes >= Q.woodsworth_votes && Q.tim_buck_votes >= Q.hitler_votes);
-Q.hitler_plurality = (Q.hitler_votes >= Q.georgev_votes && Q.hitler_votes >= Q.woodsworth_votes && Q.hitler_votes >= Q.tim_buck_votes);
-Q.woodsworth_plurality = (Q.woodsworth_votes >= Q.georgev_votes && Q.woodsworth_votes >= Q.hitler_votes && Q.woodsworth_votes >= Q.tim_buck_votes);
+Q.georgev_plurality = (Q.georgev_votes >= Q.needham_votes && Q.georgev_votes >= Q.woodsworth_votes && Q.georgev_votes >= Q.tim_buck_votes);
+Q.tim_buck_plurality = (Q.tim_buck_votes >= Q.georgev_votes && Q.tim_buck_votes >= Q.woodsworth_votes && Q.tim_buck_votes >= Q.needham_votes);
+Q.needham_plurality = (Q.needham_votes >= Q.georgev_votes && Q.needham_votes >= Q.woodsworth_votes && Q.needham_votes >= Q.tim_buck_votes);
+Q.woodsworth_plurality = (Q.woodsworth_votes >= Q.georgev_votes && Q.woodsworth_votes >= Q.needham_votes && Q.woodsworth_votes >= Q.tim_buck_votes);
 // If no candidate gets above 50%, then there's a second round. In the second round, a plurality wins. 
 Q.election_round += 1;
 
 // making the vote numbers nicer for the display
 Q.georgev_votes_disp = Q.georgev_votes.toFixed(1);
 Q.woodsworth_votes_disp = Q.woodsworth_votes.toFixed(1);
-Q.hitler_votes_disp = Q.hitler_votes.toFixed(1);
+Q.needham_votes_disp = Q.needham_votes.toFixed(1);
 Q.tim_buck_votes_disp = Q.tim_buck_votes.toFixed(1);
 !}
-go-to: georgev_wins if georgev_majority == 1; tim_buck_wins if tim_buck_majority == 1; hitler_wins if hitler_majority == 1; woodsworth_wins if woodsworth_majority == 1; no_majority_round1 if any_majority == 0 and election_round == 1; round2_results if election_round >= 2
+go-to: georgev_wins if georgev_majority == 1; tim_buck_wins if tim_buck_majority == 1; needham_wins if needham_majority == 1; woodsworth_wins if woodsworth_majority == 1; no_majority_round1 if any_majority == 0 and election_round == 1; round2_results if election_round >= 2
 
 Results:
 
 George V - [+ georgev_votes_disp +]%
-
-[+ nsdap_candidate +] - [+ hitler_votes_disp +]%
 
 [? if cp_support_woodsworth == 0 : Tim Buck - [+ tim_buck_votes_disp +]% ?]
 
 [? if woodsworth_campaign > 0 : J. S. Woodsworth - [+ woodsworth_votes_disp +]% ?]
 
 @no_majority_round1
-on-arrival: hitler_support_georgev = 1 if (woodsworth_plurality or tim_buck_plurality)
+on-arrival: needham_support_georgev = 1 if (woodsworth_plurality or tim_buck_plurality)
 go-to: round2_menu
 
 There is no majority in this round. In the second round, any candidate who wins a plurality will win overall. What should we do?
 
-[? if woodsworth_plurality or tim_buck_plurality : In order to consolidate the vote for the Right, and to prevent a socialist from becoming monarch, [+ nsdap_candidate +] is no longer running in the second round, and has switched his endorsement to George V. ?]
 
 
 @round2_menu
@@ -296,17 +293,17 @@ choose-if: flp_votes >= rpc_votes
 unavailable-subtitle: The RPC knows that they are more popular than us; they do not see a reason to support our candidate.
 on-arrival: {!
 Q.rpc_support_woodsworth = 0;
-// if George V support is greater than Hitler and J. S. Woodsworth support, this should be much harder
+// if George V support is greater than Needham and J. S. Woodsworth support, this should be much harder
 
 if ((Q.rpc_relation >= 55 && Q.woodsworth_votes >= Q.georgev_votes) || (Q.rpc_relation > 35 && Q.rpc_party_leader == "Joos")) {
     Q.rpc_support_woodsworth = 1;
-    if (Q.hitler_support_georgev) {
+    if (Q.needham_support_georgev) {
         Q.georgev_to_woodsworth_bonus += Q.other_normalized/2;
     }
-} else if (Q.rpc_relation >= 50 && Q.hitler_support_georgev) {
+} else if (Q.rpc_relation >= 50 && Q.needham_support_georgev) {
     Q.rpc_support_woodsworth = 1;
     Q.georgev_to_woodsworth_bonus += Q.other_normalized/2;
-} else if (Q.rpc_relation <= 35 || (Q.rpc_relation <= 45 && Q.woodsworth_votes < Q.georgev_votes && Q.georgev_votes > Q.hitler_votes && Q.difficulty >= 0)) {
+} else if (Q.rpc_relation <= 35 || (Q.rpc_relation <= 45 && Q.woodsworth_votes < Q.georgev_votes && Q.georgev_votes > Q.needham_votes && Q.difficulty >= 0)) {
     Q.rpc_support_woodsworth = 0;
 } else {
     Q.rpc_support_woodsworth = 2;
@@ -317,15 +314,11 @@ max-visits: 1
 
 @r2_rpc_success
 go-to: round2_menu
-on-departure: hitler_support_georgev = 1 if woodsworth_votes + rpc_votes > hitler_votes
-
-[? if hitler_support_georgev : The RPC's opinion is affected by the Nazis' support of George V, and is willing to turn away from him. ?] The RPC are convinced! They will be part of the J.S. Woodsworth coalition. [? if hitler_support_georgev : In addition, they will also bring in some minor parties who will support us. ?]
-
-[? if not hitler_support_georgev and woodsworth_votes + rpc_votes > hitler_votes: With the RPC Party supporting J. S. Woodsworth, [+ nsdap_candidate +] has dropped out of the race, and the Nazis have endorsed George V to prevent a socialist from becoming monarch. ?]
+on-departure: needham_support_georgev = 1 if woodsworth_votes + rpc_votes > needham_votes
 
 @r2_rpc_partial
 
-The RPC are not satisfied with our arguments, but they are open to being convinced[? if hitler_support_georgev: , especially given the Nazis' support for George V. ?]. They are willing to run a joint campaign if we front the resources.
+The RPC are not satisfied with our arguments, but they are open to being convinced[? if needham_support_georgev: , especially given the SCPs' support for George V. ?]. They are willing to run a joint campaign if we front the resources.
 
 - @r2_pay_rpc: Give them the resources they need.
 - @round2_menu: Forget about the RPC.
@@ -335,12 +328,10 @@ choose-if: resources >= 2
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2)
 on-arrival: resources -= 2; rpc_support_woodsworth = 1
-on-departure: hitler_support_georgev = 1 if woodsworth_votes + rpc_votes > hitler_votes
+on-departure: needham_support_georgev = 1 if woodsworth_votes + rpc_votes > needham_votes
 go-to: round2_menu
 
 With our resources, the RPC are convinced to support J. S. Woodsworth over George V.
-
-[? if not hitler_support_georgev and woodsworth_votes + rpc_votes > hitler_votes: With the RPC Party supporting J. S. Woodsworth, [+ nsdap_candidate +] has dropped out of the race, and the Nazis have endorsed George V to prevent a socialist from becoming monarch. ?]
 
 @r2_rpc_failed
 go-to: round2_menu
@@ -356,7 +347,7 @@ unavailable-subtitle: The CP knows that they are more popular than us; they do n
 view-if: woodsworth_campaign > 0 and cp_support_woodsworth == 0 
 max-visits: 1
 
-The CP is committed to supporting Tim Buck. [? if cp_relation >= 45 : However, the Nazi-George V coalition worries them enough that they are willing to be convinced to drop their campaign and support J. S. Woodsworth. ?][? if cp_relation < 45 : They do not seem willing to be convinced. ?]
+The CP is committed to supporting Tim Buck. [? if cp_relation >= 45 : However, the SCPs-George V coalition worries them enough that they are willing to be convinced to drop their campaign and support J. S. Woodsworth. ?][? if cp_relation < 45 : They do not seem willing to be convinced. ?]
 
 - @r2_cp_resources: Use our resources.
 - @r2_cp_relations: Use our good relations.
@@ -414,13 +405,13 @@ go-to: election_algorithm
 set-jump: post_election
 
 @round2_results
-go-to: georgev_wins if georgev_plurality == 1; tim_buck_wins if tim_buck_plurality == 1; woodsworth_wins if woodsworth_plurality == 1; hitler_wins if hitler_plurality == 1
+go-to: georgev_wins if georgev_plurality == 1; tim_buck_wins if tim_buck_plurality == 1; woodsworth_wins if woodsworth_plurality == 1; needham_wins if needham_plurality == 1
 
 
 @georgev_wins
 on-arrival: monarch = "George V"
 
-As expected, the incumbent George V wins the presidency. Let's hope he continues to keep the Nazis out of power.
+As expected, the incumbent George V wins the presidency. Let's hope he continues to keep the SCPs out of power.
 
 @tim_buck_wins
 on-arrival: monarch = "Tim Buck"; cp_relation = 80;
@@ -428,15 +419,6 @@ on-arrival: monarch = "Tim Buck"; cp_relation = 80;
 Tim Buck of the CP has won the presidency. Immediately, the far-right launches a coup attempt against the government. We have no choice but to unite with the CP against the fascists...
 
 - @civil_war: This is civil war.
-
-@hitler_wins
-on-arrival: monarch = nsdap_candidate; prime_minister = "Hitler"; prime_minister_party = "NSDAP"
-
-[? if nsdap_candidate == "Hitler" : Adolf Hitler of the NSDAP has won the presidency. He wastes no time in consolidating power. ?]
-[? if nsdap_candidate != "Hitler" : The NSDAP candidate [+ monarch +] has won. The first action Monarch [+ monarch +] takes is inviting Hitler back into Canada, and appointing him prime_minister. The Nazis waste no time in consolidating power. ?]
-
-- @hitler_takes_power: What do we do now?
-
 
 @woodsworth_wins
 on-arrival: monarch = "J. S. Woodsworth"; reformist_dissent -= 15; agrarian_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_flp += 8*(1-dissent); old_middle_flp += 5*(1-dissent); new_middle_flp += 5*(1-dissent); rural_flp += 5*(1-dissent); unemployed_flp += 5*(1-dissent);

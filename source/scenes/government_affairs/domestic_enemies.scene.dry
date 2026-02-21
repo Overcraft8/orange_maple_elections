@@ -11,7 +11,7 @@ view-if: flp_in_government = 1 and interior_minister_party = "FLP"
 
 As we have control over the Interior Ministry, we can direct police and intelligence services to investigate internal enemies. We can proscribe various organizations.
 
-- @deport_hitler
+- @deport_needham
 - @ban_sa: Ban the SA.
 - @unban_sa: Unban the SA.
 - @persecute_sa
@@ -24,10 +24,10 @@ As we have control over the Interior Ministry, we can direct police and intellig
 - @root: Take no action for now.
 
 @ban_sa
-view-if: nazi_urgency >= 3 and sa_banned == 0
+view-if: scp_urgency >= 3 and sa_banned == 0
 on-arrival: sa_strength *= 0.85; sa_strength *= 0.7 if interior_police_loyalty >= 0.7; sa_banned = 1; cpc_relation -= 3; prussian_police_loyalty -= 0.05; interior_police_loyalty -= 0.05; sa_militancy -= 0.05; sa_ban_timer = 6;
 
-As it turns out, the Nazi SA has many allies in the police and bureaucracy. Our relationship with the police weakens, and the SA can still organize illegally, right under the police's noses. [? if interior_police_loyalty >= 0.7 : Nevertheless, the SA is substantially weakened by our ban. ?]
+As it turns out, the SCPs SA has many allies in the police and bureaucracy. Our relationship with the police weakens, and the SA can still organize illegally, right under the police's noses. [? if interior_police_loyalty >= 0.7 : Nevertheless, the SA is substantially weakened by our ban. ?]
 
 @unban_sa
 view-if: sa_banned = 1

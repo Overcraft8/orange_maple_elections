@@ -81,7 +81,6 @@ CPC: [+ cpc_r +]%
 # 1928: 14, 1930: 7
 SCP: [+ scp_r +]%
 # 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]%
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
@@ -181,17 +180,17 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: FLP: [+ workers_flp_display +]%, RPC: [+ workers_rpc_display +]%, CP: [+ workers_cp_display +]%, [+ lpc_name +]: [+ workers_lpc_display +]%, CPC: [+ workers_cpc_display +]%; SCP: [+ workers_scp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: FLP: [+ workers_flp_display +]%, RPC: [+ workers_rpc_display +]%, CP: [+ workers_cp_display +]%, [+ lpc_name +]: [+ workers_lpc_display +]%, CPC: [+ workers_cpc_display +]%; SCP: [+ workers_scp_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: FLP: [+ new_middle_flp_display +]%, RPC: [+ new_middle_rpc_display +]%, CP: [+ new_middle_cp_display +]%, [+ lpc_name +]: [+ new_middle_lpc_display +]%, CPC: [+ new_middle_cpc_display +]%; SCP: [+ new_middle_scp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: FLP: [+ new_middle_flp_display +]%, RPC: [+ new_middle_rpc_display +]%, CP: [+ new_middle_cp_display +]%, [+ lpc_name +]: [+ new_middle_lpc_display +]%, CPC: [+ new_middle_cpc_display +]%; SCP: [+ new_middle_scp_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: FLP: [+ old_middle_flp_display +]%, RPC: [+ old_middle_rpc_display +]%, CP: [+ old_middle_cp_display +]%, [+ lpc_name +]: [+ old_middle_lpc_display +]%, CPC: [+ old_middle_cpc_display +]%; SCP: [+ old_middle_scp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: FLP: [+ old_middle_flp_display +]%, RPC: [+ old_middle_rpc_display +]%, CP: [+ old_middle_cp_display +]%, [+ lpc_name +]: [+ old_middle_lpc_display +]%, CPC: [+ old_middle_cpc_display +]%; SCP: [+ old_middle_scp_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: FLP: [+ rural_flp_display +]%, RPC: [+ rural_rpc_display +]%, CP: [+ rural_cp_display +]%, [+ lpc_name +]: [+ rural_lpc_display +]%, CPC: [+ rural_cpc_display +]%; SCP: [+ rural_scp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: FLP: [+ rural_flp_display +]%, RPC: [+ rural_rpc_display +]%, CP: [+ rural_cp_display +]%, [+ lpc_name +]: [+ rural_lpc_display +]%, CPC: [+ rural_cpc_display +]%; SCP: [+ rural_scp_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: FLP: [+ unemployed_flp_display +]%, RPC: [+ unemployed_rpc_display +]%, CP: [+ unemployed_cp_display +]%, [+ lpc_name +]: [+ unemployed_lpc_display +]%, CPC: [+ unemployed_cpc_display +]%; SCP: [+ unemployed_scp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: FLP: [+ unemployed_flp_display +]%, RPC: [+ unemployed_rpc_display +]%, CP: [+ unemployed_cp_display +]%, [+ lpc_name +]: [+ unemployed_lpc_display +]%, CPC: [+ unemployed_cpc_display +]%; SCP: [+ unemployed_scp_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: FLP: [+ catholics_flp_display +]%, RPC: [+ catholics_rpc_display +]%, CP: [+ catholics_cp_display +]%, [+ lpc_name +]: [+ catholics_lpc_display +]%, CPC: [+ catholics_cpc_display +]%; SCP: [+ catholics_scp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: FLP: [+ catholics_flp_display +]%, RPC: [+ catholics_rpc_display +]%, CP: [+ catholics_cp_display +]%, [+ lpc_name +]: [+ catholics_lpc_display +]%, CPC: [+ catholics_cpc_display +]%; SCP: [+ catholics_scp_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 @parties
 go-to: menu
@@ -220,10 +219,6 @@ Current relations: [+ scp_relation : relationships +]
 Current relations: [+ cp_relation : relationships +]
 
 [? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Canada) - a party recently formed in a split from the FLP, the SAPD is essentially an agglomeration of various left-wing splinter groups between the FLP and CP. ?]
-
-**NSDAP** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist Canadian Worker's Party, or Nazis) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
-
-Current relations: [+ nsdap_relation : relationships +]
 
 **Other parties** - there is a multitude of small parties, including the United Farmers parties. There are also independent Liberal, Progressive, and Conservative candidates who have not been nominated yet support the parties' positions.
 
@@ -255,7 +250,7 @@ Strength: [+ sh_strength +] thousand
 
 Militarization: [+ sh_militancy : militancy +]
 
-**Sturmabteilung (SA)**: This is the nazi paramilitary group.
+**Sturmabteilung (SA)**: This is the scp paramilitary group.
 
 Strength: [+ sa_strength +] thousand
 
@@ -381,12 +376,6 @@ data = data.concat([
         "name": "SCP",
         "seats": Q.scp_r / 2,
     },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
-        "seats": Q.nsdap_r / 2,
-    },
 ]);
 if (d3 && window) {
     // get screen width
@@ -406,8 +395,8 @@ if (d3 && window) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'flp': '#D26E28', 'cp': '#8B0000', 'lpc': '#BE0028', 'rpc': '#E7DB73', 'cpc': '#0055A5', 'scp': '#50E23D', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'flp': 'FLP', 'cp': 'CP', 'lpc': Q.lpc_name, 'rpc': 'RPC', 'cpc': 'CPC', 'scp': 'SCP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'flp': '#D26E28', 'cp': '#8B0000', 'lpc': '#BE0028', 'rpc': '#E7DB73', 'cpc': '#0055A5', 'scp': '#50E23D', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'flp': 'FLP', 'cp': 'CP', 'lpc': Q.lpc_name, 'rpc': 'RPC', 'cpc': 'CPC', 'scp': 'SCP', 'other': 'Others', 'sapd': 'SAPD'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     if (Q.election_records.length > 0) {
@@ -419,8 +408,8 @@ if (d3 && window) {
     if (!Q.historical_mode || Q.game_over) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'flp': '#D26E28', 'cp': '#8B0000', 'lpc': '#BE0028', 'rpc': '#E7DB73', 'cpc': '#0055A5', 'scp': '#50E23D', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'flp': 'FLP', 'cp': 'CP', 'lpc': Q.lpc_name, 'rpc': 'RPC', 'cpc': 'CPC', 'scp': 'SCP', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'flp': '#D26E28', 'cp': '#8B0000', 'lpc': '#BE0028', 'rpc': '#E7DB73', 'cpc': '#0055A5', 'scp': '#50E23D', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'flp': 'FLP', 'cp': 'CP', 'lpc': Q.lpc_name, 'rpc': 'RPC', 'cpc': 'CPC', 'scp': 'SCP', 'other': 'Others', 'sapd': 'SAPD'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }

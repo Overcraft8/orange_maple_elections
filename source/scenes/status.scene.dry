@@ -50,8 +50,6 @@ Commons composition:
 {!<span class="tooltip-text" title="Conservative Party">!}[? if not cpc_name: CPC?][? if cpc_name != 0 : [+ cpc_name +]?]{!</span>!}: [+ cpc_r +]%
 # 1928: 14, 1930: 7
 {!<span class="tooltip-text" title="Social Credit Party">!}[? if not scp_name: SCP?][? if scp_name != 0 : [+ scp_name +]?]{!</span>!}: [+ scp_r +]%
-# 1928: 3, 1930: 18
-{!<span class="tooltip-text" title="National-Socialist Canadian Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_r +]%
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
@@ -78,8 +76,6 @@ Next Parliamentary Election: [+ next_parl_election_month : month +] [+ next_parl
 {!<span class="tooltip-text" title="Communist Party">!}[? if not cp_name: CP?][? if cp_name != 0 : [+ cp_name +]?]{!</span>!}: [+ cp_relation : relationships +]
 
 {!<span class="tooltip-text" title="Social Credit Party">!}[? if not scp_name: SCP?][? if scp_name != 0 : [+ scp_name +]?]{!</span>!}: [+ scp_relation : relationships +]
-
-{!<span class="tooltip-text" title="National-Socialist Canadian Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
 
 
 @paramilitaries
@@ -112,7 +108,7 @@ RFB Militarization: [+ rfb_militancy : militancy +]
 
 Stahlhelm Militarization: [+ sh_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the Nazi paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
+{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the SCPs paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
 
 SA Militarization: [+ sa_militancy : militancy +]
 
@@ -153,23 +149,21 @@ CPC: [+ cpc_votes +]%
 
 SCP: [+ scp_votes +]%
 
-NSDAP: [+ nsdap_votes +]%
-
 Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: FLP: [+ workers_flp_display +]%, RPC: [+ workers_rpc_display +]%, CP: [+ workers_cp_display +]%, [? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]: [+ workers_lpc_display +]%, CPC: [+ workers_cpc_display +]%; SCP: [+ workers_scp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: FLP: [+ workers_flp_display +]%, RPC: [+ workers_rpc_display +]%, CP: [+ workers_cp_display +]%, [? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]: [+ workers_lpc_display +]%, CPC: [+ workers_cpc_display +]%; SCP: [+ workers_scp_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: FLP: [+ new_middle_flp_display +]%, RPC: [+ new_middle_rpc_display +]%, CP: [+ new_middle_cp_display +]%, [? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]: [+ new_middle_lpc_display +]%, CPC: [+ new_middle_cpc_display +]%; SCP: [+ new_middle_scp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: FLP: [+ new_middle_flp_display +]%, RPC: [+ new_middle_rpc_display +]%, CP: [+ new_middle_cp_display +]%, [? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]: [+ new_middle_lpc_display +]%, CPC: [+ new_middle_cpc_display +]%; SCP: [+ new_middle_scp_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: FLP: [+ old_middle_flp_display +]%, RPC: [+ old_middle_rpc_display +]%, CP: [+ old_middle_cp_display +]%, [? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]: [+ old_middle_lpc_display +]%, CPC: [+ old_middle_cpc_display +]%; SCP: [+ old_middle_scp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: FLP: [+ old_middle_flp_display +]%, RPC: [+ old_middle_rpc_display +]%, CP: [+ old_middle_cp_display +]%, [? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]: [+ old_middle_lpc_display +]%, CPC: [+ old_middle_cpc_display +]%; SCP: [+ old_middle_scp_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: FLP: [+ rural_flp_display +]%, RPC: [+ rural_rpc_display +]%, CP: [+ rural_cp_display +]%, [? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]: [+ rural_lpc_display +]%, CPC: [+ rural_cpc_display +]%; SCP: [+ rural_scp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: FLP: [+ rural_flp_display +]%, RPC: [+ rural_rpc_display +]%, CP: [+ rural_cp_display +]%, [? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]: [+ rural_lpc_display +]%, CPC: [+ rural_cpc_display +]%; SCP: [+ rural_scp_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: FLP: [+ unemployed_flp_display +]%, RPC: [+ unemployed_rpc_display +]%, CP: [+ unemployed_cp_display +]%, [? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]: [+ unemployed_lpc_display +]%, CPC: [+ unemployed_cpc_display +]%; SCP: [+ unemployed_scp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: FLP: [+ unemployed_flp_display +]%, RPC: [+ unemployed_rpc_display +]%, CP: [+ unemployed_cp_display +]%, [? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]: [+ unemployed_lpc_display +]%, CPC: [+ unemployed_cpc_display +]%; SCP: [+ unemployed_scp_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: FLP: [+ catholics_flp_display +]%, RPC: [+ catholics_rpc_display +]%, CP: [+ catholics_cp_display +]%, [? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]: [+ catholics_lpc_display +]%, CPC: [+ catholics_cpc_display +]%; SCP: [+ catholics_scp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: FLP: [+ catholics_flp_display +]%, RPC: [+ catholics_rpc_display +]%, CP: [+ catholics_cp_display +]%, [? if not lpc_name: LPC?][? if lpc_name != 0 : [+ lpc_name +]?]: [+ catholics_lpc_display +]%, CPC: [+ catholics_cpc_display +]%; SCP: [+ catholics_scp_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 Support for the Republic: [+ pro_republic_disp +]%
 

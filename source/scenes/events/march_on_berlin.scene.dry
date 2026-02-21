@@ -1,6 +1,6 @@
 title: March on Berlin
 subtitle: Right-wing militants are taking action...
-view-if: ((flp_in_government = 1 and coup_progress >= 10 and year >= 1930 and (sa_banned=0 or sh_banned=0)) or (year >= 1933 and month >= 2 and nsdap_normalized + scp_normalized >= 0.5)) and march_on_berlin_timer = 0
+view-if: ((flp_in_government = 1 and coup_progress >= 10 and year >= 1930 and (sa_banned=0 or sh_banned=0)) or (year >= 1933 and month >= 2 and scp_normalized + scp_normalized >= 0.5)) and march_on_berlin_timer = 0
 new-page: true
 max-visits: 4
 on-arrival: march_on_berlin_seen += 1; sa_strength += 80; sh_strength += 80; strife += 1; march_on_berlin_timer += 8
@@ -11,7 +11,7 @@ tags: event
 
 The far right is mobilizing. Paramilitary forces of the Stahlhelm and SA, organized under the Harzburg Front, have marched on Berlin, threatening to violently overthrow the government.
 
-They demand either immediate elections under the "supervision" of the nationalist paramilitaries, or else the immediate resignation of the government and the appointment of Adolf Hitler as prime_minister[? if hitler_deported : , and the revocation of his deportation ?]. It is obvious that they are threatening a civil war if their demands are not met.
+They demand either immediate elections under the "supervision" of the nationalist paramilitaries, or else the immediate resignation of the government and the appointment of Adolf Needham as prime_minister[? if needham_deported : , and the revocation of his deportation ?]. It is obvious that they are threatening a civil war if their demands are not met.
 
 @non_govt_menu
 
@@ -22,20 +22,20 @@ It appears that Monarch [+ monarch +] is looking favorably upon the fascist prop
 
 @accept
 title: There is nothing we can do.
-go-to: accept_election if (nsdap_normalized + scp_normalized >= 0.5 and far_right_coalition < 50); accept_hitler if (nsdap_normalized + scp_normalized < 0.5 or far_right_coalition >= 50)
+go-to: accept_election if (scp_normalized + scp_normalized >= 0.5 and scp_majority < 50); accept_needham if (scp_normalized + scp_normalized < 0.5 or scp_majority >= 50)
 
 @accept_election
-on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_parl_election_month = month + 1 if next_election_time >= time+1; next_parl_election_year = year if next_election_time >= time+1; next_parl_election_year += 1 if next_parl_election_month > 12; next_parl_election_month -= 12 if next_parl_election_month > 12; old_middle_nsdap += 10; new_middle_nsdap += 10; workers_nsdap += 10; rural_nsdap += 10; unemployed_nsdap += 8; workers_flp -= 10; workers_cp -= 10; sa_strength += 100;
+on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_parl_election_month = month + 1 if next_election_time >= time+1; next_parl_election_year = year if next_election_time >= time+1; next_parl_election_year += 1 if next_parl_election_month > 12; next_parl_election_month -= 12 if next_parl_election_month > 12; old_middle_scp += 10; new_middle_scp += 10; workers_scp += 10; rural_scp += 10; unemployed_scp += 8; workers_flp -= 10; workers_cp -= 10; sa_strength += 100;
 
 Monarch [+ monarch +] has called for emergency elections, to be held next month, under a caretaker government. The SA is permitted to act with impunity, intimidating voters into supporting the fascists.
 
 
-@accept_hitler
-on-arrival: prime_minister = "Hitler"; prime_minister_party = "NSDAP"; flp_in_government = 0
+@accept_needham
+on-arrival: prime_minister = "Needham"; prime_minister_party = "SCP"; flp_in_government = 0
 
-After the resignation of the prime_minister, Hitler has been appointed prime_minister[? if hitler_deported: , after being made a citizen again ?].
+After the resignation of the prime_minister, Needham has been appointed prime_minister[? if needham_deported: , after being made a citizen again ?].
 
-- @hitler_takes_power
+- @needham_takes_power
 
 @ask_resign
 
@@ -66,7 +66,7 @@ The Reichsbanner number at [+ rb_strength +] thousand; many are in Berlin to cou
 
 
 @fight_2_win
-on-arrival: coup_progress = 0; sa_strength *= 0.7; sh_strength *= 0.7; rb_strength *= 0.9; workers_nsdap -= 12*(1-dissent); unemployed_nsdap -= 10*(1-dissent); new_middle_nsdap -= 6*(1-dissent); workers_flp += 8*(1-dissent); unemployed_flp += 6*(1-dissent); pro_republic += 15
+on-arrival: coup_progress = 0; sa_strength *= 0.7; sh_strength *= 0.7; rb_strength *= 0.9; workers_scp -= 12*(1-dissent); unemployed_scp -= 10*(1-dissent); new_middle_scp -= 6*(1-dissent); workers_flp += 8*(1-dissent); unemployed_flp += 6*(1-dissent); pro_republic += 15
 achievement: drei_pfeile
 
 Our forces confront the fascists, and somehow, the fascists retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.
@@ -74,7 +74,7 @@ Our forces confront the fascists, and somehow, the fascists retreat! They were o
 The show of force has reinvigorated support for the republic and for the FLP, and has weakened the fascists.
 
 @fight_2_win_2
-on-arrival: coup_progress = 0; pro_republic += 5; workers_nsdap -= 2*(1-dissent); unemployed_nsdap -= 2*(1-dissent); new_middle_nsdap -= 2*(1-dissent); rb_strength *= 0.9; sa_strength *= 0.9; sh_strength *= 0.9
+on-arrival: coup_progress = 0; pro_republic += 5; workers_scp -= 2*(1-dissent); unemployed_scp -= 2*(1-dissent); new_middle_scp -= 2*(1-dissent); rb_strength *= 0.9; sa_strength *= 0.9; sh_strength *= 0.9
 
 # if march on Berlin has already been seen
 
@@ -104,20 +104,20 @@ The courts agree that Monarch [+ monarch +] is wrong to dismiss us, and that we 
 @new_elections
 title: Call for new snap elections.
 subtitle: We will not resign at gunpoint, and we will attempt to maintain the integrity of the elections.
-go-to: new_elections_woodsworth if monarch == "J. S. Woodsworth"; new_elections_georgev if monarch != "J. S. Woodsworth" and rpc_relation >= 40 and far_right_coalition < 50; new_elections_georgev_reject if monarch != "J. S. Woodsworth" and (rpc_relation < 40 or far_right_coalition >= 50)
+go-to: new_elections_woodsworth if monarch == "J. S. Woodsworth"; new_elections_georgev if monarch != "J. S. Woodsworth" and rpc_relation >= 40 and scp_majority < 50; new_elections_georgev_reject if monarch != "J. S. Woodsworth" and (rpc_relation < 40 or scp_majority >= 50)
 
 
 @new_elections_woodsworth
-go-to: new_elections_woodsworth_2 if nsdap_normalized + scp_normalized >= 0.5 and far_right_coalition < 50; new_elections_woodsworth_reject if (nsdap_normalized + scp_normalized < 0.5 or far_right_coalition >= 50)
+go-to: new_elections_woodsworth_2 if scp_normalized + scp_normalized >= 0.5 and scp_majority < 50; new_elections_woodsworth_reject if (scp_normalized + scp_normalized < 0.5 or scp_majority >= 50)
 
-# if the Nazis + SCP have a current majority in the Commons, then they'll instantly launch the coup.
+# if the SCPs + SCP have a current majority in the Commons, then they'll instantly launch the coup.
 
 
 @new_elections_woodsworth_reject
 
-The fascists reject our offer of free and fair elections. They are demanding that Monarch [+ monarch +] dismisses the current government and appoints Hitler prime_minister. [? if far_right_coalition >= 50 : They claim that since the far-right coalition has the majority in the Commons, they are constitutionally justified in appointing the chanellor. Unfortunately, their argument is not exactly wrong. ?]
+The fascists reject our offer of free and fair elections. They are demanding that Monarch [+ monarch +] dismisses the current government and appoints Needham prime_minister. [? if scp_majority >= 50 : They claim that since the far-right coalition has the majority in the Commons, they are constitutionally justified in appointing the chanellor. Unfortunately, their argument is not exactly wrong. ?]
 
-- @woodsworth_appoints_hitler
+- @woodsworth_appoints_needham
 - @fight
 
 @new_elections_woodsworth_2
@@ -156,13 +156,13 @@ We have resigned our positions in the government.
 
 
 
-@woodsworth_appoints_hitler
-title: We cannot do anything but appoint Hitler prime_minister.
+@woodsworth_appoints_needham
+title: We cannot do anything but appoint Needham prime_minister.
 view-if: monarch == "J. S. Woodsworth"
-choose-if: nsdap_normalized >= 0.5 or largest_party == "NSDAP"
+choose-if: scp_normalized >= 0.5 or largest_party == "SCP"
 unavailable-subtitle: There is no way Monarch [+ monarch +] could do such a blatantly undemocratic act.
-on-arrival: prime_minister = "Hitler"; prime_minister_party = "NSDAP"; flp_in_government = 0
+on-arrival: prime_minister = "Needham"; prime_minister_party = "SCP"; flp_in_government = 0
 
-Threatened with a civil war, and unwilling to fight anymore, Monarch [+ monarch +] dismisses the current government and appoints Hitler of the NSDAP as prime_minister.
+Threatened with a civil war, and unwilling to fight anymore, Monarch [+ monarch +] dismisses the current government and appoints Needham of the SCP as prime_minister.
 
-- @hitler_takes_power
+- @needham_takes_power
