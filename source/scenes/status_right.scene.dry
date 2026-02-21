@@ -18,7 +18,7 @@ is-special: true
 
 = Board of Directors 
 
-<div style="display: flex; justify-content: center; gap: 20px;">
+<div style="display: flex; justify-content: center; gap: 2px;">
 
     <div style="text-align: center; font-size: 4px;">
         <img src="img/portraits/NicholsonAlexander.jpg" style="width: 80px;">
@@ -30,7 +30,11 @@ is-special: true
         <p>[+ flp_board_two +]</p>
     </div>
 
-    <div style="text-align: center;">
+</div>
+
+<div style="display: flex; justify-content: center; gap: 2px;">
+
+<div style="text-align: center;">
         <img src="img/portraits/BrockelbankJohn.jpg" style="width: 80px;">
         <p>[+ flp_board_three +]</p>
     </div>
@@ -41,8 +45,6 @@ is-special: true
     </div>
 
 </div>
-
-
 
 
 @partyfactions
