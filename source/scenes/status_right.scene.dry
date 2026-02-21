@@ -4,7 +4,7 @@ is-special: true
 
 = Leader of the FLP
 
- [if the_split == 0 : <div><img src="img/portraits/WilliamsHaraGeorge.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">George Hara Williams</p> ]
+<div><img src="img/portraits/WilliamsHaraGeorge.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">George Hara Williams</p>
 
 = Parliamentary Party Leader 
 
