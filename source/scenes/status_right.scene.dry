@@ -1,4 +1,4 @@
-title: Party Hierarchy
+title: partyhierarchy
 new-page: true
 is-special: true
 
@@ -11,7 +11,7 @@ is-special: true
 <div><img src="img/portraits/ColdwellMajorJames.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
 <p style="text-align: center;margin-bottom: 0;"> [+ flp_parliament_leader +] </p>
 
-@party_factions
+@partyfactions
 
 = Internal Factions of the <span style="color: #00008B;">**FLP**</span>
 
