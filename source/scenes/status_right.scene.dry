@@ -18,17 +18,30 @@ is-special: true
 
 = Board of Directors 
 
-<div><img src="img/portraits/NicholsonAlexander.jpg" style="width: 5%;display: block;margin: auto;margin-bottom: 5px;"></div>
-<p style="text-align: center;margin-bottom: 0;"> [+ flp_board_one +] </p>
+<div style="display: flex; justify-content: center; gap: 20px;">
 
-<div><img src="img/portraits/LouiseLucas.jpg" style="width: 5%;display: block;margin: auto;margin-bottom: 5px;"></div>
-<p style="text-align: center;margin-bottom: 0;"> [+ flp_board_two +] </p>
+    <div style="text-align: center;">
+        <img src="img/portraits/NicholsonAlexander.jpg" style="width: 120px;">
+        <p>[+ flp_board_one +]</p>
+    </div>
 
-<div><img src="img/portraits/BrockelbankJohn.jpg" style="width: 5%;display: block;margin: auto;margin-bottom: 5px;"></div>
-<p style="text-align: center;margin-bottom: 0;"> [+ flp_board_three +] </p>
+    <div style="text-align: center;">
+        <img src="img/portraits/LouiseLucas.jpg" style="width: 120px;">
+        <p>[+ flp_board_two +]</p>
+    </div>
 
-<div><img src="img/portraits/FinesClarence.jpg" style="width: 5%;display: block;margin: auto;margin-bottom: 5px;"></div>
-<p style="text-align: center;margin-bottom: 0;"> [+ flp_board_four +] </p>
+    <div style="text-align: center;">
+        <img src="img/portraits/BrockelbankJohn.jpg" style="width: 120px;">
+        <p>[+ flp_board_three +]</p>
+    </div>
+
+    <div style="text-align: center;">
+        <img src="img/portraits/FinesClarence.jpg" style="width: 120px;">
+        <p>[+ flp_board_four +]</p>
+    </div>
+
+</div>
+
 
 
 
