@@ -2,7 +2,7 @@ title: The Nation
 new-page: true
 is-special: true
 
-= Leader of the FLP
+= President of the FLP
 
 <div><img src="img/portraits/WilliamsHaraGeorge.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;">George Hara Williams</p>
 
@@ -20,23 +20,23 @@ is-special: true
 
 <div style="display: flex; justify-content: center; gap: 20px;">
 
-    <div style="text-align: center;">
-        <img src="img/portraits/NicholsonAlexander.jpg" style="width: 120px;">
+    <div style="text-align: center; font-size: 4px;">
+        <img src="img/portraits/NicholsonAlexander.jpg" style="width: 80px;">
         <p>[+ flp_board_one +]</p>
     </div>
 
     <div style="text-align: center;">
-        <img src="img/portraits/LouiseLucas.jpg" style="width: 120px;">
+        <img src="img/portraits/LouiseLucas.jpg" style="width: 80px;">
         <p>[+ flp_board_two +]</p>
     </div>
 
     <div style="text-align: center;">
-        <img src="img/portraits/BrockelbankJohn.jpg" style="width: 120px;">
+        <img src="img/portraits/BrockelbankJohn.jpg" style="width: 80px;">
         <p>[+ flp_board_three +]</p>
     </div>
 
     <div style="text-align: center;">
-        <img src="img/portraits/FinesClarence.jpg" style="width: 120px;">
+        <img src="img/portraits/FinesClarence.jpg" style="width: 80px;">
         <p>[+ flp_board_four +]</p>
     </div>
 
