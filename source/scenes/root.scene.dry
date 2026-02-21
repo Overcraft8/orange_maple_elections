@@ -51,7 +51,7 @@ Q.factions = ['left', 'agrarian', 'labor', 'reformist', 'neorevisionist'];
 Q.left_strength = 15;
 Q.left_dissent = 20;
 Q.agrarian_strength = 30;
-Q.center_dissent = 0;
+Q.agrarian_dissent = 0;
 Q.labor_strength = 25;
 Q.labor_dissent = 5;
 Q.reformist_strength = 25;
@@ -115,7 +115,7 @@ Q.flp_parliament_leader = "Major James Coldwell";
 Q.cp_party_leader = "Tim Buck";
 Q.cpc_leader = "James Anderson";
 Q.lpc_leader = "Mackenzie King";
-Q.scp_leader = "William Aberhart"; 
+Q.scp_leader = "Joseph Needham"; 
 Q.rpc_leader = "Henry Stevens";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the FLP.
 Q.rpc_party_leader = "Henry Stevens";
@@ -626,9 +626,9 @@ Q.spry_advisor = 0; // Graham Spry
 set-bg: img/map_of_canada.jpg
 new-page: true
 
-> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
+> *"We should never, never be afraid or ashamed about dreams. The dreams won’t all come true; we won’t always make it; but where there is no vision a people perish. Where people have no dreams and no hopes and aspirations, life becomes dull and a meaningless wilderness."*
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+ - Tommy Douglas, Premier of Saskatchewan from 1944-1961
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
@@ -644,7 +644,7 @@ on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; cp_rel
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; rpc_relation = 41; cp_relation = 16; cpc_relation = 31; budget = 3;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; agrarian_dissent = 25; rpc_relation = 41; cp_relation = 16; cpc_relation = 31; budget = 3;
 go-to: 1928_main
 
 @1928_historical
@@ -658,7 +658,7 @@ Q.rb_strength = 2000;
 Q.reformist_dissent = 25;
 Q.left_dissent = 30;
 Q.labor_dissent = 25;
-Q.center_dissent = 25;
+Q.agrarian_dissent = 25;
 Q.rpc_relation = 41;
 Q.cp_relation = 16;
 Q.cpc_relation = 31;

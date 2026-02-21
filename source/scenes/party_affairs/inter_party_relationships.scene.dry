@@ -12,8 +12,8 @@ max-visits: 12
 
 The FLP cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the FLP, RPC, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
 
-- @liberals: Strengthen our bonds with the left-liberal Canadian Democratic Party and conservative-liberal Canadian People's Party.
-- @center: Strengthen our bonds with the Catholic RPC Party.
+- @liberals: Strengthen our bonds with the Liberal Party.
+- @social_credit: Strengthen our bonds with the Social Credit Party.
 - @cp: Work towards repairing relationships with the Communist Party.
 - @flp_alone: The FLP can stand alone for now.
 - @easy_discard
@@ -63,53 +63,46 @@ on-arrival: cp_relation += 3*(1 - dissent); reformist_dissent += 1
 
 After the events of Blütmai, reconciling with the Communists is difficult, if not impossible. Nevertheless, we must try.
 
-@center
+@social_credit
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; rpc_relation += 2 if rpc_party_leader == "Joos"
-go-to: center_op if rpc_in_government = 1 and flp_in_government = 0 and prime_minister != "Brüning"; center_coalition if flp_in_government = 1 and rpc_in_government = 1; center_bruning if prime_minister = "Brüning"
+on-arrival: resources -= 1; scp_relation += 2 if scp_party_leader == "Joos"
+go-to: social_credit_op if scp_in_government = 1 and flp_in_government = 0 and prime_minister != "Needham"; social_credit_coalition if flp_in_government = 1 and scp_in_government = 1; social_credit_needham if prime_minister = "Needham"
 
-@center_op
-on-arrival: rpc_relation += 5*(1 - dissent)
+@social_credit_op
+on-arrival: scp_relation += 5*(1 - dissent)
 
-We are currently in opposition to the RPC-led government, but that does not preclude the general building of feelings of good will.
+We are currently in opposition to the SCP-led government, but that does not preclude the general building of feelings of good will.
 
-@center_coalition
-on-arrival: rpc_relation += 8*(1 - dissent)
+@social_credit_coalition
+on-arrival: scp_relation += 8*(1 - dissent)
 
 We are currently coalition partners with them, so improving relations comes naturally.
 
-@center_bruning
-on-arrival: rpc_relation += 5*(1 - dissent)
+@social_credit_needham
+on-arrival: scp_relation += 5*(1 - dissent)
 
-The Brüning semi-autocratic regime makes building friendly relations difficult, but not impossible.
+Needham's Social Credit Party is closely aligned with the ASCP, and is hesitant to align with us.
 
 @liberals
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; lpc_relation += 5*(1 - dissent)
-go-to: cpc_stresemann if stresemann_dead = 0; cpc_loss if stresemann_dead = 1 and year <= 1930; cpc_moribund if year > 1930
+go-to: cpc_stresemann if stresemann_dead = 0; cpc_moribund if year > 1930
 
-The [+ lpc_name +] has been one of our closest allies through the course of the Republic.
+The [+ lpc_name +] has been the dominant party in Saskatchewan since it's birth. Perhaps they can prove worthwhile allies.
 
 @cpc_stresemann
 on-arrival: cpc_relation += 8*(1 - dissent)
 
 Gustav Stresemann, the leader of the CPC is the best foreign policy leaders of the republic, and while he has previously expressed monarchist tendencies, he has been friendly towards us.
 
-@cpc_loss
-on-arrival: cpc_relation += 5*(1 - dissent)
-
-With the death of Gustav Stresemann, the CPC is much less likely to be accommodating of us. In addition, the liberal parties are electorally in decline, so perhaps our efforts are best spent elsewhere.
-
-However, given the influence of the CPC among the other right-leaning parties [? if monarch == "George V": and with Monarch George V ?], it can still be helpful to influence them.
-
 @cpc_moribund
 on-arrival: cpc_relation += 5*(1 - dissent)
 
-The liberal parties (both the [+ lpc_name +] and CPC) are electorally moribund, so perhaps our efforts are best spent elsewhere.
+The liberal party [+ lpc_name +] is electorally moribund, so perhaps our efforts are best spent elsewhere.
 
 However, given the influence of the CPC among the other right-leaning parties[? if monarch == "George V": and with Monarch George V ?], it can still be helpful to influence them.
 

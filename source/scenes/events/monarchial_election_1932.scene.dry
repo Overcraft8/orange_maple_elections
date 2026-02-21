@@ -57,7 +57,7 @@ Supporting Tim Buck is rather unpopular in our party, even if the Communists acc
 - @support_georgev: Support George V instead.
 
 @support_tim_buck_2
-on-arrival: flp_support_tim_buck = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_flp -= 5; workers_flp -= 3; cp_relation += 10; communist_coalition += 2; rpc_relation -= 15; cpc_relation -= 15; lpc_relation -= 10
+on-arrival: flp_support_tim_buck = 1; reformist_dissent += 15; agrarian_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_flp -= 5; workers_flp -= 3; cp_relation += 10; communist_coalition += 2; rpc_relation -= 15; cpc_relation -= 15; lpc_relation -= 10
 
 Fine. We have thrown our support to Chairman Tim Buck of the CP.
 
@@ -392,7 +392,7 @@ Supporting Tim Buck is rather unpopular in our party, even if the Communists acc
 - @round2_menu: Never mind.
 
 @round2_tim_buck_2
-on-arrival: woodsworth_campaign = 0; flp_support_tim_buck = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_flp -= 5; workers_flp -= 3; cp_relation += 10; communist_coalition += 2; rpc_relation -= 15; cpc_relation -= 15
+on-arrival: woodsworth_campaign = 0; flp_support_tim_buck = 1; reformist_dissent += 15; agrarian_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_flp -= 5; workers_flp -= 3; cp_relation += 10; communist_coalition += 2; rpc_relation -= 15; cpc_relation -= 15
 on-departure: rpc_support_woodsworth = 0; cp_support_woodsworth = 0;
 
 Fine. We have thrown our support to Chairman Tim Buck of the CP.
@@ -439,6 +439,6 @@ on-arrival: monarch = nsdap_candidate; prime_minister = "Hitler"; prime_minister
 
 
 @woodsworth_wins
-on-arrival: monarch = "J. S. Woodsworth"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_flp += 8*(1-dissent); old_middle_flp += 5*(1-dissent); new_middle_flp += 5*(1-dissent); rural_flp += 5*(1-dissent); unemployed_flp += 5*(1-dissent);
+on-arrival: monarch = "J. S. Woodsworth"; reformist_dissent -= 15; agrarian_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_flp += 8*(1-dissent); old_middle_flp += 5*(1-dissent); new_middle_flp += 5*(1-dissent); rural_flp += 5*(1-dissent); unemployed_flp += 5*(1-dissent);
 
 J. S. Woodsworth of the FLP has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.

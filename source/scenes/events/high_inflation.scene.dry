@@ -23,7 +23,7 @@ on-arrival: upper_tax_rates += 1; lower_tax_rates += 1; budget += 2; unemployed 
 Raising taxes is unpopular among everyone, but it might be what it takes to keep inflation under control.
 
 @welfare
-on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; unemployed += 1.5; new_middle_flp += 4*(1-dissent); old_middle_flp += 4*(1-dissent); workers_flp -= 5; unemployed_flp -= 5; inflation -= 1; left_dissent += 5; labor_dissent += 5; center_dissent += 5; cp_coalition_dissent += 1; economic_growth -= 0.4
+on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; unemployed += 1.5; new_middle_flp += 4*(1-dissent); old_middle_flp += 4*(1-dissent); workers_flp -= 5; unemployed_flp -= 5; inflation -= 1; left_dissent += 5; labor_dissent += 5; agrarian_dissent += 5; cp_coalition_dissent += 1; economic_growth -= 0.4
 
 Reducing the amount of government spending should reduce the inflation rate, according to classical economics. But it imposes pain upon the people who are suffering the most.
 

@@ -91,7 +91,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the CP.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Agrarian wing is a mix between reform and revolution.">Agrarian</span>!} strength: [+ agrarian_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="The Agrarian wing is a mix between reform and revolution.">Agrarian</span>!} strength: [+ agrarian_strength : strength +], dissent: [+ agrarian_dissent : dissent +]
 
 {!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 

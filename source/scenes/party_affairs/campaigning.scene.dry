@@ -48,9 +48,9 @@ We have increased our campaigning among the old middle class. [? if nationalism 
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: rural_flp += 5*(1-dissent); rural_flp -= 3*(1-dissent) if peoples_party == 0; resources -= 1; peoples_party_support += 1; rural_flp += 3*(1-dissent) if rural_policy >= 2
+on-arrival: rural_flp += 5*(1-dissent); resources -= 1; rural_flp += 3*(1-dissent) if rural_policy >= 2
 
-We have increased our campaigning among farmers. [? if peoples_party == 0: We have not historically campaigned much among the farmers, and they do not trust us. ?][? if peoples_party > 0: As a people's party, we have an easier time increasing support among farmers than before. ?][? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
+We have increased our campaigning among farmers. The farmers are a traditional voting bloc of ours[? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
 
 @unemployed
 subtitle: -1 resources
