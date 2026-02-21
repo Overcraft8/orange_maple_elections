@@ -395,12 +395,6 @@ img.inline-img.icon {
 #bg1 {
     z-index: -99;
 }
-.b {
-}
-.save_button {
-}
-.delete_button {
-}
 
 /*
  * Card stuff for dendrynexus
@@ -410,18 +404,6 @@ img.inline-img.icon {
 ul.decks, ul.hand, ul.pinned-cards {
   list-style: none;
   padding-left: 0;
-}
-
-.hand {
-
-}
-
-.pinned-cards {
-
-}
-
-.deck {
-
 }
 
 a.card {
