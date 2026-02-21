@@ -30,7 +30,6 @@ title: Forming the Iron Front
 choose-if: advisor_action_timer == 0 and iron_front_formed == 0 and scp_urgency >= 2
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if iron_front_formed : The Iron Front has already been formed. ?][? if scp_urgency < 2 : The party does not yet see the danger of the SCPs. ?]
 on-arrival: advisor_action_timer = 6; rb_strength += 50; scp_urgency += 1
-go-to: confronting_scp.iron_front 
 
 
 @scp_urgency
