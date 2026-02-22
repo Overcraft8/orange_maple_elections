@@ -366,7 +366,7 @@ go-to: popular_front_success
 view-if: rpc_party_leader == "Joos" and cp_party_leader == "Conciliators"
 on-arrival: flp_in_government = 1; in_popular_front = 1; prime_minister = "Williams"; prime_minister_party = "FLP"; cp_relation += 10; coup_progress += 2; in_left_front = 0; in_weimar_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
 achievement: grosse_volksfront
-go-to: 
+go-to: popular_front_success
 
 Somehow, the coalition is successfully formed! The conciliatory leadership of the RPC Party and CP helped make the negotiations possible. We still need a prime_minister; the only acceptable choice among the parties was George Hara Williams of the FLP, acceptable to the RPC and CP [? if monarch == "George V" : as well as Monarch George V, albeit extremely reluctantly ?].
 
