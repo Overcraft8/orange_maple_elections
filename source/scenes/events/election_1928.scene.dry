@@ -484,7 +484,7 @@ go-to: left_coalition_success
 
 @left_coalition_success
 on-arrival: flp_in_government = 1; in_left_front = 1; prime_minister = "Williams"; prime_minister_party = "FLP"; coup_progress += 3; capital_strike_progress += 2; in_popular_front = 0; in_grand_coalition = 0; in_weimar_coalition = 0; cp_relation += 10
-go-to: 
+go-to: left_coalition_no_civil_war
 achievement: einheitsfront
 
 Somehow, surprisingly, the left coalition is successfully formed, without appointing Tim Buck as prime_minister. The consensus choice for prime_minister, accepted by the FLP, CP, and Monarch [+ monarch +], is George Hara Williams, who belongs to the agrarian faction of the FLP, but was acceptable to the left due to his previous membership in the left-wing anti-war UFLP.
