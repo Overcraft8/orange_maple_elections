@@ -632,7 +632,7 @@ table {
 .seat.cp {
     fill: #8B0000;
 }
-.seat.flp {
+.seat.flg {
     fill: #D26E28;
     stroke: var(--border-color);
     stroke-width: 1.5px;
