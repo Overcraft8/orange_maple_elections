@@ -62,4 +62,4 @@ view-if: cp_truce == 0
 unavailable-subtitle: The CP is not interested.
 on-arrival: cp_truce = 1; cp_relation += 5; wul_strength += 50; rb_strength += 50; sa_strength += 50;
 
-We have made at least a temporary truce with the CP, so that our respective paramilitaries will stop fighting.
+We have made at least a temporary truce with the CP, so that our respective organizations will stop fighting.

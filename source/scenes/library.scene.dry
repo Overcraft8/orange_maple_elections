@@ -15,7 +15,7 @@ Herein contains relevant information about the government and politics of the Ca
 - @demographics: Demographics
 - @parties: Parties
 - @public_opinion: Public opinion (and projected election results)
-- @paramilitaries: Paramilitary groups
+- @organizations: Paramilitary groups
 - @factions: Internal factions
 - @figures: Figures and charts
 - @backSpecialScene: Exit library.
@@ -222,7 +222,7 @@ Current relations: [+ cp_relation : relationships +]
 
 **Other parties** - there is a multitude of small parties, including the United Farmers parties. There are also independent Liberal, Progressive, and Conservative candidates who have not been nominated yet support the parties' positions.
 
-@paramilitaries
+@organizations
 on-arrival: {!
 Q.rb_strength = Math.round(Q.rb_strength);
 Q.sh_strength = Math.round(Q.sh_strength);

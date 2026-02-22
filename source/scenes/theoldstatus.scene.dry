@@ -96,7 +96,7 @@ Economic growth: [+ economic_growth_2 +]%
 [? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
 
-@paramilitaries
+@organizations
 on-arrival: {!
 if (Q.rb_strength) {
     Q.rb_strength_2 = Q.rb_strength.toFixed(1);
@@ -112,7 +112,7 @@ if (Q.sa_strength) {
 }
 !}
 
-= Paramilitaries
+= Organizations
 
 {!<span class="tooltip-text" title="The UFC(SS)  is a popular organization for defending democracy, mostly affiliated with the FLG.">UFC(SS)</span>!} Strength: [+ rb_strength_2 +] thousand
 
@@ -130,7 +130,7 @@ Stahlhelm Militarization: [+ sh_militancy : militancy +]
 
 SA Militarization: [+ sa_militancy : militancy +]
 
-= Official military/paramilitaries
+= Official military/organizations
 
 Reichswehr: [+ reichswehr_strength +] thousand troops.
 

@@ -105,7 +105,7 @@ Q.rpc_relation = 50;
 Q.cp_relation = 25;
 Q.lpc_relation = 60;
 Q.cpc_relation = 35;
-// SCP and SCP are invariably hostile
+// SCP are invariably hostile
 Q.SCP_relation = 10;
 
 

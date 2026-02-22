@@ -78,7 +78,7 @@ Next Parliamentary Election: [+ next_parl_election_month : month +] [+ next_parl
 {!<span class="tooltip-text" title="Social Credit Party">!}[? if not scp_name: SCP?][? if scp_name != 0 : [+ scp_name +]?]{!</span>!}: [+ scp_relation : relationships +]
 
 
-@paramilitaries
+@organizations
 on-arrival: {!
 if (Q.rb_strength) {
     Q.rb_strength_2 = Q.rb_strength.toFixed(1);
@@ -94,7 +94,7 @@ if (Q.sa_strength) {
 }
 !}
 
-= Paramilitaries
+= Organizations
 
 {!<span class="tooltip-text" title="The UFC(SS) is a popular organization for defending democracy, mostly affiliated with the FLG.">UFC(SS)</span>!} Strength: [+ rb_strength_2 +] thousand
 
@@ -112,7 +112,7 @@ Stahlhelm Militarization: [+ sh_militancy : militancy +]
 
 SA Militarization: [+ sa_militancy : militancy +]
 
-= Official military/paramilitaries
+= Official military/organizations
 
 Reichswehr: [+ reichswehr_strength +] thousand troops.
 

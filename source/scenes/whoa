@@ -210,7 +210,7 @@ CWC: [+ cwc_ideology : ideology +]
 
 [? if slmc_formed = 1 : SLMC: [+ slmc_ideology : ideology +] ?]
 
-@paramilitaries
+@organizations
 on-arrival: {!
 if (Q.slfpt_strength) {
     Q.slfpt_strength_2 = Q.slfpt_strength.toFixed(1);
