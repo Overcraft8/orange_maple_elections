@@ -90,17 +90,20 @@ header {
 #header-links a:last-of-type {
   margin-right: 0;
 }
-#header-links a:first-of-type {
-  background-color: #F7B718;
-  color: #FFD659;
+
+/* These are the colors for Library, Save, Options */
+
+#header-links a:first-of-type {   
+  background-color: #ba1c19;
+  color: #e67e7e;
 }
 #header-links a:nth-of-type(2) {
-  background-color: #941E32;
-  color: #DB5168;
+  background-color: #786d3e;
+  color: #c5b697;
 }
 #header-links a:nth-of-type(3) {
   background-color: #DF7500;
-  color: #FF9A2E;
+  color: #d6b894;
 }
 header h1, header h2 {
   display: inline-block;
