@@ -7,7 +7,10 @@ const factions = [
 
 function renderFactionBar() {
   const container = document.getElementById("factionBar");
-  if (!container) return; // Try again later
+  if (!container) return;
+
+  // Clear old content
+  container.innerHTML = "";
 
   factions.forEach(f => {
     const seg = document.createElement("div");
@@ -19,19 +22,13 @@ function renderFactionBar() {
   });
 }
 
-// Try again every 200ms until the tab loads
-const factionBarInterval = setInterval(() => {
-  const container = document.getElementById("factionBar");
-  if (container) {
-    clearInterval(factionBarInterval);
-    renderFactionBar();
-  }
-}, 200);
-
-// Re-render when the tab is opened
+// Re-render when the Party Factions tab is actually shown
 document.getElementById("partyfactions_tab").addEventListener("click", () => {
-  setTimeout(renderFactionBar, 50);
+  // Wait for Dendry to finish injecting the scene
+  setTimeout(() => {
+    renderFactionBar();
+  }, 150);
 });
 
 // Also try rendering on load
-setTimeout(renderFactionBar, 200);
+setTimeout(renderFactionBar, 300);
