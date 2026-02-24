@@ -1,8 +1,8 @@
 const factions = [
-  { name: "Agrarians", percent: 40, color: "#d9534f" },
-  { name: "Labor", percent: 25, color: "#5bc0de" },
-  { name: "Left", percent: 20, color: "#5e5e5e" },
-  { name: "Reformist", percent: 15, color: "#5cb85c" }
+  { name: "Agrarians", percent: 40, color: "#a7d11c" },
+  { name: "Labor", percent: 25, color: "#0F52BA" },
+  { name: "Left", percent: 20, color: "#7b1616" },
+  { name: "Reformist", percent: 15, color: "#d26e28" }
 ];
 
 function renderFactionBar() {
