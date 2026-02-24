@@ -32,3 +32,15 @@ document.getElementById("partyfactions_tab").addEventListener("click", () => {
 
 // Also try rendering on load
 setTimeout(renderFactionBar, 300);
+
+const observer = new MutationObserver(() => {
+  const container = document.getElementById("factionBar");
+  if (container) {
+    renderFactionBar();
+  }
+});
+
+observer.observe(document.getElementById("qualities_right"), {
+  childList: true,
+  subtree: true
+});
