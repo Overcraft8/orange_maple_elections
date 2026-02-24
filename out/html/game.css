@@ -94,8 +94,8 @@ header {
 /* These are the colors for Library, Save, Options */
 
 #header-links a:first-of-type {   
-  background-color: #ba1c19;
-  color: #e67e7e;
+  background-color: #eded36;
+  color: #ecec8d;
 }
 #header-links a:nth-of-type(2) {
   background-color: #786d3e;
@@ -103,7 +103,7 @@ header {
 }
 #header-links a:nth-of-type(3) {
   background-color: #8dd33e;
-  color: #d6b894;
+  color: #7fb182;
 }
 header h1, header h2 {
   display: inline-block;
