@@ -27,3 +27,11 @@ const factionBarInterval = setInterval(() => {
     renderFactionBar();
   }
 }, 200);
+
+// Re-render when the tab is opened
+document.getElementById("partyfactions_tab").addEventListener("click", () => {
+  setTimeout(renderFactionBar, 50);
+});
+
+// Also try rendering on load
+setTimeout(renderFactionBar, 200);
