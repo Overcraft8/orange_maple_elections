@@ -175,19 +175,13 @@ Railway length: [+ railway_length +] km
 
 Road length: [+ road_length +] km
 
-Rural Electrification: [+ rural_electrification +]%
-
-Rural Sanitation Access: [+ rural_sanitation +]%
-
-Rural Telephone Access: [+ rural_telephone +]%
-
 = Tax Rates 
 
-Lower income tax: [+ lower_tax_rates +]
+Lower income tax: [+ lower_tax_rates +]%
 
-Upper income tax: [+ Upper_tax_rates +]
+Upper income tax: [+ Upper_tax_rates +]%
 
-Tariffs: [+ tariffs +]
+Tariffs: [+ tariffs +]%
 
 @economy
 
@@ -202,3 +196,27 @@ Economic growth: [+ economic_growth_2 +]%
 @livingstandards
 
 = Living Standards
+
+Welfare: [+ welfare +]
+
+Primary education quality: [+ primaryeducationquality +]
+
+Secondary education quality: [+ secondaryeducationquality +]
+
+Higher education quality: [+ highereducationquality +]
+
+Curriculum: [+ Curriculum +]
+
+Healthcare quality: [+ healthcarequality +]
+
+Housing availability: [+ housingavailability +]
+
+= Rural Standards
+
+Rural Electrification: [+ rural_electrification +]%
+
+Rural Sanitation Access: [+ rural_sanitation +]%
+
+Rural Telephone Access: [+ rural_telephone +]%
+
+

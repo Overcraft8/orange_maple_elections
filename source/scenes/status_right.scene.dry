@@ -55,8 +55,6 @@ is-special: true
     <div id="factionBar" class="bar-container"></div>
 </div>
 
-
-
 <span class="tooltip-text" title="A faction consisting of radical farmers, representing the small family farm." style="color: #a7d11c;">**Agrarians**</span> 
 Strength: [+ agrarian_strength : strength +] 
 Dissent: [+ agrarian_dissent : dissent +]

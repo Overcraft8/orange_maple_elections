@@ -471,7 +471,19 @@ Q.education_science = 0;
 //                   Living Standards
 // level of welfare relative to 1932 (can go negative)
 Q.welfare = 0;
-
+Q.primaryeducationquality = "Basic";
+Q.secondaryeducationquality = "Basic";
+Q.highereducationquality = "Basic";
+Q.Curriculum = "Traditional";
+Q.healthcarequality = "Basic";
+Q.housingavailability = "Insufficient";
+//  
+//                   Rural living standards
+// Rural Access to electricity
+Q.rural_electrification = 0;
+// Rural Access to sanitation
+Q.rural_sanitation = 0;
+Q.rural_telephone = 0;
 
 //                 Foreign Relations
 // Relations with the USA
@@ -486,10 +498,6 @@ Q.soviet_relation = 0;
 Q.public_transit = 0;
 // Have we nationalized the provinces' resources?
 Q.resource_nationalization = 0;
-// Rural Access to electricity
-Q.rural_electrification = 0;
-// Rural Access to sanitation
-Q.rural_sanitation = 0;
 // Railway Length
 Q.railway_length = 6500; // in km
 Q.road_length = 20000; // in km
