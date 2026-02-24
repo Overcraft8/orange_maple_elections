@@ -51,7 +51,9 @@ is-special: true
 
 = Internal Factions of the <span style="color: #d26e28;">**FLG**</span>
 
+@html
 <div id="factionBar" class="bar-container"></div>
+@end
 
 <span class="tooltip-text" title="A faction consisting of radical farmers, representing the small family farm." style="color: #a7d11c;">**Agrarians**</span> 
 Strength: [+ agrarian_strength : strength +] 
