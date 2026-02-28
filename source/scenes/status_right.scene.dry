@@ -6,7 +6,7 @@ is-special: true
 
 <div><img src="img/portraits/WilliamsHaraGeorge.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;"> [+ flg_president +] </p>
 
-= Parliamentary Party Leader 
+= Legislative Party Leader 
 
 <div><img src="img/portraits/ColdwellMajorJames.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
 <p style="text-align: center;margin-bottom: 0;"> [+ flg_parliament_leader +] </p>
@@ -70,3 +70,22 @@ Dissent: [+ left_dissent : dissent +]
 <span class="tooltip-text" title="The moderate wing of the FLG and most aligned with the Federal CCF." style="color: #d26e28;">**Reformist**</span> 
 Strength: [+ reformist_strength : strength +] 
 Dissent: [+ reformist_dissent : dissent +]
+
+@partyorganizations
+
+= Party Organizations of the FLG
+
+**CCYM (Saskatchewan Section)**
+[+ ccym_strength +] strength
+[+ ccym_relations +] relations with the party
+
+**UFC(SS)**
+[+ UFC(SS)_strength +] strength
+[+ UFC(SS)_relations +] relations with the party
+
+**SCSA**
+[+ SCSA_strength +] strength
+[+ SCSA_relations +] relations with the party
+
+
+

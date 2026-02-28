@@ -538,7 +538,13 @@ Q.George_Williams_Dead = 0;
 
 
 
-
+//                             SASKATCHEWAN CCF ORGANIZATIONS
+Q.ccym_strength = 0;
+Q.ccym_relations = 0;
+Q.UFC(SS)_strength = 0;
+Q.UFC(SS)_relations = 0;
+Q.SCSA_strength = 0;
+Q.SCSA_relations = 0;
 
 
 
