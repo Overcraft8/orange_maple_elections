@@ -317,7 +317,7 @@ view-if: n_advisors < 3
 
 - #nonfactional_advisor
 
--                                          #agrarian
+#                                 Agrarians
 
 @add_williams
 title: George Hara Williams
