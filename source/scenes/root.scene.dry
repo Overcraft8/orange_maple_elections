@@ -408,6 +408,21 @@ Q.minority_government = 0;
 // ministries - which parties control the ministries?
 // starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
+
+Q.cooperatives_minister = "None";
+Q.cooperatives_minister_party = "None";
+Q.education_minister = "None";
+Q.education_minister_party = "None";
+Q.mineral_resources_minister = "None";
+Q.mineral_resources_minister_party = "None";
+Q.municipal_minister = "None";
+Q.municipal_minister_party = "None";
+Q.transportation_minister = "None";
+Q.transportation_minister_party = "None";
+Q.telephones_telegraphs_minister = "None";
+Q.telephones_telegraphs_minister_party = "None";
+
+
 Q.foreign_minister = 'Streseman';
 Q.foreign_minister_party = 'CPC';
 Q.interior_minister = 'von Keudell';
@@ -565,9 +580,12 @@ Q.n_elections = 0;
 Q.no_majority_elections = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 1;
-Q.next_parl_election_year = 1934;
+# Q.next_parl_election_year = 1934;
+# Q.next_parl_election_month = 6;
+# Q.next_election_time = 30; //months until the next election
+Q.next_parl_election_year = 1932;
 Q.next_parl_election_month = 6;
-Q.next_election_time = 30; //months until the next election
+Q.next_election_time = 6; //months until the next election
 // government affairs timers
 Q.agricultural_policy_timer = 0;
 Q.domestic_enemies_timer = 0;

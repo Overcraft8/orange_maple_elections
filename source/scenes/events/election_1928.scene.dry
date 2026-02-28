@@ -121,6 +121,19 @@ Q.in_minority_government = 0;
 Q.in_unity_government = 0;
 Q.flg_toleration = 0;
 Q.flg_caretaker = 0;
+
+
+
+Q.cooperatives_minister_party = 'RPC';
+Q.education_minister_party = 'RPC';
+Q.Mineral_resources_minister_party = 'RPC';
+Q.Municipal_affairs_minister_party = 'RPC';
+Q.transportation_minister_party = 'RPC';
+Q.telephones_telegraphs_minister_party = 'RPC
+
+
+
+
 Q.foreign_minister_party = 'CPC';
 Q.interior_minister_party = 'RPC';
 Q.justice_minister_party = 'I';
@@ -1106,6 +1119,71 @@ We can pick from any number of ministries. Controlling a ministry allows us to d
 
 - #mins_1928
 - #drop_mins_1928
+
+
+@cooperatives
+title: Cooperative Ministry
+subtitle: A new ministry to oversee the cooperatives. 
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: cooperatives_minister_party != "FLG"
+on-arrival: leverage -= 5; cooperatives_minister_party = "FLG"; cooperatives_minister = "Carlyle"
+go-to: ministries
+
+@education
+title: Education Ministry
+subtitle: Saskatchewan has many issues in education, and we should be in a position to address them.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: education_minister_party != "FLG"
+on-arrival: leverage -= 5; education_minister_party = "FLG"; education_minister = "Carlyle"
+go-to: ministries
+
+@mineral_resoures
+title: Mineral Resources Ministry
+subtitle: Saskatchewan has many untapped natural resources that we could use to our advantage.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: mineral_resouces_minister_party != "FLG"
+on-arrival: leverage -= 5; mineral_resources_minister_party = "FLG"; mineral_resources_minister = "Carlyle"
+go-to: ministries
+
+@municipal
+title: Municipal Affairs Ministry
+subtitle: We can utilize relations with the municipalities to develop the province. 
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: municipal_minister_party != "FLG"
+on-arrival: leverage -= 5; municipal_minister_party = "FLG"; municipal_minister = "Carlyle"
+go-to: ministries
+
+@transportation
+title: Highways and Transportation Ministry
+subtitle: Saskatchewan is a large province, and transportation is a key issue.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: transportation_minister_party != "FLG"
+on-arrival: leverage -= 5; transportation_minister_party = "FLG"; transportation_minister = "Carlyle"
+go-to: ministries
+
+@telephones_telegraphs
+title: Telephones and Telegraphs Ministry
+subtitle: Saskatchewan has an undeveloped telecommunications infrastructure, and this ministry would allow us to improve it.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 5
+view-if: telephones_telegraphs_minister_party != "FLG"
+on-arrival: leverage -= 5; telephones_telegraphs_minister_party = "FLG"; telephones_telegraphs_minister = "Carlyle"
+go-to: ministries
+
+
+# Old Ministries
+
 
 @labor
 title: Labor Ministry
