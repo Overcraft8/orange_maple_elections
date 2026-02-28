@@ -172,9 +172,9 @@ Q.prussian_police_militancy = 1;
 Q.prussian_police_loyalty = 0.5;
 
 // strength includes actual military and de facto reserves?
-Q.reichswehr_strength = 100;
-Q.reichswehr_militancy = 5;
-Q.reichswehr_loyalty = 0.2;
+Q.rcmp_strength = 100;
+Q.rcmp_militancy = 5;
+Q.rcmp_loyalty = 0.2;
 
 // The state of the country
 
@@ -433,8 +433,8 @@ Q.justice_minister = 'Hergt';
 Q.justice_minister_party = 'SCP';
 Q.labor_minister = 'JS_Woodsworth';
 Q.labor_minister_party = 'RPC';
-Q.reichswehr_minister = 'Groener';
-Q.reichswehr_minister_party = 'I';
+Q.rcmp_minister = 'Groener';
+Q.rcmp_minister_party = 'I';
 Q.economic_minister = 'Curtius';
 Q.economic_minister_party = 'CPC';
 Q.finance_minister = 'Köhler';

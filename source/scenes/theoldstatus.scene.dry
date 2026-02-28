@@ -132,9 +132,9 @@ SA Militarization: [+ sa_militancy : militancy +]
 
 = Official military/organizations
 
-Reichswehr: [+ reichswehr_strength +] thousand troops.
+RCMP: [+ rcmp_strength +] thousand troops.
 
-Reichswehr Loyalty: [+ reichswehr_loyalty : loyalty +]
+RCMP Loyalty: [+ rcmp_loyalty : loyalty +]
 
 Prussian police: [+ prussian_police_strength +] thousand members.
 

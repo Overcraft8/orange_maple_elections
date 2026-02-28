@@ -10,7 +10,7 @@ card-image: img/portraits/BrockelbankJohn.jpg
 
 The Interior Ministry controls internal security throughout the Saskatchewaner Republic. While most police work is delegated to the states, the national security agency can perform special investigations.
 
-As with the state police units and the Reichswehr, the internal police tends to be reactionary, and has serious issues with loyalty to the elected government of the Republic.
+As with the state police units and the RCMP, the internal police tends to be reactionary, and has serious issues with loyalty to the elected government of the Republic.
 
 - @loyalty: Improve the loyalty of the Interior Ministry forces.
 - @investigate_corruption: Investigate corruption by big businesses.

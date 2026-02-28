@@ -106,7 +106,7 @@ Justice: [+ justice_minister_party +]
 
 Foreign: [+ foreign_minister_party +]
 
-Reichswehr: [+ reichswehr_minister_party +]
+RCMP: [+ rcmp_minister_party +]
 
 Agriculture: [+ agriculture_minister_party +]
 
@@ -256,9 +256,9 @@ Militarization: [+ sa_militancy : militancy +]
 
 **Official military/paramilitary groups:**
 
-**Reichswehr**: [+ reichswehr_strength +] thousand troops. This is Saskatchewan's military.
+**RCMP**: [+ rcmp_strength +] thousand troops. This is Saskatchewan's military.
 
-Loyalty: [+ reichswehr_loyalty : loyalty +]
+Loyalty: [+ rcmp_loyalty : loyalty +]
 
 **Prussian police**: [+ prussian_police_strength +] thousand members.
 

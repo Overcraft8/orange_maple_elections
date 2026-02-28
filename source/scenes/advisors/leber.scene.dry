@@ -28,8 +28,8 @@ Leber helps us to rally the people in defense of democracy.
 @military_affairs
 title: Military affairs
 subtitle: We can set our military policy.
-choose-if: advisor_action_timer == 0 and flg_in_government and reichswehr_minister_party == "FLG"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not flg_in_government : The FLG is not in government. ?][? if reichswehr_minister_party != "FLG": The FLG does not have the Reichswehr ministry. ?]
+choose-if: advisor_action_timer == 0 and flg_in_government and rcmp_minister_party == "FLG"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not flg_in_government : The FLG is not in government. ?][? if rcmp_minister_party != "FLG": The FLG does not have the RCMP ministry. ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: military_policy
 

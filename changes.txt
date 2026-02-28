@@ -374,7 +374,7 @@ Minor changes:
 - UI change for the options menu
 - various tweaks to effects and thresholds
 - Wirth is an option for chancellor after the death of Müller if Joseph Joos is the RPC leader.
-- Defunding the Reichswehr increases coup progress more, and increases paramilitary strength.
+- Defunding the RCMP increases coup progress more, and increases paramilitary strength.
 
 
 Backend changes:

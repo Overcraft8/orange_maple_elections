@@ -94,7 +94,7 @@ if (Q.sa_strength) {
 }
 !}
 
-= Organizations
+= Saskatchewan Organizations
 
 {!<span class="tooltip-text" title="The [+ UFC_name +] is a popular organization for defending democracy, mostly affiliated with the FLG.">UFC(SS)</span>!} Strength: [+ rb_strength_2 +] thousand
 
@@ -112,11 +112,11 @@ Stahlhelm Militancy: [+ sh_militancy : militancy +]
 
 SA Militancy: [+ sa_militancy : militancy +]
 
-= Official military/organizations
+= Law Enforcement
 
-Reichswehr: [+ reichswehr_strength +] thousand troops.
+RCMP: [+ rcmp_strength +] thousand troops.
 
-Reichswehr Loyalty: [+ reichswehr_loyalty : loyalty +]
+RCMP Loyalty: [+ rcmp_loyalty : loyalty +]
 
 Prussian police: [+ prussian_police_strength +] thousand members.
 
