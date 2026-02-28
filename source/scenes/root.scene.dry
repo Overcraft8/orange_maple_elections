@@ -409,6 +409,8 @@ Q.minority_government = 0;
 // starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
 
+
+
 Q.cooperatives_minister = "None";
 Q.cooperatives_minister_party = "CPC";
 Q.education_minister = "None";
@@ -580,9 +582,14 @@ Q.n_elections = 0;
 Q.no_majority_elections = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 1;
-# Q.next_parl_election_year = 1934;
-# Q.next_parl_election_month = 6;
-# Q.next_election_time = 30; //months until the next election
+
+
+// Q.next_parl_election_year = 1934;
+// Q.next_parl_election_month = 6;
+// Q.next_election_time = 30; //months until the next election
+
+
+
 Q.next_parl_election_year = 1932;
 Q.next_parl_election_month = 6;
 Q.next_election_time = 6; //months until the next election
