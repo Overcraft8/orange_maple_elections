@@ -410,17 +410,17 @@ Q.minority_government = 0;
 // is the agricultural ministry useful at all?
 
 Q.cooperatives_minister = "None";
-Q.cooperatives_minister_party = "None";
+Q.cooperatives_minister_party = "CPC";
 Q.education_minister = "None";
-Q.education_minister_party = "None";
+Q.education_minister_party = "CPC";
 Q.mineral_resources_minister = "None";
-Q.mineral_resources_minister_party = "None";
+Q.mineral_resources_minister_party = "CPC";
 Q.municipal_minister = "None";
-Q.municipal_minister_party = "None";
+Q.municipal_minister_party = "CPC";
 Q.transportation_minister = "None";
-Q.transportation_minister_party = "None";
+Q.transportation_minister_party = "CPC";
 Q.telephones_telegraphs_minister = "None";
-Q.telephones_telegraphs_minister_party = "None";
+Q.telephones_telegraphs_minister_party = "CPC";
 
 
 Q.foreign_minister = 'Streseman';
@@ -652,6 +652,7 @@ Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 Q.underhill_advisor = 0; // Frank Underhill
 Q.spry_advisor = 0; // Graham Spry
 !}
+
 set-bg: img/map_of_canada.jpg
 new-page: true
 
