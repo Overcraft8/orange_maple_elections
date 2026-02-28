@@ -121,20 +121,14 @@ Q.in_minority_government = 0;
 Q.in_unity_government = 0;
 Q.flg_toleration = 0;
 Q.flg_caretaker = 0;
-
-
-
+// New Ministries
 Q.cooperatives_minister_party = 'RPC';
 Q.education_minister_party = 'RPC';
 Q.Mineral_resources_minister_party = 'RPC';
 Q.Municipal_affairs_minister_party = 'RPC';
 Q.transportation_minister_party = 'RPC';
 Q.telephones_telegraphs_minister_party = 'RPC';
-
-
-
 // Old Ministries
-
 Q.foreign_minister_party = 'CPC';
 Q.interior_minister_party = 'RPC';
 Q.justice_minister_party = 'I';
@@ -180,7 +174,6 @@ for (var party of Q.parties) {
 }
 Q.election_records.push(election_result);
 !}
-
 on-departure: scp_urgency = 1 if (scp_urgency == 0 and scp_r >= 15)
 on-display: {!
 data = [
