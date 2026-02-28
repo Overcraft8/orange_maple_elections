@@ -1,9 +1,9 @@
-title: Assembly Elections
+title: Commons Elections
 new-page: true
 tags: event
 priority: -1
 view-if: (year = next_parl_election_year and month >= next_parl_election_month) or (year > next_parl_election_year)
-on-departure: month_actions += 1; in_election = 0; next_parl_election_year = next_parl_election_year + 4; n_elections += 1; next_election_time = time + 48; papen_premier_timer = 4;
+on-departure: month_actions += 1; in_election = 0; next_parl_election_year = next_parl_election_year + 4; n_elections += 1; next_election_time = time + 48; papen_prime_minister_timer = 4;
 set-jump: post_election_1928
 face-image: img/Rothe_Wahlen_1903.jpg
 
@@ -13,10 +13,28 @@ face-image: img/Rothe_Wahlen_1903.jpg
 
 = Elections, [+ month : month +] [+ year +]
 
-The Assembly elections are to be held now.
+The Commons elections are to be held now.
 
 - @election_algorithm: May we do our best...
+- @cancel_elections
 
+@cancel_elections
+title: We cannot hold the elections now. Cancel the elections.
+subtitle: This is an anti-democratic move that may backfire.
+view-if: in_emergency_government == 1 and monarch == "J. S. Woodsworth" and not monarchial_powers
+
+Since we are currently ruling as part of an emergency government, we may use quasi-constitutional trickery to significantly delay these elections, and continue governing via Article 48. This is likely to be extremely unpopular both with our base and with the other parties. However, this may be necessary to prevent the extremists from gaining power.
+
+- @cancel_elections_2: Yes, do it.
+- @election_algorithm: No, let's hold the elections.
+
+@cancel_elections_2
+on-departure: next_parl_election_year = next_parl_election_year + 1; next_election_time = time + 12; pro_republic -= 10; cpc_relation -= 8; rpc_relation -= 8; lpc_relation -= 10; cp_relation -= 8; coup_progress += 2; workers_flg -= 4; new_middle_flg -= 5; old_middle_flg -= 5; rural_flg -= 5; catholics_flg -= 5; unemployed_flg -= 5; coup_progress += 2; scp_normalized >= 0.5; sa_strength += 100 if coup_progress >= 7; sh_strength += 100 if coup_progress >= 7
+achievement: ausnahmezustand
+
+Fine. Monarch [+ monarch +] has taken the unprecedented step of canceling these elections. New elections are scheduled for [+ next_parl_election_month : month +] [+ next_parl_election_year +].
+
+Let us hope this does not backfire.
 
 @post_election_1928
 on-arrival: {!
@@ -70,16 +88,13 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 // get change arrows and signs
 
 
-// The largest party can only be the FLG, LPC, CPC, or SCP.
+// The largest party can only be the NSDAP or the FLG.
 Q.largest_party = 'FLG';
+if (Q.scp_r >= Q.flg_r && Q.scp_r >= Q.cp_r) {
+    Q.largest_party = 'SCP';
+}
 
-if (Q.lpc_r >= Q.flg_r && Q.lpc_r >= Q.cpc_r && Q.lpc_r >= Q.scp_r) {
-    Q.largest_party = 'LPC';
-}
-if (Q.cpc_r >= Q.flg_r && Q.cpc_r >= Q.lpc_r && Q.cpc_r >= Q.scp_r) {
-    Q.largest_party = 'CP';
-}
-if (Q.scp_r >= Q.flg_r && Q.scp_r >= Q.lpc_r && Q.scp_r >= Q.cpc_r) {
+if (Q.cp_r >= Q.flg_r && Q.cp_r >= Q.scp_r) {
     Q.largest_party = 'CP';
 }
 
@@ -89,15 +104,15 @@ Q.grand_coalition = Q.flg_r + Q.lpc_r + Q.rpc_r + Q.cpc_r;
 Q.bourgeois_coalition = Q.lpc_r + Q.rpc_r + Q.cpc_r + Q.other_r;
 Q.center_right_coalition = Q.rpc_r + Q.lpc_r + Q.cpc_r + Q.other_r + Q.scp_r;
 Q.right_coalition = Q.rpc_r + Q.cpc_r + Q.other_r + Q.scp_r;
-Q.scp_majority = Q.scp_r 
+Q.far_right_coalition = Q.scp_r + Q.scp_r;
 Q.left_coalition = Q.flg_r + Q.cp_r + Q.sapd_r;
 // this is an absurd concept lol
 Q.popular_front_coalition = Q.flg_r + Q.cp_r + Q.rpc_r + Q.lpc_r + Q.sapd_r;
-Q.anti_democratic_coalition = Q.cp_r + Q.scp_r;
-// aka everyone except scp, cp, scp
+Q.anti_democratic_coalition = Q.cp_r + Q.scp_r + Q.scp_r;
+// aka everyone except nazi, cp, scp
 Q.neo_weimar_coalition = Q.flg_r + Q.lpc_r + Q.rpc_r + Q.cpc_r + Q.other_r;
-// Needham + Right-wing parties (only comes into effect if you've alienated RPC too badly)
-Q.needham_right_coalition = Q.rpc_r + Q.scp_r
+// Hitler + Right-wing parties (only comes into effect if you've alienated RPC too badly)
+Q.hitler_right_coalition = Q.rpc_r + Q.scp_r + Q.scp_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
 Q.progressive_coalition = Q.flg_r + Q.cp_r + Q.lpc_r + Q.sapd_r;
 
@@ -121,14 +136,6 @@ Q.in_minority_government = 0;
 Q.in_unity_government = 0;
 Q.flg_toleration = 0;
 Q.flg_caretaker = 0;
-// New Ministries
-Q.cooperatives_minister_party = 'RPC';
-Q.education_minister_party = 'RPC';
-Q.Mineral_resources_minister_party = 'RPC';
-Q.Municipal_affairs_minister_party = 'RPC';
-Q.transportation_minister_party = 'RPC';
-Q.telephones_telegraphs_minister_party = 'RPC';
-// Old Ministries
 Q.foreign_minister_party = 'CPC';
 Q.interior_minister_party = 'RPC';
 Q.justice_minister_party = 'I';
@@ -174,15 +181,14 @@ for (var party of Q.parties) {
 }
 Q.election_records.push(election_result);
 !}
-on-departure: scp_urgency = 1 if scp_urgency == 0 and scp_r >= 15
-
+on-departure: scp_urgency = 1 if (scp_urgency == 0 and scp_r >= 15)
 on-display: {!
 data = [
     {
         "id": "cp",
         "legend": "CP",
         "name": "CP",
-        "seats": Math.round(Q.cp_r / 2),
+        "seats": Math.round(Q.cp_r*5),
     }
 ];
 if (Q.sapd_formed && Q.sapd_r) {
@@ -190,7 +196,7 @@ if (Q.sapd_formed && Q.sapd_r) {
             "id": "sapd",
             "legend": "SAPD",
             "name": "SAPD",
-            "seats": Math.round(Q.sapd_r / 2),
+            "seats": Math.round(Q.sapd_r*5),
             });
 }
 data = data.concat([
@@ -229,7 +235,7 @@ data = data.concat([
         "legend": "SCP",
         "name": "SCP",
         "seats": Math.round(Q.scp_r/2),
-    },
+    }
 ]);
 
 if (window && d3) {
@@ -239,21 +245,21 @@ if (window && d3) {
     if (screenWidth < width - 50) {
         width = screenWidth - 50; 
         height = width;
-        document.getElementById("assembly").style.height = screenWidth/2 + "px";
+        document.getElementById("commons").style.height = screenWidth/2 + "px";
     } 
 
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#assembly").datum(data).call(parliament);
+    d3.select("#commons").datum(data).call(parliament);
 }
 !}
 go-to: coalition_menu
 
 = Election results
 
-{!<svg id="assembly" style="width: 500px; height: 250px;"> </svg>!}
+{!<svg id="commons" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
