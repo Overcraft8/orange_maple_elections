@@ -96,21 +96,21 @@ if (Q.sa_strength) {
 
 = Organizations
 
-{!<span class="tooltip-text" title="The UFC(SS) is a popular organization for defending democracy, mostly affiliated with the FLG.">UFC(SS)</span>!} Strength: [+ rb_strength_2 +] thousand
+{!<span class="tooltip-text" title="The [+ UFC_name +] is a popular organization for defending democracy, mostly affiliated with the FLG.">UFC(SS)</span>!} Strength: [+ rb_strength_2 +] thousand
 
-UFC(SS) Militarization: [+ rb_militancy : militancy +]
+[+ UFC_name +] Militancy: [+ rb_militancy : militancy +]
 
 {!<span class="tooltip-text" title="The WUL (Workers Unity League) is a communist group associated with the CP.">WUL</span>!} Strength: [+ wul_strength_2 +] thousand
 
-WUL Militarization: [+ wul_militancy : militancy +]
+WUL Militancy: [+ wul_militancy : militancy +]
 
 {!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the SCP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
 
-Stahlhelm Militarization: [+ sh_militancy : militancy +]
+Stahlhelm Militancy: [+ sh_militancy : militancy +]
 
 {!<span class="tooltip-text" title="The SA (Sturmabteilung) is the SCPs paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
 
-SA Militarization: [+ sa_militancy : militancy +]
+SA Militancy: [+ sa_militancy : militancy +]
 
 = Official military/organizations
 
