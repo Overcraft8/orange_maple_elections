@@ -174,7 +174,8 @@ for (var party of Q.parties) {
 }
 Q.election_records.push(election_result);
 !}
-on-departure: scp_urgency = 1 if (scp_urgency == 0 and scp_r >= 15)
+on-departure: scp_urgency = 1 if scp_urgency == 0 and scp_r >= 15
+
 on-display: {!
 data = [
     {
