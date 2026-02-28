@@ -80,8 +80,8 @@ Dissent: [+ reformist_dissent : dissent +]
 [+ ccym_relations +] relations with the party
 
 **UFC(SS)**
-[+ UFC(SS)_strength +] strength
-[+ UFC(SS)_relations +] relations with the party
+[+ UFCSS_strength +] strength
+[+ UFCSS_relations +] relations with the party
 
 **SCSA**
 [+ SCSA_strength +] strength
