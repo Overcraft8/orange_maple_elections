@@ -147,9 +147,11 @@ Q.prussian_government = "FLP";
 // Number of members in 1928 (in thousands)
 // UFC(SS), stahlhelm, SA, Workers Unity League
 Q.ufc_strength = 2000;
-Q.ufc_militancy = 0.01;
+Q.ufc_militancy = 0.30;
 Q.women_in_rb = 0;
 Q.ufc_banned = 0;
+Q.ccym_militancy = 0.15;
+Q.scsa_militancu = 0.03;
 Q.sh_strength = 500;
 Q.sh_militancy = 0.5;
 Q.sh_banned = 0;

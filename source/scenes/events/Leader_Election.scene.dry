@@ -1,24 +1,31 @@
-title: Leadership of the FLP
+title: FLP President Election
 new-page: true
-subtitle: We must choose a President
-on-arrival: flp_president = "none"
+subtitle: Who will lead our party?
 tags: event
-view-if: year = 1932 and month = 2
+view-if: year = 1929 and month = 5
 max-visits: 1
 face-image: img/Calgary_Conference.jpg
-go-to: select_leader
 
-= FLP President Selection
+= Selection of our President
 
-The first task of the FLP will be to select our Party President. With a primarily agrarian membership, the most sensible choice would be George Williams, a farmer himself and a long-term President of the UFC(SS). However, concerns have risen about his communist sympathies, owing to a visit to the USSR earlier last year. 
+The FLP is a traditionally agrarian party. 
 
-Coldwell is the choice of the Labour faction within the party. He is a former teacher and well-developed debater. However, there are questions about his ability to rally the farmers in a heavily rural province.
+Yes. 
 
-- @George_Williams: The Populist who led the farmers into politics will lead us to victory!
-- @Major_Coldwell: Coldwell can rally the urban labourers!
+- @GeorgeWilliams: We must unite the farmers behind the FLP!
+- @Coldwell: The urban labourers must not be forgotten!
 
-@George_Williams: Williams is the path forward
-on-arrival: rural_flp += 3; agrarian_strength += 4
+@GeorgeWilliams 
+on-arrival: flp_rural += 4; agrarian_strength += 4
+face-image: img/portraits/WilliamsHaraGeorge.jpg
 
-@Major_Coldwell: Coldwell is the path forward
-on-arrival: rural_flp += 3; labor_strength += 4
+Williams will lead us to victory!
+
+@Coldwell
+on-arrival flp_workers += 4; labor_strength += 4
+face-image: img/portraits/ColdwellMajorJames.jpg
+
+Coldwell will lead us to victory!
+
+
+

@@ -79,6 +79,8 @@ Dissent: [+ reformist_dissent : dissent +]
 [+ ccym_strength +] strength
 [+ ccym_relations +] relations with the party
 
+CCYM Militancy: [+ ccym_militancy : militancy +]
+
 <span style="color: #a7d11c;">**UFC(SS)**</span> 
 [+ UFCSS_strength +] strength
 [+ UFCSS_relations +] relations with the party
@@ -88,6 +90,8 @@ UFC(SS) Militancy: [+ ufc_militancy : militancy +]
 <span style="color: #d26e28;">**SCSA**</span> 
 [+ SCSA_strength +] strength
 [+ SCSA_relations +] relations with the party
+
+SCSA Militancy: [+ scsa_militancy : militancy +]
 
 {!<span class="tooltip-text" title="The WUL (Workers Unity League) is a communist group associated with the CP.">WUL</span>!} Strength: [+ wul_strength_2 +] thousand
 
