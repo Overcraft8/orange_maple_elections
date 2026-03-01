@@ -1,7 +1,21 @@
 title = Leadership of the FLP
 subtitle = We must choose a President
-on-arrival: 
+on-arrival: flp_president = "none"
 tags: event
 view-if: year = 1932 and month = 2
 priority: 2
 max-visits: 1
+go-to: select_leader
+
+@select_leader
+
+- @George_Williams: The Populist who led the farmers into politics will lead us to victory!
+- @Major_Coldwell: Coldwell can rally the urban labourers!
+
+@George_Williams: Williams is the path forward
+face-image: img/WilliamsHaraGeorge.jpg
+on-arrival: rural_flp += 3; agrarian_strength += 4
+
+@Major_Coldwell: Coldwell is the path forward
+face-image: img/ColdwellMajorJames.jpg
+on-arrival: rural_flp += 3; labor_strength += 4

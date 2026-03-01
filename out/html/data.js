@@ -1,5 +1,5 @@
 const tooltipList = [{
-    searchString: "FLG",
+    searchString: "FLP",
     explanationText: "The Farmer-Labour Group - Us"
 }, 
 {
@@ -30,7 +30,7 @@ const tooltipList = [{
 
 
 const colourList = [{
-        word: "FLG",
+        word: "FLP",
         style: "color: #D26E28; font-weight: bold;"
     },
     {

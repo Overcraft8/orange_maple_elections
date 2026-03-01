@@ -4,12 +4,12 @@ is-special: true
 
 = President of the FLP
 
-<div><img src="img/portraits/WilliamsHaraGeorge.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;"> [+ flp_president +] </p>
+<div><img src="img/portraits/Question_Mark.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p style="text-align: center;margin-bottom: 0;"> [+ flp_president +] </p>
 
 = Legislative Party Leader 
 
-<div><img src="img/portraits/ColdwellMajorJames.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
-<p style="text-align: center;margin-bottom: 0;"> [+ flp_parliament_leader +] </p>
+<div><img src="img/portraits/Question_Mark.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
+<p style="text-align: center;margin-bottom: 0;"> [+ flp_legislative_leader +] </p>
 
 = Party Secretary
 
@@ -71,7 +71,7 @@ Dissent: [+ left_dissent : dissent +]
 Strength: [+ reformist_strength : strength +] 
 Dissent: [+ reformist_dissent : dissent +]
 
-@partyorganizations
+@partyaffiliates
 
 = Party Affiliates of the FLP
 

@@ -109,9 +109,9 @@ Q.cpc_relation = 35;
 Q.SCP_relation = 10;
 
 
-Q.flp_parliament_leader = "Major James Coldwell";
-Q.flp_president = "George Hara Williams";
-Q.flp_secretary = "Frank Eliason";
+Q.flp_legislative_leader = "None";
+Q.flp_president = "None";
+Q.flp_secretary = "None";
 
 Q.flp_board_one = "Alexander Nicholson";
 Q.flp_board_one_faction = "agrarian";
