@@ -22,7 +22,7 @@ face-image: img/portraits/WilliamsHaraGeorge.jpg
 Williams will lead us to victory!
 
 @Coldwell
-on-arrival flp_workers += 4; labor_strength += 4
+on-arrival: flp_workers += 4; labor_strength += 4
 face-image: img/portraits/ColdwellMajorJames.jpg
 
 Coldwell will lead us to victory!
