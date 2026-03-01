@@ -146,10 +146,10 @@ Q.prussian_government = "FLG";
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
 // UFC(SS), stahlhelm, SA, Workers Unity League
-Q.rb_strength = 2000;
-Q.rb_militancy = 0.01;
+Q.ufc_strength = 2000;
+Q.ufc_militancy = 0.01;
 Q.women_in_rb = 0;
-Q.rb_banned = 0;
+Q.ufc_banned = 0;
 Q.sh_strength = 500;
 Q.sh_militancy = 0.5;
 Q.sh_banned = 0;
@@ -697,11 +697,11 @@ For more information on the politics and government of Saskatchewan, see the "Li
 - @1932_historical: Begin (historical mode)
 
 @1932_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; cp_relation = 29; rpc_relation = 54; cpc_relation = 49; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 3; ufc_strength = 2500; cp_relation = 29; rpc_relation = 54; cpc_relation = 49; budget = 5;
 go-to: 1932_main
 
 @1932_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; agrarian_dissent = 25; rpc_relation = 41; cp_relation = 16; cpc_relation = 31; budget = 3;
+on-arrival: difficulty = 1; resources = 0; dues = 1; ufc_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; agrarian_dissent = 25; rpc_relation = 41; cp_relation = 16; cpc_relation = 31; budget = 3;
 go-to: 1932_main
 
 @1932_historical
@@ -711,7 +711,7 @@ Q.difficulty = 2;
 Q.historical_mode = 1;
 Q.resources = 2;
 Q.dues = 1;
-Q.rb_strength = 2000;
+Q.ufc_strength = 2000;
 Q.reformist_dissent = 25;
 Q.left_dissent = 30;
 Q.labor_dissent = 25;

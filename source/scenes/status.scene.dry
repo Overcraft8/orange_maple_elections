@@ -80,8 +80,8 @@ Next Legislative Election: [+ next_parl_election_month : month +] [+ next_parl_e
 
 @organizations
 on-arrival: {!
-if (Q.rb_strength) {
-    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
+if (Q.ufc_strength) {
+    Q.ufc_strength_2 = Q.ufc_strength.toFixed(1);
 }
 if (Q.wul_strength) {
     Q.wul_strength_2 = Q.wul_strength.toFixed(1);
@@ -96,13 +96,9 @@ if (Q.sa_strength) {
 
 = Saskatchewan Organizations
 
-{!<span class="tooltip-text" title="The [+ UFC_name +] is a popular organization for defending democracy, mostly affiliated with the FLG.">UFC(SS)</span>!} Strength: [+ rb_strength_2 +] thousand
+{!<span class="tooltip-text" title="The [+ UFC_name +] is a popular organization for defending democracy, mostly affiliated with the FLG.">UFC(SS)</span>!} Strength: [+ ufc_strength_2 +] thousand
 
-[+ UFC_name +] Militancy: [+ rb_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The WUL (Workers Unity League) is a communist group associated with the CP.">WUL</span>!} Strength: [+ wul_strength_2 +] thousand
-
-WUL Militancy: [+ wul_militancy : militancy +]
+[+ UFC_name +] Militancy: [+ ufc_militancy : militancy +]
 
 {!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the SCP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
 

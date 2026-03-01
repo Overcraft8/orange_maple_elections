@@ -222,7 +222,7 @@ Current relations: [+ cp_relation : relationships +]
 
 @organizations
 on-arrival: {!
-Q.rb_strength = Math.round(Q.rb_strength);
+Q.ufc_strength = Math.round(Q.ufc_strength);
 Q.sh_strength = Math.round(Q.sh_strength);
 Q.sa_strength = Math.round(Q.sa_strength); 
 !}
@@ -232,9 +232,9 @@ go-to: menu
 
 **UFC(SS) **: There are various farmer's organizations in Saskatchewan, mainly acting as wheat pool cooperatives. They have are represented by the reformist wing of our party.
 
-Strength: [+ rb_strength +] thousand
+Strength: [+ ufc_strength +] thousand
 
-Militarization: [+ rb_militancy : militancy +]
+Militarization: [+ ufc_militancy : militancy +]
 
 **Workers Unity League (WUL)**: The "Red Front Fighter's League" is associated with the CP.
 

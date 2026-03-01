@@ -98,8 +98,8 @@ Economic growth: [+ economic_growth_2 +]%
 
 @organizations
 on-arrival: {!
-if (Q.rb_strength) {
-    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
+if (Q.ufc_strength) {
+    Q.ufc_strength_2 = Q.ufc_strength.toFixed(1);
 }
 if (Q.wul_strength) {
     Q.wul_strength_2 = Q.wul_strength.toFixed(1);
@@ -114,9 +114,9 @@ if (Q.sa_strength) {
 
 = Organizations
 
-{!<span class="tooltip-text" title="The UFC(SS)  is a popular organization for defending democracy, mostly affiliated with the FLG.">UFC(SS)</span>!} Strength: [+ rb_strength_2 +] thousand
+{!<span class="tooltip-text" title="The UFC(SS)  is a popular organization for defending democracy, mostly affiliated with the FLG.">UFC(SS)</span>!} Strength: [+ ufc_strength_2 +] thousand
 
-UFC(SS) Militarization: [+ rb_militancy : militancy +]
+UFC(SS) Militarization: [+ ufc_militancy : militancy +]
 
 {!<span class="tooltip-text" title="The WUL (Workers Unity League) is a communist group associated with the CP.">WUL</span>!} Strength: [+ wul_strength_2 +] thousand
 

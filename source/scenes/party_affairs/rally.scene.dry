@@ -12,7 +12,7 @@ go-to: main_rally; sa_disrupt if sa_strength > 180 and not sa_banned and not ret
 The SCPs SA has disrupted our rally! Their street troops are preventing us from meeting.
 
 - @police_protect: Call the police to protect our rally.
-- @rb_protect: Use the UFC(SS) to protect our rally.
+- @ufc_protect: Use the UFC(SS) to protect our rally.
 - @both_protect: The police and UFC(SS) should work together to protect our rally.
 - @cancel: Cancel the rally.
 
@@ -31,17 +31,17 @@ on-arrival: strife += 1; workers_scp += 3
 
 Unfortunately, the police were unable or unwilling to hold back the SA mob. The SCPs have won this show of strength.
 
-@rb_protect
-on-arrival: rb_success = rb_strength*rb_militancy - sa_strength*sa_militancy; strife += 1
-go-to: rb_protect_win if rb_success >= 0; rb_protect_lose if rb_success < 0
+@ufc_protect
+on-arrival: ufc_success = ufc_strength*ufc_militancy - sa_strength*sa_militancy; strife += 1
+go-to: ufc_protect_win if ufc_success >= 0; ufc_protect_lose if ufc_success < 0
 
-@rb_protect_win
+@ufc_protect_win
 go-to: main_rally
 
 The UFC(SS) has successfully protected our rally against the SA! Our meeting can go ahead as usual.
 
-@rb_protect_lose
-on-arrival: workers_scp += 3; rb_strength -= 50
+@ufc_protect_lose
+on-arrival: workers_scp += 3; ufc_strength -= 50
 
 Unfortunately, the UFC(SS) was not able to hold back the SA mob. The SCPs have won this show of strength.
 
@@ -49,8 +49,8 @@ Unfortunately, the UFC(SS) was not able to hold back the SA mob. The SCPs have w
 view-if: flg_prussia
 choose-if: prussian_police_training > 0
 unavailable-subtitle: The loyal sections of the police have never coordinated with the UFC(SS) before.
-on-arrival: rb_success = rb_strength*rb_militancy - sa_strength*sa_militancy + prussian_police_loyalty*prussian_police_militancy*prussian_police_strength*2; strife += 1
-go-to: both_protect_win if rb_success >= 0; both_protect_lose if rb_success < 0
+on-arrival: ufc_success = ufc_strength*ufc_militancy - sa_strength*sa_militancy + prussian_police_loyalty*prussian_police_militancy*prussian_police_strength*2; strife += 1
+go-to: both_protect_win if ufc_success >= 0; both_protect_lose if ufc_success < 0
 
 @both_protect_win
 go-to: main_rally
@@ -58,7 +58,7 @@ go-to: main_rally
 The police and UFC(SS) have successfully protected our rally against the SA! Our meeting can go ahead as usual.
 
 @both_protect_lose
-on-arrival: workers_scp += 3; rb_strength -= 50
+on-arrival: workers_scp += 3; ufc_strength -= 50
 
 Unfortunately, the police and UFC(SS) were not able to hold back the SA mob. The SCPs have won this show of strength.
 

@@ -1,7 +1,7 @@
 title: Streetfighting
 new-page: true
 is-card: true
-on-arrival: streetfighting_timer = 6; month_actions += 1; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25; strife += 1
+on-arrival: streetfighting_timer = 6; month_actions += 1; ufc_militarization_cost = 2 if ufc_militancy > 0.1 else ufc_militarization_cost = 1; ufc_militarization_cost = 3 if ufc_militancy > 0.25; strife += 1
 view-if: year >= 1930 and sa_strength >= 150 and streetfighting_timer == 0 and not return_to_normalcy
 card-image: img/blutmai_2.jpg
 tags: party_affairs; antifascism
@@ -21,17 +21,17 @@ We must do something to protect the workers against these predations.
 - @easy_discard
 
 @battle
-view-if: rb_militancy > 0.1 and rb_militancy < 0.5
-on-arrival: rb_militancy += 0.1; sa_strength += 40; rb_strength -= 100; 
+view-if: ufc_militancy > 0.1 and ufc_militancy < 0.5
+on-arrival: ufc_militancy += 0.1; sa_strength += 40; ufc_strength -= 100; 
 max-visits: 1
 
 Many UFC(SS) members are not ready for actual fighting, and thus quit. However, the remainder are toughened as a result. Our confrontations also provide ample recruiting material for the SCPs SA.
 
 @arm_rb
-subtitle: -[+ rb_militarization_cost +] resource
-choose-if: resources >= rb_militarization_cost
-unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed).
-on-arrival: resources -= rb_militarization_cost; rb_militancy += 0.06; rb_strength += 50; sa_strength += 50; rpc_relation -= 5 if historical_mode 
+subtitle: -[+ ufc_militarization_cost +] resource
+choose-if: resources >= ufc_militarization_cost
+unavailable-subtitle: Not enough resources ([+ ufc_militarization_cost +] needed).
+on-arrival: resources -= ufc_militarization_cost; ufc_militancy += 0.06; ufc_strength += 50; sa_strength += 50; rpc_relation -= 5 if historical_mode 
 
 We have increased training and purchased more armaments for the UFC(SS).
 
@@ -40,19 +40,19 @@ We have increased training and purchased more armaments for the UFC(SS).
 
 @if_training
 view-if: iron_front_formed == 1
-on-arrival: rb_militancy += 0.03; rb_strength += 200; sa_strength += 50; 
+on-arrival: ufc_militancy += 0.03; ufc_strength += 200; sa_strength += 50; 
 max-visits: 2
 
 As part of the Iron Front, we are increasing coordination between the UFC(SS) and the unions, and many union members want to become more involved.
 
 @prussian_police_training
 view-if: flg_prussia == 1 and prussian_police_loyalty > 0.5
-on-arrival: rb_militancy += 0.05; sa_strength += 50; prussian_police_training += 1
+on-arrival: ufc_militancy += 0.05; sa_strength += 50; prussian_police_training += 1
 
 The loyal sections of the Prussian police can help train the UFC(SS).
 
 @peace
-on-arrival: rb_militancy -= 0.02; rb_strength -= 50; pacifism += 1
+on-arrival: ufc_militancy -= 0.02; ufc_strength -= 50; pacifism += 1
 
 By not fighting, the strength of the UFC(SS) atrophies. Pacifists in the party are gaining the upper hand.
 
@@ -60,6 +60,6 @@ By not fighting, the strength of the UFC(SS) atrophies. Pacifists in the party a
 choose-if: cp_relation >= 45
 view-if: cp_truce == 0
 unavailable-subtitle: The CP is not interested.
-on-arrival: cp_truce = 1; cp_relation += 5; wul_strength += 50; rb_strength += 50; sa_strength += 50;
+on-arrival: cp_truce = 1; cp_relation += 5; wul_strength += 50; ufc_strength += 50; sa_strength += 50;
 
 We have made at least a temporary truce with the CP, so that our respective organizations will stop fighting.
