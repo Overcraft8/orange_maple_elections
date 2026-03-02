@@ -86,10 +86,10 @@ CCYM Influence: [+ ccym_strength +]%
 CCYM Relations: [+ ccym_relations +] 
 CCYM Militancy: [+ ccym_militancy : militancy +]
 
-<span style="color: #a7d11c;">**[+ ufcss_name +]**</span> 
-[+ ufcss_name +] Influence: [+ UFCSS_strength +]%
-[+ ufcss_name +] Relations: [+ UFCSS_relations +]
-[+ ufcss_name +] Militancy: [+ ufc_militancy : militancy +]
+<span style="color: #a7d11c;">**[+ UFC_name +]**</span> 
+[+ UFC_name +] Influence: [+ UFCSS_strength +]%
+[+ UFC_name +] Relations: [+ UFCSS_relations +]
+[+ UFC_name +] Militancy: [+ ufc_militancy : militancy +]
 
 <span style="color: #d26e28;">**SCSA**</span> 
 SCSA Influence: [+ SCSA_strength +]%

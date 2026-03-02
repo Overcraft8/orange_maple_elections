@@ -147,7 +147,7 @@ Q.prussian_government = "FLP";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
-// [+ ufcss_name +], stahlhelm, SA, Workers Unity League
+// [+ UFC_name +], stahlhelm, SA, Workers Unity League
 Q.ufc_strength = 2000;
 Q.ufc_militancy = 0.30;
 Q.women_in_rb = 0;
@@ -277,7 +277,7 @@ Q.new_middle_qol = 100;
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
 Q.parties = ['flp', 'cp', 'rpc', 'lpc', 'cpc', 'scp', 'other'];
 
-Q.ufcss_name = "UFC(SS)";
+Q.UFC_name = "UFC(SS)";
 
 
 
@@ -548,7 +548,7 @@ Q.George_Williams_Dead = 0;
 
 // SASKATCHEWAN CCF ORGANIZATIONS
 
-Q.UFC_name = "[+ ufcss_name +]";
+Q.UFC_name = "UFC(SS)";
 
 
 Q.ccym_strength = 0;
