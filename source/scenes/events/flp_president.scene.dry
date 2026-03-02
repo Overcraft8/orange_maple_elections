@@ -1,8 +1,7 @@
 title: FLP President
 new-page: true
 tags: event
-max-visits: 1
-face-image: img/[+ flp_president_img +]
+view-if: 2 = 1
 
 = Our President
 
@@ -15,12 +14,13 @@ face-image: img/[+ flp_president_img +]
 
 {!
 if (Q.flp_president == "George Hara Williams") {
-    "George Hara Williams is an agrarian.";
+    return "George Hara Williams is a populist Agrarian. ";
 }
 if (Q.flp_president == "Major James Coldwell") {
-    "Major James Coldwell is a labour faction member.";
+    return "Major James Coldwell is a labour faction member.";
 }
 !}
+
 
 - @Back: Back to Main Screen
 
