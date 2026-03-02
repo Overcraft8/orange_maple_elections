@@ -340,7 +340,7 @@ document.addEventListener('mousemove', e => {
 
 // President Buttons
 
-window.flpPresidentClicked = function() {
+window.goToFLPPresident = function() {
     window.dendryUI.dendryEngine.goToScene("flp_president");
-
 };
+
