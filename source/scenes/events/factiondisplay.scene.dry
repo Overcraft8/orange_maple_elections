@@ -7,8 +7,6 @@ max-visits: 1
 
 = Faction Strength
 
-- @Back: Back to main screen
-
 <svg id="factionsSvg" width="600" height="300" style="display:block; margin:auto;"></svg>
 
 <script>
@@ -37,6 +35,8 @@ if (window && d3) {
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#assembly").datum(data).call(parliament);
 }
+
+- @Back: Back to main screen
 
 @Back
 
