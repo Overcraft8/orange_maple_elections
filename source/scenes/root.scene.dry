@@ -700,9 +700,9 @@ Q.march_on_berlin_timer = 0;
 
 // all the initial advisors are centrists.
 Q.coldwell_advisor = 1; // Major James Coldwell
-Q.douglas_advisor = 1; // Tommy Douglas
+Q.douglas_advisor = 0; // Tommy Douglas
 Q.douglas_dead = 0;
-Q.nicholson_advisor = 1; // Alexander Nicholson
+Q.nicholson_advisor = 0; // Alexander Nicholson
 
 // left advisors
 Q.jamieson_advisor = 0; // Laura Jamieson
@@ -712,8 +712,8 @@ Q.winch_advisor = 0; // Ernest Winch
 Q.irvine_advisor = 0; // William Irvine
 
 // agrarian alternate advisors
-Q.eliason_advisor = 0; // Frank Eliason
-Q.williams_advisor = 0; // George Hara Williams
+Q.eliason_advisor = 1; // Frank Eliason
+Q.williams_advisor = 1; // George Hara Williams
 
 // Reformist advisors
 Q.brockelbank_advisor = 0; // John Brockelbank
@@ -788,7 +788,7 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1932
 
-It is a dire time for Saskatchewan. The Great Depression has begun, and the government of James Anderson has resorted to a policy of retrenchment. The government had previously attempted relief with deficit financing but this effort has been halted by business interests. As a result, Anderson's Co-operative Coalition Government has raised taxes on corporations but also levied taxes on gross revenue and oil storage tanks. Civil Service pay has fallen by 9-14%, loans to farmers have all but halted, and the Highways Budget provides for no constructio. The province is in the midst of a severe drought, and many farmers are on the brink of ruin.
+It is a dire time for Saskatchewan. The Great Depression has begun, and the government of James Anderson has resorted to a policy of retrenchment. The government had previously attempted relief with deficit financing but this effort has been halted by business interests. As a result, Anderson's Co-operative Coalition Government has raised taxes on corporations but also levied taxes on gross revenue and oil storage tanks. Civil Service pay has fallen by 9-14%, loans to farmers have all but halted, and the Highways Budget provides for no construction. The province is in the midst of a severe drought, and many farmers are on the brink of ruin.
 
 The Farmer-Labour Group (FLP) is the only party offering a real alternative to the old capitalist order. However, we are a young and inexperienced party, and we face opposition not only from opposing parties but also from within our own ranks, torn between the Agrarian vision of George Williams and the Labour oriented M. J. Coldwell. The FLP's success in the upcoming election will depend on your ability to navigate these challenges and present a compelling vision for the future of Saskatchewan.
 
