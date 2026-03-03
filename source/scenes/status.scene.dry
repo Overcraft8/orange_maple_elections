@@ -116,7 +116,7 @@ WUL Militancy: [+ wul_militancy : militancy +]
 
 RCMP: [+ rcmp_strength +] thousand troops.
 
-RCMP Loyalty: [+ rcmp_suspicion +]
+RCMP Suspicion: [+ rcmp_suspicion : suspicion +]
 
 Urban police: [+ city_police_strength +] thousand members.
 
