@@ -23,12 +23,12 @@ const tooltipList = [{
     explanationText: "The Social Credit Party"
 }, 
 {
-    searchString: "UFC(SS)",
-    explanationText: "The United Farmers of Canada (Saskatchewan Section. It's political apparatus has merged into the FLP. "
+    searchString: "UFC",
+    explanationText: "The United Farmers of Canada (Saskatchewan Section).\nIt's political apparatus has merged into the FLP. "
 },
 {
     searchString: "ILP",
-    explanationText: "The Independent Labour Party. \n They have merged into the FLP. "
+    explanationText: "The Independent Labour Party.\n They have merged into the FLP. "
 }
 ];
 
@@ -58,20 +58,12 @@ const colourList = [{
         style: "color: #50E23D; font-weight: bold;"
     },
     {
-        word: "UFC(SS)",
+        word: "UFC(SS)" && "Agrarian" && "agrarian" && "farmer",
         style: "color: #a7d11c; font-weight: bold;"
     },
     {
         word: "ILP",
-        style: "color: #d11c1c; font-weight: bold;"
-    },
-    {
-        word: "Agrarian", 
-        style: "color: #a7d11c; font-weight: bold;"
-    },
-    {
-        word: "Farmer", 
-        style: "color: #a7d11c; font-weight: bold;"
+        style: "color: #b06262; font-weight: bold;"
     },
     {
         word: "Labour", 
