@@ -62,7 +62,23 @@ const colourList = [{
         style: "color: #50E23D; font-weight: bold;"
     },
     {
-        word: ["UFC(SS)", "Agrarian", "agrarian", "farmer"],
+        word: "UFC(SS)",
+        style: "color: #a7d11c; font-weight: bold;"
+    },
+    {
+        word: "Agrarian",
+        style: "color: #a7d11c; font-weight: bold;"
+    },
+    {
+        word: "agrarian",
+        style: "color: #a7d11c; font-weight: bold;"
+    },
+    {
+        word: "Farmer",
+        style: "color: #a7d11c; font-weight: bold;"
+    },
+    {
+        word: "farmer",
         style: "color: #a7d11c; font-weight: bold;"
     },
     {
@@ -71,6 +87,10 @@ const colourList = [{
     },
     {
         word: "Labour", 
+        style: "color: #0F52BA; font-weight: bold;"
+    },
+    {
+        word: "labour", 
         style: "color: #0F52BA; font-weight: bold;"
     },
     {
