@@ -169,9 +169,10 @@ Support for the Republic: [+ pro_republic_disp +]%
 
 {!
 if (Q.railway_length < 100000 && Q.road_length < 1000000) {
-    return '<div><img src="img/Farmers1914.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>The province has an undeveloped rail transportation system!';
+    return '<div><img src="img/Farmers1914.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p>The province has an undeveloped rail transportation system!</p>';
 }
 !}
+
 
 
 Railway length: [+ railway_length +] km
