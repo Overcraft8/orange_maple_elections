@@ -29,11 +29,11 @@ if (window && d3) {
         document.getElementById("assembly").style.height = screenWidth/2 + "px";
     } 
 
-    var parliament = d3.parliament();
-    parliament.width(width).height(height).innerRadiusCoef(0.4);
-    parliament.enter.fromCenter(true).smallToBig(true);
-    parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#assembly").datum(data).call(parliament);
+    var factions = d3.factions();
+    factions.width(width).height(height).innerRadiusCoef(0.4);
+    factions.enter.fromCenter(true).smallToBig(true);
+    factions.exit.toCenter(false).bigToSmall(true);
+    d3.select("#assembly").datum(data).call(factions);
 }
 
 - @Back: Back to main screen
