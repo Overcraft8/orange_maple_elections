@@ -5,11 +5,11 @@ tags: party_affairs
 view-if: rally_timer <= 0
 on-arrival: month_actions += 1; rally_timer = 6
 card-image: img/George_Jones_Speech.jpg
-go-to: main_rally; sa_disrupt if sa_strength > 180 and not sa_banned and not return_to_normalcy
+go-to: main_rally; ful_disrupt if ful_strength > 180 and not ful_banned and not return_to_normalcy
 
-@sa_disrupt
+@ful_disrupt
 
-The SCPs SA has disrupted our rally! Their street troops are preventing us from meeting.
+The SCPs FUL has disrupted our rally! Their street troops are preventing us from meeting.
 
 - @police_protect: Call the police to protect our rally.
 - @ufc_protect: Use the UFC(SS) to protect our rally.
@@ -18,7 +18,7 @@ The SCPs SA has disrupted our rally! Their street troops are preventing us from 
 
 @police_protect
 view-if: flp_prussia == 1
-on-arrival: police_protect_success = city_police_loyalty * city_police_militancy * city_police_strength*2 - sa_militancy*sa_strength;
+on-arrival: police_protect_success = city_police_loyalty * city_police_militancy * city_police_strength*2 - ful_militancy*ful_strength;
 go-to: police_protect_win if police_protect_success >= 0; police_protect_lose if police_protect_success < 0
 
 @police_protect_win
@@ -29,44 +29,44 @@ The police successfully protected our rally, so it can go ahead as usual.
 @police_protect_lose
 on-arrival: strife += 1; workers_scp += 3
 
-Unfortunately, the police were unable or unwilling to hold back the SA mob. The SCPs have won this show of strength.
+Unfortunately, the police were unable or unwilling to hold back the FUL mob. The SCPs have won this show of strength.
 
 @ufc_protect
-on-arrival: ufc_success = ufc_strength*ufc_militancy - sa_strength*sa_militancy; strife += 1
+on-arrival: ufc_success = ufc_strength*ufc_militancy - ful_strength*ful_militancy; strife += 1
 go-to: ufc_protect_win if ufc_success >= 0; ufc_protect_lose if ufc_success < 0
 
 @ufc_protect_win
 go-to: main_rally
 
-The UFC(SS) has successfully protected our rally against the SA! Our meeting can go ahead as usual.
+The UFC(SS) has successfully protected our rally against the FUL! Our meeting can go ahead as usual.
 
 @ufc_protect_lose
 on-arrival: workers_scp += 3; ufc_strength -= 50
 
-Unfortunately, the UFC(SS) was not able to hold back the SA mob. The SCPs have won this show of strength.
+Unfortunately, the UFC(SS) was not able to hold back the FUL mob. The SCPs have won this show of strength.
 
 @both_protect
 view-if: flp_prussia
 choose-if: city_police_training > 0
 unavailable-subtitle: The loyal sections of the police have never coordinated with the UFC(SS) before.
-on-arrival: ufc_success = ufc_strength*ufc_militancy - sa_strength*sa_militancy + city_police_loyalty*city_police_militancy*city_police_strength*2; strife += 1
+on-arrival: ufc_success = ufc_strength*ufc_militancy - ful_strength*ful_militancy + city_police_loyalty*city_police_militancy*city_police_strength*2; strife += 1
 go-to: both_protect_win if ufc_success >= 0; both_protect_lose if ufc_success < 0
 
 @both_protect_win
 go-to: main_rally
 
-The police and UFC(SS) have successfully protected our rally against the SA! Our meeting can go ahead as usual.
+The police and UFC(SS) have successfully protected our rally against the FUL! Our meeting can go ahead as usual.
 
 @both_protect_lose
 on-arrival: workers_scp += 3; ufc_strength -= 50
 
-Unfortunately, the police and UFC(SS) were not able to hold back the SA mob. The SCPs have won this show of strength.
+Unfortunately, the police and UFC(SS) were not able to hold back the FUL mob. The SCPs have won this show of strength.
 
 
 @cancel
 on-arrival: workers_scp += 3;
 
-The SA have won this show of strength.
+The FUL have won this show of strength.
 
 @main_rally
 

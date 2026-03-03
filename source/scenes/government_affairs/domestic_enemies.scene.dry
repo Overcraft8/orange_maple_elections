@@ -11,9 +11,9 @@ view-if: flp_in_government = 1 and interior_minister_party = "FLP"
 
 As we have control over the Interior Ministry, we can direct police and intelligence services to investigate internal enemies. We can proscribe various organizations.
 
-- @ban_sa: Ban the SA.
-- @unban_sa: Unban the SA.
-- @persecute_sa
+- @ban_ful: Ban the FUL.
+- @unban_ful: Unban the FUL.
+- @persecute_ful
 - @ban_sh: Ban the Stahlhelm.
 - @unban_sh: Unban the Stahlhelm.
 - @persecute_sh
@@ -22,26 +22,26 @@ As we have control over the Interior Ministry, we can direct police and intellig
 - @persecute_wul
 - @root: Take no action for now.
 
-@ban_sa
-view-if: scp_urgency >= 3 and sa_banned == 0
-on-arrival: sa_strength *= 0.85; sa_strength *= 0.7 if interior_police_loyalty >= 0.7; sa_banned = 1; cps_relation -= 3; city_police_loyalty -= 0.05; interior_police_loyalty -= 0.05; sa_militancy -= 0.05; sa_ban_timer = 6;
+@ban_ful
+view-if: scp_urgency >= 3 and ful_banned == 0
+on-arrival: ful_strength *= 0.85; ful_strength *= 0.7 if interior_police_loyalty >= 0.7; ful_banned = 1; cps_relation -= 3; city_police_loyalty -= 0.05; interior_police_loyalty -= 0.05; ful_militancy -= 0.05; ful_ban_timer = 6;
 
-As it turns out, the SCPs SA has many allies in the police and bureaucracy. Our relationship with the police weakens, and the SA can still organize illegally, right under the police's noses. [? if interior_police_loyalty >= 0.7 : Nevertheless, the SA is substantially weakened by our ban. ?]
+As it turns out, the SCPs FUL has many allies in the police and bureaucracy. Our relationship with the police weakens, and the FUL can still organize illegally, right under the police's noses. [? if interior_police_loyalty >= 0.7 : Nevertheless, the FUL is substantially weakened by our ban. ?]
 
-@unban_sa
-view-if: sa_banned = 1
-on-arrival: sa_banned = 0; sa_strength += 100; sa_militancy += 0.05
+@unban_ful
+view-if: ful_banned = 1
+on-arrival: ful_banned = 0; ful_strength += 100; ful_militancy += 0.05
 
-The SA is no longer banned. They immediately go on a recruiting spree.
+The FUL is no longer banned. They immediately go on a recruiting spree.
 
-@persecute_sa
-title: Further persecute the SA.
-view-if: sa_banned = 1
+@persecute_ful
+title: Further persecute the FUL.
+view-if: ful_banned = 1
 choose-if: judicial_reform >= 3 and interior_police_loyalty >= 0.7
 unavailable-subtitle: [? if judicial_reform < 3 : The judiciary would not allow this. ?] [? if interior_police_loyalty < 0.7 : The police are too disloyal to be trusted with this. ?]
-on-arrival: sa_strength *= 0.7; sa_militancy -= 0.05
+on-arrival: ful_strength *= 0.7; ful_militancy -= 0.05
 
-We have arrested more of the SA's leaders and confiscated their weapons.
+We have arrested more of the FUL's leaders and confiscated their weapons.
 
 @ban_sh
 on-arrival: sh_strength *= 0.85; sh_strength *= 0.7 if interior_police_loyalty >= 0.7; sh_banned = 1; cps_relation -= 5; city_police_loyalty -= 0.1; interior_police_loyalty -= 0.05; coalition_dissent += 1 if flp_in_government = 1 and in_grand_coalition = 1 and monarch = "George V"; sh_ban_timer = 6;

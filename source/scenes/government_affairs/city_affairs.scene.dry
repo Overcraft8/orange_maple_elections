@@ -16,8 +16,8 @@ We can enact policies in City Police.
 - @police_loyalty: Bolster the loyalty of the police.
 - @police_strength: Recruit additional police.
 - @bureaucracy: Purge the bureaucracy of reactionary elements.
-- @ban_sa: Ban the SA, the SCPs paramilitary group.
-- @unban_sa: Reverse the SA ban.
+- @ban_ful: Ban the FUL, the SCPs paramilitary group.
+- @unban_ful: Reverse the FUL ban.
 - @ban_wul: Ban the WUL, the Communist paramilitary.
 - @unban_wul: Reverse the WUL ban.
 - @ban_sh: Ban the Stahlhelm, the Nationalist paramilitary.
@@ -47,17 +47,17 @@ on-arrival: city_police_loyalty += 0.05; nationalism -= 5; pacifism += 1; democr
 
 The bureaucracy is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on individual freedoms, but perhaps the security of the republic requires it.
 
-@ban_sa
-view-if: scp_urgency >= 3 and sa_banned == 0
-on-arrival: sa_strength *= 0.9; sa_strength *= 0.75 if city_police_loyalty >= 0.75; sa_banned = 1; cps_relation -= 3; city_police_loyalty -= 0.05; sa_militancy -= 0.05; sa_ban_timer = 6;
+@ban_ful
+view-if: scp_urgency >= 3 and ful_banned == 0
+on-arrival: ful_strength *= 0.9; ful_strength *= 0.75 if city_police_loyalty >= 0.75; ful_banned = 1; cps_relation -= 3; city_police_loyalty -= 0.05; ful_militancy -= 0.05; ful_ban_timer = 6;
 
-As it turns out, the SCPs SA has many allies in the police and bureaucracy. Our relationship with the police weakens, and the SA can still organize illegally, right under the police's noses. [? if city_police_loyalty >= 0.7 : Nevertheless, the SA is substantially weakened by our ban. ?] 
+As it turns out, the SCPs FUL has many allies in the police and bureaucracy. Our relationship with the police weakens, and the FUL can still organize illegally, right under the police's noses. [? if city_police_loyalty >= 0.7 : Nevertheless, the FUL is substantially weakened by our ban. ?] 
 
-@unban_sa
-view-if: sa_banned = 1
-on-arrival: sa_banned = 0; sa_strength += 100; sa_militancy += 0.05
+@unban_ful
+view-if: ful_banned = 1
+on-arrival: ful_banned = 0; ful_strength += 100; ful_militancy += 0.05
 
-The SA is no longer banned. They immediately go on a recruiting spree.
+The FUL is no longer banned. They immediately go on a recruiting spree.
 
 @ban_sh
 on-arrival: sh_strength *= 0.85; sh_strength *= 0.7 if city_police_loyalty >= 0.75; sh_banned = 1; cps_relation -= 5; city_police_loyalty -= 0.1; coalition_dissent += 1 if flp_in_government = 1 and in_grand_coalition = 1 and monarch = "George V"; sh_ban_timer = 6;

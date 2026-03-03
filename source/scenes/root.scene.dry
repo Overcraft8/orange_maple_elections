@@ -194,21 +194,21 @@ Q.city_government = "FLP";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
-// UFC(SS), stahlhelm, SA, Workers Unity League
+// UFC(SS), stahlhelm, FUL, Workers Unity League
 Q.ufc_strength = 2000;
 Q.ufc_militancy = 0.30;
 Q.women_in_rb = 0;
 Q.ufc_banned = 0;
 Q.ccym_militancy = 0.15;
-Q.scsa_militancy = 0.03;
+Q.scful_militancy = 0.03;
 Q.sh_strength = 500;
 Q.sh_militancy = 0.5;
 Q.sh_banned = 0;
 Q.sh_banned_prussia = 0;
-Q.sa_strength = 80;
-Q.sa_militancy = 0.5;
-Q.sa_banned = 0;
-Q.sa_banned_prussia = 0;
+Q.ful_strength = 80;
+Q.ful_militancy = 0.5;
+Q.ful_banned = 0;
+Q.ful_banned_prussia = 0;
 Q.wul_strength = 130;
 Q.wul_militancy = 0.5;
 Q.wul_banned = 0;
@@ -562,7 +562,7 @@ Q.rural_sanitation = 0;
 Q.rural_telephone = 0;
 
 //                 Foreign Relations
-// Relations with the USA
+// Relations with the UFUL
 Q.american_relation = 0;
 // Relations with Britain
 Q.britain_relation = 0;
@@ -597,7 +597,7 @@ Q.George_Williams_Dead = 0;
 
 
 
-// SASKATCHEWAN CCF ORGANIZATIONS
+// Saskatchewan Organizations
 
 
 Q.ccym_strength = 0;
@@ -633,7 +633,7 @@ Q.timers = ['advisor_action', 'confronting_scp', 'crisis_program',
             'education_science', 'curriculum',
             // events
             'emergency_cuts', 'unemployment_insurance',
-            'sa_ban', 'sh_ban', 'papen_premier',
+            'ful_ban', 'sh_ban', 'papen_premier',
             'cp_policy', 'cp_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis', 'march_on_berlin',
             'understanding_enemy', 'schleichers_schemes'];
@@ -692,7 +692,7 @@ Q.coalition_affairs_timer = 0;
 // event timers
 Q.emergency_cuts_timer = 0;
 Q.unemployment_insurance_timer = 0;
-Q.sa_ban_timer = 0;
+Q.ful_ban_timer = 0;
 Q.sh_ban_timer = 0;
 Q.cp_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;

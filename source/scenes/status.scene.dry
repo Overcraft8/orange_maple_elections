@@ -91,8 +91,8 @@ if (Q.wul_strength) {
 if (Q.sh_strength) {
     Q.sh_strength_2 = Q.sh_strength.toFixed(1);
 }
-if (Q.sa_strength) {
-    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
+if (Q.ful_strength) {
+    Q.ful_strength_2 = Q.ful_strength.toFixed(1);
 }
 !}
 
@@ -104,8 +104,8 @@ UFC(SS) Militancy: [+ ufc_militancy : militancy +]
 {!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the SCP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
 Stahlhelm Militancy: [+ sh_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the SCPs paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
-SA Militancy: [+ sa_militancy : militancy +]
+{!<span class="tooltip-text" title="The FUL (Sturmabteilung) is the SCPs paramilitary.">FUL</span>!} Strength: [+ ful_strength_2 +] thousand
+FUL Militancy: [+ ful_militancy : militancy +]
 
 {!<span class="tooltip-text" title="The WUL (Workers Unity League) is a communist group associated with the CP.">WUL</span>!} Strength: [+ wul_strength_2 +] thousand
 

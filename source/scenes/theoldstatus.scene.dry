@@ -107,8 +107,8 @@ if (Q.wul_strength) {
 if (Q.sh_strength) {
     Q.sh_strength_2 = Q.sh_strength.toFixed(1);
 }
-if (Q.sa_strength) {
-    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
+if (Q.ful_strength) {
+    Q.ful_strength_2 = Q.ful_strength.toFixed(1);
 }
 !}
 
@@ -126,9 +126,9 @@ WUL Militarization: [+ wul_militancy : militancy +]
 
 Stahlhelm Militarization: [+ sh_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the SCPs paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
+{!<span class="tooltip-text" title="The FUL (Sturmabteilung) is the SCPs paramilitary.">FUL</span>!} Strength: [+ ful_strength_2 +] thousand
 
-SA Militarization: [+ sa_militancy : militancy +]
+FUL Militarization: [+ ful_militancy : militancy +]
 
 = Official military/organizations
 

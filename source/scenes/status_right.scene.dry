@@ -98,7 +98,7 @@ Militancy: [+ ufc_militancy : militancy +]
 <span style="color: #d26e28;">**SCSA**</span> 
 Influence: [+ SCSA_strength +]%
 Relations: [+ SCSA_relations +]
-Militancy: [+ scsa_militancy : militancy +]
+Militancy: [+ scful_militancy : militancy +]
 
 
 

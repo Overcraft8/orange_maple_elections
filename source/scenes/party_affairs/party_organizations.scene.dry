@@ -46,7 +46,7 @@ on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; agra
 
 It is not enough for the FLP to solely be a political party. The Worker Singer's League, Worker's Sports, and our schools and libraries are crucial to our members' lives. Funding these organizations makes our members more committed to the party, even when our policies might not be to their liking.
 
-[? if sa_strength > 500 : However, it feels frivolous to spend on sports and choirs when the fascists are murdering us in the streets. ?]
+[? if ful_strength > 500 : However, it feels frivolous to spend on sports and choirs when the fascists are murdering us in the streets. ?]
 
 @rb
 choose-if: resources > 0

@@ -452,7 +452,7 @@ With great reluctance, Monarch [+ monarch +] appoints [+ premier +] as premier.
 
 Immediately, [+ premier +] goes to work building a "Soviet Saskatchewan": consolidating as much power as possible in the CP, purging state institutions of anti-communists, and sending street fighters against the "enemies of the people".
 
-In response to [+ premier +] being appointed Premier, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and SCPs SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the RCMP have taken their troops out of the barracks and joined them with the Stahlhelm to stop the CP from taking power. We are forced to be on the same side as the CP, whether we want to or not.
+In response to [+ premier +] being appointed Premier, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and SCPs FUL enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the RCMP have taken their troops out of the barracks and joined them with the Stahlhelm to stop the CP from taking power. We are forced to be on the same side as the CP, whether we want to or not.
 
 
 
@@ -555,7 +555,7 @@ go-to: no_majority_bruning_toleration if (no_majority_elections <= 3 and anti_de
 
 
 @georgev_appoints_papen
-on-arrival: premier = "Papen"; premier_party = "I"; next_election_time = time+3; next_parl_election_month = month + 3; next_parl_election_year = year; next_parl_election_year += 1 if next_parl_election_month > 12; next_parl_election_month -= 12 if next_parl_election_month > 12; sa_banned = 0; pro_republic -= 8; finance_minister_party = "I"; interior_minister_party = "I"; economic_minister_party = "I"; labour_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "I"; rcmp_minister = "I";
+on-arrival: premier = "Papen"; premier_party = "I"; next_election_time = time+3; next_parl_election_month = month + 3; next_parl_election_year = year; next_parl_election_year += 1 if next_parl_election_month > 12; next_parl_election_month -= 12 if next_parl_election_month > 12; ful_banned = 0; pro_republic -= 8; finance_minister_party = "I"; interior_minister_party = "I"; economic_minister_party = "I"; labour_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "I"; rcmp_minister = "I";
 
 There is no path to a majority government. Monarch George V is tired of the chaos, and appoints Franz von Papen as premier instead of Brüning. Papen is a indenpendent formerly from the PPS Party, and is significantly to the right of the majority of the PPS Party.
 
@@ -916,7 +916,7 @@ if (Q.pro_republic < 36) {
     Q.unemployed_scp += 8;   
 }
 if (Q.scp_majority >= 50) {
-    Q.sa_strength += 100;
+    Q.ful_strength += 100;
     Q.sh_strength += 100;
     Q.coup_progress += 3;
 }

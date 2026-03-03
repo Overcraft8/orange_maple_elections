@@ -224,7 +224,7 @@ Current relations: [+ cp_relation : relationships +]
 on-arrival: {!
 Q.ufc_strength = Math.round(Q.ufc_strength);
 Q.sh_strength = Math.round(Q.sh_strength);
-Q.sa_strength = Math.round(Q.sa_strength); 
+Q.ful_strength = Math.round(Q.ful_strength); 
 !}
 go-to: menu
 
@@ -248,11 +248,11 @@ Strength: [+ sh_strength +] thousand
 
 Militarization: [+ sh_militancy : militancy +]
 
-**Sturmabteilung (SA)**: This is the scp paramilitary group.
+**Sturmabteilung (FUL)**: This is the scp paramilitary group.
 
-Strength: [+ sa_strength +] thousand
+Strength: [+ ful_strength +] thousand
 
-Militarization: [+ sa_militancy : militancy +]
+Militarization: [+ ful_militancy : militancy +]
 
 **Official military/paramilitary groups:**
 
