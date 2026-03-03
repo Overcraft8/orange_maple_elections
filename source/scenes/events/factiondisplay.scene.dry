@@ -1,0 +1,13 @@
+<svg id="factionsSvg" width="600" height="300" style="display:block; margin:auto;"></svg>
+
+<script>
+d3.select("#factionsSvg")
+  .datum(factionData)
+  .call(
+    d3.factions()
+      .width(600)
+      .innerRadiusCoef(0.35)
+  );
+</script>
+
+Working?

@@ -344,3 +344,6 @@ window.goToFLPPresident = function() {
     window.dendryUI.dendryEngine.goToScene("flp_president");
 };
 
+window.goTofactiondisplay = function() {
+    window.dendryUI.dendryEngine.goToScene("factiondisplay")
+}

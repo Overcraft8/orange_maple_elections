@@ -57,19 +57,13 @@ is-special: true
 
 = Internal Factions of the <span style="color: #d26e28;">**FLP**</span>
 
-<svg id="factionsSvg" width="600" height="300" style="display:block; margin:auto;"></svg>
-
-<script>
-d3.select("#factionsSvg")
-  .datum(factionData)
-  .call(
-    d3.factions()
-      .width(600)
-      .innerRadiusCoef(0.35)
-  );
-</script>
-
-
+<div>
+  <img 
+  src="img/CCF_Caucus_meeting.jpg" 
+  style="width: 60%; display: block; margin: auto; margin-bottom: 5px; cursor: pointer;"
+  onclick="goTofactiondisplay()"
+>
+</div>
 
 
 <div style="width: 100%;">
