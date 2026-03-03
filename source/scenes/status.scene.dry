@@ -201,6 +201,9 @@ Inflation: [+ inflation_2 +]%
 
 Economic growth: [+ economic_growth_2 +]%
 
+Saskatchewan GDP: $[+ saskatchewan_gdp +] Million
+Total Saskatchewan Debt: $[+ saskatchewan_debt +] Million
+
 @livingstandards
 
 = Living Standards

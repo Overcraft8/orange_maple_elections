@@ -226,7 +226,7 @@ Q.city_police_loyalty = 0.5;
 Q.rcmp_strength = 100;
 Q.rcmp_militancy = 5;
 Q.rcmp_loyalty = 0.2;
-Q.rcmp_suspicion = 0.50;
+Q.rcmp_suspicion = 50;
 
 // The state of the country
 
@@ -311,6 +311,8 @@ Q.inflation = 2.9;
 
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
 Q.economic_growth = 4.4;
+Q.saskatchewan_gdp = 200
+Q.saskatchewan_debt = 168
 
 // economic expansion timer
 Q.economic_expansion = 0;
