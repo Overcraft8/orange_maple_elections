@@ -1,0 +1,8 @@
+(..5) Unaware
+(5..14.9) Uncertain
+(14.9..29.9) Tentative
+(29.9..39.9) Cautious
+(39.9..54.9) Wary
+(54.9..64.9) Assertive
+(64.9..74.9) Guarded
+(74.9..) Aggressive

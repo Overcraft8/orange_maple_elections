@@ -230,13 +230,13 @@ go-to: menu
 
 **Paramilitary groups:**
 
-**UFC(SS) **: The UFC(SS) 
+**UFC(SS) **: A farm organization constructed to remedy the plight of the farmers against big business interests. 
 
 Strength: [+ ufc_strength +] thousand
 
 Militarization: [+ ufc_militancy : militancy +]
 
-**Workers Unity League (WUL)**: The "Red Front Fighter's League" is associated with the CP.
+**Workers Unity League (WUL)**: The Trade Union Central of the Communist Party. It is rather diminished from it's peak but still holds substantial sway over the workers. 
 
 Strength: [+ wul_strength +] thousand
 

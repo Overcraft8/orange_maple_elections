@@ -65,11 +65,6 @@ is-special: true
 >
 </div>
 
-
-<div style="width: 100%;">
-    <div id="factionBar" class="bar-container"></div>
-</div>
-
 <span class="tooltip-text" title="A faction consisting of radical farmers, representing the small family farm." style="color: #a7d11c;">**Agrarians**</span> 
 Strength: [+ agrarian_strength : strength +] 
 Dissent: [+ agrarian_dissent : dissent +]
@@ -91,19 +86,19 @@ Dissent: [+ reformist_dissent : dissent +]
 = Party Affiliates of the FLP
 
 <span style="color: #7b1616;">**CCYM**</span> 
-CCYM Influence: [+ ccym_strength +]%
-CCYM Relations: [+ ccym_relations +] 
-CCYM Militancy: [+ ccym_militancy : militancy +]
+Influence: [+ ccym_strength +]%
+Relations: [+ ccym_relations +] 
+Militancy: [+ ccym_militancy : militancy +]
 
 <span style="color: #a7d11c;">**UFC(SS)**</span> 
-UFC(SS) Influence: [+ UFCSS_strength +]%
-UFC(SS) Relations: [+ UFCSS_relations +]
-UFC(SS) Militancy: [+ ufc_militancy : militancy +]
+Influence: [+ UFCSS_strength +]%
+Relations: [+ UFCSS_relations +]
+Militancy: [+ ufc_militancy : militancy +]
 
 <span style="color: #d26e28;">**SCSA**</span> 
-SCSA Influence: [+ SCSA_strength +]%
-SCSA Relations: [+ SCSA_relations +]
-SCSA Militancy: [+ scsa_militancy : militancy +]
+Influence: [+ SCSA_strength +]%
+Relations: [+ SCSA_relations +]
+Militancy: [+ scsa_militancy : militancy +]
 
 
 

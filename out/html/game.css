@@ -640,13 +640,13 @@ table {
     stroke: var(--border-color);
     stroke-width: 1.5px;
 }
-.seat.lpc {
+.seat.lps {
     fill: #BE0028;
 }
 .seat.pps {
     fill: #E7DB73;
 }
-.seat.cpc {
+.seat.cps {
     fill: #0055A5;
 }
 .seat.other {
@@ -717,6 +717,4 @@ table {
     font-family: sans-serif;
 }
 
-#factionsSvg {
-    display: block;
-}
+
