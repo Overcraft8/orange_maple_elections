@@ -48,7 +48,7 @@ body.dark-mode .tools {
 }
 header, #content, footer {
   color: var(--text-color);
-  max-width: 540px;
+  max-width: 400px;
   margin: 0 auto;
   overflow: auto;
 }
@@ -643,7 +643,7 @@ table {
 .seat.lpc {
     fill: #BE0028;
 }
-.seat.rpc {
+.seat.pps {
     fill: #E7DB73;
 }
 .seat.cpc {

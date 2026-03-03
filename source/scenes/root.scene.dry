@@ -688,7 +688,7 @@ Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
 Q.underhill_advisor = 0; // Frank Underhill
 Q.spry_advisor = 0; // Graham Spry
 !}
-set-bg: img/map_of_canada.jpg
+set-bg: img/Weyburn_Overhead.jpg
 new-page: true
 
 > *"We should never, never be afraid or ashamed about dreams. The dreams won’t all come true; we won’t always make it; but where there is no vision a people perish. Where people have no dreams and no hopes and aspirations, life becomes dull and a meaningless wilderness."*

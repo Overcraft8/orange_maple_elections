@@ -11,7 +11,7 @@ const tooltipList = [{
     explanationText: "The Liberal Party"
 },
 {
-    searchString: "RPC", 
+    searchString: "PPS", 
     explanationText: "The Reconstruction Party"
 },
 {
@@ -46,7 +46,7 @@ const colourList = [{
         style: "color: #BE0028; font-weight: bold;"
     },
     {
-        word: "RPC", 
+        word: "PPS", 
         style: "color: #E7DB73; font-weight: bold;"
     },
     {

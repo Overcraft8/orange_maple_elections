@@ -548,7 +548,7 @@ table {
 .seat.lpc {
     fill: #BE0028;
 }
-.seat.rpc {
+.seat.pps {
     fill: #E7DB73;
 }
 .seat.cpc {
