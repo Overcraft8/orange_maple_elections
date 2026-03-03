@@ -70,6 +70,10 @@ const colourList = [{
         style: "color: #a7d11c; font-weight: bold;"
     },
     {
+        word: "Farmer", 
+        style: "color: #a7d11c; font-weight: bold;"
+    },
+    {
         word: "Labour", 
         style: "color: #0F52BA; font-weight: bold;"
     },
