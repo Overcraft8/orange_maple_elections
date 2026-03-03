@@ -58,7 +58,7 @@ const colourList = [{
         style: "color: #50E23D; font-weight: bold;"
     },
     {
-        word: "UFC(SS)" && "Agrarian" && "agrarian" && "farmer",
+        word: ["UFC(SS)", "Agrarian", "agrarian", "farmer"],
         style: "color: #a7d11c; font-weight: bold;"
     },
     {
