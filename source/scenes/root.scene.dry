@@ -501,6 +501,7 @@ Q.highereducationquality = "Basic";
 Q.Curriculum = "Traditional";
 Q.healthcarequality = "Basic";
 Q.housingavailability = "Insufficient";
+Q.poverty = "30";
 //  
 //                   Rural living standards
 // Rural Access to electricity

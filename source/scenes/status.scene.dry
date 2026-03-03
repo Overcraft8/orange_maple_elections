@@ -96,7 +96,7 @@ if (Q.sa_strength) {
 
 = Saskatchewan Organizations
 
-{!<span class="tooltip-text" title="The [+ UFC_name +] is a popular organization for defending democracy, mostly affiliated with the FLP.">[+ UFC_name +]</span>!} Strength: [+ ufc_strength_2 +] thousand
+{!<span class="tooltip-text" title="The [+ UFC_name +] is a popular organization for defending democracy, mostly affiliated with the FLP.">UFC(SS)</span>!} Strength: [+ ufc_strength_2 +] thousand
 
 [+ UFC_name +] Militancy: [+ ufc_militancy : militancy +]
 
@@ -166,6 +166,13 @@ Support for the Republic: [+ pro_republic_disp +]%
 @interior
 
 = Infrastructure
+
+{!
+if (Q.railway_length < 100000 && Q.road_length < 1000000) {
+    return '<div><img src="img/Farmers1914.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>The province has an undeveloped rail transportation system!';
+}
+!}
+
 
 Railway length: [+ railway_length +] km
 
