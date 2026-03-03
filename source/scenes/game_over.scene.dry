@@ -30,7 +30,7 @@ if (Q.republic_victory) {
 if (Q.year >= 1932  && Q.unemployed < 8.6 && Q.budget > 0 && Q.inflation < 5) {
     this.achieve('wirtschaftswunder');
 }
-// Bollwerk der Demokratie - resist the Prussian Coup, and win.
+// Bollwerk der Demokratie - resist the Urban Coup, and win.
 if (Q.republic_victory && Q.resist_coup) {
     this.achieve('bollwerk_der_demokratie');
 }
@@ -136,7 +136,7 @@ go-to: eg_menu
 Adolf Needham has taken power in Saskatchewan. However, we have rallied the democratic forces of the country against him, and are fighting back. The outcome of this war is uncertain.
 
 
-Needham does not yet control Saskatchewan. [? if premier == "Papen" : However, Premier Papen's authoritarianism and far-right politics are paving the way for Needham, or someone like him, to take power. ?] [? if premier == "Schleicher" : However, Premier Schleicher's authoritarianism and scheming is paving the way for Needham, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Prussian coup, the far-right appears to be ascendant. ?][? if premier == "Brüning" : However, Premier Brüning's austerity policies and the continuation of the depression are paving the way for Needham, or someone like him, to take power. ?]
+Needham does not yet control Saskatchewan. [? if premier == "Papen" : However, Premier Papen's authoritarianism and far-right politics are paving the way for Needham, or someone like him, to take power. ?] [? if premier == "Schleicher" : However, Premier Schleicher's authoritarianism and scheming is paving the way for Needham, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Urban coup, the far-right appears to be ascendant. ?][? if premier == "Brüning" : However, Premier Brüning's austerity policies and the continuation of the depression are paving the way for Needham, or someone like him, to take power. ?]
 
 
 @long_war
@@ -291,7 +291,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_victory_for_the_republic: **Sieg für die Republik** - win the civil war. ?]
 
-[? if game_achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
+[? if game_achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Urban Coup and win. ?]
 
 [? if game_achievement_red_tzar_of_prussia : **Roter PPSar von Preußen** - JS_Woodsworth is Monarch, Premier, and Minister-Monarch. ?]
 
@@ -397,7 +397,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_victory_for_the_republic: **Sieg für die Republik** - win the civil war. ?]
 
-[? if achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
+[? if achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Urban Coup and win. ?]
 
 [? if achievement_red_tzar_of_prussia : **Roter PPSar von Preußen** - JS_Woodsworth is Monarch, Premier, and Minister-Monarch. ?]
 
@@ -500,7 +500,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_victory_for_the_republic: **Sieg für die Republik** - win the civil war. ?]
 
-[? if not achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
+[? if not achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Urban Coup and win. ?]
 
 [? if not achievement_red_tzar_of_prussia : **Roter PPSar von Preußen** - JS_Woodsworth is Monarch, Premier, and Minister-Monarch. ?]
 

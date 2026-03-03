@@ -57,6 +57,15 @@ is-special: true
 
 = Internal Factions of the <span style="color: #d26e28;">**FLP**</span>
 
+d3.select("#factionsSvg")
+  .datum(factionData)
+  .call(
+    d3.factions()
+      .width(600)
+      .innerRadiusCoef(0.35)
+  );
+
+
 <div style="width: 100%;">
     <div id="factionBar" class="bar-container"></div>
 </div>

@@ -59,6 +59,52 @@ Q.reformist_dissent = 5;
 Q.neorevisionist_strength = 0;
 Q.neorevisionist_dissent = 10;
 
+const factionData = [
+  {
+    id: "left",
+    seats: Q.left_strength,
+    color: "#d73027",
+    outline: "#8b1d1d",
+    dissent: Q.left_dissent
+  },
+  {
+    id: "agrarian",
+    seats: Q.agrarian_strength,
+    color: "#66bd63",
+    outline: "#3a6b36",
+    dissent: Q.agrarian_dissent
+  },
+  {
+    id: "labour",
+    seats: Q.labour_strength,
+    color: "#4575b4",
+    outline: "#2a4a73",
+    dissent: Q.labour_dissent
+  },
+  {
+    id: "reformist",
+    seats: Q.reformist_strength,
+    color: "#fee08b",
+    outline: "#bfa45f",
+    dissent: Q.reformist_dissent
+  },
+  {
+    id: "neorevisionist",
+    seats: Q.neorevisionist_strength,
+    color: "#f46d43",
+    outline: "#a3472d",
+    dissent: Q.neorevisionist_dissent
+  }
+];
+
+
+
+
+
+
+
+
+
 // secret events...
 Q.unions_independent = 0;
 Q.agrarians_resign = 0;
@@ -140,10 +186,10 @@ Q.georgev_relation = 25;
 Q.georgev_enabled = 0;
 
 
-// Does the FLP lead in Prussia?
+// Does the FLP lead in City Police?
 Q.flp_prussia = 1;
 // Options: flp, lps, cps, scp
-Q.prussian_government = "FLP";
+Q.city_government = "FLP";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
@@ -171,9 +217,9 @@ Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
 Q.interior_police_loyalty = 0.45;
 
-Q.prussian_police_strength = 90;
-Q.prussian_police_militancy = 1;
-Q.prussian_police_loyalty = 0.5;
+Q.city_police_strength = 90;
+Q.city_police_militancy = 1;
+Q.city_police_loyalty = 0.5;
 
 // strength includes actual military and de facto reserves?
 Q.rcmp_strength = 100;
@@ -576,7 +622,7 @@ Q.timers = ['advisor_action', 'confronting_scp', 'crisis_program',
             // govt
             'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
             'foreign_policy', 'judiciary', 'labour_affairs', 'military_policy',
-            'police', 'prussian_affairs', 'shuffle_cabinet', 'social_welfare',
+            'police', 'city_affairs', 'shuffle_cabinet', 'social_welfare',
             'homosexual_rights', 'economic_policy', 'coalition_affairs',
             'war_guilt', 'womens_rights', 'economic_democracy',
             'dealing_with_toleration',
@@ -632,7 +678,7 @@ Q.judiciary_timer = 0;
 Q.labour_affairs_timer = 0;
 Q.military_policy_timer = 0;
 Q.police_timer = 0;
-Q.prussian_affairs_timer = 0;
+Q.city_affairs_timer = 0;
 Q.shuffle_cabinet_timer = 0;
 Q.social_welfare_timer = 0;
 Q.war_guilt_timer = 0;

@@ -9,17 +9,17 @@ new-page: true
 
 John Brockelbank is a militant from the [+ UFC_name +] and was active in it's wheat pool campaign. He is fiercely loyal to George Williams. 
 
-- @prussian_bulwark
+- @city_bulwark
 - @police_affairs
 - @root: Return to main
 
-@prussian_bulwark
-title: Prussian Bulwark
-subtitle: Brockelbank has influence over Prussian politics.
+@city_bulwark
+title: Urban Bulwark
+subtitle: Brockelbank has influence over Urban politics.
 choose-if: advisor_action_timer <= 0 and flp_prussia = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not flp_prussia : The FLP is not in control of Prussia. ?]
-on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_action = 1
-go-to: prussian_affairs
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not flp_prussia : The FLP is not in control of City Police. ?]
+on-arrival: advisor_action_timer = 6; city_affairs_timer -= 6; last_advisor_action = 1
+go-to: city_affairs
 
 
 @police_affairs

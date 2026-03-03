@@ -114,9 +114,9 @@ RCMP: [+ rcmp_strength +] thousand troops.
 
 RCMP Loyalty: [+ rcmp_loyalty : loyalty +]
 
-Prussian police: [+ prussian_police_strength +] thousand members.
+Urban police: [+ city_police_strength +] thousand members.
 
-Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
+Urban police loyalty: [+ city_police_loyalty : loyalty +]
 
 [? if flp_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
 

@@ -23,7 +23,7 @@ As with the state police units and the RCMP, the internal police tends to be rea
 @loyalty
 on-arrival: interior_police_loyalty += 0.1
 
-As with the Prussian state police, there are measures we can take to root out reactionary and anti-democratic sentiment in the police. We can improve training and recruiting procedures, and identify and remove known fascists and the like.
+As with the Urban state police, there are measures we can take to root out reactionary and anti-democratic sentiment in the police. We can improve training and recruiting procedures, and identify and remove known fascists and the like.
 
 Current interior police loyalty: [+ interior_police_loyalty : loyalty +]
 

@@ -145,7 +145,7 @@ The Allies are grateful of our exposure and repudiation of militarism. Our partn
 
 @concordat_negotiate
 title: Negotiate a Concordat between the Saskatchewan and the Vatican.
-view-if: prussian_concordat = 1 and reichskonkordat = 0 and reichskonkordat_progress < 4
+view-if: city_concordat = 1 and reichskonkordat = 0 and reichskonkordat_progress < 4
 on-arrival: reichskonkordat_progress += 2; reichskonkordat_progress -= 1 if abortion_rights; reichskonkordat_progress -= 1 if family_law; pps_relation += 3*(1-dissent)
 
 The Roman Catholic Church is interested in furthering relations with the Saskatchewanian Republic, seeing us as preferable to the old anti-Catholic policies of the Empire. We are working towards the signing of a Concordat, an agreement between the Vatican and the Republic that formally recognizes the Church's rights and interests in the country. The PPS Party is especially interested in making this agreement.

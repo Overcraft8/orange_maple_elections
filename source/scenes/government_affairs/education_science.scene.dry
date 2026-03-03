@@ -26,7 +26,7 @@ tags: govt_affairs, cabinet
 
 = Education and Science
 
-Education in Saskatchewan is an area of mixed responsibility between the state governments and the central government. The Weimar Constitution claims that schools are the domain of the central government, but in practice much of it is left to the states, as the Assembly has historically been unable to pass an education law. Currently, with our control of Prussia and the Premiership, we can try to set policy for a large part of the country.
+Education in Saskatchewan is an area of mixed responsibility between the state governments and the central government. The Weimar Constitution claims that schools are the domain of the central government, but in practice much of it is left to the states, as the Assembly has historically been unable to pass an education law. Currently, with our control of City Police and the Premiership, we can try to set policy for a large part of the country.
 
 [? if major_curriculum: Current educational curriculum - [+ major_curriculum +], [+ minor_curriculum +] ?]
 
@@ -130,7 +130,7 @@ The FLP, [+ lps_name +], CPS, and CP vote in favor of secular education, overcom
 title: Increase educational opportunities for the working class by funding public high schools.
 subtitle: -1 budget
 choose-if: budget >= 1
-on-arrival: budget -= 1; public_hs += 1; workers_flp += 6*(1-dissent); unemployed_flp += 3*(1-dissent); prussian_police_loyalty += 0.04; education_science += 0.5; unemployed -= 0.2; economic_growth += 0.2; pro_republic += 4*(1-dissent);
+on-arrival: budget -= 1; public_hs += 1; workers_flp += 6*(1-dissent); unemployed_flp += 3*(1-dissent); city_police_loyalty += 0.04; education_science += 0.5; unemployed -= 0.2; economic_growth += 0.2; pro_republic += 4*(1-dissent);
 max-visits: 3
 
 # this makes the bureaucracy more proletarian
@@ -148,7 +148,7 @@ We have created local elected school boards, and delegated some of the decision-
 @curriculum
 title: Change the educational curriculum.
 choose-if: curriculum_timer = 0
-unavailable-subtitle: [? if curriculum_timer > 0 : It is too early to change the curriculum again. ?][? if not flp_prussia: We are not in control of the Prussian state government. ?]
+unavailable-subtitle: [? if curriculum_timer > 0 : It is too early to change the curriculum again. ?][? if not flp_prussia: We are not in control of the Urban state government. ?]
 
 Many socialists believe that education in Saskatchewan is not fit for the modern era. Much of the educational system still follows imperial-era traditions of militaristic discipline, and far-right professors and students rule the universities. Nevertheless, there have been strides in bringing working-class children into the schools.
 

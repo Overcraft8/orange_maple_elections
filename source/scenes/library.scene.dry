@@ -260,9 +260,9 @@ Militarization: [+ sa_militancy : militancy +]
 
 Loyalty: [+ rcmp_loyalty : loyalty +]
 
-**Prussian police**: [+ prussian_police_strength +] thousand members.
+**Urban police**: [+ city_police_strength +] thousand members.
 
-Loyalty: [+ prussian_police_loyalty : loyalty +]
+Loyalty: [+ city_police_loyalty : loyalty +]
 
 
 
@@ -299,7 +299,7 @@ Dissent: [+ labour_dissent : dissent +]
 
 **Reformists**
 
-Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if flp_prussia : They are dominant in the state government of Prussia. ?]
+Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if flp_prussia : They are dominant in the state government of City Police. ?]
 
 Strength: [+ reformist_strength : strength +]
 
