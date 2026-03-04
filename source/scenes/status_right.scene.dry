@@ -87,17 +87,23 @@ Dissent: [+ reformist_dissent : dissent +]
 
 <span style="color: #7b1616;">**CCYM**</span> 
 Influence: [+ ccym_influence +]%
+
 Relations: [+ ccym_relations : relationships +] 
+
 Militancy: [+ ccym_militancy : militancy +]
 
 <span style="color: #a7d11c;">**UFC (SS)**</span> 
 Influence: [+ ufcss_influence +]%
+
 Relations: [+ ufcss_relations : relationships +]
+
 Militancy: [+ ufc_militancy : militancy +]
 
 <span style="color: #d26e28;">**SCSA**</span> 
 Influence: [+ scsa_influence +]%
+
 Relations: [+ scsa_relations : relationships +]
+
 Militancy: [+ scsa_militancy : militancy +]
 
 
