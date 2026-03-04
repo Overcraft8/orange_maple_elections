@@ -5,7 +5,7 @@ tags: event
 view-if: 2 = 2
 max-visits: 1
 
-on-display: {!
+on-arrival: {!
 data = data.concat([
     {
         "id": "agrarian",
@@ -53,7 +53,8 @@ if (window && d3) {
 
 = Faction Strengths
 
-{!<svg id="assembly" style="width: 500px; height: 250px;"> </svg>!}
+<svg id="assembly" style="width: 500px; height: 250px;"></svg>
+
 
 - @Back: Back to main screen
 
