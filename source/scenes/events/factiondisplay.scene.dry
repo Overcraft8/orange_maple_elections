@@ -2,7 +2,7 @@ title: Faction Strength Screen
 new-page: true
 subtitle: The strength of the factions
 tags: event
-view-if: 2 = 2
+view-if: 2 = 1
 max-visits: 1
 
 on-arrival: {!
@@ -21,7 +21,7 @@ data = data.concat([
     },
     {
         "id": "left",
-        "legend": "left",
+        "legend": "Left",
         "name": "Left",
         "seats": left_strength,
     },
