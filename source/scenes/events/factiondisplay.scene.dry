@@ -79,7 +79,9 @@ if (window && d3) {
 }
 !}
 
-= Faction Strength
+= Faction Strengths
+
+{!<svg id="assembly" style="width: 500px; height: 250px;"> </svg>!}
 
 - @Back: Back to main screen
 
