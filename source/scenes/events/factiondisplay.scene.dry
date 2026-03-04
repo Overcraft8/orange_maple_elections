@@ -6,59 +6,31 @@ view-if: 2 = 2
 max-visits: 1
 
 on-display: {!
-data = [
-    {
-        "id": "cp",
-        "legend": "CP",
-        "name": "CP",
-        "seats": Math.round(Q.cp_r / 2),
-    }
-];
-if (Q.sapd_formed && Q.sapd_r) {
-    data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r / 2),
-            });
-}
 data = data.concat([
     {
-        "id": "flp",
-        "legend": "FLP",
-        "name": "FLP",
-        "seats": Math.round(Q.flp_r/2),
+        "id": "agrarian",
+        "legend": "Agrarian",
+        "name": "Agrarian",
+        "seats": agrarian_strength,
     },
     {
-        "id": "lps",
-        "legend": Q.lps_name,
-        "name": Q.lps_name,
-        "seats": Math.round(Q.lps_r/2),
+        "id": "labour",
+        "legend": "Labour",
+        "name": "Labour",
+        "seats": labour_strength,
     },
     {
-        "id": "pps",
-        "legend": "PPS",
-        "name": "PPS",
-        "seats": Math.round(Q.pps_r/2),
+        "id": "left",
+        "legend": "left",
+        "name": "Left",
+        "seats": left_strength,
     },
     {
-        "id": "cps",
-        "legend": "CPS",
-        "name": "CPS",
-        "seats": Math.round(Q.cps_r/2),
-    },
-    {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(Q.other_r/2),
-    },
-    {
-        "id": "scp",
-        "legend": "SCP",
-        "name": "SCP",
-        "seats": Math.round(Q.scp_r/2),
-    },
+        "id": "reformist",
+        "legend": "Reformist",
+        "name": "Reformist",
+        "seats": reformist_strength,
+    }
 ]);
 
 if (window && d3) {

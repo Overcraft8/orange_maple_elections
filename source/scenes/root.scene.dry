@@ -60,46 +60,37 @@ Q.reformist_dissent = 5;
 Q.neorevisionist_strength = 0;
 Q.neorevisionist_dissent = 10;
 
+
 const factionData = [
   {
-    id: "left",
-    seats: Q.left_strength,
-    color: "#d73027",
-    outline: "#8b1d1d",
-    dissent: Q.left_dissent
-  },
-  {
-    id: "agrarian",
-    seats: Q.agrarian_strength,
-    color: "#66bd63",
-    outline: "#3a6b36",
-    dissent: Q.agrarian_dissent
-  },
-  {
-    id: "labour",
-    seats: Q.labour_strength,
-    color: "#4575b4",
-    outline: "#2a4a73",
-    dissent: Q.labour_dissent
-  },
-  {
-    id: "reformist",
-    seats: Q.reformist_strength,
-    color: "#fee08b",
-    outline: "#bfa45f",
-    dissent: Q.reformist_dissent
-  },
-  {
-    id: "neorevisionist",
-    seats: Q.neorevisionist_strength,
-    color: "#f46d43",
-    outline: "#a3472d",
-    dissent: Q.neorevisionist_dissent
-  }
+        "id": "agrarian",
+        "legend": "Agrarian",
+        "name": "Agrarian",
+        "seats": agrarian_strength,
+        color: #a7d11c;
+    },
+    {
+        "id": "labour",
+        "legend": "Labour",
+        "name": "Labour",
+        "seats": labour_strength,
+        color: #0F52BA;
+    },
+    {
+        "id": "left",
+        "legend": "left",
+        "name": "Left",
+        "seats": left_strength,
+        color: #7b1616;
+    },
+    {
+        "id": "reformist",
+        "legend": "Reformist",
+        "name": "Reformist",
+        "seats": reformist_strength,
+        color: #d26e28;
+    }
 ];
-
-
-
 
 
 
@@ -745,9 +736,9 @@ Q.spry_advisor = 0; // Graham Spry
 set-bg: img/Weyburn_Overhead.jpg
 new-page: true
 
-> *"Emergency measures, however, are of only temporary value, for the present depression is a sign of the mortal sickness of the whole capitalist system, and this sickness cannot be cured by the application of salves. These leave untouched the cancer which is eating at the heart of our society, namely, the economic system in which our natural resources and our principal means of production and distribution are owned, controlled and operated for the private profit of a small proportion of our population."*
+> *"Emergency measures, however, are of only temporary value, for the present depression is a sign of the mortal sickness of the whole capitalist system, and this sickness cannot be cured by the application of salves. These leave untouched the cancer which is eating at the heart of our society, namely, the economic system in which our natural resources and our principal means of production and distribution are owned, controlled and operated for the private profit of a small proportion of our population.
 
-*"No CCF Government will rest content until it has eradicated capitalism and put into operation the full programme of socialized planning which will lead to the establishment in Canada of the Cooperative Commonwealth."*
+> No CCF Government will rest content until it has eradicated capitalism and put into operation the full programme of socialized planning which will lead to the establishment in Canada of the Cooperative Commonwealth."*
 
  - Regina Manifesto, 1933
 
