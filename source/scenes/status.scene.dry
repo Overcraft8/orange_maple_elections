@@ -98,9 +98,6 @@ if (Q.ful_strength) {
 
 = Saskatchewan Organizations
 
-{!<span class="tooltip-text" title="The UFC (SS) is a popular organization for defending democracy, mostly affiliated with the FLP.">UFC (SS)</span>!} Strength: [+ ufc_strength_2 +] thousand
-UFC (SS) Militancy: [+ ufc_militancy : militancy +]
-
 {!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the SCP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
 Stahlhelm Militancy: [+ sh_militancy : militancy +]
 
@@ -109,16 +106,14 @@ FUL Militancy: [+ ful_militancy : militancy +]
 
 {!<span class="tooltip-text" title="The WUL (Workers Unity League) is a communist group associated with the CP.">WUL</span>!} Strength: [+ wul_strength_2 +] thousand
 
-WUL Influence: [+ wul_strength +]%
+WUL Strength: [+ wul_strength +]
 WUL Militancy: [+ wul_militancy : militancy +]
 
 = Law Enforcement
 
-RCMP: [+ rcmp_strength +] thousand troops.
-
 RCMP Suspicion: [+ rcmp_suspicion : suspicion +]
 
-Urban police: [+ city_police_strength +] thousand members.
+Urban police: [+ city_police_strength : strength +]
 
 Urban police loyalty: [+ city_police_loyalty : loyalty +]
 

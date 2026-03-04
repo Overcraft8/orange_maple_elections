@@ -5,9 +5,7 @@ tags: event
 view-if: 2 = 1
 max-visits: 1
 
-= Faction Strength
-
-<svg id="factionsSvg" width="600" height="300" style="display:block; margin:auto;"></svg>
+on-arrival: {! <svg id="factionsSvg" width="600" height="300" style="display:block; margin:auto;"></svg>
 
 <script>
 d3.select("#factionsSvg")
@@ -35,6 +33,9 @@ if (window && d3) {
     factions.exit.toCenter(false).bigToSmall(true);
     d3.select("#assembly").datum(data).call(factions);
 }
+!}
+
+= Faction Strength
 
 - @Back: Back to main screen
 

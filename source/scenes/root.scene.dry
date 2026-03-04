@@ -218,7 +218,7 @@ Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
 Q.interior_police_loyalty = 0.45;
 
-Q.city_police_strength = 90;
+Q.city_police_strength = 20;
 Q.city_police_militancy = 1;
 Q.city_police_loyalty = 0.5;
 
@@ -604,10 +604,10 @@ Q.George_Williams_Dead = 0;
 
 Q.ccym_strength = 0;
 Q.ccym_relations = 0;
-Q.UFCSS_strength = 0;
-Q.UFCSS_relations = 0;
-Q.SCSA_strength = 0;
-Q.SCSA_relations = 0;
+Q.ufcss_strength = 0;
+Q.ufcss_relations = 0;
+Q.scsa_strength = 0;
+Q.scsa_relations = 0;
 
 
 

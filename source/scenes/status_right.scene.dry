@@ -83,6 +83,12 @@ Dissent: [+ reformist_dissent : dissent +]
 
 @partyaffiliates
 
+on-arrival: {!
+if (Q.ufc_strength) {
+    Q.ufc_strength_2 = Q.ufc_strength.toFixed(1);
+}
+!}
+
 = Party Affiliates of the FLP
 
 <span style="color: #7b1616;">**CCYM**</span> 
@@ -91,14 +97,14 @@ Relations: [+ ccym_relations +]
 Militancy: [+ ccym_militancy : militancy +]
 
 <span style="color: #a7d11c;">**UFC (SS)**</span> 
-Influence: [+ UFCSS_strength +]%
-Relations: [+ UFCSS_relations +]
+Influence: [+ ufcss_strength +]%
+Relations: [+ ufcss_relations +]
 Militancy: [+ ufc_militancy : militancy +]
 
 <span style="color: #d26e28;">**SCSA**</span> 
-Influence: [+ SCSA_strength +]%
-Relations: [+ SCSA_relations +]
-Militancy: [+ scful_militancy : militancy +]
+Influence: [+ scsa_strength +]%
+Relations: [+ scsa_relations +]
+Militancy: [+ scsa_militancy : militancy +]
 
 
 
