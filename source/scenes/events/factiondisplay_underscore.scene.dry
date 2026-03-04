@@ -1,0 +1,44 @@
+title: Faction Strength Screen
+new-page: true
+subtitle: The strength of the factions
+tags: event
+view-if: 2 = 1
+max-visits: 1
+
+ on-arrival: {! <svg id="factionsSvg" width="600" height="300" style="display:block; margin:auto;"></svg>
+
+<script>
+d3.select("#factionsSvg")
+  .datum(factionData)
+  .call(
+    d3.factions()
+      .width(600)
+      .innerRadiusCoef(0.35)
+  );
+</script>
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("assembly").style.height = screenWidth/2 + "px";
+    } 
+
+    var factions = d3.factions();
+    factions.width(width).height(height).innerRadiusCoef(0.4);
+    factions.enter.fromCenter(true).smallToBig(true);
+    factions.exit.toCenter(false).bigToSmall(true);
+    d3.select("#assembly").datum(data).call(factions);
+}
+!}
+
+= Faction Strength
+
+- @Back: Back to main screen
+
+@Back
+
+Working?
