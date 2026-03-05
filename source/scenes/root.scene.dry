@@ -85,7 +85,7 @@ const factionData = [
         "legend": "Reformist",
         "name": "Reformist",
         "seats": reformist_strength,
-    }
+    },
     {
         "id": "neorevisionist",
         "legend": "Neorevisionist",
