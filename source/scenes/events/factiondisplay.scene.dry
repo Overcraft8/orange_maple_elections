@@ -30,7 +30,38 @@ data = data.concat([
         "legend": "Reformist",
         "name": "Reformist",
         "seats": reformist_strength,
+    }const factionData = [
+  {
+        "id": "agrarian",
+        "legend": "Agrarian",
+        "name": "Agrarian",
+        "seats": agrarian_strength,
+    },
+    {
+        "id": "labour",
+        "legend": "Labour",
+        "name": "Labour",
+        "seats": labour_strength,
+    },
+    {
+        "id": "left",
+        "legend": "Left",
+        "name": "Left",
+        "seats": left_strength,
+    },
+    {
+        "id": "reformist",
+        "legend": "Reformist",
+        "name": "Reformist",
+        "seats": reformist_strength,
+    },
+    {
+        "id": "neorevisionist",
+        "legend": "Neorevisionist",
+        "name": "Neorevisionist",
+        "seats": neorevisionist_strength,
     }
+];
 ]);
 
 if (window && d3) {
