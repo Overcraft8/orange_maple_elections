@@ -273,7 +273,7 @@ Q.mannar_d_old_middle = 20;
 Q.mannar_d_new_middle = 20;
 Q.mannar_d_worker = 20;
 Q.mannar_d_rural = 20;
-Q.mannar_d_catholic = 20
+Q.mannar_d_catholic = 20;
 
 Q.mannar_d_seats = 5;
 Q.mannar_d_pop_weight = 0.72;
@@ -300,8 +300,8 @@ Q.inflation = 2.9;
 
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
 Q.economic_growth = 4.4;
-Q.saskatchewan_gdp = (200).toFixed(1);
-Q.saskatchewan_debt = (160).toFixed(1);
+Q.saskatchewan_gdp = Number((200).toFixed(1));
+Q.saskatchewan_debt = Number((160).toFixed(1));
 
 // economic expansion timer
 Q.economic_expansion = 0;
