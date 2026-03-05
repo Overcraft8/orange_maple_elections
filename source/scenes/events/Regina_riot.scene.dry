@@ -8,20 +8,31 @@ face-image: img/Regina_Riot.jpg
 
 = The Trek reaches Regina
 
-The On-to-Ottawa trek has finally touched ground in Regina. The 2000 or so men 
+The On-to-Ottawa trek has finally touched ground in Regina. Prime Minister Bennett has ordered that CPR refuse access to their trains. 
 
-- @GeorgeWilliams: George Williams will surely lead the FLP to victory.
-- @Coldwell: Coldwell will surely lead the FLP to victory. 
+As a result, the ~2000 striking workers have been left stranded in the city. Eight trekkers have been dispatched to Ottawa for negotiations. In the meantime, [+ premier +] is supplying the trekkers with food and water. 
 
-@GeorgeWilliams 
-on-arrival: flp_rural += 4; agrarian_strength += 4; flp_president = "George Hara Williams"; flp_president_img = "WilliamsHaraGeorge.jpg"
-face-image: img/portraits/WilliamsHaraGeorge.jpg
+This situation has left the FLP leadership divided. Many among the Labour faction hope to rally the FLP in support of the strike, or at least, voice approval. However, many moderates advise caution in affiliating so closely with an event organized by the CP's WUL. 
 
-Williams will lead us to victory!
+There are also concerns that Bennett's government will violently suppress the strike. A similar reaction occured in the Winnipeg 1919 General Strike, resulting in 2 deaths. The transcontinental nature of the trek may also incline Bennett to extreme measures.
 
-@Coldwell
-on-arrival: flp_workers += 4; labour_strength += 4; flp_president = "Major James Coldwell"; flp_president_img = "ColdwellMajorJames.jpg"
-face-image: img/portraits/ColdwellMajorJames.jpg
+- @StaySilent: The situation is too fickle, we cannot get involved. 
+- @SendSpeakers: FLP leaders voicing independent approval may keep us free of persecution
+- @ProvideSupplies: We must support the strikers materially.
+- @Rally: We must join the trekkers!
 
-Coldwell will lead us to victory!
+@StaySilent
+on-arrival: flp_workers -= 4; labour_strength -= 4; 
 
+Many of the workers and strikers expected us to say *something*. 
+
+@SendSpeakers
+on-arrival: flp_workers += 2; labour_strength += 1; 
+
+The strikers are enthused that even the known moderate Major James Coldwell is speaking. 
+
+@SendSpeakers
+view-if (Q.resources >= 1)
+on-arrival: resources -= 1; 
+
+@Rally
