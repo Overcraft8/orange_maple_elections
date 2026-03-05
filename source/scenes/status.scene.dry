@@ -51,9 +51,6 @@ Premier: [+ premier +] ([+ premier_party +])
 Assembly composition:
 
 
-{!<svg id="assembly" style="width: 500px; height: 250px;"> </svg>!}
-
-
 # 1928: 30, 1930: 25, 1932: 22
 {!<span class="tooltip-text" title="Farmer-Labour Group">!}[? if not flp_name: FLP?][? if flp_name != 0 : [+ flp_name +]?]{!</span>!}: [+ flp_r +]%
 [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
