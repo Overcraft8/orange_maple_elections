@@ -213,6 +213,11 @@ function applyWholesome(str) {
     if (window.justLoaded) {
         window.justLoaded = false;
     }
+    if (scene === "Status") {
+        var Q = window.dendryUI.dendryEngine.state.qualities;
+        renderAssembly(Q);
+    }
+
   };
 
   // TODO: have some code for tabbed sidebar browsing.
@@ -313,7 +318,7 @@ function applyWholesome(str) {
     window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
   };
 
-}());
+});
 
 // Western Province
 function Colombo_info() {
@@ -347,3 +352,43 @@ window.goToFLPPresident = function() {
 window.goTofactiondisplay = function() {
     window.dendryUI.dendryEngine.goToScene("factiondisplay")
 }
+
+
+function renderAssembly(Q) {
+    var statusdata = [
+        { id: "cp",    legend: "CP",    name: "CP",    seats: Q.cp_seats },
+        { id: "flp",   legend: "FLP",   name: "FLP",   seats: Q.flp_seats },
+        { id: "lps",   legend: "LPS",   name: "LPS",   seats: Q.lps_seats },
+        { id: "pps",   legend: "PPS",   name: "PPS",   seats: Q.pps_seats },
+        { id: "cps",   legend: "CPS",   name: "CPS",   seats: Q.cps_seats },
+        { id: "other", legend: "Other", name: "Other", seats: Q.other_seats },
+        { id: "scp",   legend: "SCP",   name: "SCP",   seats: Q.scp_seats }
+    ];
+
+    if (Q.sapd_formed && Q.sapd_r) {
+        statusdata.push({
+            id: "sapd",
+            legend: "SAPD",
+            name: "SAPD",
+            seats: Q.sapd_seats
+        });
+    }
+
+    var width = 500;
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50;
+        height = width;
+        document.getElementById("assembly").style.height = (screenWidth / 2) + "px";
+    }
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+
+    d3.select("#assembly").datum(statusdata).call(parliament);
+}
+
