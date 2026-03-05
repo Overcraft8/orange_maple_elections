@@ -169,6 +169,8 @@ Q.wul_militancy = 0.5;
 Q.wul_banned = 0;
 Q.wul_banned_prussia = 0;
 
+Q.trek_support = 0;
+
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
 Q.interior_police_loyalty = 0.45;

@@ -12,17 +12,6 @@ Q.economic_growth_2 = '0';
 if (Q.economic_growth) {
     Q.economic_growth_2 = Q.economic_growth.toFixed(1);
 }
-Q.cp_seats    = Math.round(60 / Q.cp_r_prev_elec) * 100;
-    Q.flp_seats   = Math.round(60 / Q.flp_r_prev_elec) * 100;
-    Q.lps_seats   = Math.round(60 / Q.lps_r_prev_elec) * 100;
-    Q.pps_seats   = Math.round(60 / Q.pps_r_prev_elec) * 100;
-    Q.cps_seats   = Math.round(60 / Q.cps_r_prev_elec) * 100;
-    Q.other_seats = Math.round(60 / Q.other_r_prev_elec) * 100;
-    Q.scp_seats   = Math.round(60 / Q.scp_r_prev_elec) * 100;
-
-    if (Q.sapd_formed && Q.sapd_r) {
-        Q.sapd_seats = Math.round(60 / Q.sapd_r_prev_elec) * 100;
-    }
 !}
 
 = Status
