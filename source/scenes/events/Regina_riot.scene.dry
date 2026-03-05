@@ -31,8 +31,9 @@ on-arrival: flp_workers += 2; labour_strength += 1;
 
 The strikers are enthused that even the known moderate Major James Coldwell is speaking. 
 
-@SendSpeakers
+@ProvideSupplies
 view-if (Q.resources >= 1)
 on-arrival: resources -= 1; 
 
 @Rally
+view-if (Q.left_strength > )
