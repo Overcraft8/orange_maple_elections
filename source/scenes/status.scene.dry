@@ -205,11 +205,9 @@ Total Saskatchewan Debt: $[+ saskatchewan_debt +] Million
 
 Welfare: [+ welfare +]
 
-Primary education quality: [+ primaryeducationquality +]
+Basic Education quality: [+ educationquality +]
 
-Secondary education quality: [+ secondaryeducationquality +]
-
-Higher education quality: [+ highereducationquality +]
+Higher Education quality: [+ highereducationquality +]
 
 Curriculum: [+ Curriculum +]
 

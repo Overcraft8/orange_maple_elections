@@ -273,14 +273,7 @@ Q.monthly_economic_growth = 1;
 Q.saskatchewan_debt = Number((160).toFixed(1));
 Q.saskatchewan_gdp = Number((200).toFixed(1)); // new GDP
 // Q.saskatchewan_old_gdp should already exist
-
-// Determine arrow direction
-var gdp_sign_img =
-    Q.saskatchewan_gdp > Q.saskatchewan_old_gdp
-        ? '<img src="img/GreenPlus.jpg"> '
-        : Q.saskatchewan_gdp < Q.saskatchewan_old_gdp
-            ? '<img src="img/RedNegative.jpg"> '
-            : '<img src="img/BlueStatic.jpg"> ';
+Q.saskatchewan_old_gdp = 1;
 
 Q.depression = 1;
 
@@ -518,8 +511,7 @@ Q.education_science = 0;
 //                   Living Standards
 // level of welfare relative to 1932 (can go negative)
 Q.welfare = 0;
-Q.primaryeducationquality = "Basic";
-Q.secondaryeducationquality = "Basic";
+Q.educationquality = "Basic";
 Q.highereducationquality = "Basic";
 Q.Curriculum = "Traditional";
 Q.healthcarequality = "Basic";
