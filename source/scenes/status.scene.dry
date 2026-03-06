@@ -226,3 +226,12 @@ Rural Sanitation Access: [+ rural_sanitation +]%
 Rural Telephone Access: [+ rural_telephone +]%
 
 
+@situations 
+
+= Situations
+
+if (Q.depression) {
+
+
+    
+}

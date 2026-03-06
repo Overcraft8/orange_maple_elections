@@ -269,8 +269,23 @@ Q.inflation = 2.9;
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
 Q.economic_growth = 4.4;
 Q.monthly_economic_growth = 1;
-Q.saskatchewan_gdp = Number((200).toFixed(1));
-Q.saskatchewan_debt = Number((160).toFixed(1));
+
+Q.saskatchewan_gdp = Number((200).toFixed(1)); // new GDP
+// Q.saskatchewan_old_gdp should already exist
+
+// Determine arrow direction
+var gdp_sign_img =
+    Q.saskatchewan_gdp > Q.saskatchewan_old_gdp
+        ? '<img src="img/GreenPlus.jpg"> '
+        : Q.saskatchewan_gdp < Q.saskatchewan_old_gdp
+            ? '<img src="img/RedNegative.jpg"> '
+            : '<img src="img/BlueStatic"> ';
+
+// Build display string
+Q.saskatchewan_gdp_change_str =
+    gdp_sign_img + Math.abs(Q.saskatchewan_gdp - Q.saskatchewan_old_gdp).toFixed(1);
+
+Q.depression = 1;
 
 // economic expansion timer
 Q.economic_expansion = 0;
