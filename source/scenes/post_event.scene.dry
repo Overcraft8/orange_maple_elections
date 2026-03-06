@@ -19,10 +19,10 @@ Q.saskatchewan_gdp = Number(
 
 var gdp_sign_img =
     Q.saskatchewan_gdp > Q.saskatchewan_old_gdp
-        ? '<img src="img/GreenPlus.jpg"> '
+        ? '<img src="img/GreenPlus.png"> '
         : Q.saskatchewan_gdp < Q.saskatchewan_old_gdp
-            ? '<img src="img/RedNegative.jpg"> '
-            : '<img src="img/BlueStatic.jpg"> ';
+            ? '<img src="img/RedNegative.png"> '
+            : '<img src="img/BlueStatic.png"> ';
 
 Q.str_saskatchewan_gdp = gdp_sign_img + Q.saskatchewan_gdp;
 
