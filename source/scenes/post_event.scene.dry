@@ -13,9 +13,9 @@ for (var c of Q.classes) {
 }
 
 Q.monthly_economic_growth = Q.economic_growth / 12;
-Q.saskatchewan_gdp = Q.saskatchewan_old_gdp
+Q.saskatchewan_old_gdp = Q.saskatchewan_gdp
 Q.saskatchewan_gdp = Number(
-  (Q.saskatchewan_gdp * (1 + Q.monthly_economic_growth / 100)).toFixed(1));
+  (Q.saskatchewan_gdp * (Q.monthly_economic_growth / 100 + 1)).toFixed(1));
 
 var gdp_sign_img =
     Q.saskatchewan_gdp > Q.saskatchewan_old_gdp

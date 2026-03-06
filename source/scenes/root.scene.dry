@@ -273,7 +273,6 @@ Q.monthly_economic_growth = 1;
 Q.saskatchewan_debt = Number((160).toFixed(1));
 Q.saskatchewan_gdp = Number((200).toFixed(1)); // new GDP
 // Q.saskatchewan_old_gdp should already exist
-Q.saskatchewan_old_gdp = Q.saskatchewan_old_gdp || 1;
 
 Q.depression = 1;
 
