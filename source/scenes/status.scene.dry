@@ -230,7 +230,7 @@ Rural Telephone Access: [+ rural_telephone +]%
 
 = Situations
 
-if (Q.depression) {
+on-arrival: if (Q.depression) {
 
 
 
