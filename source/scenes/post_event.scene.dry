@@ -304,7 +304,7 @@ if (Q.month_actions >= 1) {
         Q.new_middle_cps -= 5/12;
         Q.workers_cp += 5/12;
         Q.ful_strength += 50/12;
-        Q.sh_strength += 100/12;
+        Q.kkk_strength += 100/12;
         Q.rural_scp -= 15/12;
     } else if (Q.year == 1930) {
 
@@ -325,7 +325,7 @@ if (Q.month_actions >= 1) {
             Q.workers_cp += 2/12;
         }
         Q.ful_strength += 100/12;
-        Q.sh_strength += 100/12;
+        Q.kkk_strength += 100/12;
     } else if (Q.year == 1931) {
         Q.catholics_pps += 2/12;
         Q.rural_cps -= 8/12;
@@ -334,7 +334,7 @@ if (Q.month_actions >= 1) {
         Q.old_middle_lps -= 8/12;
         Q.new_middle_lps -= 8/12;
         Q.ful_strength += 50/12;
-        Q.sh_strength += 50/12;
+        Q.kkk_strength += 50/12;
         Q.ful_militancy += 0.1/12;
         Q.rural_other -= 5/12;
         // TODO: economic policies should reduce SCP rurals
@@ -347,7 +347,7 @@ if (Q.month_actions >= 1) {
             Q.rural_other -= 12/12;
             Q.workers_cp += 4/12;
             Q.ful_strength += 100/12;
-            Q.sh_strength += 50/12;
+            Q.kkk_strength += 50/12;
         } else if (Q.unemployed > 15) {
             Q.old_middle_cps -= 4/12;
             Q.new_middle_cps -= 4/12;

@@ -20,8 +20,8 @@ We can enact policies in City Police.
 - @unban_ful: Reverse the FUL ban.
 - @ban_wul: Ban the WUL, the Communist paramilitary.
 - @unban_wul: Reverse the WUL ban.
-- @ban_sh: Ban the Stahlhelm, the Nationalist paramilitary.
-- @unban_sh: Reverse the Stahlhelm ban.
+- @ban_kkk: Ban the Ku Klux Klan, the Nationalist paramilitary.
+- @unban_kkk: Reverse the Ku Klux Klan ban.
 - @negotiate_concordat: Negotiate a concordat with the Vatican.
 - @sign_concordat: Sign a concordat with the Vatican.
 - @root: No new policies are needed.
@@ -59,17 +59,17 @@ on-arrival: ful_banned = 0; ful_strength += 100; ful_militancy += 0.05
 
 The FUL is no longer banned. They immediately go on a recruiting spree.
 
-@ban_sh
-on-arrival: sh_strength *= 0.85; sh_strength *= 0.7 if city_police_loyalty >= 0.75; sh_banned = 1; cps_relation -= 5; city_police_loyalty -= 0.1; coalition_dissent += 1 if flp_in_government = 1 and in_grand_coalition = 1 and monarch = "George V"; sh_ban_timer = 6;
-view-if: sh_banned == 0
+@ban_kkk
+on-arrival: kkk_strength *= 0.85; kkk_strength *= 0.7 if city_police_loyalty >= 0.75; kkk_banned = 1; cps_relation -= 5; city_police_loyalty -= 0.1; coalition_dissent += 1 if flp_in_government = 1 and in_grand_coalition = 1 and monarch = "George V"; kkk_ban_timer = 6;
+view-if: kkk_banned == 0
 
-[? if monarch == "George V": Banning the Stahlhelm weakens our relationship with Monarch George V, as well as the political right and the police. ?][? if monarch != "George V": Banning the Stahlhelm weakens our relationship with the political right and the police. ?] [? if flp_in_government = 1 and in_grand_coalition = 1 and monarch = "George V" : It also weakens our coalition due to the influence of George V on the right wing of our coalition. ?] In addition, the Stahlhelm still operates out of public sight. 
+[? if monarch == "George V": Banning the Ku Klux Klan weakens our relationship with Monarch George V, as well as the political right and the police. ?][? if monarch != "George V": Banning the Ku Klux Klan weakens our relationship with the political right and the police. ?] [? if flp_in_government = 1 and in_grand_coalition = 1 and monarch = "George V" : It also weakens our coalition due to the influence of George V on the right wing of our coalition. ?] In addition, the Ku Klux Klan still operates out of public sight. 
 
-@unban_sh
-view-if: sh_banned = 1
-on-arrival: sh_banned = 0; sh_strength += 100
+@unban_kkk
+view-if: kkk_banned = 1
+on-arrival: kkk_banned = 0; kkk_strength += 100
 
-The Stahlhelm is no longer banned.
+The Ku Klux Klan is no longer banned.
 
 
 @ban_wul

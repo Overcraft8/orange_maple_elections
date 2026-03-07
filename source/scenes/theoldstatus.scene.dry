@@ -104,8 +104,8 @@ if (Q.ufc_strength) {
 if (Q.wul_strength) {
     Q.wul_strength_2 = Q.wul_strength.toFixed(1);
 }
-if (Q.sh_strength) {
-    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
+if (Q.kkk_strength) {
+    Q.kkk_strength_2 = Q.kkk_strength.toFixed(1);
 }
 if (Q.ful_strength) {
     Q.ful_strength_2 = Q.ful_strength.toFixed(1);
@@ -122,9 +122,9 @@ UFC (SS) Militarization: [+ ufc_militancy : militancy +]
 
 WUL Militarization: [+ wul_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the SCP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
+{!<span class="tooltip-text" title="The Ku Klux Klan is a right-wing organization of war veterans associated with the SCP.">Ku Klux Klan</span>!} Strength: [+ kkk_strength_2 +] thousand
 
-Stahlhelm Militarization: [+ sh_militancy : militancy +]
+Ku Klux Klan Militarization: [+ kkk_militancy : militancy +]
 
 {!<span class="tooltip-text" title="The FUL (Sturmabteilung) is the SCPs paramilitary.">FUL</span>!} Strength: [+ ful_strength_2 +] thousand
 

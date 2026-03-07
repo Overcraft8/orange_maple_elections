@@ -89,8 +89,8 @@ if (Q.ufc_strength) {
 if (Q.wul_strength) {
     Q.wul_strength_2 = Q.wul_strength.toFixed(1);
 }
-if (Q.sh_strength) {
-    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
+if (Q.kkk_strength) {
+    Q.kkk_strength_2 = Q.kkk_strength.toFixed(1);
 }
 if (Q.ful_strength) {
     Q.ful_strength_2 = Q.ful_strength.toFixed(1);
@@ -99,8 +99,8 @@ if (Q.ful_strength) {
 
 = Saskatchewan Organizations
 
-{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the SCP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] hundred
-Stahlhelm Militancy: [+ sh_militancy : militancy +]
+{!<span class="tooltip-text" title="The Ku Klux Klan is a right-wing organization of war veterans associated with the SCP.">Ku Klux Klan</span>!} Strength: [+ kkk_strength_2 +] hundred
+Ku Klux Klan Militancy: [+ kkk_militancy : militancy +]
 
 FUL Strength: [+ ful_strength_2 +] hundred
 FUL Militancy: [+ ful_militancy : militancy +]

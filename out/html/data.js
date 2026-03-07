@@ -137,5 +137,13 @@ const colourList = [{
         word: "WUL", 
         style: "color: #920c0c; font-weight: bold;"
     },
+    {
+        word: "Ku Klux Klan", 
+        style: "color: #626262; font-weight: bold;"
+    },
+    {
+        word: "KKK", 
+        style: "color: #626262; font-weight: bold;"
+    },
 ];
 

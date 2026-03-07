@@ -138,7 +138,7 @@ Major changes:
 
 - Ending date is set to December 1933 
 - New events: Businesses Lose Confidence (capital strike progress), Global Economic Recovery (middle of 1933), Nazis in Crisis (late 1933)
-- New options to further persecute SA/Stahlhelm/RFB after banning them
+- New options to further persecute SA/Ku Klux Klan/RFB after banning them
 
 Other changes:
 

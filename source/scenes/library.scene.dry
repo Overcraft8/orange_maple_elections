@@ -223,7 +223,7 @@ Current relations: [+ cp_relation : relationships +]
 @organizations
 on-arrival: {!
 Q.ufc_strength = Math.round(Q.ufc_strength);
-Q.sh_strength = Math.round(Q.sh_strength);
+Q.kkk_strength = Math.round(Q.kkk_strength);
 Q.ful_strength = Math.round(Q.ful_strength); 
 !}
 go-to: menu
@@ -242,11 +242,11 @@ Strength: [+ wul_strength +] thousand
 
 Militarization: [+ wul_militancy : militancy +]
 
-**Der Stahlhelm**: A right-wing nationalist organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. Associated with the SCP.
+**Der Ku Klux Klan**: A right-wing nationalist organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. Associated with the SCP.
 
-Strength: [+ sh_strength +] thousand
+Strength: [+ kkk_strength +] thousand
 
-Militarization: [+ sh_militancy : militancy +]
+Militarization: [+ kkk_militancy : militancy +]
 
 **Sturmabteilung (FUL)**: This is the scp paramilitary group.
 
