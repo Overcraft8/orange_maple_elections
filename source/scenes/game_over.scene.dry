@@ -121,22 +121,22 @@ if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_l
 
 @needham_wins
 view-if: (premier == "Needham" or monarch == "Needham") and (total_defeat==1)
-title: Adolf Needham is in undisputed control over Saskatchewan.
+title: Needham is in undisputed control over Saskatchewan.
 tags: endings
 go-to: eg_menu
 
-Adolf Needham is in undisputed control over Saskatchewan. The FLP, along with all of the democratic forces, have failed.
+Needham is in undisputed control over Saskatchewan. The FLP, along with all of the democratic forces, have failed.
 
 @war_against_needham
 view-if: (premier == "Needham" or monarch == "Needham") and (long_war == 1)
-title: Adolf Needham is in power, but we are fighting to stop him.
+title: Needham is in power, but we are fighting to stop him.
 tags: endings
 go-to: eg_menu
 
-Adolf Needham has taken power in Saskatchewan. However, we have rallied the democratic forces of the country against him, and are fighting back. The outcome of this war is uncertain.
+Needham has taken power in Saskatchewan. However, we have rallied the democratic forces of the country against him, and are fighting back. The outcome of this war is uncertain.
 
 
-Needham does not yet control Saskatchewan. [? if premier == "Papen" : Howeve[? r, Premier Papen's authoritarianism and far-right politics are paving the way for Needham, or someone like him, to take power. ?] if premier == "Schleicher" : However, Premier Schleicher's authoritarianism and scheming is paving the way for Needham, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Urban coup, the far-right appears to be ascendant. ?][? if premier == "Brüning" : However, Premier Brüning's austerity policies and the continuation of the depression are paving the way for Needham, or someone like him, to take power. ?]
+Needham does not yet control Canada. [? if prime_minister == "Papen" : However, Prime Minister Papen's authoritarianism and far-right politics are paving the way for Needham, or someone like him, to take power. ?] [? if prime_minister == "Schleicher" : However, Prime Minister Schleicher's authoritarianism and scheming is paving the way for Needham, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Prussian coup, the far-right appears to be ascendant. ?][? if prime_minister == "Brüning" : However, Prime Minister Brüning's austerity policies and the continuation of the depression are paving the way for Needham, or someone like him, to take power. ?]
 
 
 @long_war
