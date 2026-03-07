@@ -136,7 +136,7 @@ go-to: eg_menu
 Adolf Needham has taken power in Saskatchewan. However, we have rallied the democratic forces of the country against him, and are fighting back. The outcome of this war is uncertain.
 
 
-Needham does not yet control Saskatchewan. [? if premier == "Papen" : However, Premier Papen's authoritarianism and far-right politics are paving the way for Needham, or someone like him, to take power. ?] [? if premier == "Schleicher" : However, Premier Schleicher's authoritarianism and scheming is paving the way for Needham, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Urban coup, the far-right appears to be ascendant. ?][? if premier == "Brüning" : However, Premier Brüning's austerity policies and the continuation of the depression are paving the way for Needham, or someone like him, to take power. ?]
+Needham does not yet control Saskatchewan. [? if premier == "Papen" : Howeve[? r, Premier Papen's authoritarianism and far-right politics are paving the way for Needham, or someone like him, to take power. ?] if premier == "Schleicher" : However, Premier Schleicher's authoritarianism and scheming is paving the way for Needham, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Urban coup, the far-right appears to be ascendant. ?][? if premier == "Brüning" : However, Premier Brüning's austerity policies and the continuation of the depression are paving the way for Needham, or someone like him, to take power. ?]
 
 
 @long_war
