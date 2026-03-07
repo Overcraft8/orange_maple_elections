@@ -259,7 +259,7 @@ Rural Telephone Access: [+ rural_telephone +]%
 
 = Situations
 
-[? if Q.Depression == 1:
+[? if depression == 1:
 {!
 <div>
   <img 
