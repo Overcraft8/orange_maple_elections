@@ -1,7 +1,7 @@
 title: Depression
 new-page: true
 tags: event
-view if: 2 = 1
+view-if: 2 = 1
 
 = The Trek reaches Regina
 
