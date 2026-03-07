@@ -260,6 +260,7 @@ Rural Telephone Access: [+ rural_telephone +]%
 = Situations
 
 [? if Q.Depression == 1:
+{!
 <div>
   <img 
   src="img/portraits/Melfort_Market.jpg" 
@@ -267,4 +268,5 @@ Rural Telephone Access: [+ rural_telephone +]%
   onclick="goToDepressionSituation()"
 >
 </div>
+!}
 ?]
