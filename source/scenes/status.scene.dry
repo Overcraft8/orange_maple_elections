@@ -88,21 +88,21 @@ Next Legislative Election: [+ next_parl_election_month : month +] [+ next_parl_e
 
 {!<tr><td>Party</td><td>Workers</td><td>Rural</td><td>Unemployed</td><td>New Middle</td><td>Old Middle</td><tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D26E28; outline: 2px; outline-style: solid;'> </div> !} **FLP:** {!</td><td>!} **[+ workers_flp +]%** {!</td><td>!} **[+ rural_flp +]%** {!</td><td>!} **[+ unemployed_flp +]%** {!</td><td>!} **[+ new_middle_flp +]%** {!</td><td>!} **[+ old_middle_flp +]%** {!</td><tr>!}
+{!<tr><td><div class="box" style='background-color:#D26E28; outline: 2px; outline-style: solid;'> </div> !} **FLP:** {!</td><td>!} **[+ workers_flp_display +]%** {!</td><td>!} **[+ rural_flp_display +]%** {!</td><td>!} **[+ unemployed_flp_display +]%** {!</td><td>!} **[+ new_middle_flp_display +]%** {!</td><td>!} **[+ old_middle_flp_display +]%** {!</td><tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ workers_sapd +]% {!</td><td>!} [+ rural_sapd +]% {!</td><td>!} [+ unemployed_sapd +]% {!</td><td>!} [+ new_middle_sapd +]% {!</td><td>!} [+ old_middle_sapd +]% {!</td></tr>!} ?]
+[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ workers_sapd_display +]% {!</td><td>!} [+ rural_sapd_display +]% {!</td><td>!} [+ unemployed_sapd_display +]% {!</td><td>!} [+ new_middle_sapd_display +]% {!</td><td>!} [+ old_middle_sapd_display +]% {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#920c0c'> </div> !} CP: {!</td><td>!} [+ workers_cp +]% {!</td><td>!} [+ rural_cp +]% {!</td><td>!} [+ unemployed_cp +]% {!</td><td>!} [+ new_middle_cp +]% {!</td><td>!} [+ old_middle_cp +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#920c0c'> </div> !} CP: {!</td><td>!} [+ workers_cp_display +]% {!</td><td>!} [+ rural_cp_display +]% {!</td><td>!} [+ unemployed_cp_display +]% {!</td><td>!} [+ new_middle_cp_display +]% {!</td><td>!} [+ old_middle_cp_display +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#BE0028'> </div> !} [+ lps_name +]: {!</td><td>!} [+ workers_lps +]% {!</td><td>!} [+ rural_lps +]% {!</td><td>!} [+ unemployed_lps +]% {!</td><td>!} [+ new_middle_lps +]% {!</td><td>!} [+ old_middle_lps +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#BE0028'> </div> !} [+ lps_name +]: {!</td><td>!} [+ workers_lps_display +]% {!</td><td>!} [+ rural_lps_display +]% {!</td><td>!} [+ unemployed_lps_display +]% {!</td><td>!} [+ new_middle_lps_display +]% {!</td><td>!} [+ old_middle_lps_display +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#E7DB73'> </div> !} PPS: {!</td><td>!} [+ workers_pps +]% {!</td><td>!} [+ rural_pps +]% {!</td><td>!} [+ unemployed_pps +]% {!</td><td>!} [+ new_middle_pps +]% {!</td><td>!} [+ old_middle_pps +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#E7DB73'> </div> !} PPS: {!</td><td>!} [+ workers_pps_display +]% {!</td><td>!} [+ rural_pps_display +]% {!</td><td>!} [+ unemployed_pps_display +]% {!</td><td>!} [+ new_middle_pps_display +]% {!</td><td>!} [+ old_middle_pps_display +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#0055A5'> </div> !} CPS: {!</td><td>!} [+ workers_cps +]% {!</td><td>!} [+ rural_cps +]% {!</td><td>!} [+ unemployed_cps +]% {!</td><td>!} [+ new_middle_cps +]% {!</td><td>!} [+ old_middle_cps +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0055A5'> </div> !} CPS: {!</td><td>!} [+ workers_cps_display +]% {!</td><td>!} [+ rural_cps_display +]% {!</td><td>!} [+ unemployed_cps_display +]% {!</td><td>!} [+ new_middle_cps_display +]% {!</td><td>!} [+ old_middle_cps_display +]% {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ workers_other +] % {!</td><td>!} [+ rural_other +]% {!</td><td>!} [+ unemployed_other +]% {!</td><td>!} [+ new_middle_other +]% {!</td><td>!} [+ old_middle_other +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ workers_other_display +] % {!</td><td>!} [+ rural_other_display +]% {!</td><td>!} [+ unemployed_other_display +]% {!</td><td>!} [+ new_middle_other_display +]% {!</td><td>!} [+ old_middle_other_display +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#50E23D'> </div> !} SCP: {!</td><td>!} [+ workers_scp +]% {!</td><td>!} [+ rural_scp +]% {!</td><td>!} [+ unemployed_scp +]% {!</td><td>!} [+ new_middle_scp +]% {!</td><td>!} [+ old_middle_scp +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#50E23D'> </div> !} SCP: {!</td><td>!} [+ workers_scp_display +]% {!</td><td>!} [+ rural_scp_display +]% {!</td><td>!} [+ unemployed_scp_display +]% {!</td><td>!} [+ new_middle_scp_display +]% {!</td><td>!} [+ old_middle_scp_display +]% {!</td></tr>!}
 
 {!</table>!}
 
@@ -188,22 +188,6 @@ CPS: [+ cps_votes +]%
 SCP: [+ scp_votes +]%
 
 Others: [+ other_votes +]%
-
-**Detailed results for each demographic**
-
-Workers: FLP: [+ workers_flp_display +]%, PPS: [+ workers_pps_display +]%, CP: [+ workers_cp_display +]%, [? if not lps_name: LPS?][? if lps_name != 0 : [+ lps_name +]?]: [+ workers_lps_display +]%, CPS: [+ workers_cps_display +]%; SCP: [+ workers_scp_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
-
-New Middle Class: FLP: [+ new_middle_flp_display +]%, PPS: [+ new_middle_pps_display +]%, CP: [+ new_middle_cp_display +]%, [? if not lps_name: LPS?][? if lps_name != 0 : [+ lps_name +]?]: [+ new_middle_lps_display +]%, CPS: [+ new_middle_cps_display +]%; SCP: [+ new_middle_scp_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
-
-Old Middle Class: FLP: [+ old_middle_flp_display +]%, PPS: [+ old_middle_pps_display +]%, CP: [+ old_middle_cp_display +]%, [? if not lps_name: LPS?][? if lps_name != 0 : [+ lps_name +]?]: [+ old_middle_lps_display +]%, CPS: [+ old_middle_cps_display +]%; SCP: [+ old_middle_scp_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
-
-Rural: FLP: [+ rural_flp_display +]%, PPS: [+ rural_pps_display +]%, CP: [+ rural_cp_display +]%, [? if not lps_name: LPS?][? if lps_name != 0 : [+ lps_name +]?]: [+ rural_lps_display +]%, CPS: [+ rural_cps_display +]%; SCP: [+ rural_scp_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
-
-Unemployed: FLP: [+ unemployed_flp_display +]%, PPS: [+ unemployed_pps_display +]%, CP: [+ unemployed_cp_display +]%, [? if not lps_name: LPS?][? if lps_name != 0 : [+ lps_name +]?]: [+ unemployed_lps_display +]%, CPS: [+ unemployed_cps_display +]%; SCP: [+ unemployed_scp_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
-
-Catholics: FLP: [+ catholics_flp_display +]%, PPS: [+ catholics_pps_display +]%, CP: [+ catholics_cp_display +]%, [? if not lps_name: LPS?][? if lps_name != 0 : [+ lps_name +]?]: [+ catholics_lps_display +]%, CPS: [+ catholics_cps_display +]%; SCP: [+ catholics_scp_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
-
-Support for the Republic: [+ pro_republic_disp +]%
 
 @interior
 
