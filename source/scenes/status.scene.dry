@@ -228,7 +228,7 @@ Poverty Incidence: [+ poverty : pop_percentage +]
 
 GDP Growth: [+ economic_growth_2 +]%
 
-Saskatchewan GDP: $[+ str_saskatchewan_gdp +] Million
+Saskatchewan GDP: [+ str_saskatchewan_gdp +] Million
 
 Total Saskatchewan Debt: $[+ saskatchewan_debt +] Million
 
