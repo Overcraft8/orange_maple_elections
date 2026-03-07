@@ -26,6 +26,7 @@ Q.year = 1932;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
+Q.last_month = 0
 
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
 Q.difficulty = 0;
@@ -520,8 +521,6 @@ var gdp_sign_img =
             : '<img src="img/BlueStatic.png"> ';
 
 Q.str_saskatchewan_gdp = gdp_sign_img + Q.saskatchewan_gdp;
-
-
 
 
 //                   Living Standards
