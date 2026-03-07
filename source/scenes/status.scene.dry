@@ -84,22 +84,22 @@ Next Legislative Election: [+ next_parl_election_month : month +] [+ next_parl_e
 @organizations
 on-arrival: {!
 if (Q.ufc_strength) {
-    Q.ufc_strength_2 = Q.ufc_strength.toFixed(1);
+    Q.ufc_strength_2 = Q.ufc_strength.toFixed(2);
 }
 if (Q.wul_strength) {
-    Q.wul_strength_2 = Q.wul_strength.toFixed(1);
+    Q.wul_strength_2 = Q.wul_strength.toFixed(2);
 }
 if (Q.kkk_strength) {
-    Q.kkk_strength_2 = Q.kkk_strength.toFixed(1);
+    Q.kkk_strength_2 = Q.kkk_strength.toFixed(2);
 }
 if (Q.ful_strength) {
-    Q.ful_strength_2 = Q.ful_strength.toFixed(1);
+    Q.ful_strength_2 = Q.ful_strength.toFixed(2);
 }
 !}
 
 = Saskatchewan Organizations
 
-{!<span class="tooltip-text" title="The Ku Klux Klan is a right-wing organization of war veterans associated with the SCP.">Ku Klux Klan</span>!} Strength: [+ kkk_strength_2 +] hundred
+Ku Klux Klan Strength: [+ kkk_strength_2 +] hundred
 Ku Klux Klan Militancy: [+ kkk_militancy : militancy +]
 
 FUL Strength: [+ ful_strength_2 +] hundred
@@ -107,6 +107,15 @@ FUL Militancy: [+ ful_militancy : militancy +]
 
 WUL Strength: [+ wul_strength_2 +] hundred
 WUL Militancy: [+ wul_militancy : militancy +]
+
+if (Q.sta_affiliated == 0) { <span style="color: #d26e28;">**STA**</span> 
+Influence: [+ sta_influence +]%
+
+Relations: [+ sta_relations : relationships +]
+
+Militancy: [+ sta_militancy : militancy +]
+
+}
 
 = Law Enforcement
 

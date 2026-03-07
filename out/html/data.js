@@ -1,6 +1,6 @@
 const tooltipList = [{
     searchString: "FLP",
-    explanationText: "The Farmer-Labour Group - Us"
+    explanationText: "The Farmer-Labour Group - Our Party"
 }, 
 {
     searchString: "CP", 
@@ -24,15 +24,11 @@ const tooltipList = [{
 }, 
 {
     searchString: "UFC",
-    explanationText: "The United Farmers of Canada (Saskatchewan Section).\nIt's political apparatus has merged into the FLP. "
+    explanationText: "The United Farmers of Canada (Saskatchewan Section)"
 },
 {
     searchString: "CCYM",
     explanationText: "The Cooperative Commonwealth Youth Movement."
-},
-{
-    searchString: "Unions",
-    explanationText: "The various unions of Saskatchewan. "
 },
 {
     searchString: "ILP",
@@ -40,16 +36,24 @@ const tooltipList = [{
 },
 {
     searchString: "FUL",
-    explanationText: "The Farmer's Unity League. A radical farmer's organization affiliated with the CP."
+    explanationText: "The Farmer's Unity League."
 },
 {
     searchString: "WUL",
-    explanationText: "The Worker's Unity League. A radical farmer's organization affiliated with the CP."
+    explanationText: "The Worker's Unity League. "
 },
 {
-    searchString: "Cooperative Coalition Government", 
+    searchString: "Cooperative Coalition", 
     explanationText: "A coalition of Conservatives, Progressives, and Independents"
-}
+},
+{
+    searchString: "KKK", 
+    explanationText: "The Ku Klux Klan."
+},
+{
+    searchString: "STA", 
+    explanationText: "The Saskatchewan Teacher's Alliance. "
+},
 ];
 
 

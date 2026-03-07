@@ -1,17 +1,17 @@
 body {
-  --bg-color: #decca5;
+  --bg-color: #555555;
   --border-color: #000;
-  --content-bg-color: #decca5;
+  --content-bg-color: #f5ebd6;
   --text-color: #431;
   --link-color: #900;
   --link-hover-color: rgba(0, 0, 0, 0.05);
   --unavailable-bg-color: rgba(0, 0, 0, 0.1);
   --unavailable-color: #9a795f;
-  --tab-bg-color: #dbc591;
-  --tab-color: #ebc7a7;
-  --tab-hover-color: #bca189;
-  --card-border-color: #b8aa93; 
-  --card-bg-color: #bca28e; 
+  --tab-bg-color: #e5d7b4;
+  --tab-color: #e5d7b4;
+  --tab-hover-color: #dfd1ae;
+  --card-border-color: #dfd1ba; 
+  --card-bg-color: #ede1c2; 
   font-family: "Minion Pro", Georgia, serif;
   background-color: var(--bg-color);
   padding: 0;
@@ -671,7 +671,7 @@ table {
 .mytooltip .mytooltiptext {
   position: fixed;
   z-index: 999999;
-  width: 240px;
+  width: 130px;
   background: #fff4e6;
   color: #3b1f0a;
   text-align: left;

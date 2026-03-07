@@ -584,8 +584,9 @@ Q.ccym_relations = 60;
 Q.ufcss_influence = 60;
 Q.ufcss_strength = 0;
 Q.ufcss_relations = 70;
-Q.scsa_strength = 5;
-Q.scsa_relations = 40;
+Q.sta_affiliated = 0;
+Q.sta_strength = 5;
+Q.sta_relations = 40;
 
 
 
