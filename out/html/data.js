@@ -126,7 +126,7 @@ const colourList = [{
         style: "color: #d26e28; font-weight: bold;"
     },
     {
-        word: "Cooperative Coalition Government", 
+        word: "Cooperative Coalition", 
         style: "color: #288ed2; font-weight: bold;"
     },
     {

@@ -589,6 +589,16 @@ Q.rcmp_loyalty = 0.2;
 Q.rcmp_suspicion = 50;
 
 
+//                               FLP / CCF Programme
+use_lease_adopted = 0;
+
+
+
+
+
+
+
+
 
 
 

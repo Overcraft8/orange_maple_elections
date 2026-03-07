@@ -103,12 +103,15 @@ if (Q.ful_strength) {
 KKK Strength: [+ kkk_strength_2 +] Thousand<br>
 KKK Militancy: [+ kkk_militancy : militancy +]<br>
 ?]
-
+[? if 1 == 1 : 
 FUL Strength: [+ ful_strength_2 +] Thousand
 FUL Militancy: [+ ful_militancy : militancy +]
+?]
 
+[? if 1 == 1 :
 WUL Strength: [+ wul_strength_2 +] Thousand
 WUL Militancy: [+ wul_militancy : militancy +]
+?]
 
 [? if sta_affiliated == 0 :
 STA Relations: [+ sta_relations : relationships +]<br>
