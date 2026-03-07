@@ -83,7 +83,7 @@ Next Legislative Election: [+ next_parl_election_month : month +] [+ next_parl_e
 = Polling
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Workers</td><td>Rural</td></tr>Unemployed</td><td>New Middle</td><td>!}
+{!<tr><td>Party</td><td>Workers</td><td>Rural</td><td>Unemployed</td><td>New Middle</td><td>Old Middle</td><td>!}
 
 {!<tr><td><div class="box" style='background-color:#D26E28; outline: 2px; outline-style: solid;'> </div> !} **FLP:** {!</td><td>!} **[+ workers_flp +]%** {!</td><td>!} **[+ rural_flp +]%** {!</td></tr>}**[+ unemployed_flp +]**{!</td></tr>} [+ new_middle_flp +]% {!</td></tr>} [+ old_middle_flp +]% {</td><td>!}
 
@@ -127,14 +127,15 @@ if (Q.ful_strength) {
 KKK Strength: [+ kkk_strength_2 +] Thousand<br>
 KKK Militancy: [+ kkk_militancy : militancy +]<br>
 ?]
+
 [? if 1 == 1 : 
-FUL Strength: [+ ful_strength_2 +] Thousand
-FUL Militancy: [+ ful_militancy : militancy +]
+FUL Strength: [+ ful_strength_2 +] Thousand<br>
+FUL Militancy: [+ ful_militancy : militancy +]<br>
 ?]
 
 [? if 1 == 1 :
-WUL Strength: [+ wul_strength_2 +] Thousand
-WUL Militancy: [+ wul_militancy : militancy +]
+WUL Strength: [+ wul_strength_2 +] Thousand<br>
+WUL Militancy: [+ wul_militancy : militancy +]<br>
 ?]
 
 [? if sta_affiliated == 0 :
