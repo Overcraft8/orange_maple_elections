@@ -99,8 +99,10 @@ if (Q.ful_strength) {
 
 = Saskatchewan Organizations
 
-Ku Klux Klan Strength: [+ kkk_strength_2 +] Thousand
-Ku Klux Klan Militancy: [+ kkk_militancy : militancy +]
+[? if 1 == 1 :
+KKK Strength: [+ kkk_strength_2 +] Thousand<br>
+KKK Militancy: [+ kkk_militancy : militancy +]<br>
+?]
 
 FUL Strength: [+ ful_strength_2 +] Thousand
 FUL Militancy: [+ ful_militancy : militancy +]
