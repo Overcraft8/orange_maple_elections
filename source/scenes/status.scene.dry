@@ -63,72 +63,7 @@ Next Legislative Election: [+ next_parl_election_month : month +] [+ next_parl_e
 
 # = Public Opinion
 
-
-
 @politics
-
-= Assembly Composition
-
-{!
-<svg id="status_assembly" style="width:500px;height:250px;"></svg>
-
-<script>
-// Define colors and outlines for parties
-var partyColors = {
-    cp: "#1f77b4",
-    sapd: "#ff7f0e",
-    flp: "#2ca02c",
-    lps: "#d62728",
-    pps: "#9467bd",
-    cps: "#8c564b",
-    other: "#7f7f7f",
-    scp: "#bcbd22"
-};
-
-setTimeout(function () {
-    var data = [
-        { id: "cp", legend: "CP", name: "CP", seats: Math.round(Q.cp_r * 0.6) }
-    ];
-
-    if (Q.sapd_formed && Q.sapd_r) {
-        data.push({
-            id: "sapd",
-            legend: "SAPD",
-            name: "SAPD",
-            seats: Math.round(Q.sapd_r * 0.6)
-        });
-    }
-
-    data = data.concat([
-        { id: "flp", legend: "FLP", name: "FLP", seats: Math.round(Q.flp_r * 0.6) },
-        { id: "lps", legend: "LPS", name: "LPS", seats: Math.round(Q.lps_r * 0.6) },
-        { id: "pps", legend: "PPS", name: "PPS", seats: Math.round(Q.pps_r * 0.6) },
-        { id: "cps", legend: "CPS", name: "CPS", seats: Math.round(Q.cps_r * 0.6) },
-        { id: "other", legend: "Other", name: "Other", seats: Math.round(Q.other_r * 0.6) },
-        { id: "scp", legend: "SCP", name: "SCP", seats: Math.round(Q.scp_r * 0.6) }
-    ]);
-
-    // Add color and outline for each party
-    data.forEach(function(p) {
-        p.color = partyColors[p.id] || "#cccccc";
-        p.outline = "#000";
-    });
-
-    if (window && window.d3) {
-        var parliament = d3.parliament()
-            .width(500)
-            .height(250)
-            .innerRadiusCoef(0.4);
-
-        // Bind data to a d3 selection
-        d3.select("#status_assembly")
-            .datum(data)  // datum is correct, parliament uses data.each
-            .call(parliament);
-    }
-}, 50);
-</script>
-!}
-
 
 {!<div style="max-height:350px; overflow-y:auto; padding:6px;">!}
 
@@ -248,25 +183,31 @@ Support for Socialism: [+ socialism +]
 
 = Infrastructure
 
-{!
-if (Q.railway_length < 100000 && Q.road_length < 1000000) {
-    return '<div><img src="img/Farmers1914.jpg" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div><p>The province has an undeveloped rail transportation system!</p>';
-}
-!}
-
-
 
 Railway length: [+ railway_length +] km
-
 Road length: [+ road_length +] km
 
 = Tax Rates 
 
 Lower income tax: [+ lower_tax_rates +]%
-
 Upper income tax: [+ Upper_tax_rates +]%
-
 Tariffs: [+ tariffs +]%
+
+= Living Standards
+
+Welfare: [+ welfare +]
+
+Basic Education quality: [+ educationquality +]
+Higher Education quality: [+ highereducationquality +]
+Curriculum: [+ Curriculum +]
+
+Healthcare quality: [+ healthcarequality +]
+
+= Rural Standards
+
+Rural Electrification: [+ rural_electrification +]%
+Rural Sanitation Access: [+ rural_sanitation +]%
+Rural Telephone Access: [+ rural_telephone +]%
 
 @economy
 
@@ -283,29 +224,6 @@ GDP Growth: [+ economic_growth_2 +]%
 Saskatchewan GDP: [+ str_saskatchewan_gdp +] Million
 
 Total Saskatchewan Debt: $[+ saskatchewan_debt +] Million
-
-@livingstandards
-
-= Living Standards
-
-Welfare: [+ welfare +]
-
-Basic Education quality: [+ educationquality +]
-
-Higher Education quality: [+ highereducationquality +]
-
-Curriculum: [+ Curriculum +]
-
-Healthcare quality: [+ healthcarequality +]
-
-= Rural Standards
-
-Rural Electrification: [+ rural_electrification +]%
-
-Rural Sanitation Access: [+ rural_sanitation +]%
-
-Rural Telephone Access: [+ rural_telephone +]%
-
 
 @situations 
 
@@ -343,6 +261,32 @@ Rural Telephone Access: [+ rural_telephone +]%
     Underdeveloped Countryside
     <img 
       src="img/Quil_Lake_1917.jpg" 
+      style="width: 60%; display: block; margin: auto; cursor: pointer;"
+      onclick="goToDepressionSituation()"
+    >
+  <div>
+!}
+?]
+
+[? if depression == 1:
+{!
+  <div style="text-align: center; font-weight: bold; margin-bottom: 5px;">
+    Extensive Privatized Rail
+    <img 
+      src="img/Regina_Train_1951.jpg" 
+      style="width: 60%; display: block; margin: auto; cursor: pointer;"
+      onclick="goToDepressionSituation()"
+    >
+  <div>
+!}
+?]
+
+[? if depression == 1:
+{!
+  <div style="text-align: center; font-weight: bold; margin-bottom: 5px;">
+    Meager Labour Regulation
+    <img 
+      src="img/Saskatoon_StreetcarRail_Construction.jpg" 
       style="width: 60%; display: block; margin: auto; cursor: pointer;"
       onclick="goToDepressionSituation()"
     >
