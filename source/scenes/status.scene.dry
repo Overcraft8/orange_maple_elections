@@ -271,7 +271,7 @@ Rural Telephone Access: [+ rural_telephone +]%
       onclick="goToDepressionSituation()"
     />
   </div>
-
+  
   <!-- Back button -->
   <div style="text-align: center; margin-top: 10px;">
     <button 
