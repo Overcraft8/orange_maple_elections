@@ -74,17 +74,19 @@ Next Legislative Election: [+ next_parl_election_month : month +] [+ next_parl_e
 
 {!<table class="poll-table">!}
 
-{!<tr><td>!}**Party Relationships**{!<td><td>!}**Party Polling**{!<td><tr>!}
+{!<tr><td>!}Party{!<tr><td>!}**Relationships**{!<td><td>!}**Polling**{!<td><tr>!}
 
-{!<span class="tooltip-text" title="Progressive Party">!}[? if not pps_name: PPS?][? if pps_name != 0 : [+ pps_name +]?]{!</td><td>!}[+ pps_relation : relationships +]{!</td><td>!} **FLP Poll:** [+ flp_votes +]% {!</td><tr>!}
+FLP {!</td><td>!}This is our Party{!</td><td>!} **FLP Poll:** [+ flp_votes +]% {!</td><tr>!}
 
-{!<span class="tooltip-text" title="Liberal Party">!}[? if not lps_name: LPS?][? if lps_name != 0 : [+ lps_name +]?]{!</td><td>!}[+ lps_relation : relationships +]{!</td><td>!} LPS Poll: [+ lps_votes +]% {!</td><tr>!}
+PPS {!</td><td>!}[+ pps_relation : relationships +]{!</td><td>!} PPS Poll: [+ pps_votes +]% {!</td><tr>!}
 
-{!<span class="tooltip-text" title="Conservative Party">!}[? if not cps_name: CPS?][? if cps_name != 0 : [+ cps_name +]?]{!</td><td>!}[+ cps_relation : relationships +]{!</td><td>!} CPS Polls: [+ cps_votes +]% {!</td><tr>!}
+LPS {!</td><td>!}[+ lps_relation : relationships +]{!</td><td>!} LPS Poll: [+ lps_votes +]% {!</td><tr>!}
 
-{!<span class="tooltip-text" title="Communist Party">!}[? if not cp_name: CP?][? if cp_name != 0 : [+ cp_name +]?]{!</td><td>!}[+ cp_relation : relationships +]{!</span>!}{!</td><td>!}[+ cp_votes +]% {!</td><tr>!}
+CPS {!</td><td>!}[+ cps_relation : relationships +]{!</td><td>!} CPS Polls: [+ cps_votes +]% {!</td><tr>!}
 
-{!<span class="tooltip-text" title="Social Credit Party">!}[? if not scp_name: SCP?][? if scp_name != 0 : [+ scp_name +]?]{!</td><td>!}[+ scp_relation : relationships +]{!</td><td>!} SCP Polls: [+ scp_votes +]% {!</td><tr>!}
+CP {!</td><td>!}[+ cp_relation : relationships +]{!</span>!}{!</td><td>!}[+ cp_votes +]% {!</td><tr>!}
+
+SCP {!</td><td>!}[+ scp_relation : relationships +]{!</td><td>!} SCP Polls: [+ scp_votes +]% {!</td><tr>!}
 
 {!</table>!}
 
