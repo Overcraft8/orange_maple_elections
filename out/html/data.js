@@ -239,4 +239,35 @@ const colourList = [{
         word: "Disastrous", 
         style: "color: #e03c2a; font-weight: bold;"
     },
+    // Militancy
+    {
+        word: "Nonexistent", 
+        style: "color: #3ce02a; font-weight: bold;"
+    },
+    {
+        word: "Very Low", 
+        style: "color: #70e02a; font-weight: bold;"
+    },
+    {
+        word: "Low", 
+        style: "color: #a0e02a; font-weight: bold;"
+    },
+    {
+        word: "Medium Low", 
+        style: "color: #bfe02a; font-weight: bold;"
+    },
+    {
+        word: "Medium", 
+        style: "color: #e0b22a; font-weight: bold;"
+    },
+    {
+        word: "High", 
+        style: "color: #e07f2a; font-weight: bold;"
+    },
+    {
+        word: "Very High", 
+        style: "color: #e0572a; font-weight: bold;"
+    },
 ];
+
+
