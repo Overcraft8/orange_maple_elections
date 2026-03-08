@@ -176,7 +176,7 @@ d3.select("#status_assembly")
 
 {!<div style="max-height:350px; overflow-y:auto; padding:6px;">!}
 
-=                           Class Polling
+=                                     Class Polling
 
 {!<table class="poll-table">!}
 
@@ -290,7 +290,7 @@ Tariffs: [+ tariffs +]%
 
 Inflation: [+ inflation_2 +]%
 
-Unemployment: [+ unemployed_2 : pop_percentage +]% 
+Unemployment: [+ unemployed_2 : pop_percentage +]
 
 Rural Poverty Incidence: [+ poverty : pop_percentage +]
 

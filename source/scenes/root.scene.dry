@@ -540,7 +540,7 @@ Q.George_Williams_Dead = 0;
 
 
 Q.ccym_influence = 25;
-Q.ccym_strength = 0;
+Q.ccym_strength = 3;
 Q.ccym_relations = 60;
 Q.ccym_militancy = 0.15;
 
