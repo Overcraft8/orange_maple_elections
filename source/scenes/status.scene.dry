@@ -263,23 +263,11 @@ Rural Telephone Access: [+ rural_telephone +]%
 {!
   <div style="text-align: center; font-weight: bold; margin-bottom: 5px;">
     The Great Depression
-  </div>
-  <div>
     <img 
       src="img/Melfort_Market.jpg" 
       style="width: 60%; display: block; margin: auto; cursor: pointer;"
       onclick="goToDepressionSituation()"
-    />
-  </div>
-  
-  <!-- Back button -->
-  <div style="text-align: center; margin-top: 10px;">
-    <button 
-      style="padding: 6px 12px; font-size: 1em; cursor: pointer;" 
-      onclick="window.goBackToPreviousScene()"
     >
-      Back
-    </button>
-  </div>
+  <div>
 !}
 ?]

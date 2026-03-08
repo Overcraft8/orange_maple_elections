@@ -12,7 +12,6 @@
   var main = function(dendryUI) {
     ui = dendryUI;
     game = ui.game;
-    window.previousScene = null;
     // Add your custom code here.
   };
 
@@ -344,20 +343,10 @@ document.addEventListener('mousemove', e => {
 window.goToFLPPresident = function() {
     window.previousScene = window.dendryUI.dendryEngine.state.sceneId;
     window.dendryUI.dendryEngine.goToScene("flp_president");
-    <button onclick="window.goBackToPreviousScene()">Back</button>
 };
 
 window.goToDepressionSituation = function() {
     window.previousScene = window.dendryUI.dendryEngine.state.sceneId;
     window.dendryUI.dendryEngine.goToScene("Depression_Situation");
-    <button onclick="window.goBackToPreviousScene()">Back</button>
 };
 
-window.goBackToPreviousScene = function() {
-    if (window.previousScene) {
-        window.dendryUI.dendryEngine.goToScene(window.previousScene);
-        window.previousScene = null; 
-    } else {
-        console.warn("No previous scene stored!");
-    }
-};
