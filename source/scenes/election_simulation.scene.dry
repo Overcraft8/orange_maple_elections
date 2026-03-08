@@ -4,7 +4,6 @@ set-jump: post_election
 Don't looky here
 
 go-to: election_algorithm
-set-jump: post_election
 
 @post_election
 on-arrival: {!
