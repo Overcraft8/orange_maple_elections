@@ -15,7 +15,7 @@ Herein contains relevant information about the government and politics of the Sa
 - @demographics: Demographics
 - @parties: Parties
 - @public_opinion: Public opinion (and projected election results)
-- @organizations: Paramilitary groups
+- @organizations: Unions, terrorist organizations, farmer organizations
 - @factions: Internal factions
 - @figures: Figures and charts
 - @backSpecialScene: Exit library.
@@ -30,29 +30,27 @@ Saskatchewanian provinces oversee various policy areas, including education, hea
 @Saskatchewanian_timeline
 go-to: menu
 
-= Timeline of the FLP and the Republic (until 1928)
+= Timeline of Saskatchewan
 
-**1774**: The Quebec Act is signed into law, protecting French civil law and Catholic rights. 
+**1609**: Henry Kelsey explores the land that would come to be known as Saskatchewan
 
-**1867**: Saskatchewan is granted Dominion status, allowing it to run its internal affairs. The Liberals and Conservatives become the 2 dominant parties. 
+**1870**: The establishment of Manitoba as a province initiates a wave of Métis migration into the South Saskatchewan River Basin. Saskatchewan becomes the hotbed of Métis and Indigenous resistance against the encroachment of Canada.
 
-**1870**: The province of Manitoba joins Confederation after the Metis-led Red River Rebellion is crushed. The Red River Rebellion becomes the first symbol of East-West political antagonism in Saskatchewan.
+**1872**: The Dominion Lands Act is passed, allowing individuals to claim up to 160 acres of Prairie land for free. Settlers gradually begin to pour into the province. 
 
-**1871**: The province of British Columbia enters Confederataion, having been promised a transcontinental railway to the east. 
+**1885**: The Provisional Government of Saskatchewan is declared by a group of Métis along the Southbranch settlements. They are joined by a few hundred Cree and Assiniboine. Thus, the Northwest-Rebellion is declared. The rebellion is put down a month later at the Battle of Batoche by Canadian militia and the NWMP. 
 
-**1873**: Prince Edward Island joins Confederation, having been promised more than proportional seats in the Assembly. 
+**1885**: The Canadian Pacific Railway is completed, granting complete access to the Prairies and commencing another wave of immigration, primarily to service the agricultural sector. Many immigrants come from Germany, The United Kingdom, and Ukraine. 
 
-**1885**: The Metis-led Northwest Rebellion is crushed by Saskatchewanian soldiers arriving through the promised Saskatchewanian Pacific Railway. 
+**1905**: Saskatchewan is inaugurated as a province. In the resulting election, the Liberal Party comes to power with the support of the farmers. 
 
-**1914-1918**: Saskatchewan enters the First World War. Conscription measures lead to riots among the largely anti-war Quebecois population.
+**1920**: The Progressive Party of Canada is formed primarily to combat the powerful rural corporations in favour of the small family farms. They win the second most seats in the 1921 Canadian Federal Election.
 
-**1919**: The Winnipeg General Strike is violently shut down by the RCMP, resulting in 2 deaths and 30 injured. The event would act as a catalyst for the rise in Labour politics across Saskatchewan. J.S. Woodsworth would be elected to the Assembly in the Winnipeg Centre riding 2 years later.
+**1923-1924**: 46,000 farmers sign up to form the Saskatchewan Wheat Pool, an agricultural cooperative. 
 
-**1926**: Premier Mackenzie King requests Governor General Byng to dissolve parliament and call an election, suspecting that a recent Liberal scandal would lose them the support of the Progressive Party and therefore, a majority. Byng declines, insisting that Conservative Leader Meighan be given a chance to govern and negotiate with other parties to obtain a majority. Instead, Meighan loses a confidence vote 3 days later, forcing Byng to call an election anyways. 
+**1929**: The Great Depression hits Saskatchewan, compounded by the Dust Bowl and the province's reliance on commodity sale. Thousands emigrate from the family farm. Per capita money income falls 75%. 
 
-**1926**: The Statue of Westminster is signed, granting Saskatchewan authority over foreign policy and lawmaking, excepting amendments to the constitution. 
-
-**1930-1932**: Conservative Leader James Anderson becomes Premier on a campaign of "blasting" Saskatchewan out of the Depression. Instead, 1.5 million Saskatchewanians are left in poverty, 10% of the population. Drought across the Prairies, hailed as the "Dirty Thirties" leads to a rise in Farmer co-ops and support for socialist policies amongst rural voters. Anderson's administration constructs work camps for unemployed single men, paying 20 cents a day.
+**1931**: Striking workers at the Bienfait Coal Mine collaborate with the WUL to demand better working conditions from the American owners. When Scabs are prevented from entering the mine, the RCMP is brought in, leading to a resultant riot and the deaths of 3 mine workers. 
 
 @curr_gov
 go-to: cabinet if flp_in_government; menu if not flp_in_government
@@ -118,9 +116,9 @@ go-to: menu
 
 **Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Many are socialist, supporting either the FLP or CP. They make up 40-50% of the population.
 
-**Old Mittelstand**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the far right. 10-15% of the population.
+**Old Middle**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the far right. 10-15% of the population.
 
-**New Mittelstand**: The new middle class consists of white-collar workers and government employees. This is the base of liberalism. 10-15% of the population.
+**New Middle**: The new middle class consists of white-collar workers and government employees. This is the base of liberalism. 10-15% of the population.
 
 **Rural**: Small and large farmers and independent rural workers. This is the base of the FLP. They have been radicalized by the Depression and the Drought they they remain committed to holding their property. 60-65% of the population.
 
@@ -230,37 +228,41 @@ go-to: menu
 
 **Paramilitary groups:**
 
-**UFC (SS) **: A farm organization constructed to remedy the plight of the farmers against big business interests. 
+**UFC (SS)**: A farm organization whose primary aim is to serve the interests of the farmers. 
 
-Strength: [+ ufc_strength +] thousand
+Strength: [+ ufc_strength +] Thousand
 
 Militarization: [+ ufc_militancy : militancy +]
 
 **Workers Unity League (WUL)**: The Trade Union Central of the Communist Party. It is rather diminished from it's peak but still holds substantial sway over the workers. 
 
-Strength: [+ wul_strength +] thousand
+Strength: [+ wul_strength +] Thousand
 
 Militarization: [+ wul_militancy : militancy +]
 
-**Der Ku Klux Klan**: A right-wing nationalist organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. Associated with the SCP.
+**Ku Klux Klan (KKK)**: A racist, anti-Catholic terror organization. They are a recent import from the United States. [? if ruling_government == "Cooperative Coalition" : There are rumours brewing about their connection to Anderson's CPS. ?]
 
-Strength: [+ kkk_strength +] thousand
+Strength: [+ kkk_strength +] Thousand
 
 Militarization: [+ kkk_militancy : militancy +]
 
-**Sturmabteilung (FUL)**: This is the scp paramilitary group.
+**Farmers Unity League (FUL)**: This is the farmer's organization of the CP, more militant and radical than the UFC (SS)
 
-Strength: [+ ful_strength +] thousand
+Strength: [+ ful_strength +] Thousand
 
 Militarization: [+ ful_militancy : militancy +]
 
 **Official military/paramilitary groups:**
 
-**RCMP**: [+ rcmp_strength +] thousand troops. This is Saskatchewan's military.
+**The Royal Canadian Mounted Police (RCMP)**: The main law enforcement agency of the province. Traditionally under control of the Saskatchewan Premier.
+
+ [+ rcmp_strength +] Thousand 
 
 Loyalty: [+ rcmp_loyalty : loyalty +]
 
-**Urban police**: [+ city_police_strength +] thousand members.
+**Urban police**: The few cities of Saskatchewan have their own municipal police departments. These include Saskatoon, Regina, Moose Jaw, and Prince Albert. 
+
+[+ city_police_strength +] Thousand members.
 
 Loyalty: [+ city_police_loyalty : loyalty +]
 

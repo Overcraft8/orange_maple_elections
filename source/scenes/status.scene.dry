@@ -78,15 +78,18 @@ Next Legislative Election: [+ next_parl_election_month : month +] [+ next_parl_e
 
 {!<tr><td>!} **FLP** {!</td><td>!}Our Party{!</td><td>!} **Poll:** [+ flp_votes +]% {!</td><tr>!}
 
-{!<tr><td>!} PPS {!</td><td>!}[+ pps_relation : relationships +]{!</td><td>!} Poll: [+ pps_votes +]% {!</td><tr>!}
+{!<tr><td>!} PPS {!</td><td>!}[+ pps_relation : relationships +]{!</td><td>!} [+ pps_votes +]% {!</td><tr>!}
 
-{!<tr><td>!} LPS {!</td><td>!}[+ lps_relation : relationships +]{!</td><td>!} Poll: [+ lps_votes +]% {!</td><tr>!}
+{!<tr><td>!} LPS {!</td><td>!}[+ lps_relation : relationships +]{!</td><td>!} [+ lps_votes +]% {!</td><tr>!}
 
-{!<tr><td>!} CPS {!</td><td>!}[+ cps_relation : relationships +]{!</td><td>!} Poll: [+ cps_votes +]% {!</td><tr>!}
+{!<tr><td>!} CPS {!</td><td>!}[+ cps_relation : relationships +]{!</td><td>!} [+ cps_votes +]% {!</td><tr>!}
 
-{!<tr><td>!} CP {!</td><td>!}[+ cp_relation : relationships +]{!</td><td>!} Poll: [+ cp_votes +]% {!</td><tr>!}
+{!<tr><td>!} CP {!</td><td>!}[+ cp_relation : relationships +]{!</td><td>!} [+ cp_votes +]% {!</td><tr>!}
 
-{!<tr><td>!} SCP {!</td><td>!}[+ scp_relation : relationships +]{!</td><td>!} Poll: [+ scp_votes +]% {!</td><tr>!}
+{!<tr><td>!} Others {!</td><td>!} Varied {!</td><td>!} [+ other_votes +]% {!</td><tr>!}
+
+{!<tr><td>!} SCP {!</td><td>!}[+ scp_relation : relationships +]{!</td><td>!} [+ scp_votes +]% {!</td><tr>!}
+
 
 {!</table>!}
 
@@ -158,18 +161,20 @@ WUL Militancy: [+ wul_militancy : militancy +]<br>
 [? if sta_affiliated == 0 :
 STA Relations: [+ sta_relations : relationships +]<br>
 STA Militancy: [+ sta_militancy : militancy +]<br>
+STA Strength: [+ sta_strength +] Thousand<br>
 ?]
 
 [? if tlc_affiliated == 0 :
 TLC Relations: [+ tlc_relations : relationships +]<br>
 TLC Militancy: [+ tlc_militancy : militancy +]<br>
+TLC Strength: [+ tlc_strength +] Thousand<br>
 ?]
 
 = Law Enforcement
 
 RCMP Suspicion: [+ rcmp_suspicion : suspicion +]
 
-Urban police: [+ city_police_strength : strength +]
+Urban police: [+ city_police_strength : strength +] Thousand
 
 Urban police loyalty: [+ city_police_loyalty : loyalty +]
 
