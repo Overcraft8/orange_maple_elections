@@ -44,7 +44,6 @@ is-special: true
     <div style="text-align: center;">
         <p>[+ flp_board_four +]</p>
     </div>
-
 </div>
 
 
@@ -72,6 +71,7 @@ Dissent: [+ reformist_dissent : dissent +]
 @partyaffiliates
 
 = Party Affiliates of the FLP
+
 [? if 1 == 1 : 
 <span style="color: #7b1616;">**CCYM**</span> 
 Influence: [+ ccym_influence +]%

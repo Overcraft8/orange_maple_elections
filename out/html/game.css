@@ -718,7 +718,7 @@ table {
 }
 
 .poll-table {
-  font-size: 12px;
+  font-size: 0.85em;
   line-height: 1.1;
   max-height: 350px;
   overflow-y: auto;
@@ -742,5 +742,5 @@ table {
 
 .poll-table td {
   border: 1px solid #000000;
-  padding: 4px 6px;
+  padding: 2px 4px;
 }

@@ -261,12 +261,15 @@ Rural Telephone Access: [+ rural_telephone +]%
 
 [? if depression == 1:
 {!
-= The Great Depression
+<div style="text-align: center; font-weight: bold; margin-bottom: 5px;">
+  The Great Depression
+</div>
 <div>
   <img 
-  src="img/Melfort_Market.jpg" 
-  style="width: 60%; display: block; margin: auto; margin-bottom: 5px; cursor: pointer;"
-  onclick="goToDepressionSituation()"
+    src="img/Melfort_Market.jpg" 
+    style="width: 60%; display: block; margin: auto; cursor: pointer;"
+    onclick="goToDepressionSituation()"
+  />
 </div>
 !}
 ?]
