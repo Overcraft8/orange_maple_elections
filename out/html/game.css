@@ -231,14 +231,14 @@ img.inline-img.icon {
 #tools_wrapper {
   position: absolute;
   width: 100%;
-  max-width: 69em;
+  max-width: 85em;
   left: 0;
   right: 0;
   margin: 0 auto;
 }
 .tools {
   padding: 0.6em;
-  width: 16rem;
+  width: 25rem;
   color: var(--text-color);
   background-color: var(--content-bg-color);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
