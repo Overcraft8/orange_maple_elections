@@ -69,79 +69,124 @@ Next Legislative Election: [+ next_parl_election_month : month +] [+ next_parl_e
 
 = Assembly Composition
 
-{!<svg id="status_assembly" style="width:500px;height:250px;"></svg>!}
-
 on-display: {!
 
-var data = [
-{
-"id": "cp",
-"legend": "CP",
-"name": "CP",
-"seats": Math.round(Q.cp_r * 0.6)
-}
+data = [
+    {
+        "id": "cp",
+        "legend": "CP",
+        "name": "CP",
+        "seats": Math.round(Q.cp_r * 0.6),
+    }
 ];
-
 if (Q.sapd_formed && Q.sapd_r) {
-data.push({
-"id": "sapd",
-"legend": "SAPD",
-"name": "SAPD",
-"seats": Math.round(Q.sapd_r * 0.6)
-});
+    data.push({
+            "id": "sapd",
+            "legend": "SAPD",
+            "name": "SAPD",
+            "seats": Math.round(Q.sapd_r * 0.6),
+            });
+}
+data = data.concat([
+    {
+        "id": "flp",
+        "legend": "FLP",
+        "name": "FLP",
+        "seats": Math.round(Q.flp_r * 0.6),
+    },
+    {
+        "id": "lps",
+        "legend": "LPS",
+        "name": "LPS",
+        "seats": Math.round(Q.lps_r * 0.6),
+    },
+    {
+        "id": "pps",
+        "legend": "PPS",
+        "name": "PPS",
+        "seats": Math.round(Q.pps_r * 0.6),
+    },
+    {
+        "id": "cps",
+        "legend": "CPS",
+        "name": "CPS",
+        "seats": Math.round(Q.cps_r * 0.6),
+    },
+    {
+        "id": "other",
+        "legend": "Other",
+        "name": "Other",
+        "seats": Math.round(Q.other_r * 0.6),
+    },
+    {
+        "id": "scp",
+        "legend": "SCP",
+        "name": "SCP",
+        "seats": Math.round(Q.scp_r * 0.6),
+    },
+]); 
+
+function allocateSeats(percentages, totalSeats = 128) {
+    const exactSeats = {};
+    const flooredSeats = {};
+    const remainders = [];
+
+    let totalFlooredSeats = 0;
+    for (const party in percentages) {
+        const exact = (percentages[party] * totalSeats) / 100;
+        const floored = Math.floor(exact);
+        const remainder = exact - floored;
+
+        exactSeats[party] = exact;
+        flooredSeats[party] = floored;
+        totalFlooredSeats += floored;
+
+        remainders.push({ party, remainder });
+    }
+
+    const seatsToDistribute = totalSeats - totalFlooredSeats;
+    remainders.sort((a, b) => b.remainder - a.remainder);
+
+    for (let i = 0; i < seatsToDistribute; i++) {
+        flooredSeats[remainders[i].party]++;
+    }
+
+    return flooredSeats;
 }
 
-data = data.concat([
-{
-"id": "flp",
-"legend": "FLP",
-"name": "FLP",
-"seats": Math.round(Q.flp_r * 0.6)
-},
-{
-"id": "lps",
-"legend": "LPS",
-"name": "LPS",
-"seats": Math.round(Q.lps_r * 0.6)
-},
-{
-"id": "pps",
-"legend": "PPS",
-"name": "PPS",
-"seats": Math.round(Q.pps_r * 0.6)
-},
-{
-"id": "cps",
-"legend": "CPS",
-"name": "CPS",
-"seats": Math.round(Q.cps_r * 0.6)
-},
-{
-"id": "other",
-"legend": "Other",
-"name": "Other",
-"seats": Math.round(Q.other_r * 0.6)
-},
-{
-"id": "scp",
-"legend": "SCP",
-"name": "SCP",
-"seats": Math.round(Q.scp_r * 0.6)
+const inputPercentages = {
+    flp_r: Q.flp_r, 
+    cp_r: Q.cp_r, 
+    pps_r: Q.pps_r, 
+    lps_r: Q.pps_r, 
+    cps_r: Q.pps_r, 
+    scp_r: Q.scp_r, 
+    other_r: Q.other_r
+};
+
+const allocatedSeats = allocateSeats(inputPercentages);
+
+for (const party in allocatedSeats) {
+    Q[party + "_seats"] = allocatedSeats[party];
 }
-]);
 
 if (window && d3) {
-
-var parliament = d3.parliament();
-parliament.width(500).height(500).innerRadiusCoef(0.4);
-
-d3.select("#status_assembly")
-.datum(data)
-.call(parliament);
-
+    var width = 500;
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50;
+        height = width;
+        document.getElementById("bavaria_landtag").style.height = screenWidth/2 + "px";
+    }
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#bavaria_landtag").datum(data).call(parliament);
 }
-
 !}
+
 
 {!<svg id="status_assembly" style="width:500px;height:250px;"></svg>!}
 
