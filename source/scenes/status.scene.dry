@@ -14,8 +14,6 @@ if (Q.economic_growth) {
 }
 !}
 
-= Status
-
 {!</div>!}
 
 {!<div style="max-height:350px; overflow-y:auto; padding:6px;">!}
@@ -31,6 +29,21 @@ if (Q.economic_growth) {
 <!-- MAIN CONTENT -->
 <div style="width:60%; padding:0 10px;">
 !}
+
+= Status
+
+{!
+</div>
+
+<!-- RIGHT IMAGE -->
+<div style="width:60%; text-align:center;">
+<img src="img/IMG_5443.jpg" style="max-width:100%;">
+</div>
+
+</div>
+!}
+
+{!</div>!}
 
 [+ month : month +] [+ year +]
 
@@ -78,19 +91,6 @@ Next Legislative Election: [+ next_parl_election_month : month +] [+ next_parl_e
 
 
 # = Public Opinion
-
-{!
-</div>
-
-<!-- RIGHT IMAGE -->
-<div style="width:60%; text-align:center;">
-<img src="img/IMG_5443.jpg" style="max-width:100%;">
-</div>
-
-</div>
-!}
-
-{!</div>!}
 
 @politics
 
