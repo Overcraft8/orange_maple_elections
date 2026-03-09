@@ -4,6 +4,12 @@ is-special: true
 
 = President of the FLP
 
+is-card: true
+tags: programme
+view-if: 1 == 1
+on-arrival: programme_timer += 3
+card-image: img/portraits[+ flp_president_img +]
+
 <div>
   <img 
   src="img/portraits/[+ flp_president_img +]" 
