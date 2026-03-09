@@ -25,16 +25,13 @@
   };
 
   window.showStats = function() {
-    if (window.dendryUI.dendryEngine.state.sceneId.startsWith('library')) {
-        window.dendryUI.dendryEngine.goToScene('backSpecialScene');
-    } else {
-        window.dendryUI.dendryEngine.goToScene('library');
-    }
-    if (window.dendryUI.dendryEngine.state.sceneId.startsWith('flp_president')) {
-        window.dendryUI.dendryEngine.goToScene('backSpecialScene');
-    } else {
-        window.dendryUI.dendryEngine.goToScene('flp_president');
-    }
+  var scene = window.dendryUI.dendryEngine.state.sceneId;
+
+  if (scene.startsWith('library') || scene.startsWith('flp_president')) {
+      window.dendryUI.dendryEngine.goToScene('backSpecialScene');
+  } else {
+      window.dendryUI.dendryEngine.goToScene('library');
+  }
   };
 
   window.showMods = function() {
