@@ -1,5 +1,6 @@
 title: FLP President
 new-page: true
+is-special: true
 tags: event
 view-if: 2 = 1
 
