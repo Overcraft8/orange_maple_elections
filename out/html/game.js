@@ -164,13 +164,18 @@ window.displayText = function (text) {
     return applyWholesome(text);
 };
 
+function escapeRegex(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function applyWholesome(str) {
     const allWords = new Set([
         ...tooltipList.map(t => t.searchString),
         ...colourList.map(c => c.word)
     ]);
 
-    const regex = new RegExp(`\\b(${[...allWords].join('|')})\\b`, 'g');
+    const words = [...allWords].map(escapeRegex);
+    const regex = new RegExp(`(?<![\\w-])(${words.join('|')})(?![\\w-])`, 'g');
 
     return str.replace(/(<(?:span|strong)[^>]*>.*?<\/(?:span|strong)>|<[^>]+>|[^<]+)/g, (segment) => {
         if (segment.startsWith('<')) return segment;
@@ -187,7 +192,7 @@ function applyWholesome(str) {
             }
 
             if (tooltip) {
-                return `<span class='mytooltip' style='${style}'>${innerText}<span  class='mytooltiptext'>${tooltip.explanationText}</span></span>`;
+                return `<span class='mytooltip' style='${style}'>${innerText}<span class='mytooltiptext'>${tooltip.explanationText}</span></span>`;
             } else if (colour) {
                 return `<span style='${style}'>${innerText}</span>`;
             }
