@@ -1,0 +1,53 @@
+title: Party Programme
+new-page: true
+is-card: true
+tags: party_affairs
+view-if: programme_timer <= 0
+on-arrival: month_actions += 1; programme_timer += 3
+card-image: img/Sask_CCF_Programme.jpg
+#subtitle: Choosing our party's platform
+
+Our Party has many policies that we can choose from. Some of them include a use-lease policy to protect farmers from foreclosure, a comprehensive labour rights platform to ensure that tragedies such as the Bienfait Coal Miner's strike never occur again, or to attempt nationalizing the Saskatchewan railways. 
+
+What path should we take? 
+
+- @rural_policies: What rural policies might we adopt? 
+# - @labour_policies: What labour policies might we adopt?
+# - @infra_policies: What construction or maintenance might we undertake?
+# - @econ_policies: What economic policies might we adopt?
+# - @health_policies: What healthcare policies might we adopt?
+# - @edu_policies: What educational policies might we adopt?
+- @back: Go Back
+
+@rural_policies
+subtitle: The farmers are a traditional voting bloc of ours. 
+face-image: img/Williams_picnic.jpg
+
+[? if ufc_affiliated == 1 : Our party is traditionally agrarian-oriented, owing to the tremendous backing of the UFC (SS) in financing our operations and promoting membership to our party. ?]
+[? if ufc_affiliated == 0 : Our party has lost much of our rural base. ?]
+
+- @use_lease: We can protect the farmers by illegalizing immediate foreclosure by their creditors. 
+#- @wheat_pool: We can create a provincially regulated and operated wheat pool. 
+#- @grain_elevators: We can promote the construction of public grain elevators. 
+#- @price_guarantee: We can set a floor price for livestock and grain. 
+
+
+@use_lease
+
+Enacting this policy would allow farmers to remain on their land by leasing the property back to their creditor or a public authority. 
+
+This would enable the farmer to utilize their land to pay back their payments, acting as a safeguard from the seizure of their primary form of income generation. 
+
+We would construct a Farm Land Security Board to oversee this policy and ensure that both farmers and creditors are acting faithfully. 
+
+- @Yes_use_lease: We will promise this policy
+- @return: Let's go back
+
+@Yes_use_lease
+on-arrival: agrarian_strength += 2; use_lease_plat += 1; 
+
+We have chosen to add a use-lease policy to our platform. The farmers will surely be enthusiastic. 
+
+
+@back
+- @return: Go back

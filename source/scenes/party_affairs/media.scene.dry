@@ -2,14 +2,14 @@ title: Media
 new-page: true
 is-card: true
 tags: party_affairs
-view-if: media_timer <= 0
+view-if: media_timer <= 0; media_power = 1;
 on-arrival: month_actions += 1; media_timer += 6;
-card-image: img/North_Star.jpg
+card-image: img/Farmer_Labour_News.jpg
 #subtitle: Setting the direction for our newspapers and radio.
 
 = Media
 
-The FLP has little media presence and we are susceptible to the larger parties' monopoly on news...
+[? if media_power >= 3: The FLP has little media presence and we are susceptible to the larger parties' monopoly on news...?]
 
 - @commercial
 - @campaign
