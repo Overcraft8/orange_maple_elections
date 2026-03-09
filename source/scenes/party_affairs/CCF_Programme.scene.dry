@@ -17,7 +17,7 @@ What path should we take?
 # - @econ_policies: What economic policies might we adopt?
 # - @health_policies: What healthcare policies might we adopt?
 # - @edu_policies: What educational policies might we adopt?
-- @back: Go Back
+- @return: Go Back
 
 @rural_policies
 subtitle: The farmers are a traditional voting bloc of ours. 
@@ -40,11 +40,28 @@ This would enable the farmer to utilize their land to pay back their payments, a
 
 We would construct a Farm Land Security Board to oversee this policy and ensure that both farmers and creditors are acting faithfully. 
 
-- @Yes_use_lease: We will promise this policy
+This is a radical rural policy that would potentially destabilize our agricultural sector. However, it may be worth it to ensure the support of the farmers. 
+
+- @yes_use_lease: We will promise this policy
 - @return: Let's go back
 
-@Yes_use_lease
-on-arrival: agrarian_strength += 2; use_lease_plat += 1; flp_rural += 5; 
+@yes_use_lease
+on-arrival: agrarian_strength += 5; use_lease_plat += 1; flp_rural += 4;
 
 We have chosen to add a use-lease policy to our platform. The farmers will surely be enthusiastic. 
 
+# -----------------------
+
+@wheat_pool
+
+Enacting this policy would allow farmers to collect their crop and livestock for sale together in a provincially secured wheat pool, allowing greater bargaining power in both distribution and payment. 
+
+This would encroach upon many of the existing wheat pools in Saskatchewan though we could officiate a merger of these organizations if we so wished. 
+
+- @yes_wheat_pool
+- @return: Let's go back
+
+@yes_wheat_pool
+on-arrival: agrarian_strength += 3; wheat_pool_plat += 1; flp_rural += 4
+
+We have chosen to add a provincial wheat pool to our platform. The farmers will surely be enthusiastic. 
