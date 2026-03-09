@@ -16,6 +16,10 @@ if (Q.economic_growth) {
 
 = Status
 
+{!</div>!}
+
+{!<div style="max-height:350px; overflow-y:auto; padding:6px;">!}
+
 {!
 <div style="display:flex; align-items:flex-start;">
 
@@ -86,7 +90,7 @@ Next Legislative Election: [+ next_parl_election_month : month +] [+ next_parl_e
 </div>
 !}
 
-
+{!</div>!}
 
 @politics
 
