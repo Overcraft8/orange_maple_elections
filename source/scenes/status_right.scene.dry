@@ -6,9 +6,9 @@ is-special: true
 
 
 {!
-<a class="card" href="#flp_president">
-  <img class="card-img" src="img/portraits/[+ flp_president_img +]">
-</a>
+<div class="card" go-to="flp_president">
+  <img class="card-img" src="img/portraits/WilliamsHaraGeorge.jpg">
+</div>
 !}
 
 = Legislative Party Leader 
@@ -99,7 +99,7 @@ Strength: [+ ufc_strength +] Thousand<br>
 Influence: [+ sta_influence +]%<br>
 Relations: [+ sta_relations : relationships +]<br>
 Militancy: [+ sta_militancy : militancy +]<br>
-StrengthL [+ sta_strength +] Thousand<br>
+Strength: [+ sta_strength +] Thousand<br>
 ?]
 
 [? if tlc_affiliated == 1 :
