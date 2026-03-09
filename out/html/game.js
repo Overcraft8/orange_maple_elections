@@ -30,6 +30,11 @@
     } else {
         window.dendryUI.dendryEngine.goToScene('library');
     }
+    if (window.dendryUI.dendryEngine.state.sceneId.startsWith('flp_president')) {
+        window.dendryUI.dendryEngine.goToScene('backSpecialScene');
+    } else {
+        window.dendryUI.dendryEngine.goToScene('flp_president');
+    }
   };
 
   window.showMods = function() {

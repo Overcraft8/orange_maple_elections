@@ -18,10 +18,10 @@ view-if: 2 = 1
 
 
 - @Information: Information on our President
-- @Back: Back to Main Screen
+- @backSpecialScene: Exit informational tab.
 
 @Information
 
-@Back
-go-to: backSpecialScene
+Yes, he was really quite cool
 
+go-to: backSpecialScene
