@@ -23,7 +23,7 @@ if (Q.economic_growth) {
 
 <!-- LEFT IMAGE -->
 <div style="width:60%; text-align:center;">
-<img src="img/IMG_5444.jpg" style="max-width:100%;">
+<img src="img/Red_Lily.png" style="max-width:100%;">
 </div>
 
 <!-- MAIN CONTENT -->
@@ -37,7 +37,7 @@ if (Q.economic_growth) {
 
 <!-- RIGHT IMAGE -->
 <div style="width:60%; text-align:center;">
-<img src="img/IMG_5443.jpg" style="max-width:100%;">
+<img src="img/Wheat_Stalk.png" style="max-width:100%;">
 </div>
 
 </div>

@@ -6,11 +6,12 @@ is-special: true
 
 
 {!
-<a class="card" go-to="flp_president">
-  <img class="card-img" src="img/portraits/WilliamsHaraGeorge.jpg">
+<a class="card" go-to="flp_president" style="display:flex; flex-direction:column; align-items:center;">
+  <img class="card-img" src="img/portraits/[+ flp_president_img +]">
+  <span class="card-caption">President</span>
 </a>
-<span class="card-caption">President</span>
 !}
+
 = Legislative Party Leader 
 
 <div><img src="img/portraits/[+ flp_legislative_leader_img  +]" style="width: 60%;display: block;margin: auto;margin-bottom: 5px;"></div>
