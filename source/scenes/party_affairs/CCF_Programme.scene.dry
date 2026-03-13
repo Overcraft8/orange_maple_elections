@@ -3,7 +3,7 @@ new-page: true
 is-card: true
 tags: party_affairs, programme
 view-if: programme_timer <= 0
-on-arrival: month_actions += 1; programme_timer += 3
+on-arrival: month_actions += 1; programme_timer = 3
 card-image: img/Sask_CCF_Programme.jpg
 subtitle: Choosing our party's platform
 
