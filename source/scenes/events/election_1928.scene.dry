@@ -623,6 +623,17 @@ go-to: right_coalition_post_flp if right_coalition >= 50 and prime_minister != "
 @right_coalition_post_flp
 go-to: right_coalition_2
 
+@right_coalition_2
+unavailable-subtitle: The SCP is not interested in a coalition with the PPS.
+view-if: right_coalition >= 50
+choose-if: year < 1929
+on-arrival: flp_in_government = 0; flp_toleration = 0; premier = "Brüning"; premier_party = "PPS"; foreign_minister_party = "CPS"; interior_minister_party = "SCP"; justice_minister_party = "SCP"; labour_minister_party = "PPS"; rcmp_minister_party = "I"; economic_minister_party = "CPS"; finance_minister_party = "PPS"; agriculture_minister_party = "SCP"; in_right_coalition = 1;
+
+Even though the SCP is very reluctant to participate in such a coalition, they still accede to Monarch George V's wishes. Thus, a majority center-right coalition is formed, with Brüning as premier.
+
+
+
+
 @new_elections_flp
 on-arrival: next_election_time = time+3; next_parl_election_month = month + 3; next_parl_election_year = year; next_parl_election_year = year + 1 if next_parl_election_month > 12; next_parl_election_month = next_parl_election_month - 12 if next_parl_election_month > 12; new_middle_flp -= 5; old_middle_flp -= 5; workers_flp -= 3; catholics_flp -= 3; in_election = 1
 
