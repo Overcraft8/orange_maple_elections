@@ -311,7 +311,7 @@ There are some potential coalition arrangements.
 #- @lps_coalition
 #- @grand_coalition
 #- @new_grand_coalition
-#- @unity_government
+- @unity_government_coalition
 #- @scp_majority
 #- @no_majority
 #- @woodsworths_dilemma
@@ -339,7 +339,7 @@ The work of the Party has finally borne fruition! We can now rule unhindered by 
 @majority_premier
 on-arrival: premier =  legislative_leader 
 
-@unity_government
+@unity_government_coalition
 title: Victory!
 subtitle: FLP ([+ flp_r +]%)
 unavailable-subtitle: FLP ([+ flp_r +]%) We do not have enough support.
