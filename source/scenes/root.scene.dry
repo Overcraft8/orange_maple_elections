@@ -232,9 +232,8 @@ Q.inflation = 2.9;
 Q.economic_growth = 4.4;
 Q.monthly_economic_growth = 1;
 
-Q.saskatchewan_debt = Number((160).toFixed(1));
-Q.saskatchewan_gdp = Number((200).toFixed(1)); // new GDP
-// Q.saskatchewan_old_gdp should already exist
+Q.saskatchewan_debt = Number((100).toFixed(1));
+Q.saskatchewan_gdp = Number((100).toFixed(1)); // new GDP
 
 Q.depression = 1;
 
@@ -359,7 +358,7 @@ Q.cp_in_government = 0;
 
 Q.in_right_coalition = 0;
 // Weimar coalition = FLP + PPS + LPS
-Q.in_weimar_coalition = 0;
+Q.in_lps_coalition = 0;
 // Grand coalition = FLP + PPS + LPS + CPS
 // also includes the "new grand coalition" of FLP + PPS + LPS + CPS + Others
 Q.in_grand_coalition = 0;
@@ -473,15 +472,6 @@ Q.monthly_economic_growth = Q.economic_growth / 12;
 Q.saskatchewan_old_gdp = Q.saskatchewan_gdp;
 Q.saskatchewan_gdp = Number(
   (Q.saskatchewan_gdp * (Q.monthly_economic_growth / 100 + 1)).toFixed(1));
-
-var gdp_sign_img =
-    Q.saskatchewan_gdp > Q.saskatchewan_old_gdp
-        ? '<img src="img/GreenPlus.png"> '
-        : Q.saskatchewan_gdp < Q.saskatchewan_old_gdp
-            ? '<img src="img/RedNegative.png"> '
-            : '<img src="img/BlueStatic.png"> ';
-
-Q.str_saskatchewan_gdp = gdp_sign_img + "$" + Q.saskatchewan_gdp;
 
 
 //                   Living Standards

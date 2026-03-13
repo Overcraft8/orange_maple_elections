@@ -108,7 +108,7 @@ unavailable-subtitle: -1 treasury - requres a majority of parties to support sec
 choose-if: treasury >= 1 and (progressive_coalition + cps_r >= 50)
 view-if: secularized = 0
 
-Are you sure about this? The Weimar Coalition had an agreement to not touch religious schools; the Catholic PPS Party will revolt.
+Are you sure about this? The Liberal-CCF Coalition had an agreement to not touch religious schools; the Catholic PPS Party will revolt.
 
 - @secularize_2: Yes, do it.
 - @ed_menu: No, do not touch religious education.
@@ -116,13 +116,13 @@ Are you sure about this? The Weimar Coalition had an agreement to not touch reli
 
 @secularize_2
 on-arrival: secularized = 1; catholics_flp -= 15; pps_relation -= 15; cps_relation += 6*(1-dissent); lps_relation += 6*(1-dissent); cp_relation += 6*(1-dissent); new_middle_flp += 3*(1-dissent); workers_flp += 3*(1-dissent); education_science += 0.5; new_middle_lps += 4; new_middle_cps += 4
-go-to: vote_of_no_confidence.vonc_menu if in_weimar_coalition or in_grand_coalition or in_popular_front
+go-to: vote_of_no_confidence.vonc_menu if in_lps_coalition or in_grand_coalition or in_popular_front
 
 # instant VONC from zentrum
 
 The FLP, [+ lps_name +], CPS, and CP vote in favor of secular education, overcoming the opposition of the religiously-oriented PPS Party and SCP. We have funded secular community schools to replace some previous denominational schools.
 
-[? if in_weimar_coalition or in_grand_coalition or in_popular_front: Of course, the PPS Party is in revolt at this proposal, and have called for a vote of no confidence in our government. ?]
+[? if in_lps_coalition or in_grand_coalition or in_popular_front: Of course, the PPS Party is in revolt at this proposal, and have called for a vote of no confidence in our government. ?]
 
 
 
@@ -175,7 +175,7 @@ We should teach students how to be citizens of a democratic republic, by teachin
 @science_major
 title: Scientific curriculum
 subtitle: Modern science, mathematics, and technical skills
-on-arrival: curriculum_timer = 50; major_curriculum = "scientific"; education_science += 1; coalition_dissent += 1 if in_weimar_coalition; pps_relation -= 5; lps_relation += 4*(1-dissent); cp_relation += 3*(1-dissent); new_middle_flp += 3*(1-dissent); workers_flp += 2*(1-dissent)
+on-arrival: curriculum_timer = 50; major_curriculum = "scientific"; education_science += 1; coalition_dissent += 1 if in_lps_coalition; pps_relation -= 5; lps_relation += 4*(1-dissent); cp_relation += 3*(1-dissent); new_middle_flp += 3*(1-dissent); workers_flp += 2*(1-dissent)
 go-to: curriculum_minor
 
 Our educational system should reflect the modern age, and we should teach science and rational thinking. Religious conservatives tend to react negatively against this. 

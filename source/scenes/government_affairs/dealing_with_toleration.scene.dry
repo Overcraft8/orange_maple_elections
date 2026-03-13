@@ -64,7 +64,7 @@ Our attempts to reach out to the center-right are met with disdain by leftists w
 
 @new_grand_coalition
 title: Can we join the government in a new grand coalition?
-view-if: neo_weimar_coalition >= 50
+view-if: neo_lps_coalition >= 50
 choose-if: pps_relation >= 50 and cps_relation >= 30 and resources >= 2
 subtitle: We will need 2 resources to smooth out the process of forming the coalition.
 unavailable-subtitle: [? if pps_relation < 50 : We do not have adequate relations with the PPS Party. ?][? if cps_relation < 30 : We do not have adequate relations with the CPS. ?] [? if resources < 2 : We do not have enough resources. ?]
