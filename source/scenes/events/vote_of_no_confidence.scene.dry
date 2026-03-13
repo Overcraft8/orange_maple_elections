@@ -56,7 +56,7 @@ view-if: tried_supporting_cp = 0
 on-arrival: tried_supporting_cp = 1
 unavailable-subtitle: [? if communist_coalition < 3 : The CP won't take part in parliamentary government. ?] [? if cp_relation < 50 : The CP is not friendly enough with us. ?] [? if (in_grand_coalition and cp_r < cps_r) or (in_weimar_coalition and cp_r < pps_r): The CP does not have enough votes. ?] [? if in_popular_front : We are already in a Popular Front with the CP. ?]
 
-If the Communists abstain, then we essentially can maintain a minority government[? if monarch=="George V":, although it would be very difficult to make policy without the support of Monarch George V, which we do not have ?]. If this happens, then we will own a massive debt to the CP. This could lead to broader cooperation in the future, for better or for worse.
+If the Communists abstain, then we essentially can maintain a minority government[? if prime minister=="Richard Bennett":, although it would be very difficult to make policy without the support of Monarch Richard Bennett, which we do not have ?]. If this happens, then we will own a massive debt to the CP. This could lead to broader cooperation in the future, for better or for worse.
 
 - @support_cp_2: Persuade the CP to "tolerate" us?
 - @let_it_happen: Never mind. Let the vote happen.
@@ -84,9 +84,9 @@ The CP is not interested in a "toleration" arrangement; they will only support u
 @let_it_happen
 call: set_next_election_time
 on-arrival: time_to_election = 3; flp_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; flp_toleration = 0; foreign_minister_party = "CPS"; interior_minister_party = "PPS"; justice_minister_party = "I"; labour_minister_party = "PPS"; rcmp_minister_party = "I"; economic_minister_party = lps_name; finance_minister_party = "CPS"; agriculture_minister_party = "PPS"; labour_minister = "Stegerwald"; interior_minister = "Wirth"; finance_minister = "Moldenhauer"; economic_minister = "Curtius"; justice_minister = "Koch-Weser"; foreign_minister = "Stresemann"; agriculture_minister = "Dietrich"; rcmp_minister = "Groener";  coalition_dissent = 0; pro_republic -= 5; old_middle_flp -= 3; new_middle_flp -= 2; workers_flp -= 3 if pro_republic < 50; workers_flp -= 4 if pro_republic < 40; old_middle_scp += 4 if pro_republic < 50; new_middle_scp += 3 if pro_republic < 50
-go-to: let_it_happen_georgev if monarch != "J. S. Woodsworth"; let_it_happen_woodsworth if monarch == "J. S. Woodsworth"
+go-to: let_it_happen_bennett if prime_minister != "J. S. Woodsworth"; let_it_happen_woodsworth if prime_minister == "J. S. Woodsworth"
 
-@let_it_happen_georgev
+@let_it_happen_bennett
 on-arrival: premier = "Brüning"; premier_party = "PPS"; welfare -= 2;
 
 The vote succeeds, and our government has resigned. Premier Brüning has been appointed as the head of an acting government, consisting solely of the bourgeois parties. He immediately proceeds to cut welfare spending substantially.

@@ -115,7 +115,7 @@ Q.SCP_relation = 10;
 Q.flp_legislative_leader = "None";
 Q.flp_legislative_leader_img = "Question_Mark.jpg";
 Q.flp_president = "None";
-Q.flp_president_img = "Question_Mark.jpg";
+Q.flp_president_img = "ColdwellMajorJames.jpg";
 
 Q.flp_board_one = "Alexander Nicholson";
 Q.flp_board_one_faction = "agrarian";
@@ -136,10 +136,10 @@ Q.pps_leader = "Henry Stevens";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the FLP.
 Q.pps_party_leader = "Henry Stevens";
 
-// hmm... maybe we can play nice with George V???
-Q.georgev_relation = 25;
-// whether or not georgev can dismiss the government.
-Q.georgev_enabled = 0;
+// hmm... maybe we can play nice with Richard Bennett???
+Q.bennett_relation = 25;
+// whether or not bennett can dismiss the government.
+Q.bennett_enabled = 0;
 
 
 // Does the FLP lead in City Police?
@@ -166,8 +166,8 @@ Q.electoral_threshold = 0;
 Q.constitutional_reform = 0;
 // constructive vote of no confidence
 Q.constructive_vonc = 0;
-// reduction in monarchial powers
-Q.monarchial_powers = 0;
+// reduction in prime ministerial powers
+Q.prime_ministerial_powers = 0;
 // allows banning of non-constitutional parties
 Q.constitutional_protection = 0;
 Q.cp_banned = 0;
@@ -346,7 +346,7 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.monarch = "George V";
+Q.prime_minister = "Richard Bennett";
 // starting premier: James Anderson
 Q.premier = "James Anderson";
 Q.premier_party = 'CPS';
@@ -367,7 +367,7 @@ Q.in_grand_coalition = 0;
 Q.in_popular_front = 0;
 // left coalition = FLP + CP + left-splinters
 Q.in_left_front = 0;
-// emergency government containing the FLP: only monarch JS_Woodsworth can do this.
+// emergency government containing the FLP: only prime minister JS_Woodsworth can do this.
 Q.in_emergency_government = 0;
 Q.in_flp_majority = 0;
 Q.grand_coalition_failed = 0;
@@ -383,7 +383,7 @@ Q.cp_coalition_dissent = 0;
 // does the FLP tolerate the government even if it is not a participant?
 Q.flp_toleration = 0;
 
-// is the current government a monarchial minority government?
+// is the current government a minority government?
 Q.minority_government = 0;
 Q.ruling_government = "Cooperative Coalition";
 
