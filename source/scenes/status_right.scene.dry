@@ -4,15 +4,20 @@ is-special: true
 
 = Party Hierarchy
 
+
+<div style="display:flex; gap:1em;">
+
 <a class="card" go-to="flp_president">
   <img class="card-img" src="img/portraits/[+ flp_president_img +]" style="display:block; margin:auto;">
-  <span class="card-caption">President</span>
+  <span class="card-caption">Party President</span>
 </a>
 
 <a class="card" go-to="flp_legislative_leader">
   <img class="card-img" src="img/portraits/[+ flp_legislative_leader_img +]" style="display:block; margin:auto;">
   <span class="card-caption">Legislative Leader</span>
 </a>
+</div>
+
 
 = Board of Directors 
 

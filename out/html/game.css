@@ -3,7 +3,8 @@ body {
   --border-color: #000;
   --content-bg-color: #f5ebd6;
   --text-color: #431;
-  --link-color: #900;
+  /* --link-color: #900; */
+  --link-color: rgb(0, 0, 0);
   --link-hover-color: rgba(0, 0, 0, 0.05);
   --unavailable-bg-color: rgba(0, 0, 0, 0.1);
   --unavailable-color: #9a795f;
@@ -451,6 +452,7 @@ div.blank-card {
   text-align: center;
   display: block;
   font-size: 1em;
+  
 }
 
 .card-tooltip {
