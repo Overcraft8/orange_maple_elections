@@ -309,8 +309,8 @@ There are some potential coalition arrangements.
 @coalition_menu
 
 - @flp_majority
-#- @lps_coalition
-#- @grand_coalition
+- @lps_coalition
+- @grand_coalition
 #- @new_grand_coalition
 - @unity_government_coalition
 #- @scp_majority
@@ -354,6 +354,30 @@ The work of the Party has finally borne fruition! We can now rule unhindered by 
 
 
 
+@lps_coalition
+title: Victory!
+subtitle: FLP ([+ flp_r +]%)
+unavailable-subtitle: FLP ([+ flp_r +]%) We do not have enough support.
+view-if: lps_coalition >= 50
+choose-if: flp_r >= 50
+on-arrival: premier = "Empty"; premier_party = "FLP"; flp_in_government = 1; in_flp_majority = 1; pro_republic += 5; foreign_minister_party = "FLP"; foreign_minister = "Williams"; interior_minister_party = "FLP"; interior_minister = "Brockelbank"; justice_minister_party = "FLP"; justice_minister = "Underhill"; labour_minister_party = "FLP"; labour_minister = "Carlyle"; rcmp_minister_party = "FLP"; rcmp_minister = "Leber"; economic_minister_party = "FLP"; economic_minister = "Schmidt"; finance_minister_party = "FLP"; finance_minister = "Nicholson"; agriculture_minister_party = "FLP"; agriculture_minister = "Wright"; rcmp_loyalty -= 0.05; 
+
+The work of the Party has finally borne fruition! We can now rule unhindered by the naggings of other parties.
+
+- @ministries
+
+
+@grand_coalition
+title: Victory!
+subtitle: FLP ([+ flp_r +]%)
+unavailable-subtitle: FLP ([+ flp_r +]%) We do not have enough support.
+view-if: grand_coalition >= 50
+choose-if: flp_r >= 50
+on-arrival: premier = "Empty"; premier_party = "FLP"; flp_in_government = 1; in_flp_majority = 1; pro_republic += 5; foreign_minister_party = "FLP"; foreign_minister = "Williams"; interior_minister_party = "FLP"; interior_minister = "Brockelbank"; justice_minister_party = "FLP"; justice_minister = "Underhill"; labour_minister_party = "FLP"; labour_minister = "Carlyle"; rcmp_minister_party = "FLP"; rcmp_minister = "Leber"; economic_minister_party = "FLP"; economic_minister = "Schmidt"; finance_minister_party = "FLP"; finance_minister = "Nicholson"; agriculture_minister_party = "FLP"; agriculture_minister = "Wright"; rcmp_loyalty -= 0.05; 
+
+The work of the Party has finally borne fruition! We can now rule unhindered by the naggings of other parties.
+
+- @ministries
 
 
 
@@ -384,7 +408,7 @@ A far left coalition is impossible.
 
 @left_coalition_possible
 
-The CP is still very reluctant to join a coalition, despite grassroots friendliness between our memberships. The Stalinist leadership is vehemently against such a thing. They demand the appointment of Tim Buck as premier in exchange for a coalition. [? if monarch == "George V" : There is no chance whatsoever that Prime Minister George V would approve of the appointment of a die-hard communist as premier. ?] Alternatively, if our relations with them are good enough, we could convince them to support the appointment of one of our agrarian or left-leaning members as premier.
+The CP is still very reluctant to join a coalition, despite grassroots friendliness between our memberships. The Stalinist leadership is vehemently against such a thing. They demand the appointment of Tim Buck as premier in exchange for a coalition. [? if prime_minister == "George V" : There is no chance whatsoever that Prime Minister George V would approve of the appointment of a die-hard communist as premier. ?] Alternatively, if our relations with them are good enough, we could convince them to support the appointment of one of our agrarian or left-leaning members as premier.
 
 - @tim_buck_premier: Appoint Tim Buck as premier.
 - @left_coalition_resources
@@ -392,11 +416,11 @@ The CP is still very reluctant to join a coalition, despite grassroots friendlin
 - @coalition_menu: Try a different governing arrangement.
 
 @tim_buck_premier
-choose-if: monarch == "J. S. Woodsworth" and reformist_strength + neorevisionist_strength < left_strength
-unavailable-subtitle: [? if monarch != "J. S. Woodsworth": Prime Minister [+ monarch +] would never allow such a thing. ?] [? if reformist_strength >= left_strength : Most in the parliamentary party would not support Tim Buck as premier. ?]
+choose-if: prime_minister == "JS Woodsworth" and reformist_strength + neorevisionist_strength < left_strength
+unavailable-subtitle: [? if prime_minister != "JS Woodsworth": Prime Minister [+ prime_minister +] would never allow such a thing. ?] [? if reformist_strength >= left_strength : Most in the parliamentary party would not support Tim Buck as premier. ?]
 on-arrival: premier = "Tim Buck"; premier_party = "CP"; cp_relation = 80; in_left_front = 1; flp_in_government = 1 
 
-With great reluctance, Prime Minister [+ monarch +] appoints [+ premier +] as premier.
+With great reluctance, Prime Minister [+ prime_minister +] appoints [+ premier +] as premier.
 
 Immediately, [+ premier +] goes to work building a "Soviet Saskatchewan": consolidating as much power as possible in the CP, purging state institutions of anti-communists, and sending street fighters against the "enemies of the people".
 
@@ -423,7 +447,7 @@ on-arrival: flp_in_government = 1; in_left_front = 1; premier = "Williams"; prem
 go-to: left_coalition_no_civil_war
 achievement: einheitsfront
 
-Somehow, surprisingly, the left coalition is successfully formed, without appointing Tim Buck as premier. The consensus choice for premier, accepted by the FLP, CP, and Prime Minister [+ monarch +], is George Hara Williams, who belongs to the agrarian faction of the FLP, but was acceptable to the left due to his previous membership in the left-wing anti-war UFLP.
+Somehow, surprisingly, the left coalition is successfully formed, without appointing Tim Buck as premier. The consensus choice for premier, accepted by the FLP, CP, and Prime Minister [+ prime_minister +], is George Hara Williams, who belongs to the agrarian faction of the FLP, but was acceptable to the left due to his previous membership in the left-wing anti-war UFLP.
 
 # just raise the coup limit, don't immediately go to civil war
 
@@ -557,7 +581,7 @@ The PPS party has significant qualms about appointing J. S. Woodsworth as premie
 @woodsworth_2
 subtitle: J. S. Woodsworth will be Premier.
 view-if: not historical_mode
-on-arrival: flp_in_government = 1; premier = "J. S. Woodsworth"; premier_party = "FLP"; leverage -= 10; in_grand_coalition = 1 if in_lps_coalition == 0
+on-arrival: flp_in_government = 1; premier = "JS Woodsworth"; premier_party = "FLP"; leverage -= 10; in_grand_coalition = 1 if in_lps_coalition == 0
 go-to: ministries
 
 We have promised to let the PPS have more influence in the government in response to the appointment of J. S. Woodsworth as premier.
@@ -617,7 +641,7 @@ go-to: no_govt_2
 
 @no_govt_2
 on-arrival: reformist_dissent += 25; agrarian_dissent += 10; labour_dissent += 25; neorevisionist_dissent += 25; in_lps_coalition = 0; in_grand_coalition = 0; premier = "Brüning" if premier == "James Anderson"; flp_in_government = 0; grand_coalition_failed = 1
-go-to: right_coalition_post_flp if right_coalition >= 50 and prime_minister != "J. S. Woodsworth" and year < 1929; new_elections_flp if (right_coalition < 50 or year >= 1929) and prime_minister != "J. S. Woodsworth"
+go-to: right_coalition_post_flp if right_coalition >= 50 and prime_minister != "JS Woodsworth" and year < 1929; new_elections_flp if (right_coalition < 50 or year >= 1929) and prime_minister != "J. S. Woodsworth"
 
 
 @right_coalition_post_flp
