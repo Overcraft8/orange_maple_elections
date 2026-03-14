@@ -71,7 +71,7 @@ The CP is not interested in a "toleration" arrangement; they will only support u
 
 @support_cp_grand
 
-- @election_1928.unity_government_coalition: Form a "Popular Front" coalition?
+- @election_1928.coalition_menu: Renegotiate
 - @election_1928.left_coalition
 - @try_assuage: Never mind. We must deal with this some other way.
 
@@ -84,7 +84,7 @@ The CP is not interested in a "toleration" arrangement; they will only support u
 @let_it_happen
 call: set_next_election_time
 on-arrival: time_to_election = 3; flp_in_government = 0; in_grand_coalition = 0; in_lps_coalition = 0; in_unity_government = 0; flp_toleration = 0; foreign_minister_party = "CPS"; interior_minister_party = "PPS"; justice_minister_party = "I"; labour_minister_party = "PPS"; rcmp_minister_party = "I"; economic_minister_party = lps_name; finance_minister_party = "CPS"; agriculture_minister_party = "PPS"; labour_minister = "Stegerwald"; interior_minister = "Wirth"; finance_minister = "Moldenhauer"; economic_minister = "Curtius"; justice_minister = "Koch-Weser"; foreign_minister = "Stresemann"; agriculture_minister = "Dietrich"; rcmp_minister = "Groener";  coalition_dissent = 0; pro_republic -= 5; old_middle_flp -= 3; new_middle_flp -= 2; workers_flp -= 3 if pro_republic < 50; workers_flp -= 4 if pro_republic < 40; old_middle_scp += 4 if pro_republic < 50; new_middle_scp += 3 if pro_republic < 50
-go-to: let_it_happen_bennett if prime_minister != "J. S. Woodsworth"; let_it_happen_woodsworth if prime_minister == "J. S. Woodsworth"
+go-to: let_it_happen_bennett if prime_minister != "JS Woodsworth"; let_it_happen_woodsworth if prime_minister == "J. S. Woodsworth"
 
 @let_it_happen_bennett
 on-arrival: premier = "Brüning"; premier_party = "PPS"; welfare -= 2;
