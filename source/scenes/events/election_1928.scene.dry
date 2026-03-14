@@ -190,7 +190,7 @@ data = [
         "id": "cp",
         "legend": "CP",
         "name": "CP",
-        "seats": Math.round(Q.cp_r * 0.6),
+        "seats": Q.cp_seats
     }
 ];
 if (Q.sapd_formed && Q.sapd_r) {
@@ -206,37 +206,38 @@ data = data.concat([
         "id": "flp",
         "legend": "FLP",
         "name": "FLP",
-        "seats": Math.round(Q.flp_r * 0.6),
+        "seats": Q.flp_seats
     },
     {
         "id": "lps",
         "legend": "LPS",
         "name": "LPS",
-        "seats": Math.round(Q.lps_r * 0.6),
+        "seats": Q.lps_seats
     },
     {
         "id": "pps",
         "legend": "PPS",
         "name": "PPS",
-        "seats": Math.round(Q.pps_r * 0.6),
+        "seats": Q.pps_seats
     },
     {
         "id": "cps",
         "legend": "CPS",
         "name": "CPS",
-        "seats": Math.round(Q.cps_r * 0.6),
+        "seats": Q.cps_seats
     },
     {
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Math.round(Q.other_r * 0.6),
+        "seats": Q.other_seats
     },
     {
         "id": "scp",
         "legend": "SCP",
         "name": "SCP",
-        "seats": Math.round(Q.scp_r * 0.6),
+        "seats": Q.scp_seats
+        /* "seats": Math.round(Q.scp_r * 0.6), */
     },
 ]);
 
@@ -265,9 +266,9 @@ go-to: coalition_menu
 {!<svg id="assembly" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
+{!<tr><td>Party</td><td>Vote share</td><td>% Change</td><td>Rural Seats</td><td>Urban Seats</td><td>Total Seats</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D26E28; outline: 2px; outline-style: solid;'> </div> !} **FLP:** {!</td><td>!} **[+ flp_r +]%** {!</td><td>!} **[+ str_change_flp +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D26E28; outline: 2px; outline-style: solid;'> </div> !} **FLP:** {!</td><td>!} **[+ flp_r +]%** {!</td><td>!} **[+ str_change_flp +]** {!</td><td>!} **[+ flp_rural_seats +]** {!</td><td>!} **[+ flp_urban_seats +]** {!</td><td>!} **[+ flp_seats +]**{!</td></tr>!}
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 

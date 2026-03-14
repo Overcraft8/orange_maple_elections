@@ -64,6 +64,33 @@ for (var party of Q.parties) {
 // to do that, we multiply party_normalized*1000 and divide the rounded number by 10.
 var total_support = urban_support + rural_support;
 
+
+
+
+
+for (var party of Q.parties) {
+
+    Q[party + '_urban_norm'] = Q[party + '_support'] / urban_support;
+    Q[party + '_rural_norm'] = Q[party + '_support_rural'] / rural_support;
+
+    Q[party + '_urban_votes'] = Math.round(Q[party + '_urban_norm'] * 100);
+    Q[party + '_rural_votes'] = Math.round(Q[party + '_rural_norm'] * 100);
+}
+
+
+for (var party of Q.parties) {
+
+    Q[party + '_urban_seats'] = Math.round(Q[party + '_urban_norm'] * Q.urban_seats);
+
+    Q[party + '_rural_seats'] = Math.round(Q[party + '_rural_norm'] * Q.rural_seats);
+
+    Q[party + '_seats'] =
+        Q[party + '_urban_seats'] +
+        Q[party + '_rural_seats'];
+}
+
+
+
 for (var party of Q.parties) {
     var combined_support = Q[party + '_support'] + Q[party + '_support_rural'];
 
