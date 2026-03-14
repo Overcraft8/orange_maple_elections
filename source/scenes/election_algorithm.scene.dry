@@ -83,6 +83,11 @@ for (var party of Q.parties) {
     }
 }
 
+console.log("FLP votes:", Q.flp_votes);
+console.log("PPS votes:", Q.pps_votes);
+console.log("CP votes:", Q.cp_votes);
+
+
 !}
 go-to: jumpScene
 
