@@ -43,6 +43,7 @@ var total_support = 0;
 for (var party of Q.parties) {
     var party_support = 0;
     for (var c of Q.classes) {
+        if (c === "rural") continue;   // skip rural
         if (Q.old_demographics) { 
             party_support += Q[c]*Q[c+'_'+party];
         } else  { 

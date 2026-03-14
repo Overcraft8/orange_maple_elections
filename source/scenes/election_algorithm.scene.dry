@@ -2,6 +2,7 @@ title: Election
 on-arrival: {!
 // calculate normalized class voting amounts (0 to 100)
 for (var c of Q.classes) {
+    if (c === "rural") continue;   // skip rural
     var class_votes = 0;
     for (var party of Q.parties) {
         if (Q[c+'_'+party] < 0) {
@@ -20,6 +21,7 @@ var total_support = 0;
 for (var party of Q.parties) {
     var party_support = 0;
     for (var c of Q.classes) {
+        if (c === "rural") continue;   // skip rural
         // but this version is somewhat more entertaining and allows for wilder swings in votes.
         // the other option basically necessitates a multi-class strategy. while the first option allows for a working-class-only strategy.
         if (Q.old_demographics) {
