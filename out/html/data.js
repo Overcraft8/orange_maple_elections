@@ -63,6 +63,10 @@ const tooltipList = [{
     searchString: "TLC", 
     explanationText: "The Trades and Labour Congress of Canada. "
 },
+{
+    searchString: "Res. Workers", 
+    explanationText: "Resource workers (lumber, mining, etc.)"
+},
 ];
 
 
