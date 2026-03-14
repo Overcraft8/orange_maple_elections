@@ -65,7 +65,7 @@ for (var party of Q.parties) {
 var total_support = urban_support + rural_support;
 
 for (var party of Q.parties) {
-    var combined_support = Q[party + '_support_urban'] + Q[party + '_support_rural'];
+    var combined_support = Q[party + '_support'] + Q[party + '_support_rural'];
 
     Q[party+'_normalized'] = combined_support / total_support;
 

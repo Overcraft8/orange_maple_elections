@@ -28,6 +28,10 @@ const tooltipList = [{
     explanationText: "The United Farmers of Canada (Saskatchewan Section)"
 },
 {
+    searchString: "UFPA",
+    explanationText: "The United Farmers Political Association. \n They have merged into the FLP"
+},
+{
     searchString: "CCYM",
     explanationText: "The Cooperative Commonwealth Youth Movement."
 },
@@ -92,24 +96,12 @@ const colourList = [{
         style: "color: #86a71b; font-weight: bold;"
     },
     {
-        word: "Agrarian",
-        style: "color: #86a71b; font-weight: bold;"
-    },
-    {
-        word: "agrarian",
+        word: "UFPA",
         style: "color: #86a71b; font-weight: bold;"
     },
     {
         word: "ILP",
         style: "color: #b06262; font-weight: bold;"
-    },
-    {
-        word: "Labour", 
-        style: "color: #0F52BA; font-weight: bold;"
-    },
-    {
-        word: "labour", 
-        style: "color: #0F52BA; font-weight: bold;"
     },
     {
         word: "Left", 
