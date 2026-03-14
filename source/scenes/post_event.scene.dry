@@ -43,7 +43,7 @@ var urban_support = 0;
 for (var party of Q.parties) {
     var party_support = 0;
     for (var c of Q.classes) {
-        if (c === "farmer") continue;   // skip farmer
+        if (c === "farmer" || c === "farmhand" || c === "res_worker") continue;   // skip farmer
         if (Q.old_demographics) { 
             party_support += Q[c]*Q[c+'_'+party];
         } else  { 
