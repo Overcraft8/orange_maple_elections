@@ -100,14 +100,6 @@ const colourList = [{
         style: "color: #86a71b; font-weight: bold;"
     },
     {
-        word: "Farmer",
-        style: "color: #86a71b; font-weight: bold;"
-    },
-    {
-        word: "farmer",
-        style: "color: #86a71b; font-weight: bold;"
-    },
-    {
         word: "ILP",
         style: "color: #b06262; font-weight: bold;"
     },
@@ -134,10 +126,6 @@ const colourList = [{
     {
         word: "CCYM", 
         style: "color: #7b1616; font-weight: bold;"
-    },
-    {
-        word: "Union", 
-        style: "color: #0F52BA; font-weight: bold;"
     },
     {
         word: "FUL", 

@@ -51,7 +51,7 @@ is-special: true
 
 @partyfactions
 
-= Internal Factions of the <span style="color: #d26e28;">**FLP**</span>
+= Internal Factions of the FLP
 
 [? if 1 == 1 :
 <span class="tooltip-text" title="A faction consisting of radical farmers, representing the small family farm." style="color: #86a71b;">**Agrarians**</span><br>
