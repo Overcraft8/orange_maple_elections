@@ -247,7 +247,7 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'farmer', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'old_middle', 'new_middle', 'farmer', 'farmhand', 'res_worker', 'unemployed', 'catholics'];
 Q.parties = ['flp', 'cp', 'pps', 'lps', 'cps', 'scp', 'other'];
 
 
@@ -289,6 +289,22 @@ Q.farmer_lps= 41;
 Q.farmer_cps = 37;
 Q.farmer_scp = 0;
 Q.farmer_other = 3;
+
+Q.farmhand_flp = 40;
+Q.farmhand_cp = 10;
+Q.farmhand_lps = 10;
+Q.farmhand_pps = 10;
+Q.farmhand_cps = 10;
+Q.farmhand_scp = 10;
+Q.farmhand_other = 10;
+
+Q.res_worker_flp = 40;
+Q.res_worker_cp = 10;
+Q.res_worker_lps = 10;
+Q.res_worker_pps = 10;
+Q.res_worker_cps = 10;
+Q.res_worker_scp = 10;
+Q.res_worker_other = 10;
 
 Q.unemployed_flp = 9;
 Q.unemployed_cp = 5;

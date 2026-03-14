@@ -151,7 +151,7 @@ Next Legislative Election: [+ next_parl_election_month : month +] [+ next_parl_e
 {!</div>!}
 
 
-# Farmers Polling below
+# Rural Polling below
 
 
 {!</div>!}
@@ -159,25 +159,25 @@ Next Legislative Election: [+ next_parl_election_month : month +] [+ next_parl_e
 
 {!<div style="overflow-y:auto; padding: 2px;">!}
 
-=                          Farmers Polling
+=                          Rural Polling
 
 {!<table class="poll-table">!}
 
-{!<tr><td>Party</td><td>Farmers</td></tr>!}
+{!<tr><td>Party</td><td>Farmers</td><td>Farmehands</td><td>Res. Workers</td></tr>!}
 
-{!<tr><td>!} **FLP:** {!</td><td>!} **[+ farmer_flp_display +]%** {!</td></tr>!}
+{!<tr><td>!} **FLP:** {!</td><td>!} **[+ farmer_flp_display +]%** {!</td><td>!} **[+ farmhand_flp_display +]%** {!</td><td>!} **[+ res_worker_flp_display +]%** {!</td></tr>!}
 
-{!<tr><td>!} CP: {!</td><td>!} **[+ farmer_cp_display +]%** {!</td></tr>!}
+{!<tr><td>!} CP: {!</td><td>!} [+ farmer_cp_display +]% {!</td><td>!} [+ farmhand_cp_display +]% {!</td><td>!} [+ res_worker_cp_display +]%{!</td></tr>!}
 
-{!<tr><td>!} [+ lps_name +]: {!</td><td>!} **[+ farmer_lps_display +]%** {!</td></tr>!}
+{!<tr><td>!} [+ lps_name +]: {!</td><td>!} [+ farmer_lps_display +]% {!</td><td>!} [+ farmhand_lps_display +]% {!</td><td>!} [+ res_worker_lps_display +]%{!</td></tr>!}
 
-{!<tr><td>!} PPS: {!</td><td>!} **[+ farmer_pps_display +]%** {!</td></tr>!}
+{!<tr><td>!} PPS: {!</td><td>!} [+ farmer_pps_display +]% {!</td><td>!} [+ farmhand_pps_display +]% {!</td><td>!} [+ res_worker_pps_display +]%{!</td></tr>!}
 
-{!<tr><td>!} CPS: {!</td><td>!} **[+ farmer_cps_display +]%** {!</td></tr>!}
+{!<tr><td>!} CPS: {!</td><td>!} [+ farmer_cps_display +]% {!</td><td>!} [+ farmhand_cps_display +]% {!</td><td>!} [+ res_worker_cps_display +]%{!</td></tr>!}
 
-{!<tr><td>!} Others: {!</td><td>!} **[+ farmer_other_display +]%** {!</td></tr>!}
+{!<tr><td>!} Others: {!</td><td>!} [+ farmer_other_display +]% {!</td><td>!} [+ farmhand_other_display +]% {!</td><td>!} [+ res_worker_other_display +]%{!</td></tr>!}
 
-{!<tr><td>!} SCP: {!</td><td>!} **[+ farmer_scp_display +]%** {!</td></tr>!}
+{!<tr><td>!} SCP: {!</td><td>!} [+ farmer_scp_display +]% {!</td><td>!} [+ farmhand_scp_display +]% {!</td><td>!} [+ res_worker_scp_display +]%{!</td></tr>!}
 
 {!</table>!}
 
