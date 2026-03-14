@@ -340,7 +340,7 @@ Working Class: None: [+ workers_nonvoter +]%, SLFP: [+ workers_slfp +]%, JVP: [+
 
 Middle Class: None: [+ middle_nonvoter +]%, SLFP: [+ middle_slfp +]%, JVP: [+ middle_jvp +]%, CPSL: [+ middle_cpsl +]%, LSSP: [+ middle_lssp +]%, NSSP: [+ middle_nssp +]%, TULF: [+ middle_tulf +]%, CWC: [+ middle_cwc +]%, UNP: [+ middle_unp +]%, ACTC: [+ middle_actc +]%, [? if slpp_formed: SLPP: [+ middle_slpp +]% ?][? if slmp_formed: SLMP: [+ middle_slmp +]% ?][? if slmc_formed: SLMC: [+ middle_slmc +]% ?][? if npp_formed: NPP: [+ middle_npp +]% ?][? if mep_formed: MEP: [+ middle_mep +]% ?][? if eros_formed: EROS: [+ middle_eros +]% ?][? if dplf_formed: DPLF: [+ middle_dplf +]% ?][? if pflt_formed: PFLT: [+ middle_pflt +]% ?][? if ucpf_formed: UCPF: [+ middle_ucpf +]% ?]
 
-Rural: None: [+ rural_nonvoter +]%, SLFP: [+ rural_slfp +]%, JVP: [+ rural_jvp +]%, CPSL: [+ rural_cpsl +]%, LSSP: [+ rural_lssp +]%, NSSP: [+ rural_nssp +]%, TULF: [+ rural_tulf +]%, CWC: [+ rural_cwc +]%, UNP: [+ rural_unp +]%, ACTC: [+ rural_actc +]%, [? if slpp_formed: SLPP: [+ rural_slpp +]% ?][? if slmp_formed: SLMP: [+ rural_slmp +]% ?][? if slmc_formed: SLMC: [+ rural_slmc +]% ?][? if npp_formed: NPP: [+ rural_npp +]% ?][? if mep_formed: MEP: [+ rural_mep +]% ?][? if eros_formed: EROS: [+ rural_eros +]% ?][? if dplf_formed: DPLF: [+ rural_dplf +]% ?][? if pflt_formed: PFLT: [+ rural_pflt +]% ?][? if ucpf_formed: UCPF: [+ rural_ucpf +]% ?]
+Farmers: None: [+ farmer_nonvoter +]%, SLFP: [+ farmer_slfp +]%, JVP: [+ farmer_jvp +]%, CPSL: [+ farmer_cpsl +]%, LSSP: [+ farmer_lssp +]%, NSSP: [+ farmer_nssp +]%, TULF: [+ farmer_tulf +]%, CWC: [+ farmer_cwc +]%, UNP: [+ farmer_unp +]%, ACTC: [+ farmer_actc +]%, [? if slpp_formed: SLPP: [+ farmer_slpp +]% ?][? if slmp_formed: SLMP: [+ farmer_slmp +]% ?][? if slmc_formed: SLMC: [+ farmer_slmc +]% ?][? if npp_formed: NPP: [+ farmer_npp +]% ?][? if mep_formed: MEP: [+ farmer_mep +]% ?][? if eros_formed: EROS: [+ farmer_eros +]% ?][? if dplf_formed: DPLF: [+ farmer_dplf +]% ?][? if pflt_formed: PFLT: [+ farmer_pflt +]% ?][? if ucpf_formed: UCPF: [+ farmer_ucpf +]% ?]
 
 Upper Class: None: [+ upper_nonvoter +]%, SLFP: [+ upper_slfp +]%, JVP: [+ upper_jvp +]%, CPSL: [+ upper_cpsl +]%, LSSP: [+ upper_lssp +]%, NSSP: [+ upper_nssp +]%, TULF: [+ upper_tulf +]%, CWC: [+ upper_cwc +]%, UNP: [+ upper_unp +]%, ACTC: [+ upper_actc +]%, [? if slpp_formed: SLPP: [+ upper_slpp +]% ?][? if slmp_formed: SLMP: [+ upper_slmp +]% ?][? if slmc_formed: SLMC: [+ upper_slmc +]% ?][? if npp_formed: NPP: [+ upper_npp +]% ?][? if mep_formed: MEP: [+ upper_mep +]% ?][? if eros_formed: EROS: [+ upper_eros +]% ?][? if dplf_formed: DPLF: [+ upper_dplf +]% ?][? if pflt_formed: PFLT: [+ upper_pflt +]% ?][? if ucpf_formed: UCPF: [+ upper_ucpf +]% ?]
 
@@ -465,7 +465,7 @@ Land reform: [+ itamil_land : reform +]
 
 Caste prevalance: [+ indian_tamil_caste_prevalance : dissent +]
 
-= Rural South West
+= Farmers South West
 
 Education: [+ south_education : eduinfa +]
 

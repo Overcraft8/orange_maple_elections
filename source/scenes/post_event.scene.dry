@@ -43,7 +43,7 @@ var urban_support = 0;
 for (var party of Q.parties) {
     var party_support = 0;
     for (var c of Q.classes) {
-        if (c === "rural") continue;   // skip rural
+        if (c === "farmer") continue;   // skip farmer
         if (Q.old_demographics) { 
             party_support += Q[c]*Q[c+'_'+party];
         } else  { 
@@ -54,34 +54,34 @@ for (var party of Q.parties) {
     urban_support += party_support; 
 }
 
-var rural_support = 0;
+var farmer_support = 0;
 for (var party of Q.parties) {
-    var party_support_rural = 0;
-    if (Q.classes.includes("rural")) {
-        var c = "rural";
+    var party_support_farmer = 0;
+    if (Q.classes.includes("farmer")) {
+        var c = "farmer";
         // but this version is somewhat more entertaining and allows for wilder swings in votes.
         // the other option basically necessitates a multi-class strategy. while the first option allows for a working-class-only strategy.
         if (Q.old_demographics) {
             // okay i'm pretty sure this is wrong, and the hard version is correct
             // basically this allows for "spillover" effects in other demographics.
             // so you can campaign among say the workers and 
-            party_support_rural += Q[c]*Q[c+'_'+party];
+            party_support_farmer += Q[c]*Q[c+'_'+party];
             // However, there should be a cap on how much party support you can get in a certain demo.
         } else  {
-            party_support_rural += Q[c]*Q[c+'_'+party+'_normalized'];
+            party_support_farmer += Q[c]*Q[c+'_'+party+'_normalized'];
         }
     }
-    Q[party + '_support_rural'] = party_support_rural;
-    rural_support += party_support_rural;
+    Q[party + '_support_farmer'] = party_support_farmer;
+    farmer_support += party_support_farmer;
 }
 
 
-var total_support = urban_support + rural_support;
+var total_support = urban_support + farmer_support;
 
 
 
 for (var party of Q.parties) {
-    var combined_support = Q[party + '_support'] + Q[party + '_support_rural'];
+    var combined_support = Q[party + '_support'] + Q[party + '_support_farmer'];
 
     Q[party+'_normalized'] = combined_support / total_support;
 
@@ -319,8 +319,8 @@ if (Q.month_actions >= 1) {
         if (Q.old_middle_flp > 0) {
             Q.old_middle_flp -= 5/12;
         }
-        if (Q.rural_flp > 0) {
-            Q.rural_flp -= 5/12;
+        if (Q.farmer_flp > 0) {
+            Q.farmer_flp -= 5/12;
         }
         if (Q.workers_flp_normalized > 30) {
             Q.workers_flp -= 4/12;
@@ -337,8 +337,8 @@ if (Q.month_actions >= 1) {
         if (Q.old_middle_lps > 0) {
             Q.old_middle_lps -= 5/12;
         }
-        if (Q.rural_lps > 0) {
-            Q.rural_lps -= 5/12;
+        if (Q.farmer_lps > 0) {
+            Q.farmer_lps -= 5/12;
         }
     }
 
@@ -352,17 +352,17 @@ if (Q.month_actions >= 1) {
         Q.workers_cp += 5/12;
         Q.ful_strength += 50/12;
         Q.kkk_strength += 100/12;
-        Q.rural_scp -= 15/12;
+        Q.farmer_scp -= 15/12;
     } else if (Q.year == 1930) {
 
-        Q.rural_scp -= 15/12;
+        Q.farmer_scp -= 15/12;
         Q.new_middle_cps -= 5/12;
         Q.old_middle_cps -= 6/12;
         Q.new_middle_lps -= 5/12;
         Q.old_middle_lps -= 6/12;
         Q.new_middle_other += 4/12;
         Q.old_middle_other += 4/12;
-        Q.rural_other += 5/12;
+        Q.farmer_other += 5/12;
 
         Q.workers_pps += 1/12;
         Q.old_middle_pps += 2/12;
@@ -375,7 +375,7 @@ if (Q.month_actions >= 1) {
         Q.kkk_strength += 100/12;
     } else if (Q.year == 1931) {
         Q.catholics_pps += 2/12;
-        Q.rural_cps -= 8/12;
+        Q.farmer_cps -= 8/12;
         Q.old_middle_cps -= 8/12;
         Q.new_middle_cps -= 8/12;
         Q.old_middle_lps -= 8/12;
@@ -383,32 +383,32 @@ if (Q.month_actions >= 1) {
         Q.ful_strength += 50/12;
         Q.kkk_strength += 50/12;
         Q.ful_militancy += 0.1/12;
-        Q.rural_other -= 5/12;
-        // TODO: economic policies should reduce SCP rurals
+        Q.farmer_other -= 5/12;
+        // TODO: economic policies should reduce SCP farmers
         if (!Q.works_program) {
             Q.old_middle_cps -= 6/12;
             Q.new_middle_cps -= 6/12;
-            Q.rural_cps -= 6/12;
+            Q.farmer_cps -= 6/12;
             Q.workers -= 4/12;
             Q.unemployed_cp += 2/12;
-            Q.rural_other -= 12/12;
+            Q.farmer_other -= 12/12;
             Q.workers_cp += 4/12;
             Q.ful_strength += 100/12;
             Q.kkk_strength += 50/12;
         } else if (Q.unemployed > 15) {
             Q.old_middle_cps -= 4/12;
             Q.new_middle_cps -= 4/12;
-            Q.rural_cps -= 4/12;
+            Q.farmer_cps -= 4/12;
         }
     } else if (Q.year == 1932) {
         Q.old_middle_other -= 7/12;
-        Q.rural_other -= 7/12;
+        Q.farmer_other -= 7/12;
         if (!Q.works_program) {
             Q.unemployed += 5/12;
             Q.inflation -= 2/12;
             Q.catholics_pps += 2/12;
             Q.workers -= 4/12;
-            Q.rural_scp -= 4/12;
+            Q.farmer_scp -= 4/12;
             Q.unemployed_cp += 2/12;
             Q.workers_cp += 3/12;
             Q.ful_strength += 200/12;
@@ -416,7 +416,7 @@ if (Q.month_actions >= 1) {
             Q.new_middle_scp += 4/12;
             Q.new_middle_cps -= 4/12;
             Q.old_middle_cps -= 4/12;
-            Q.rural_cps -= 4/12;
+            Q.farmer_cps -= 4/12;
         } else if (Q.unemployed > 25) {
             Q.ful_strength += 50/12;
         }
@@ -432,8 +432,8 @@ if (Q.month_actions >= 1) {
             if (Q.old_middle_cps_normalized < 40) {
                 Q.old_middle_cps += 6/12;
             }
-            if (Q.rural_scp_normalized < 40) {
-                Q.rural_scp += 6/12;
+            if (Q.farmer_scp_normalized < 40) {
+                Q.farmer_scp += 6/12;
             }
             if (Q.catholics_pps_normalized < 40) {
                 Q.catholics_pps += 6/12;
@@ -459,8 +459,8 @@ if (Q.month_actions >= 1) {
         if (Q.old_middle_flp_normalized > 20) {
             Q.old_middle_flp -= 6/12;
         }
-        if (Q.rural_flp_normalized > 20) {
-            Q.rural_flp -= 6/12;
+        if (Q.farmer_flp_normalized > 20) {
+            Q.farmer_flp -= 6/12;
         }
         if (Q.catholics_flp_normalized > 20) {
             Q.catholics_flp -= 6/12;

@@ -177,7 +177,7 @@ New Middle Class: FLP: [+ new_middle_flp_display +]%, PPS: [+ new_middle_pps_dis
 
 Old Middle Class: FLP: [+ old_middle_flp_display +]%, PPS: [+ old_middle_pps_display +]%, CP: [+ old_middle_cp_display +]%, [? if not lps_name: LPS?][? if lps_name != 0 : [+ lps_name +]?]: [+ old_middle_lps_display +]%, CPS: [+ old_middle_cps_display +]%; SCP: [+ old_middle_scp_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: FLP: [+ rural_flp_display +]%, PPS: [+ rural_pps_display +]%, CP: [+ rural_cp_display +]%, [? if not lps_name: LPS?][? if lps_name != 0 : [+ lps_name +]?]: [+ rural_lps_display +]%, CPS: [+ rural_cps_display +]%; SCP: [+ rural_scp_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Farmers: FLP: [+ farmer_flp_display +]%, PPS: [+ farmer_pps_display +]%, CP: [+ farmer_cp_display +]%, [? if not lps_name: LPS?][? if lps_name != 0 : [+ lps_name +]?]: [+ farmer_lps_display +]%, CPS: [+ farmer_cps_display +]%; SCP: [+ farmer_scp_display +]%, Others: [+ farmer_other_display +]% [? if sapd_formed: SAPD: [+ farmer_sapd_display +]% ?]
 
 Unemployed: FLP: [+ unemployed_flp_display +]%, PPS: [+ unemployed_pps_display +]%, CP: [+ unemployed_cp_display +]%, [? if not lps_name: LPS?][? if lps_name != 0 : [+ lps_name +]?]: [+ unemployed_lps_display +]%, CPS: [+ unemployed_cps_display +]%; SCP: [+ unemployed_scp_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 

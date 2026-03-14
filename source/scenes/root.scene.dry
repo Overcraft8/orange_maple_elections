@@ -188,7 +188,7 @@ Q.district_name = "Name Of";
 Q.district_worker = 0;
 Q.district_old_middle = 0;
 Q.district_new_middle = 0;
-Q.district_rural = 0;
+Q.district_farmer = 0;
 Q.district_catholic = 0;
 
 
@@ -202,7 +202,7 @@ Q.district_industries = ['Major industries'];
 Q.mannar_d_old_middle = 20;
 Q.mannar_d_new_middle = 20;
 Q.mannar_d_worker = 20;
-Q.mannar_d_rural = 20;
+Q.mannar_d_farmer = 20;
 Q.mannar_d_catholic = 20;
 
 Q.mannar_d_seats = 5;
@@ -214,7 +214,7 @@ Q.workers = 17; // industry and trade
 Q.old_middle = 8; // "old mittelstand"
 // 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
 Q.new_middle = 14; // "new mittelstand"
-Q.rural = 61; // agriculture and forestry employment... but many of those are proletarians so...
+Q.farmer = 61; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
 Q.unemployed = 15;
 Q.catholics = 30;
@@ -223,7 +223,7 @@ Q.catholics = 30;
 
 // income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
 Q.income = 1600;
-// what about incomes for different classes? rural workers? middle-class workers?
+// what about incomes for different classes? farmer workers? middle-class workers?
 
 // inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BFLPRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
 Q.inflation = 2.9;
@@ -242,12 +242,12 @@ Q.economic_expansion = 0;
 
 // quality of life (as % of 1932 - currently unused - should be welfare-adjusted.)
 Q.workers_qol = 100;
-Q.rural_qol = 100;
+Q.farmer_qol = 100;
 Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'old_middle', 'new_middle', 'farmer', 'unemployed', 'catholics'];
 Q.parties = ['flp', 'cp', 'pps', 'lps', 'cps', 'scp', 'other'];
 
 
@@ -282,13 +282,13 @@ Q.new_middle_cps = 38;
 Q.new_middle_scp = 0;
 Q.new_middle_other = 2;
 
-Q.rural_flp = 13;
-Q.rural_cp = 0;
-Q.rural_pps = 6;
-Q.rural_lps= 41;
-Q.rural_cps = 37;
-Q.rural_scp = 0;
-Q.rural_other = 3;
+Q.farmer_flp = 13;
+Q.farmer_cp = 0;
+Q.farmer_pps = 6;
+Q.farmer_lps= 41;
+Q.farmer_cps = 37;
+Q.farmer_scp = 0;
+Q.farmer_other = 3;
 
 Q.unemployed_flp = 9;
 Q.unemployed_cp = 5;
@@ -483,12 +483,12 @@ Q.Curriculum = "Traditional";
 Q.healthcarequality = "Basic";
 Q.poverty = 10;
 //  
-//                   Rural living standards
-// Rural Access to electricity
-Q.rural_electrification = 0;
-// Rural Access to sanitation
-Q.rural_sanitation = 0;
-Q.rural_telephone = 0;
+//                   Farmers living standards
+// Farmers Access to electricity
+Q.farmer_electrification = 0;
+// Farmers Access to sanitation
+Q.farmer_sanitation = 0;
+Q.farmer_telephone = 0;
 
 //                 Foreign Relations
 // Relations with the UFUL
@@ -793,7 +793,7 @@ The Farmer-Labour Group (FLP) is the only party offering a real alternative to t
 
 # This mod was given birth to in December of 2025. I was visiting some relatives in Regina and after having lunch, we headed off to Indigo to make use of a giftcard. While browsing, I came upon this intriguing book called "The Prairie Populist" by J. F. Conway. 
 
-# This book was interesting. The back cover said, quote, "George Hara Williams was undermined by Tommy Douglas and M.J. Coldwell just as Saskatchewan's CCF was on the threshold of power." As a Saskatchewanian (lol), I had grown up hearing stories about Tommy Douglas, the so called "Greatest Canadian" who had introduced universal healthcare and won five consecutive elections on a Social Democratic platform in backwater, rural, conservative Saskatchewan. 
+# This book was interesting. The back cover said, quote, "George Hara Williams was undermined by Tommy Douglas and M.J. Coldwell just as Saskatchewan's CCF was on the threshold of power." As a Saskatchewanian (lol), I had grown up hearing stories about Tommy Douglas, the so called "Greatest Canadian" who had introduced universal healthcare and won five consecutive elections on a Social Democratic platform in backwater, farmer, conservative Saskatchewan. 
 
 # So who was this "George Hara Williams" and what did good old Tommy do to him? I bought the book and devoured it for the next week or so. Turns out, George Williams had been the decisive role in rallying Saskatchewan farmers to the FLP and later, the CCF/NDP. This was quite shocking considering how forgotten Williams is nowadays. 
 

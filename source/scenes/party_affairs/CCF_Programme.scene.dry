@@ -17,7 +17,7 @@ Our Party has many policies that we can choose from. Some of them include a use-
 
 What path should we take? 
 
-- @rural_policies: What rural policies might we adopt? 
+- @farmer_policies: What farmer policies might we adopt? 
 - @labour_policies: What labour policies might we adopt?
 # - @infra_policies: What construction or maintenance might we undertake?
 # - @econ_policies: What economic policies might we adopt?
@@ -27,8 +27,8 @@ What path should we take?
 
 
 
-#                                             Rural 
-@rural_policies
+#                                             Farmers 
+@farmer_policies
 subtitle: The farmers are a traditional voting bloc of ours. 
 face-image: img/Williams_picnic.jpg
 
@@ -50,14 +50,14 @@ This would enable the farmer to utilize their land to pay back their payments, a
 
 We would construct a Farm Land Security Board to oversee this policy and ensure that both farmers and creditors are acting faithfully. 
 
-This is a radical rural policy that would potentially destabilize our agricultural sector. However, it may be worth it to ensure the support of the farmers. 
+This is a radical farmer policy that would potentially destabilize our agricultural sector. However, it may be worth it to ensure the support of the farmers. 
 
 - @yes_use_lease: We will promise this policy
-- @rural_policies: Let's go back
+- @farmer_policies: Let's go back
 
 @yes_use_lease
 title: Yes to use lease!
-on-arrival: agrarian_strength += 5; use_lease_plat += 1; flp_rural += 4;
+on-arrival: agrarian_strength += 5; use_lease_plat += 1; flp_farmer += 4;
 
 We have chosen to add a use-lease policy to our platform. The farmers will surely be enthusiastic. 
 
@@ -70,11 +70,11 @@ Enacting this policy would allow farmers to collect their crop and livestock for
 This would encroach upon many of the existing wheat pools in Saskatchewan though we could officiate a merger of these organizations if we so wished. 
 
 - @yes_wheat_pool: Yes to the wheat pool
-- @rural_policies: Let's go back
+- @farmer_policies: Let's go back
 
 @yes_wheat_pool
 title: Yes to the wheat pool!
-on-arrival: agrarian_strength += 3; wheat_pool_plat += 1; flp_rural += 4
+on-arrival: agrarian_strength += 3; wheat_pool_plat += 1; flp_farmer += 4
 
 We have chosen to add a provincial wheat pool to our platform. The farmers will surely be enthusiastic. 
 
@@ -87,7 +87,7 @@ Enacting this policy would put in place a heightened construction of grain eleva
 Enacting this policy would bring the ire of the businesses, particularly CPR which profits greatly from it's de facto monopoly over the agricultural sector's transportation and distribution. 
 
 - @yes_grain_elevators: Yes to the grain elevators
-- @rural_policies: Let's go back
+- @farmer_policies: Let's go back
 
 @yes_grain_elevators
 title: Yes to the grain elevators!
@@ -103,7 +103,7 @@ Enacting this policy would provincially regulate the sale price of livestock and
 This would have major effects on the supply side, however. 
 
 - @yes_price_guarantee: Yes to the price guarantee
-- @rural_policies: Let's go back
+- @farmer_policies: Let's go back
 
 @yes_price_guarantee
 title: Yes to the price guarantee!

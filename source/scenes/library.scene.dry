@@ -25,7 +25,7 @@ go-to: menu
 
 The Province of Saskatchewan has a unicameral legislature, the Legislative Assembly of Saskatchewan. The Premier is the head of government, and is the leader of the party with the most seats in the Assembly. The Premier appoints a cabinet of ministers to oversee various departments of government. 
 
-The Legislative Assembly is elected based on a first-past-the-post system divided into urban and rural electoral districts, colloquially referred to as "ridings". 
+The Legislative Assembly is elected based on a first-past-the-post system divided into urban and farmer electoral districts, colloquially referred to as "ridings". 
 
 The Province of Saskatchewan oversees various policy areas, including education, healthcare, agriculture, and natural resources, among others. 
 
@@ -46,7 +46,7 @@ go-to: menu
 
 **1905**: Saskatchewan is inaugurated as a province. In the resulting election, the Liberal Party comes to power with the support of the farmers. 
 
-**1920**: The Progressive Party of Canada is formed primarily to combat the powerful rural corporations in favour of the small family farms. They win the second most seats in the 1921 Canadian Federal Election.
+**1920**: The Progressive Party of Canada is formed primarily to combat the powerful farmer corporations in favour of the small family farms. They win the second most seats in the 1921 Canadian Federal Election.
 
 **1923-1924**: 46,000 farmers sign up to form the Saskatchewan Wheat Pool, an agricultural cooperative. 
 
@@ -124,7 +124,7 @@ go-to: menu
 
 **New Middle**: The new middle class consists of white-collar workers and government employees. This is the base of liberalism. 10-15% of the population.
 
-**Rural**: Small and large farmers and independent rural workers. This is the base of the FLP. They have been radicalized by the Depression and the Drought they they remain committed to holding their property. 60-65% of the population.
+**Farmers**: Small and large farmers and independent farmer workers. This is the base of the FLP. They have been radicalized by the Depression and the Drought they they remain committed to holding their property. 60-65% of the population.
 
 **Catholics** are the largest religious minority, at about 30% of the population. They disproportionately support the PPS Party (or the Bavarian People's Party in Bavaria).
 
@@ -186,7 +186,7 @@ New Middle Class: FLP: [+ new_middle_flp_display +]%, PPS: [+ new_middle_pps_dis
 
 Old Middle Class: FLP: [+ old_middle_flp_display +]%, PPS: [+ old_middle_pps_display +]%, CP: [+ old_middle_cp_display +]%, [+ lps_name +]: [+ old_middle_lps_display +]%, CPS: [+ old_middle_cps_display +]%; SCP: [+ old_middle_scp_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: FLP: [+ rural_flp_display +]%, PPS: [+ rural_pps_display +]%, CP: [+ rural_cp_display +]%, [+ lps_name +]: [+ rural_lps_display +]%, CPS: [+ rural_cps_display +]%; SCP: [+ rural_scp_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Farmers: FLP: [+ farmer_flp_display +]%, PPS: [+ farmer_pps_display +]%, CP: [+ farmer_cp_display +]%, [+ lps_name +]: [+ farmer_lps_display +]%, CPS: [+ farmer_cps_display +]%; SCP: [+ farmer_scp_display +]%, Others: [+ farmer_other_display +]% [? if sapd_formed: SAPD: [+ farmer_sapd_display +]% ?]
 
 Unemployed: FLP: [+ unemployed_flp_display +]%, PPS: [+ unemployed_pps_display +]%, CP: [+ unemployed_cp_display +]%, [+ lps_name +]: [+ unemployed_lps_display +]%, CPS: [+ unemployed_cps_display +]%; SCP: [+ unemployed_scp_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 

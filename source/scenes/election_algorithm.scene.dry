@@ -20,7 +20,7 @@ var urban_support = 0;
 for (var party of Q.parties) {
     var party_support = 0;
     for (var c of Q.classes) {
-        if (c === "rural") continue;   // skip rural
+        if (c === "farmer") continue;   // skip farmer
         // but this version is somewhat more entertaining and allows for wilder swings in votes.
         // the other option basically necessitates a multi-class strategy. while the first option allows for a working-class-only strategy.
         if (Q.old_demographics) {
@@ -37,35 +37,35 @@ for (var party of Q.parties) {
     urban_support += party_support;
 }
 
-var rural_support = 0;
+var farmer_support = 0;
 for (var party of Q.parties) {
-    var party_support_rural = 0;
-    if (Q.classes.includes("rural")) {
-        var c = "rural";
+    var party_support_farmer = 0;
+    if (Q.classes.includes("farmer")) {
+        var c = "farmer";
         // but this version is somewhat more entertaining and allows for wilder swings in votes.
         // the other option basically necessitates a multi-class strategy. while the first option allows for a working-class-only strategy.
         if (Q.old_demographics) {
             // okay i'm pretty sure this is wrong, and the hard version is correct
             // basically this allows for "spillover" effects in other demographics.
             // so you can campaign among say the workers and 
-            party_support_rural += Q[c]*Q[c+'_'+party];
+            party_support_farmer += Q[c]*Q[c+'_'+party];
             // However, there should be a cap on how much party support you can get in a certain demo.
         } else  {
-            party_support_rural += Q[c]*Q[c+'_'+party+'_normalized'];
+            party_support_farmer += Q[c]*Q[c+'_'+party+'_normalized'];
         }
     }
-    Q[party + '_support_rural'] = party_support_rural;
-    rural_support += party_support_rural;
+    Q[party + '_support_farmer'] = party_support_farmer;
+    farmer_support += party_support_farmer;
 }
 
 // 2. normalize support (fraction)
 // 3. Round to integers
 // TODO: round to 1 decimal instead of rounding to integers
 // to do that, we multiply party_normalized*1000 and divide the rounded number by 10.
-var total_support = urban_support + rural_support;
+var total_support = urban_support + farmer_support;
 
 for (var party of Q.parties) {
-    var combined_support = Q[party + '_support'] + Q[party + '_support_rural'];
+    var combined_support = Q[party + '_support'] + Q[party + '_support_farmer'];
 
     Q[party+'_normalized'] = combined_support / total_support;
 
